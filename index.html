@@ -1,72 +1,230 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es-DO">
 <head>
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Papelería Sol Naciente | Pedernales" />
-<meta property="og:description" content="Copias, impresiones, escaneo, laminado, anillado, útiles escolares y servicios digitales. Av. Duarte 59, Pedernales." />
-<meta property="og:url" content="https://oliver-rodry.github.io/" />
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Papelería Sol Naciente | Pedernales</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-<meta name="description" content="Papelería Sol Naciente en Pedernales. Copias, impresiones, laminado, anillado, útiles escolares y servicios digitales. Av. Duarte 59.">
-<link rel="canonical" href="https://oliver-rodry.github.io/" />
-<link rel="stylesheet" href="styles.css">
+  <title>Papelería Sol Naciente | Papelería y Centro de Impresión en Pedernales</title>
+  <meta name="description" content="Papelería Sol Naciente en Pedernales: útiles escolares y de oficina, copias, impresiones, escaneo, laminado y anillado. Av. Duarte 59, Pedernales 84000." />
+  <link rel="canonical" href="https://oliver-rodry.github.io/" />
 
-<script type="application/ld+json">
-{
- "@context":"https://schema.org",
- "@type":"StationeryStore",
- "name":"Papelería Sol Naciente",
- "image":"",
- "address":{
-   "@type":"PostalAddress",
-   "streetAddress":"Av. Duarte 59",
-   "addressLocality":"Pedernales",
-   "postalCode":"84000",
-   "addressCountry":"DO"
- },
- "telephone":"+1-849-354-7326",
- "openingHours":"Mo-Fr 09:00-18:00, Sa 09:00-12:00",
- "sameAs":[
-   "https://www.instagram.com/papeleria_sol_naciente"
- "url":"https://oliver-rodry.github.io/"
- ]
-}
-</script>
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Papelería Sol Naciente | Pedernales" />
+  <meta property="og:description" content="Copias, impresiones, escaneo, laminado, anillado, útiles escolares y de oficina. Av. Duarte 59, Pedernales." />
+  <meta property="og:url" content="https://oliver-rodry.github.io/" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+  [
+    {
+      "@context":"https://schema.org",
+      "@type":"StationeryStore",
+      "name":"Papelería Sol Naciente",
+      "description":"Papelería y centro de impresión y servicios digitales en Pedernales: copias, impresiones, escaneo, laminado, anillado y útiles escolares y de oficina.",
+      "url":"https://oliver-rodry.github.io/",
+      "telephone":"+1-849-354-7326",
+      "currenciesAccepted":"DOP",
+      "address":{
+        "@type":"PostalAddress",
+        "streetAddress":"Av. Duarte 59",
+        "addressLocality":"Pedernales",
+        "postalCode":"84000",
+        "addressCountry":"DO"
+      },
+      "openingHoursSpecification":[
+        {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},
+        {"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"09:00","closes":"12:00"}
+      ],
+      "sameAs":["https://www.instagram.com/papeleria_sol_naciente"]
+    },
+    {
+      "@context":"https://schema.org",
+      "@type":"WebSite",
+      "url":"https://oliver-rodry.github.io/",
+      "name":"Papelería Sol Naciente"
+    }
+  ]
+  </script>
 </head>
 
 <body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="index.html">
+        <div class="brand__mark" aria-hidden="true">☀️</div>
+        <div class="brand__text">
+          <strong>Papelería Sol Naciente</strong>
+          <span>Pedernales • Av. Duarte 59</span>
+        </div>
+      </a>
 
-<header>
-<h1>Papelería Sol Naciente</h1>
-<p>Av. Duarte 59, Pedernales 84000</p>
-<p>Lunes a Viernes 9AM–6PM | Sábado 9AM–12PM</p>
-<a href="https://wa.me/18493547326">Escribir por WhatsApp</a>
-</header>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#destacados">Destacados</a>
+        <a href="catalog.html">Catálogo</a>
+        <a href="#ubicacion">Ubicación</a>
+      </nav>
 
-<section>
-<h2>Servicios en Pedernales</h2>
-<ul>
-<li>Copias e impresiones</li>
-<li>Escaneo a WhatsApp / Email</li>
-<li>Laminado y anillado</li>
-<li>Útiles escolares y de oficina</li>
-</ul>
-</section>
+      <div class="actions">
+        <a class="btn btn--primary" id="btnWhatsapp" href="#" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </header>
 
-<section>
-<h2>Productos Destacados</h2>
-<div id="products"></div>
-<a href="catalog.html">Ver Catálogo Completo</a>
-</section>
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="badge">📍 Pedernales • Av. Duarte 59</p>
+          <h1>Papelería + Centro de Impresión en Pedernales</h1>
+          <p class="lead">
+            Copias e impresiones (B/N y color), escaneo a WhatsApp/Email, laminado, anillado y útiles escolares y de oficina.
+            Atención rápida: entra, resuelve y sale.
+          </p>
 
-<footer>
-<p>Papelería Sol Naciente</p>
-<p>Tel: +1 (849) 354-7326</p>
-<p><a href="https://www.instagram.com/papeleria_sol_naciente">Instagram</a></p>
-</footer>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="catalog.html">Ver catálogo</a>
+            <a class="btn" href="#contacto">Cotizar por WhatsApp</a>
+          </div>
 
-<script src="app.js"></script>
+          <div class="chips">
+            <span class="chip">Lun–Vie 9:00–6:00</span>
+            <span class="chip">Sáb 9:00–12:00</span>
+            <span class="chip">Precios en DOP</span>
+          </div>
+        </div>
+
+        <aside class="hero__card" aria-label="Información rápida">
+          <h2 class="h3">Información</h2>
+          <ul class="checklist">
+            <li><strong>Dirección:</strong> Av. Duarte 59, Pedernales 84000</li>
+            <li><strong>Tel/WhatsApp:</strong> +1 (849) 354-7326</li>
+            <li><strong>Instagram:</strong> @papeleria_sol_naciente</li>
+          </ul>
+
+          <div class="mini">
+            <span class="mini__label">¿Tienes un PDF o foto?</span>
+            <span class="mini__value">Envíalo por WhatsApp y te cotizamos.</span>
+          </div>
+
+          <a class="btn btn--primary w100" id="btnWhatsapp2" href="#" rel="noopener">Enviar archivo por WhatsApp</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="servicios">
+      <div class="container">
+        <div class="section__head">
+          <h2>Servicios</h2>
+          <p>Lo que más pide la gente en Pedernales — rápido, claro y con precios en DOP.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Copias e impresiones</h3>
+            <p>B/N y color para tareas, trámites, formularios, contratos y más.</p>
+          </article>
+          <article class="card">
+            <h3>Escaneo y envío</h3>
+            <p>Escaneamos y enviamos por WhatsApp o Email al instante.</p>
+          </article>
+          <article class="card">
+            <h3>Laminado y anillado</h3>
+            <p>Acabados para presentar documentos con calidad.</p>
+          </article>
+          <article class="card">
+            <h3>Útiles y oficina</h3>
+            <p>Cuadernos, lápices, folders, papel y organización.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="destacados">
+      <div class="container">
+        <div class="section__head">
+          <h2>Destacados</h2>
+          <p>Una muestra del catálogo. Para ver todo, entra al catálogo completo.</p>
+        </div>
+
+        <div class="grid3" id="featuredProducts" aria-live="polite"></div>
+
+        <div class="center">
+          <a class="btn btn--primary" href="catalog.html">Abrir catálogo completo</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ubicacion">
+      <div class="container">
+        <div class="section__head">
+          <h2>Ubicación</h2>
+          <p><strong>Av. Duarte 59, Pedernales 84000</strong>. Cerca del centro y fácil de llegar.</p>
+        </div>
+
+        <div class="map" role="region" aria-label="Mapa de ubicación">
+          <iframe
+            title="Mapa: Papelería Sol Naciente, Pedernales"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Av.%20Duarte%2059%2C%20Pedernales%2084000&output=embed">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="contacto">
+      <div class="container">
+        <div class="section__head">
+          <h2>Contacto</h2>
+          <p>Envíanos tu archivo por WhatsApp y te cotizamos rápido.</p>
+        </div>
+
+        <div class="contact">
+          <div class="contact__box">
+            <h3>WhatsApp</h3>
+            <p>+1 (849) 354-7326</p>
+            <a class="btn btn--primary" id="btnWhatsapp3" href="#" rel="noopener">Escribir ahora</a>
+            <p class="small">También puedes enviar fotos o PDFs.</p>
+          </div>
+
+          <div class="contact__box">
+            <h3>Instagram</h3>
+            <p>@papeleria_sol_naciente</p>
+            <a class="btn" href="https://www.instagram.com/papeleria_sol_naciente" rel="noopener">Ver Instagram</a>
+          </div>
+
+          <div class="contact__box">
+            <h3>Catálogo</h3>
+            <p>Precios en DOP y stock (si aplica).</p>
+            <a class="btn" href="catalog.html">Ver catálogo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <strong>Papelería Sol Naciente</strong>
+          <p class="small">
+            Av. Duarte 59, Pedernales 84000 • Tel/WhatsApp: +1 (849) 354-7326 •
+            <a href="https://www.instagram.com/papeleria_sol_naciente" rel="noopener">Instagram</a>
+          </p>
+        </div>
+        <div class="footer__links">
+          <a href="catalog.html">Catálogo</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#ubicacion">Ubicación</a>
+        </div>
+      </div>
+      <div class="container">
+        <p class="tiny">© <span id="year"></span> Papelería Sol Naciente</p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="app.js" defer></script>
 </body>
 </html>
