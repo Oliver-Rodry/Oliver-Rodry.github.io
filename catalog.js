@@ -100,8 +100,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     grid.innerHTML = filtered.map(p => {
       const stockTag = p.stock > 0
-        ? `<span class="tag tag--ok">En stock: ${p.stock}</span>`
-        : `<span class="tag tag--no">Agotado / Bajo pedido</span>`;
+        ? `<span class="status"><span class="dot dot--green"></span>Disponible</span>`
+        : `<span class="status"><span class="dot dot--orange"></span>En camino</span>`;
 
       const skuLine = p.sku ? `<div class="product__sku">${escapeHTML(p.sku)}</div>` : "";
 
