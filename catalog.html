@@ -1,19 +1,77 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es-DO">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Catálogo | Papelería Sol Naciente</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Catálogo | Papelería Sol Naciente (Pedernales)</title>
+  <meta name="description" content="Catálogo de productos y servicios de Papelería Sol Naciente en Pedernales. Precios en DOP, búsqueda, categorías y stock." />
+  <link rel="canonical" href="https://oliver-rodry.github.io/catalog.html" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="index.html">
+        <div class="brand__mark" aria-hidden="true">☀️</div>
+        <div class="brand__text">
+          <strong>Papelería Sol Naciente</strong>
+          <span>Catálogo • Pedernales</span>
+        </div>
+      </a>
 
-<h1>Catálogo</h1>
-<input type="text" id="search" placeholder="Buscar producto...">
-<div id="catalog"></div>
+      <nav class="nav" aria-label="Navegación">
+        <a href="index.html">Inicio</a>
+        <a href="catalog.html" aria-current="page">Catálogo</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
 
-<script src="app.js"></script>
-<script src="catalog.js"></script>
+      <div class="actions">
+        <a class="btn btn--primary" href="https://wa.me/18493547326" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="section__head">
+        <h1 class="h2">Catálogo</h1>
+        <p>Precios en DOP. Para actualizar, edita <code>products.csv</code> en GitHub y guarda (Commit).</p>
+      </div>
+
+      <div class="filters">
+        <label class="field">
+          <span>Buscar</span>
+          <input id="q" type="search" placeholder="Ej: cuaderno, folder, laminado..." autocomplete="off" />
+        </label>
+
+        <label class="field">
+          <span>Categoría</span>
+          <select id="category">
+            <option value="">Todas</option>
+          </select>
+        </label>
+
+        <label class="field field--inline">
+          <input id="inStockOnly" type="checkbox" />
+          <span>Solo con stock</span>
+        </label>
+      </div>
+
+      <div class="meta-row">
+        <div class="pill" id="countPill">Cargando…</div>
+        <div class="pill pill--muted">Moneda: DOP</div>
+      </div>
+
+      <div id="catalogGrid" class="catalog" aria-live="polite"></div>
+
+      <div class="center mt">
+        <a class="btn" href="index.html">Volver al inicio</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- IMPORTANT: defer ensures the DOM exists before JS runs -->
+  <script src="catalog.js" defer></script>
 </body>
 </html>
