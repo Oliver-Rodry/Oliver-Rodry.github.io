@@ -1,21 +1,77 @@
-async function loadCatalog() {
-const res = await fetch("products.csv");
-const text = await res.text();
-const rows = text.split("\n").slice(1);
+<!doctype html>
+<html lang="es-DO">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Catálogo | Papelería Sol Naciente (Pedernales)</title>
+  <meta name="description" content="Catálogo de productos y servicios de Papelería Sol Naciente en Pedernales. Precios en DOP, búsqueda, categorías y stock." />
+  <link rel="canonical" href="https://oliver-rodry.github.io/catalog.html" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-const container = document.getElementById("catalog");
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="index.html">
+        <div class="brand__mark" aria-hidden="true">☀️</div>
+        <div class="brand__text">
+          <strong>Papelería Sol Naciente</strong>
+          <span>Catálogo • Pedernales</span>
+        </div>
+      </a>
 
-rows.forEach(row => {
-if(!row) return;
+      <nav class="nav" aria-label="Navegación">
+        <a href="index.html">Inicio</a>
+        <a href="catalog.html" aria-current="page">Catálogo</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
 
-const cols = row.split(",");
-const name = cols[1];
-const price = cols[3];
+      <div class="actions">
+        <a class="btn btn--primary" id="btnWhatsapp" href="#" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </header>
 
-const div = document.createElement("div");
-div.innerHTML = `<strong>${name}</strong><br>Precio: RD$ ${price}`;
-container.appendChild(div);
-});
-}
+  <main class="section">
+    <div class="container">
+      <div class="section__head">
+        <h1 class="h2">Catálogo</h1>
+        <p>Precios en DOP. Para actualizar, solo edita <code>products.csv</code> en GitHub y guarda (Commit).</p>
+      </div>
 
-loadCatalog();
+      <div class="filters">
+        <label class="field">
+          <span>Buscar</span>
+          <input id="q" type="search" placeholder="Ej: cuaderno, folder, laminado..." autocomplete="off" />
+        </label>
+
+        <label class="field">
+          <span>Categoría</span>
+          <select id="category">
+            <option value="">Todas</option>
+          </select>
+        </label>
+
+        <label class="field field--inline">
+          <input id="inStockOnly" type="checkbox" />
+          <span>Solo con stock</span>
+        </label>
+      </div>
+
+      <div class="meta-row">
+        <div class="pill" id="countPill">Cargando…</div>
+        <div class="pill pill--muted">Moneda: DOP</div>
+      </div>
+
+      <div id="catalogGrid" class="catalog" aria-live="polite"></div>
+
+      <div class="center mt">
+        <a class="btn" href="index.html">Volver al inicio</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js" defer></script>
+  <script src="catalog.js" defer></script>
+</body>
+</html>
