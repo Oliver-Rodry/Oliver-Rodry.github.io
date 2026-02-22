@@ -10,22 +10,29 @@ document.addEventListener("DOMContentLoaded", async () => {
   let products = [];
 
   async function load() {
-    const res = await fetch("products.csv", { cache: "no-store" });
-    if (!res.ok) throw new Error("products.csv not found");
-    const text = await res.text();
+    // cache-bust so you always see latest CSV
+    const url = `products.csv?v=${Date.now()}`;
+    const res = await fetch(url, { cache: "no-store" });
+    if (!res.ok) throw new Error(`No se pudo cargar products.csv (HTTP ${res.status})`);
 
-    products = parseCSV(text).map(p => ({
-      sku: p.sku || "",
-      name: p.name || "",
-      category: p.category || "General",
+    const text = await res.text();
+    const raw = parseCSV(text);
+    if (!raw.length) throw new Error("products.csv está vacío.");
+
+    products = raw.map(p => ({
+      sku: (p.sku || "").trim(),
+      name: (p.name || "").trim(),
+      category: (p.category || "General").trim(),
       price_dop: Number(p.price_dop || 0),
       stock: Number(p.stock || 0),
-      description: p.description || ""
+      description: (p.description || "").trim()
     }));
 
-    // fill categories
+    // Categories
     const cats = [...new Set(products.map(p => p.category).filter(Boolean))]
       .sort((a,b)=>a.localeCompare(b,"es"));
+
+    category.innerHTML = `<option value="">Todas</option>`;
     cats.forEach(c => {
       const opt = document.createElement("option");
       opt.value = c;
@@ -41,7 +48,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const cat = category.value;
     const onlyStock = inStockOnly.checked;
 
-    const filtered = products.filter(p => {
+    let filtered = products.filter(p => {
       if (cat && p.category !== cat) return false;
       if (onlyStock && !(p.stock > 0)) return false;
 
@@ -52,6 +59,16 @@ document.addEventListener("DOMContentLoaded", async () => {
       return true;
     });
 
+    // Sort: in-stock first, then category, then name
+    filtered = filtered.sort((a,b) => {
+      const as = a.stock > 0 ? 0 : 1;
+      const bs = b.stock > 0 ? 0 : 1;
+      if (as !== bs) return as - bs;
+      const c = a.category.localeCompare(b.category, "es");
+      if (c !== 0) return c;
+      return a.name.localeCompare(b.name, "es");
+    });
+
     countPill.textContent = `${filtered.length} producto(s)`;
 
     grid.innerHTML = filtered.map(p => {
@@ -59,17 +76,19 @@ document.addEventListener("DOMContentLoaded", async () => {
         ? `<span class="tag tag--ok">En stock: ${p.stock}</span>`
         : `<span class="tag tag--no">Agotado / Bajo pedido</span>`;
 
+      const skuLine = p.sku ? `<div class="product__sku">${escapeHTML(p.sku)}</div>` : "";
+
       return `
         <article class="product">
           <div class="product__top">
             <div>
               <h3 class="product__name">${escapeHTML(p.name || "Producto")}</h3>
-              <div class="product__sku">${escapeHTML(p.sku)}</div>
+              ${skuLine}
             </div>
             <div class="price">${formatDOP(p.price_dop)}</div>
           </div>
 
-          <p class="product__desc">${escapeHTML(p.description)}</p>
+          ${p.description ? `<p class="product__desc">${escapeHTML(p.description)}</p>` : ""}
 
           <div class="product__row">
             <span class="tag">${escapeHTML(p.category)}</span>
@@ -99,8 +118,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     countPill.textContent = "0 producto(s)";
     grid.innerHTML = `
       <article class="product">
-        <h3 class="product__name">No se encontró el inventario</h3>
-        <p class="product__desc">Verifica que <code>products.csv</code> exista en la raíz del repositorio.</p>
+        <h3 class="product__name">No se pudo cargar el catálogo</h3>
+        <p class="product__desc">${escapeHTML(e.message)}</p>
+        <p class="product__desc">
+          Abre este archivo para confirmar:
+          <br><a class="btn" href="products.csv" target="_blank" rel="noopener">Abrir products.csv</a>
+        </p>
       </article>
     `;
   }
