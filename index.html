@@ -62,12 +62,12 @@
       <nav class="nav" aria-label="Navegación principal">
         <a href="#servicios">Servicios</a>
         <a href="#destacados">Destacados</a>
-        <a href="catalog.html">Catálogo</a>
+        <a href="catalog.html?v=1">Catálogo</a>
         <a href="#ubicacion">Ubicación</a>
       </nav>
 
       <div class="actions">
-        <a class="btn btn--primary" id="btnWhatsapp" href="#" rel="noopener">WhatsApp</a>
+        <a class="btn btn--primary" href="https://wa.me/18493547326" rel="noopener">WhatsApp</a>
       </div>
     </div>
   </header>
@@ -84,7 +84,7 @@
           </p>
 
           <div class="hero__cta">
-            <a class="btn btn--primary" href="catalog.html">Ver catálogo</a>
+            <a class="btn btn--primary" href="catalog.html?v=1">Ver catálogo</a>
             <a class="btn" href="#contacto">Cotizar por WhatsApp</a>
           </div>
 
@@ -108,7 +108,7 @@
             <span class="mini__value">Envíalo por WhatsApp y te cotizamos.</span>
           </div>
 
-          <a class="btn btn--primary w100" id="btnWhatsapp2" href="#" rel="noopener">Enviar archivo por WhatsApp</a>
+          <a class="btn btn--primary w100" href="https://wa.me/18493547326" rel="noopener">Enviar archivo por WhatsApp</a>
         </aside>
       </div>
     </section>
@@ -148,10 +148,16 @@
           <p>Una muestra del catálogo. Para ver todo, entra al catálogo completo.</p>
         </div>
 
-        <div class="grid3" id="featuredProducts" aria-live="polite"></div>
+        <div class="grid3" id="featuredProducts" aria-live="polite">
+          <article class="card">
+            <h3>Catálogo</h3>
+            <p class="small">Entra al catálogo para ver productos y precios en DOP.</p>
+            <a class="btn btn--primary" href="catalog.html?v=1">Abrir catálogo completo</a>
+          </article>
+        </div>
 
         <div class="center">
-          <a class="btn btn--primary" href="catalog.html">Abrir catálogo completo</a>
+          <a class="btn btn--primary" href="catalog.html?v=1">Abrir catálogo completo</a>
         </div>
       </div>
     </section>
@@ -185,7 +191,7 @@
           <div class="contact__box">
             <h3>WhatsApp</h3>
             <p>+1 (849) 354-7326</p>
-            <a class="btn btn--primary" id="btnWhatsapp3" href="#" rel="noopener">Escribir ahora</a>
+            <a class="btn btn--primary" href="https://wa.me/18493547326" rel="noopener">Escribir ahora</a>
             <p class="small">También puedes enviar fotos o PDFs.</p>
           </div>
 
@@ -198,7 +204,7 @@
           <div class="contact__box">
             <h3>Catálogo</h3>
             <p>Precios en DOP y stock (si aplica).</p>
-            <a class="btn" href="catalog.html">Ver catálogo</a>
+            <a class="btn" href="catalog.html?v=1">Ver catálogo</a>
           </div>
         </div>
       </div>
@@ -214,7 +220,7 @@
           </p>
         </div>
         <div class="footer__links">
-          <a href="catalog.html">Catálogo</a>
+          <a href="catalog.html?v=1">Catálogo</a>
           <a href="#servicios">Servicios</a>
           <a href="#ubicacion">Ubicación</a>
         </div>
@@ -225,6 +231,11 @@
     </footer>
   </main>
 
-  <script src="app.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const y = document.getElementById("year");
+      if (y) y.textContent = String(new Date().getFullYear());
+    });
+  </script>
 </body>
 </html>
