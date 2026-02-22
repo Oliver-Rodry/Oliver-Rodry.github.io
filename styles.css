@@ -327,3 +327,26 @@ input:focus,select:focus{
 }
 .price{font-weight:800; letter-spacing:.2px}
 .mt{margin-top:18px}
+/* ===== Dominican-friendly availability labels ===== */
+.status{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-size:.85rem;
+  padding:4px 10px;
+  border-radius:999px;
+  border:1px solid rgba(47,34,26,.14);
+  background:rgba(255,255,255,.70);
+  color: var(--text);
+}
+
+.dot{
+  width:10px;
+  height:10px;
+  border-radius:999px;
+  display:inline-block;
+  box-shadow: 0 0 0 3px rgba(0,0,0,.04);
+}
+
+.dot--green{ background:#22c55e; }   /* Disponible */
+.dot--orange{ background:#f59e0b; }  /* En camino */
