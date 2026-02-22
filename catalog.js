@@ -1,77 +1,107 @@
-<!doctype html>
-<html lang="es-DO">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Catálogo | Papelería Sol Naciente (Pedernales)</title>
-  <meta name="description" content="Catálogo de productos y servicios de Papelería Sol Naciente en Pedernales. Precios en DOP, búsqueda, categorías y stock." />
-  <link rel="canonical" href="https://oliver-rodry.github.io/catalog.html" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
+document.addEventListener("DOMContentLoaded", async () => {
+  const grid = document.getElementById("catalogGrid");
+  const q = document.getElementById("q");
+  const category = document.getElementById("category");
+  const inStockOnly = document.getElementById("inStockOnly");
+  const countPill = document.getElementById("countPill");
 
-<body>
-  <header class="topbar">
-    <div class="container topbar__inner">
-      <a class="brand" href="index.html">
-        <div class="brand__mark" aria-hidden="true">☀️</div>
-        <div class="brand__text">
-          <strong>Papelería Sol Naciente</strong>
-          <span>Catálogo • Pedernales</span>
-        </div>
-      </a>
+  const { formatDOP, parseCSV, escapeHTML } = window.__PSN__;
 
-      <nav class="nav" aria-label="Navegación">
-        <a href="index.html">Inicio</a>
-        <a href="catalog.html" aria-current="page">Catálogo</a>
-        <a href="index.html#contacto">Contacto</a>
-      </nav>
+  let products = [];
 
-      <div class="actions">
-        <a class="btn btn--primary" id="btnWhatsapp" href="#" rel="noopener">WhatsApp</a>
-      </div>
-    </div>
-  </header>
+  async function load() {
+    const res = await fetch("products.csv", { cache: "no-store" });
+    if (!res.ok) throw new Error("products.csv not found");
+    const text = await res.text();
 
-  <main class="section">
-    <div class="container">
-      <div class="section__head">
-        <h1 class="h2">Catálogo</h1>
-        <p>Precios en DOP. Para actualizar, solo edita <code>products.csv</code> en GitHub y guarda (Commit).</p>
-      </div>
+    products = parseCSV(text).map(p => ({
+      sku: p.sku || "",
+      name: p.name || "",
+      category: p.category || "General",
+      price_dop: Number(p.price_dop || 0),
+      stock: Number(p.stock || 0),
+      description: p.description || ""
+    }));
 
-      <div class="filters">
-        <label class="field">
-          <span>Buscar</span>
-          <input id="q" type="search" placeholder="Ej: cuaderno, folder, laminado..." autocomplete="off" />
-        </label>
+    // fill categories
+    const cats = [...new Set(products.map(p => p.category).filter(Boolean))]
+      .sort((a,b)=>a.localeCompare(b,"es"));
+    cats.forEach(c => {
+      const opt = document.createElement("option");
+      opt.value = c;
+      opt.textContent = c;
+      category.appendChild(opt);
+    });
 
-        <label class="field">
-          <span>Categoría</span>
-          <select id="category">
-            <option value="">Todas</option>
-          </select>
-        </label>
+    render();
+  }
 
-        <label class="field field--inline">
-          <input id="inStockOnly" type="checkbox" />
-          <span>Solo con stock</span>
-        </label>
-      </div>
+  function render() {
+    const term = (q.value || "").trim().toLowerCase();
+    const cat = category.value;
+    const onlyStock = inStockOnly.checked;
 
-      <div class="meta-row">
-        <div class="pill" id="countPill">Cargando…</div>
-        <div class="pill pill--muted">Moneda: DOP</div>
-      </div>
+    const filtered = products.filter(p => {
+      if (cat && p.category !== cat) return false;
+      if (onlyStock && !(p.stock > 0)) return false;
 
-      <div id="catalogGrid" class="catalog" aria-live="polite"></div>
+      if (term) {
+        const hay = `${p.sku} ${p.name} ${p.category} ${p.description}`.toLowerCase();
+        if (!hay.includes(term)) return false;
+      }
+      return true;
+    });
 
-      <div class="center mt">
-        <a class="btn" href="index.html">Volver al inicio</a>
-      </div>
-    </div>
-  </main>
+    countPill.textContent = `${filtered.length} producto(s)`;
 
-  <script src="app.js" defer></script>
-  <script src="catalog.js" defer></script>
-</body>
-</html>
+    grid.innerHTML = filtered.map(p => {
+      const stockTag = p.stock > 0
+        ? `<span class="tag tag--ok">En stock: ${p.stock}</span>`
+        : `<span class="tag tag--no">Agotado / Bajo pedido</span>`;
+
+      return `
+        <article class="product">
+          <div class="product__top">
+            <div>
+              <h3 class="product__name">${escapeHTML(p.name || "Producto")}</h3>
+              <div class="product__sku">${escapeHTML(p.sku)}</div>
+            </div>
+            <div class="price">${formatDOP(p.price_dop)}</div>
+          </div>
+
+          <p class="product__desc">${escapeHTML(p.description)}</p>
+
+          <div class="product__row">
+            <span class="tag">${escapeHTML(p.category)}</span>
+            ${stockTag}
+          </div>
+        </article>
+      `;
+    }).join("");
+
+    if (!filtered.length) {
+      grid.innerHTML = `
+        <article class="product">
+          <h3 class="product__name">Sin resultados</h3>
+          <p class="product__desc">Prueba otra búsqueda o quita filtros.</p>
+        </article>
+      `;
+    }
+  }
+
+  q.addEventListener("input", render);
+  category.addEventListener("change", render);
+  inStockOnly.addEventListener("change", render);
+
+  try {
+    await load();
+  } catch (e) {
+    countPill.textContent = "0 producto(s)";
+    grid.innerHTML = `
+      <article class="product">
+        <h3 class="product__name">No se encontró el inventario</h3>
+        <p class="product__desc">Verifica que <code>products.csv</code> exista en la raíz del repositorio.</p>
+      </article>
+    `;
+  }
+});
