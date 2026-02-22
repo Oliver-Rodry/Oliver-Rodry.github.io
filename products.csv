@@ -1,0 +1,9 @@
+sku,name,category,price_dop,stock,description,image
+SRV-001,Copias B/N (por hoja),Servicios,10,999,Copia blanco y negro tamaño carta,
+SRV-002,Impresión color (por hoja),Servicios,25,999,Impresión a color tamaño carta,
+SRV-003,Laminado carta,Servicios,150,999,Laminado tamaño carta,
+PRD-001,Resma papel carta,Papel,350,8,Resma tamaño carta,
+PRD-002,Cuaderno A5,Cuadernos,250,12,Cuaderno escolar,
+PRD-003,Lápiz #2 (paquete x12),Escolar,120,20,Lápices escolares,
+PRD-004,Folder manila,Oficina,15,100,Folder documentos,
+PRD-005,Carpeta plástica,Oficina,95,25,Carpeta con elástico,
