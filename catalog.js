@@ -199,6 +199,12 @@ if (already < filtered.length) {
   q.addEventListener("input", () => applyFilters(true));
   category.addEventListener("change", () => applyFilters(true));
   inStockOnly.addEventListener("change", () => applyFilters(true));
+  function loadMoreIfNeeded() {
+  const nearBottom =
+    window.innerHeight + window.scrollY >= document.body.offsetHeight - 600;
+  if (!nearBottom) return;
+  loadMore();
+}
   window.addEventListener("scroll", loadMoreIfNeeded, { passive: true });
 
   try {
