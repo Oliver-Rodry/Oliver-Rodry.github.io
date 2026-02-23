@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const inStockOnly = document.getElementById("inStockOnly");
   const countPill = document.getElementById("countPill");
 
+  // --- Helpers ---
   function formatDOP(value) {
     return new Intl.NumberFormat("es-DO", {
       style: "currency",
@@ -22,7 +23,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       .replaceAll("'", "&#039;");
   }
 
-  // Simple CSV parser (works for your current file)
+  // Simple CSV parser (works with your current export; avoid commas inside fields)
   function parseCSV(text) {
     const lines = text.trim().split(/\r?\n/).filter(Boolean);
     if (lines.length < 2) return [];
@@ -36,10 +37,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
+  // --- State ---
+  const PAGE_SIZE = 10;
   let products = [];
+  let filtered = [];
+  let visibleCount = PAGE_SIZE;
+
+  function buildStatus(stock) {
+    return stock > 0
+      ? `<span class="status"><span class="dot dot--green"></span>Disponible</span>`
+      : `<span class="status"><span class="dot dot--orange"></span>En camino</span>`;
+  }
 
   async function load() {
-    // cache bust so updates show instantly
     const res = await fetch(`products.csv?v=${Date.now()}`, { cache: "no-store" });
     if (!res.ok) throw new Error(`No se pudo cargar products.csv (HTTP ${res.status})`);
 
@@ -56,7 +66,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       description: p.description || ""
     }));
 
-    // Fill category dropdown
+    // Fill categories dropdown
     const cats = [...new Set(products.map(p => p.category).filter(Boolean))]
       .sort((a,b)=>a.localeCompare(b,"es"));
 
@@ -68,15 +78,15 @@ document.addEventListener("DOMContentLoaded", async () => {
       category.appendChild(opt);
     });
 
-    render();
+    applyFilters(true);
   }
 
-  function render() {
+  function applyFilters(reset = false) {
     const term = (q.value || "").trim().toLowerCase();
     const cat = category.value;
     const onlyStock = inStockOnly.checked;
 
-    let filtered = products.filter(p => {
+    filtered = products.filter(p => {
       if (cat && p.category !== cat) return false;
       if (onlyStock && !(p.stock > 0)) return false;
       if (term) {
@@ -86,7 +96,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       return true;
     });
 
-    // Sort: in-stock first, then category, then name
+    // Sort: disponible first, then category, then name
     filtered.sort((a,b) => {
       const as = a.stock > 0 ? 0 : 1;
       const bs = b.stock > 0 ? 0 : 1;
@@ -96,14 +106,31 @@ document.addEventListener("DOMContentLoaded", async () => {
       return a.name.localeCompare(b.name, "es");
     });
 
+    if (reset) visibleCount = PAGE_SIZE;
+    render(true);
+  }
+
+  function render(clear = false) {
     countPill.textContent = `${filtered.length} producto(s)`;
 
-    grid.innerHTML = filtered.map(p => {
-      const stockTag = p.stock > 0
-        ? `<span class="status"><span class="dot dot--green"></span>Disponible</span>`
-        : `<span class="status"><span class="dot dot--orange"></span>En camino</span>`;
+    if (clear) grid.innerHTML = "";
 
+    const toShow = filtered.slice(0, visibleCount);
+
+    // If empty
+    if (!toShow.length) {
+      grid.innerHTML = `
+        <article class="product">
+          <h3 class="product__name">Sin resultados</h3>
+          <p class="product__desc">Prueba otra búsqueda o quita filtros.</p>
+        </article>
+      `;
+      return;
+    }
+
+    grid.innerHTML = toShow.map(p => {
       const skuLine = p.sku ? `<div class="product__sku">${escapeHTML(p.sku)}</div>` : "";
+      const descLine = p.description ? `<p class="product__desc">${escapeHTML(p.description)}</p>` : "";
 
       return `
         <article class="product">
@@ -115,29 +142,43 @@ document.addEventListener("DOMContentLoaded", async () => {
             <div class="price">${formatDOP(p.price_dop)}</div>
           </div>
 
-          ${p.description ? `<p class="product__desc">${escapeHTML(p.description)}</p>` : ""}
+          ${descLine}
 
           <div class="product__row">
             <span class="tag">${escapeHTML(p.category)}</span>
-            ${stockTag}
+            ${buildStatus(p.stock)}
           </div>
         </article>
       `;
     }).join("");
 
-    if (!filtered.length) {
-      grid.innerHTML = `
-        <article class="product">
-          <h3 class="product__name">Sin resultados</h3>
-          <p class="product__desc">Prueba otra búsqueda o quita filtros.</p>
-        </article>
+    // Add a small “loading more” indicator at the end (optional)
+    const already = Math.min(visibleCount, filtered.length);
+    if (already < filtered.length) {
+      grid.innerHTML += `
+        <div class="pill pill--muted" style="text-align:center; grid-column: 1/-1;">
+          Mostrando ${already} de ${filtered.length}. Desliza para cargar más…
+        </div>
       `;
     }
   }
 
-  q.addEventListener("input", render);
-  category.addEventListener("change", render);
-  inStockOnly.addEventListener("change", render);
+  function loadMoreIfNeeded() {
+    // When user is near bottom, add 10 more
+    const nearBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 600;
+    if (!nearBottom) return;
+
+    if (visibleCount < filtered.length) {
+      visibleCount += PAGE_SIZE;
+      render(true);
+    }
+  }
+
+  // Event listeners
+  q.addEventListener("input", () => applyFilters(true));
+  category.addEventListener("change", () => applyFilters(true));
+  inStockOnly.addEventListener("change", () => applyFilters(true));
+  window.addEventListener("scroll", loadMoreIfNeeded, { passive: true });
 
   try {
     await load();
