@@ -18,6 +18,12 @@
   --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
 }
 
+@media (max-width: 640px){
+  .brand_sub{
+    display:none;
+  }
+}
+
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
