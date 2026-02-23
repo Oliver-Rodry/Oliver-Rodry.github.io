@@ -368,12 +368,13 @@ input:focus,select:focus{
   display:inline-flex;
   align-items:center;
   gap:8px;
-  font-size:.85rem;
-  padding:4px 10px;
+  padding:6px 10px;
   border-radius:999px;
-  border:1px solid rgba(47,34,26,.14);
-  background:rgba(255,255,255,.70);
-  color: var(--text);
+  border:1px solid rgba(47,34,26,.10);
+  background: rgba(255,255,255,.65);
+  font-size: 13px;
+  color: rgba(47,34,26,.85);
+  white-space: nowrap;
 }
 
 .dot{
@@ -381,8 +382,7 @@ input:focus,select:focus{
   height:10px;
   border-radius:999px;
   display:inline-block;
-  box-shadow: 0 0 0 3px rgba(0,0,0,.04);
 }
 
-.dot--green{ background:#22c55e; }   /* Disponible */
-.dot--orange{ background:#f59e0b; }  /* En camino */
+.dot--green{ background:#23c55e; }
+.dot--orange{ background:#f59e0b; }
