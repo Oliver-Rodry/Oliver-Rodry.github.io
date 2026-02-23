@@ -253,5 +253,29 @@
     });
   </script>
   <script src="index.js" defer></script>
+  <script>
+  (function () {
+    const sel = document.getElementById("navSelect");
+    if (!sel) return;
+
+    sel.addEventListener("change", () => {
+      const v = sel.value;
+      if (!v) return;
+
+      // Link to another page
+      if (v.endsWith(".html")) {
+        window.location.href = v;
+        return;
+      }
+
+      // Scroll to section on same page
+      const el = document.querySelector(v);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+
+      // reset
+      sel.value = "";
+    });
+  })();
+</script>
 </body>
 </html>
