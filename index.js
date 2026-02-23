@@ -75,8 +75,8 @@ function statusHTML(stock) {
           ${p.description ? `<p class="product__desc">${escapeHTML(p.description)}</p>` : ""}
 
           <div class="product__row">
-            <span class="tag">${escapeHTML(p.category)}</span>
-            <span class="tag ${stockClass}">${escapeHTML(stockText)}</span>
+            <span class="tag">${p.category}</span>
+            ${statusHTML(p.stock)}
           </div>
         </article>
       `;
