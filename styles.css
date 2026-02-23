@@ -50,17 +50,24 @@ code{background:rgba(47,34,26,.06); padding:.15rem .35rem; border-radius:10px}
   gap:14px; padding:12px 0;
 }
 
-.brand{display:flex; align-items:center; gap:12px}
-.brand__mark{
-  width:40px; height:40px;
-  display:grid; place-items:center;
-  border-radius:14px;
-  background:rgba(183,169,138,.22);
-  border:1px solid rgba(143,122,93,.28);
-  color:var(--text);
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
 }
-.brand__text{display:flex; flex-direction:column; line-height:1.1}
-.brand__text span{font-size:.85rem; color:var(--muted)}
+
+.brand_logo{
+  height:34px;          /* IMPORTANT: smaller */
+  width:auto;
+  max-width:140px;      /* prevents logo from stretching */
+  object-fit:contain;
+}
+
+.brand_sub{
+  font-size:.85rem;
+  color:var(--muted);
+  white-space:nowrap;
+}
 
 .nav{display:flex; gap:14px; flex-wrap:wrap}
 .nav a{
