@@ -91,11 +91,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function statusHTML(stock) {
-    return stock > 0
-      ? `<span class="status"><span class="dot dot--green"></span>Disponible</span>`
-      : `<span class="status"><span class="dot dot--orange"></span>En camino</span>`;
+  const s = Number(stock || 0);
+  if (s > 0) {
+    return `<span class="status"><span class="dot dot--green"></span>Disponible · ${s} uds</span>`;
   }
-
+  return `<span class="status"><span class="dot dot--orange"></span>En camino · ${s} uds</span>`;
+}
+  
   function setLoading(isLoading) {
     if (!countPill) return;
     countPill.textContent = isLoading ? "Cargando..." : `${filtered.length} producto(s)`;
