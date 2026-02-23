@@ -96,6 +96,14 @@ document.addEventListener("DOMContentLoaded", async () => {
       return true;
     });
 
+    function loadMore() {
+  if (visibleCount < filtered.length) {
+    visibleCount += PAGE_SIZE;
+    render(true);
+    // If still not scrollable (very large screens), user can click again.
+  }
+}
+
     // Sort: disponible first, then category, then name
     filtered.sort((a,b) => {
       const as = a.stock > 0 ? 0 : 1;
@@ -154,23 +162,36 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Add a small “loading more” indicator at the end (optional)
     const already = Math.min(visibleCount, filtered.length);
-    if (already < filtered.length) {
-      grid.innerHTML += `
-        <div class="pill pill--muted" style="text-align:center; grid-column: 1/-1;">
-          Mostrando ${already} de ${filtered.length}. Desliza para cargar más…
-        </div>
-      `;
-    }
-  }
+
+if (already < filtered.length) {
+  grid.innerHTML += `
+    <div style="grid-column: 1/-1; display:flex; flex-direction:column; align-items:center; gap:10px; margin-top:6px;">
+      <div class="pill pill--muted" style="text-align:center;">
+        Mostrando ${already} de ${filtered.length}.
+      </div>
+      <button id="loadMoreBtn" class="btn btn--primary" type="button">
+        Cargar 10 más
+      </button>
+    </div>
+  `;
+
+  // hook button
+  const btn = document.getElementById("loadMoreBtn");
+  if (btn) btn.addEventListener("click", loadMore);
+} else {
+  grid.innerHTML += `
+    <div class="pill pill--muted" style="text-align:center; grid-column: 1/-1;">
+      Fin del catálogo ✅
+    </div>
+  `;
+}
 
   function loadMoreIfNeeded() {
     // When user is near bottom, add 10 more
     const nearBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 600;
     if (!nearBottom) return;
 
-    if (visibleCount < filtered.length) {
-      visibleCount += PAGE_SIZE;
-      render(true);
+   loadMore();
     }
   }
 
