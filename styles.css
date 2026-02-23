@@ -23,7 +23,17 @@
     display:none;
   }
 }
+.btn--primary{
+  background: linear-gradient(135deg,#b8a58b,#9f8b70);
+  color: #fff;
+  border: none;
+  box-shadow: 0 8px 18px rgba(47,34,26,.15);
+}
 
+.btn--primary:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(47,34,26,.22);
+}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
