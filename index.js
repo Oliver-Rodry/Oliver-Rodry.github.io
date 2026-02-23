@@ -9,7 +9,13 @@ document.addEventListener("DOMContentLoaded", async () => {
       maximumFractionDigits: 0
     }).format(Number(value || 0));
   }
-
+function statusHTML(stock) {
+  const s = Number(stock || 0);
+  if (s > 0) {
+    return `<span class="status"><span class="dot dot--green"></span>Disponible · ${s} uds</span>`;
+  }
+  return `<span class="status"><span class="dot dot--orange"></span>En camino · ${s} uds</span>`;
+}
   function escapeHTML(s) {
     return String(s ?? "")
       .replaceAll("&", "&amp;")
