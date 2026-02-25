@@ -103,7 +103,21 @@ document.addEventListener("DOMContentLoaded", () => {
     // cache-bust suave (si cambias la foto, que se refresque)
     return `img/products/${encodeURIComponent(sku)}.jpg?v=1`;
   }
+function imgMediaHTML(p) {
+  const url = productImageUrl(p);
+  if (!url) return ""; // no sku -> no image
 
+  // If image 404s, remove the whole media container (no broken UI)
+  return `
+    <div class="product__media">
+      <img class="product__img"
+           src="${escapeHTML(url)}"
+           alt="${escapeHTML(p.name || "Producto")}"
+           loading="lazy"
+           onerror="this.closest('.product__media')?.remove()" />
+    </div>
+  `;
+}
   function ensureLightbox() {
     if (document.getElementById("lightbox")) return;
 
