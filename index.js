@@ -94,6 +94,10 @@ function statusHTML(stock) {
     grid.innerHTML = `
       <article class="card">
         <h3>Destacados</h3>
+          <div class="product__media">
+          <img class="product__img" src="img/products/SKU.jpg?v=1" ... />
+          <div class="product__imgFallback">Sin imagen</div>
+          </div>
         <p class="small">No se pudieron cargar los productos. Abre el catálogo:</p>
         <a class="btn btn--primary" href="catalog.html?v=1">Abrir catálogo completo</a>
       </article>
