@@ -12,6 +12,30 @@ document.addEventListener("DOMContentLoaded", () => {
   let visibleCount = PAGE_SIZE;
 
   // ---------- Helpers ----------
+  function productImageUrl(p) {
+  // Images named by sku/barcode like: 7467144274941.jpg
+  // Put your images in the same folder as catalog.html (root).
+  const sku = String(p?.sku || "").trim();
+  if (!sku) return "";
+  return `${encodeURIComponent(sku)}.jpg`;
+}
+
+function imgMediaHTML(p) {
+  const url = productImageUrl(p);
+  if (!url) return ""; // no sku => no image
+
+  // If the image 404s, remove the whole media container (no broken UI)
+  return `
+    <div class="product__media">
+      <img class="product__img"
+           src="${escapeHTML(url)}"
+           alt="${escapeHTML(p.name || "Producto")}"
+           loading="lazy"
+           onerror="this.closest('.product__media')?.remove()" />
+    </div>
+  `;
+}
+  
   function escapeHTML(s) {
     return String(s ?? "")
       .replaceAll("&", "&amp;")
@@ -21,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .replaceAll("'", "&#039;");
   }
 
+}
   function formatDOP(value) {
     return new Intl.NumberFormat("es-DO", {
       style: "currency",
@@ -103,21 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // cache-bust suave (si cambias la foto, que se refresque)
     return `img/products/${encodeURIComponent(sku)}.jpg?v=1`;
   }
-function imgMediaHTML(p) {
-  const url = productImageUrl(p);
-  if (!url) return ""; // no sku -> no image
 
-  // If image 404s, remove the whole media container (no broken UI)
-  return `
-    <div class="product__media">
-      <img class="product__img"
-           src="${escapeHTML(url)}"
-           alt="${escapeHTML(p.name || "Producto")}"
-           loading="lazy"
-           onerror="this.closest('.product__media')?.remove()" />
-    </div>
-  `;
-}
   function ensureLightbox() {
     if (document.getElementById("lightbox")) return;
 
@@ -218,34 +229,11 @@ function imgMediaHTML(p) {
         const clickHint = p.stock > 0 ? `<span class="product__hint">Toca para ver</span>` : "";
 
         // OJO: ponemos <img> siempre; si no existe, CSS muestra placeholder
-        return `
-          <article class="product ${clickable}" data-sku="${escapeHTML(p.sku || "")}" data-stock="${Number(p.stock || 0)}">
-            <div class="product__media">
-              <img class="product__img" src="${escapeHTML(img)}" alt="${escapeHTML(p.name || "Producto")}" loading="lazy" />
-              <div class="product__imgFallback">Sin imagen</div>
-            </div>
+        const clickable = Number(p.stock || 0) > 0 ? "product--clickable" : "";
 
-            <div class="product__top">
-              <div>
-                <h3 class="product__name">${escapeHTML(p.name || "Producto")}</h3>
-                ${skuLine}
-              </div>
-              <div class="price">${formatDOP(p.price_dop)}</div>
-            </div>
-
-            ${descLine}
-
-            <div class="product__row">
-              <span class="tag">${escapeHTML(p.category)}</span>
-              <div class="product__right">
-                ${statusHTML(p.stock)}
-                ${clickHint}
-              </div>
-            </div>
-          </article>
-        `;
-      })
-      .join("");
+return `
+  <article class="product ${clickable}" data-sku="${escapeHTML(p.sku || "")}">
+    ${imgMediaHTML(p)}
 
     // click: solo si Disponible (stock>0)
     grid.querySelectorAll(".product.product--clickable").forEach(card => {
@@ -333,6 +321,21 @@ function imgMediaHTML(p) {
 
     if (reset) visibleCount = PAGE_SIZE;
     render();
+    grid.onclick = (e) => {
+  const card = e.target.closest(".product--clickable");
+  if (!card) return;
+
+  const sku = card.dataset.sku || "";
+  const p = products.find(x => String(x.sku) === String(sku));
+  if (!p || !(Number(p.stock || 0) > 0)) return;
+
+  openLightbox({
+    title: p.name || "Producto",
+    meta: `${p.category || "General"} · ${formatDOP(p.price_dop)} · Disponible: ${Number(p.stock || 0)} uds`,
+    desc: p.description || "",
+    imgSrc: productImageUrl(p)
+  });
+};
     setLoading(false);
   }
 
@@ -379,7 +382,83 @@ function imgMediaHTML(p) {
   category?.addEventListener("change", () => applyFilters(true));
   inStockOnly?.addEventListener("change", () => applyFilters(true));
   window.addEventListener("scroll", loadMoreIfNearBottom, { passive: true });
+function ensureLightbox() {
+  if (document.getElementById("lightbox")) return;
 
+  document.body.insertAdjacentHTML(
+    "beforeend",
+    `
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <div class="lightbox__backdrop" data-close="1"></div>
+      <div class="lightbox__panel" role="dialog" aria-modal="true">
+        <button class="lightbox__close" type="button" data-close="1">✕</button>
+
+        <div class="lightbox__imgWrap">
+          <img class="lightbox__img" alt="" />
+        </div>
+
+        <div class="lightbox__body">
+          <div id="lbTitle" class="lightbox__title"></div>
+          <div id="lbMeta" class="lightbox__meta"></div>
+          <div id="lbDesc" class="lightbox__desc"></div>
+        </div>
+      </div>
+    </div>
+    `
+  );
+
+  const lb = document.getElementById("lightbox");
+  lb.addEventListener("click", (e) => {
+    if (e.target?.dataset?.close) closeLightbox();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeLightbox();
+  });
+}
+
+function closeLightbox() {
+  const lb = document.getElementById("lightbox");
+  if (!lb) return;
+  lb.classList.remove("is-open");
+  document.documentElement.classList.remove("no-scroll");
+}
+
+function openLightbox({ title, meta, desc, imgSrc }) {
+  ensureLightbox();
+  const lb = document.getElementById("lightbox");
+  const img = lb.querySelector(".lightbox__img");
+  const t = lb.querySelector("#lbTitle");
+  const m = lb.querySelector("#lbMeta");
+  const d = lb.querySelector("#lbDesc");
+
+  t.textContent = title || "";
+  m.textContent = meta || "";
+
+  const cleanDesc = (desc || "").trim();
+  if (cleanDesc) {
+    d.style.display = "block";
+    d.textContent = cleanDesc;
+  } else {
+    d.style.display = "none";
+    d.textContent = "";
+  }
+
+  const wrap = img.closest(".lightbox__imgWrap");
+  wrap.classList.remove("is-empty");
+
+  img.src = imgSrc || "";
+  img.alt = title || "Producto";
+
+  img.onerror = () => {
+    img.removeAttribute("src");
+    img.alt = "Sin imagen";
+    wrap.classList.add("is-empty");
+  };
+
+  lb.classList.add("is-open");
+  document.documentElement.classList.add("no-scroll");
+}
   // ---------- Start ----------
   load().catch(err => {
     setLoading(false);
