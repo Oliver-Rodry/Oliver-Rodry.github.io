@@ -41,37 +41,30 @@ document.addEventListener("DOMContentLoaded", () => {
       const next = text[i + 1];
 
       if (c === '"' && inQuotes && next === '"') {
-        // Escaped quote inside quoted field
         field += '"';
         i++;
         continue;
       }
-
       if (c === '"') {
         inQuotes = !inQuotes;
         continue;
       }
-
       if (c === "," && !inQuotes) {
         row.push(field);
         field = "";
         continue;
       }
-
       if ((c === "\n" || c === "\r") && !inQuotes) {
         if (c === "\r" && next === "\n") i++;
         row.push(field);
         field = "";
-        // Ignore empty trailing lines
         if (row.some(v => v.trim() !== "")) rows.push(row);
         row = [];
         continue;
       }
-
       field += c;
     }
 
-    // last field
     row.push(field);
     if (row.some(v => v.trim() !== "")) rows.push(row);
 
@@ -91,16 +84,94 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function statusHTML(stock) {
-  const s = Number(stock || 0);
-  if (s > 0) {
-    return `<span class="status"><span class="dot dot--green"></span>Disponible · ${s} uds</span>`;
+    const s = Number(stock || 0);
+    if (s > 0) {
+      return `<span class="status"><span class="dot dot--green"></span>Disponible · ${s} uds</span>`;
+    }
+    return `<span class="status"><span class="dot dot--orange"></span>En camino · ${s} uds</span>`;
   }
-  return `<span class="status"><span class="dot dot--orange"></span>En camino · ${s} uds</span>`;
-}
-  
+
   function setLoading(isLoading) {
     if (!countPill) return;
     countPill.textContent = isLoading ? "Cargando..." : `${filtered.length} producto(s)`;
+  }
+
+  // Imagen: por defecto buscamos en /img/products/<SKU>.jpg
+  function productImageUrl(p) {
+    const sku = String(p.sku || "").trim();
+    if (!sku) return "";
+    // cache-bust suave (si cambias la foto, que se refresque)
+    return `img/products/${encodeURIComponent(sku)}.jpg?v=1`;
+  }
+
+  function ensureLightbox() {
+    if (document.getElementById("lightbox")) return;
+
+    const el = document.createElement("div");
+    el.id = "lightbox";
+    el.className = "lightbox";
+    el.innerHTML = `
+      <div class="lightbox__backdrop" data-close="1"></div>
+      <div class="lightbox__panel" role="dialog" aria-modal="true" aria-label="Vista del producto">
+        <button class="lightbox__close" type="button" aria-label="Cerrar" data-close="1">×</button>
+        <div class="lightbox__content">
+          <div class="lightbox__imgWrap">
+            <img class="lightbox__img" alt="" />
+          </div>
+          <div class="lightbox__info">
+            <div class="lightbox__title" id="lbTitle"></div>
+            <div class="lightbox__meta" id="lbMeta"></div>
+            <div class="lightbox__desc" id="lbDesc"></div>
+          </div>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(el);
+
+    el.addEventListener("click", (e) => {
+      const t = e.target;
+      if (t && t.dataset && t.dataset.close) closeLightbox();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeLightbox();
+    });
+  }
+
+  function openLightbox({ title, meta, desc, imgSrc }) {
+    ensureLightbox();
+    const lb = document.getElementById("lightbox");
+    const img = lb.querySelector(".lightbox__img");
+    const t = lb.querySelector("#lbTitle");
+    const m = lb.querySelector("#lbMeta");
+    const d = lb.querySelector("#lbDesc");
+
+    t.textContent = title || "";
+    m.textContent = meta || "";
+    d.textContent = desc || "";
+
+    img.src = imgSrc || "";
+    img.alt = title || "Producto";
+
+    // fallback si no existe imagen
+    img.onerror = () => {
+      img.removeAttribute("src");
+      img.alt = "Sin imagen";
+      img.closest(".lightbox__imgWrap").classList.add("is-empty");
+    };
+    img.onload = () => {
+      img.closest(".lightbox__imgWrap").classList.remove("is-empty");
+    };
+
+    lb.classList.add("is-open");
+    document.documentElement.classList.add("no-scroll");
+  }
+
+  function closeLightbox() {
+    const lb = document.getElementById("lightbox");
+    if (!lb) return;
+    lb.classList.remove("is-open");
+    document.documentElement.classList.remove("no-scroll");
   }
 
   // ---------- Rendering ----------
@@ -110,7 +181,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const toShow = filtered.slice(0, visibleCount);
     const already = Math.min(visibleCount, filtered.length);
 
-    // Empty results
     if (!toShow.length) {
       grid.innerHTML = `
         <article class="product">
@@ -129,8 +199,18 @@ document.addEventListener("DOMContentLoaded", () => {
           ? `<p class="product__desc">${escapeHTML(p.description)}</p>`
           : "";
 
+        const img = productImageUrl(p);
+        const clickable = p.stock > 0 ? "product--clickable" : "";
+        const clickHint = p.stock > 0 ? `<span class="product__hint">Toca para ver</span>` : "";
+
+        // OJO: ponemos <img> siempre; si no existe, CSS muestra placeholder
         return `
-          <article class="product">
+          <article class="product ${clickable}" data-sku="${escapeHTML(p.sku || "")}" data-stock="${Number(p.stock || 0)}">
+            <div class="product__media">
+              <img class="product__img" src="${escapeHTML(img)}" alt="${escapeHTML(p.name || "Producto")}" loading="lazy" />
+              <div class="product__imgFallback">Sin imagen</div>
+            </div>
+
             <div class="product__top">
               <div>
                 <h3 class="product__name">${escapeHTML(p.name || "Producto")}</h3>
@@ -143,12 +223,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
             <div class="product__row">
               <span class="tag">${escapeHTML(p.category)}</span>
-              ${statusHTML(p.stock)}
+              <div class="product__right">
+                ${statusHTML(p.stock)}
+                ${clickHint}
+              </div>
             </div>
           </article>
         `;
       })
       .join("");
+
+    // click: solo si Disponible (stock>0)
+    grid.querySelectorAll(".product.product--clickable").forEach(card => {
+      card.addEventListener("click", () => {
+        const sku = card.dataset.sku || "";
+        const p = products.find(x => String(x.sku) === String(sku));
+        if (!p || !(p.stock > 0)) return;
+
+        openLightbox({
+          title: `${p.name || "Producto"}`,
+          meta: `${p.category || "General"} · ${formatDOP(p.price_dop)} · Disponible: ${Number(p.stock || 0)} uds`,
+          desc: p.description || "",
+          imgSrc: productImageUrl(p)
+        });
+      });
+    });
 
     // Footer controls
     if (already < filtered.length) {
@@ -162,7 +261,6 @@ document.addEventListener("DOMContentLoaded", () => {
           </button>
         </div>
       `;
-
       const btn = document.getElementById("loadMoreBtn");
       if (btn) btn.addEventListener("click", loadMore);
     } else {
@@ -174,16 +272,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     setLoading(false);
-
-    // If page still isn't scrollable (big screens), user can click button,
-    // but also we can auto-load a bit to fill the page.
-    autoFillViewport();
   }
 
   function loadMore() {
     if (visibleCount < filtered.length) {
       visibleCount += PAGE_SIZE;
       render();
+      // si pantalla grande y sigue sin scroll, deja el botón igual
+      // (el usuario puede seguir tocando)
     }
   }
 
@@ -192,30 +288,6 @@ document.addEventListener("DOMContentLoaded", () => {
       window.innerHeight + window.scrollY >= document.body.offsetHeight - 600;
     if (!nearBottom) return;
     loadMore();
-  }
-
-  // Auto-load additional chunks until there's enough content to scroll (max 5 chunks)
-  function autoFillViewport() {
-    let safety = 0;
-    while (document.body.scrollHeight <= window.innerHeight + 50 && visibleCount < filtered.length && safety < 5) {
-      visibleCount += PAGE_SIZE;
-      safety++;
-      // Re-render after increasing visibleCount
-      // (we do it inside loop to progressively add content)
-      const toShow = filtered.slice(0, visibleCount);
-      if (!toShow.length) break;
-      // re-render final state after loop
-    }
-    // re-render once after adjustments
-    // (only if we increased visibleCount)
-    // We can detect by checking if already less than visibleCount
-    // Simple: just call render again if it still fits and we increased
-    // But to avoid recursion loops, only call once if needed.
-    // We'll check if still fits and we can show more.
-    // (This is safe because render() calls autoFillViewport() again,
-    // but safety loop prevents runaway.)
-    // To avoid recursion completely, we do nothing here beyond adjusting;
-    // render() already called it. We'll rely on user clicking if needed.
   }
 
   // ---------- Filtering ----------
@@ -235,7 +307,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return true;
     });
 
-    // Sort: Disponible first, then category, then name
+    // Disponible primero
     filtered.sort((a, b) => {
       const as = a.stock > 0 ? 0 : 1;
       const bs = b.stock > 0 ? 0 : 1;
@@ -246,15 +318,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     if (reset) visibleCount = PAGE_SIZE;
-
-    setLoading(false);
     render();
+    setLoading(false);
   }
 
   // ---------- Load data ----------
   async function load() {
     setLoading(true);
 
+    // cache bust + no-store para reducir cache raro en GH Pages
     const res = await fetch(`products.csv?v=${Date.now()}`, { cache: "no-store" });
     if (!res.ok) throw new Error(`No se pudo cargar products.csv (HTTP ${res.status})`);
 
