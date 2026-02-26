@@ -676,3 +676,27 @@ input:focus,select:focus{
   font-size: 14px;
   line-height: 1.35;
 }
+/* =========================
+   WhatsApp Button Style
+   ========================= */
+
+.btn--whatsapp,
+a[href*="wa.me"],
+a[href*="whatsapp"] {
+  background: #25D366 !important;
+  color: #ffffff !important;
+  border: 1px solid #25D366 !important;
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25);
+}
+
+.btn--whatsapp:hover,
+a[href*="wa.me"]:hover,
+a[href*="whatsapp"]:hover {
+  background: #1ebe5d !important;
+  border-color: #1ebe5d !important;
+  box-shadow: 0 10px 24px rgba(37, 211, 102, 0.35);
+}
+
+.btn--whatsapp:active {
+  transform: scale(0.98);
+}
