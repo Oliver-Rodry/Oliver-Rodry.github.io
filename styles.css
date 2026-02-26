@@ -110,7 +110,72 @@ a[href*="whatsapp"]:hover{
 }
 
 .topbar__row{ width:100%; }
+/* ===== Mobile hamburger menu (mobile only) ===== */
+.menu_btn{
+  width:100%;
+  display:none;              /* shown only on mobile via media query */
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:12px 14px;
+  border-radius:14px;
+  border:1px solid rgba(47,34,26,.14);
+  background:rgba(255,255,255,.75);
+  box-shadow: 0 8px 18px rgba(47,34,26,.06);
+  cursor:pointer;
+}
 
+.menu_icon{
+  width:18px;
+  height:12px;
+  position:relative;
+  display:inline-block;
+}
+.menu_icon::before,
+.menu_icon::after{
+  content:"";
+  position:absolute;
+  left:0; right:0;
+  height:2px;
+  background:rgba(47,34,26,.72);
+  border-radius:999px;
+}
+.menu_icon::before{ top:0; box-shadow: 0 5px 0 rgba(47,34,26,.72), 0 10px 0 rgba(47,34,26,.72); }
+.menu_icon::after{ display:none; } /* not needed, we used box-shadow trick */
+
+.menu_text{
+  font-weight:600;
+  color:var(--text);
+}
+
+.menu_panel{
+  margin-top:10px;
+  width:100%;
+  border-radius:16px;
+  border:1px solid rgba(47,34,26,.12);
+  background:linear-gradient(180deg, rgba(255,255,255,.82), rgba(255,255,255,.62));
+  box-shadow: 0 12px 28px rgba(47,34,26,.08);
+  padding:10px;
+  display:grid;
+  gap:6px;
+}
+.menu_panel a{
+  padding:10px 12px;
+  border-radius:12px;
+  color:var(--muted);
+}
+.menu_panel a:hover{
+  background:rgba(47,34,26,.05);
+  color:var(--text);
+}
+
+/* Show hamburger only on mobile; keep desktop nav normal */
+@media (max-width: 820px){
+  .menu_btn{ display:inline-flex; }
+}
+@media (min-width: 821px){
+  .topbar__row--menu{ display:none; } /* no mobile menu on desktop */
+}
 /* Brand */
 .brand{
   display:flex;
