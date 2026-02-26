@@ -696,6 +696,91 @@ a[href*="whatsapp"]:hover {
   border-color: #1ebe5d !important;
   box-shadow: 0 10px 24px rgba(37, 211, 102, 0.35);
 }
+/* ---------------------------
+   Mobile header: dropdown on its own line,
+   logo centered, WhatsApp right
+---------------------------- */
+
+.topbar__inner--mobileStack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.topbar__row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.topbar__row--menu {
+  justify-content: flex-start;
+}
+
+.topbar__row--main {
+  justify-content: space-between;
+}
+
+/* make dropdown line feel separate */
+.topbar__row--menu .nav__mobile {
+  width: 100%;
+}
+.topbar__row--menu .nav_select {
+  width: 100%;
+}
+
+/* center the brand block on the 2nd line */
+.topbar__row--main .brand {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* bigger logo on mobile */
+@media (max-width: 760px) {
+  .brand_logo {
+    height: 52px;   /* slightly bigger */
+    width: auto;
+  }
+}
+
+/* keep WhatsApp aligned to right */
+.topbar__row--main .actions {
+  margin-left: auto;
+}
+
+/* Desktop: revert to your original header style */
+@media (min-width: 761px) {
+  .topbar__inner--mobileStack {
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .topbar__row--menu {
+    display: none; /* hide dropdown line on desktop */
+  }
+
+  .topbar__row--main {
+    width: auto;
+    flex: 0 0 auto;
+  }
+
+  .nav--desktop {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    margin-left: auto;
+  }
+}
+
+/* Mobile: hide desktop nav links (dropdown only) */
+@media (max-width: 760px) {
+  .nav--desktop {
+    display: none;
+  }
+}
 
 .btn--whatsapp:active {
   transform: scale(0.98);
