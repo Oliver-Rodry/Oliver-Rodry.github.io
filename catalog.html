@@ -89,5 +89,22 @@
 
   <!-- IMPORTANT: defer ensures the DOM exists before JS runs -->
   <script src="catalog.js?v=3"></script>
+  <script>
+  (function () {
+    const sel = document.getElementById("navSelect");
+    if (!sel) return;
+
+    sel.addEventListener("change", () => {
+      const v = sel.value;
+      if (!v) return;
+
+      // For catalog page: values are full URLs or anchor URLs.
+      window.location.href = v;
+
+      // reset
+      sel.value = "";
+    });
+  })();
+</script>
 </body>
 </html>
