@@ -13,7 +13,7 @@
   <meta property="og:description" content="Copias, Impresiones, Escaneo, Laminado, Encuadernado, Útiles Escolares y de oficina. Av. Duarte 59, Pedernales." />
   <meta property="og:url" content="https://oliver-rodry.github.io/" />
 
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=3" />
 
   <script type="application/ld+json">
   [
@@ -49,329 +49,219 @@
 </head>
 
 <body>
-  <header class="topbar">
-    <div class="container topbar__inner">
+<header class="topbar">
+  <div class="container topbar__inner">
 
-      <!-- Row 1 (mobile): logo centered + WhatsApp right
-           Desktop: becomes logo-left + nav-center + WhatsApp-right via CSS grid -->
-      <div class="topbar__row topbar__row--main">
-        <a class="brand" href="index.html" aria-label="Papelería Sol Naciente (Inicio)">
-          <img src="logo.png.png" alt="Papelería Sol Naciente" class="brand_logo">
-          <span class="brand_sub">Av. Duarte 59 • Frente a la fiscalía</span>
-        </a>
+    <!-- ROW 1: Brand (left on desktop / centered on mobile) + WhatsApp (right) -->
+    <div class="topbar__row topbar__row--main">
+      <a class="brand" href="index.html" aria-label="Papelería Sol Naciente (Inicio)">
+        <img src="logo.png.png" alt="Papelería Sol Naciente" class="brand_logo">
+        <span class="brand_sub">Av. Duarte 59 • Frente a la fiscalía</span>
+      </a>
 
-        <nav class="nav nav--desktop" aria-label="Navegación principal">
-          <a href="#servicios">Servicios</a>
-          <a href="#destacados">Destacados</a>
-          <a href="catalog.html?v=5">Catálogo</a>
-          <a href="#ubicacion">Ubicación</a>
-        </nav>
-
-        <div class="actions">
-          <a class="btn btn--whatsapp" href="https://wa.me/18493547326" target="_blank" rel="noopener">WhatsApp</a>
-        </div>
+      <div class="actions">
+        <a class="btn btn--whatsapp" href="https://wa.me/18493547326" target="_blank" rel="noopener">WhatsApp</a>
       </div>
-
-      <!-- Row 2 (mobile): dropdown FULL WIDTH -->
-      <div class="topbar__row topbar__row--menu">
-  <button class="menu_btn" type="button" aria-expanded="false" aria-controls="mobileMenu">
-    <span class="menu_icon" aria-hidden="true"></span>
-    <span class="menu_text">Menú</span>
-  </button>
-
-  <div id="mobileMenu" class="menu_panel" hidden>
-    <!-- Use the SAME links as desktop -->
-    <a href="#servicios">Servicios</a>
-    <a href="#destacados">Destacados</a>
-    <a href="catalog.html?v=5">Catálogo</a>
-    <a href="#ubicacion">Ubicación</a>
-    <a href="#contacto">Contacto</a>
-  </div>
-</div>
-
     </div>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero__grid">
-        <div class="hero__content">
-          <p class="badge">📍 Av. Duarte 59, Pedernales • Frente a la fiscalía</p>
-          <h1>Papelería y Centro de Impresión en Pedernales</h1>
-          <p class="lead">
-            Copias e Impresiones (B/N y Color), Escaneo a WhatsApp/Email, Laminado, Encuadernado y Útiles Escolares y de Oficina.
-            Atención rápida: entra, resuelve y sale.
-          </p>
+    <!-- Desktop center nav -->
+    <nav class="nav nav--desktop" aria-label="Navegación principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#destacados">Destacados</a>
+      <a href="catalog.html?v=5">Catálogo</a>
+      <a href="#ubicacion">Ubicación</a>
+    </nav>
 
-          <div class="hero__cta">
-            <a class="btn btn--primary" href="catalog.html?v=5">Ver catálogo</a>
-            <a class="btn" href="#contacto">Cotizar por WhatsApp</a>
-          </div>
+    <!-- Mobile hamburger dropdown (NO JS, reliable toggle) -->
+    <details class="mnav" aria-label="Menú móvil">
+      <summary class="mnav__btn">
+        <span class="mnav__icon" aria-hidden="true"></span>
+        <span class="mnav__label">Menú</span>
+      </summary>
 
-          <div class="chips">
-            <span class="chip">Lun–Vie 9:00–6:00</span>
-            <span class="chip">Sáb 9:00–12:00</span>
-            <span class="chip">Precios en DOP</span>
-          </div>
+      <nav class="mnav__panel" aria-label="Navegación móvil">
+        <a href="#servicios">Servicios</a>
+        <a href="#destacados">Destacados</a>
+        <a href="catalog.html?v=5">Catálogo</a>
+        <a href="#ubicacion">Ubicación</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </details>
+
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__content">
+        <p class="badge">📍 Av. Duarte 59, Pedernales • Frente a la fiscalía</p>
+        <h1>Papelería y Centro de Impresión en Pedernales</h1>
+        <p class="lead">
+          Copias e Impresiones (B/N y Color), Escaneo a WhatsApp/Email, Laminado, Encuadernado y Útiles Escolares y de Oficina.
+          Atención rápida: entra, resuelve y sale.
+        </p>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="catalog.html?v=5">Ver catálogo</a>
+          <a class="btn" href="#contacto">Cotizar por WhatsApp</a>
         </div>
 
-        <aside class="hero__card" aria-label="Información rápida">
-          <h2 class="h3">Información</h2>
-          <ul class="checklist">
-            <li><strong>Dirección:</strong> Av. Duarte 59, Pedernales 84000 (Frente a la fiscalía)</li>
-            <li><strong>Tel/WhatsApp:</strong> +1 (849) 354-7326</li>
-            <li><strong>Instagram:</strong> @papeleria_sol_naciente</li>
-          </ul>
-
-          <div class="mini">
-            <span class="mini__label">¿Tienes un PDF o foto?</span>
-            <span class="mini__value">Envíalo por WhatsApp y te cotizamos.</span>
-          </div>
-
-          <a class="btn btn--primary w100" href="https://wa.me/18493547326" rel="noopener">Enviar archivo por WhatsApp</a>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section" id="servicios">
-      <div class="container">
-        <div class="section__head">
-          <h2>Servicios</h2>
-          <p>Lo que más pide la gente en Pedernales — rápido, claro y con precios en DOP.</p>
-        </div>
-
-        <div class="cards">
-          <article class="card">
-            <h3>Copias e impresiones</h3>
-            <p>B/N y color para tareas, trámites, formularios, contratos y más.</p>
-          </article>
-          <article class="card">
-            <h3>Escaneo y envío</h3>
-            <p>Escaneamos y enviamos por WhatsApp o Email al instante.</p>
-          </article>
-          <article class="card">
-            <h3>Laminado y Encuadernado</h3>
-            <p>Acabados para presentar documentos con calidad.</p>
-          </article>
-          <article class="card">
-            <h3>Útiles y oficina</h3>
-            <p>Cuadernos, lápices, folders, papel y organización.</p>
-          </article>
+        <div class="chips">
+          <span class="chip">Lun–Vie 9:00–6:00</span>
+          <span class="chip">Sáb 9:00–12:00</span>
+          <span class="chip">Precios en DOP</span>
         </div>
       </div>
-    </section>
 
-    <section class="section section--alt" id="destacados">
-      <div class="container">
-        <div class="section__head">
-          <h2>Destacados</h2>
-          <p>Una muestra del catálogo. Para ver todo, entra al catálogo completo.</p>
+      <aside class="hero__card" aria-label="Información rápida">
+        <h2 class="h3">Información</h2>
+        <ul class="checklist">
+          <li><strong>Dirección:</strong> Av. Duarte 59, Pedernales 84000 (Frente a la fiscalía)</li>
+          <li><strong>Tel/WhatsApp:</strong> +1 (849) 354-7326</li>
+          <li><strong>Instagram:</strong> @papeleria_sol_naciente</li>
+        </ul>
+
+        <div class="mini">
+          <span class="mini__label">¿Tienes un PDF o foto?</span>
+          <span class="mini__value">Envíalo por WhatsApp y te cotizamos.</span>
         </div>
 
-        <div class="grid3" id="featuredProducts" aria-live="polite">
-          <article class="card">
-            <h3>Catálogo</h3>
-            <p class="small">Entra al catálogo para ver productos y precios en DOP.</p>
-            <a class="btn btn--primary" href="catalog.html?v=5">Abrir catálogo completo</a>
-          </article>
-        </div>
+        <a class="btn btn--primary w100" href="https://wa.me/18493547326" rel="noopener">Enviar archivo por WhatsApp</a>
+      </aside>
+    </div>
+  </section>
 
-        <div class="center">
+  <section class="section" id="servicios">
+    <div class="container">
+      <div class="section__head">
+        <h2>Servicios</h2>
+        <p>Lo que más pide la gente en Pedernales — rápido, claro y con precios en DOP.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Copias e impresiones</h3>
+          <p>B/N y color para tareas, trámites, formularios, contratos y más.</p>
+        </article>
+        <article class="card">
+          <h3>Escaneo y envío</h3>
+          <p>Escaneamos y enviamos por WhatsApp o Email al instante.</p>
+        </article>
+        <article class="card">
+          <h3>Laminado y Encuadernado</h3>
+          <p>Acabados para presentar documentos con calidad.</p>
+        </article>
+        <article class="card">
+          <h3>Útiles y oficina</h3>
+          <p>Cuadernos, lápices, folders, papel y organización.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="destacados">
+    <div class="container">
+      <div class="section__head">
+        <h2>Destacados</h2>
+        <p>Una muestra del catálogo. Para ver todo, entra al catálogo completo.</p>
+      </div>
+
+      <div class="grid3" id="featuredProducts" aria-live="polite">
+        <article class="card">
+          <h3>Catálogo</h3>
+          <p class="small">Entra al catálogo para ver productos y precios en DOP.</p>
           <a class="btn btn--primary" href="catalog.html?v=5">Abrir catálogo completo</a>
+        </article>
+      </div>
+
+      <div class="center">
+        <a class="btn btn--primary" href="catalog.html?v=5">Abrir catálogo completo</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="ubicacion">
+    <div class="container">
+      <div class="section__head">
+        <h2>Ubicación</h2>
+        <p><strong>Av. Duarte 59, Pedernales 84000</strong>. Cerca del centro y fácil de llegar.</p>
+      </div>
+
+      <div class="map" role="region" aria-label="Mapa de ubicación">
+        <iframe
+          title="Mapa: Papelería Sol Naciente, Pedernales"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Av.%20Duarte%2059%2C%20Pedernales%2084000&output=embed">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="contacto">
+    <div class="container">
+      <div class="section__head">
+        <h2>Contacto</h2>
+        <p>Envíanos tu archivo por WhatsApp y te cotizamos rápido.</p>
+      </div>
+
+      <div class="contact">
+        <div class="contact__box">
+          <h3>WhatsApp</h3>
+          <p>+1 (849) 354-7326</p>
+          <a class="btn btn--primary" href="https://wa.me/18493547326" rel="noopener">Escribir ahora</a>
+          <p class="small">También puedes enviar fotos o PDFs.</p>
+        </div>
+
+        <div class="contact__box">
+          <h3>Instagram</h3>
+          <p>@papeleria_sol_naciente</p>
+          <a class="btn" href="https://www.instagram.com/papeleria_sol_naciente" rel="noopener">Ver Instagram</a>
+        </div>
+
+        <div class="contact__box">
+          <h3>📍 Cómo llegar</h3>
+          <p>Av. Duarte 59, Pedernales 84000<br>(Frente a la fiscalía)</p>
+          <a class="btn btn--primary"
+             href="https://www.google.com/maps/search/?api=1&query=Av.%20Duarte%2059%2C%20Pedernales%2084000"
+             target="_blank"
+             rel="noopener">
+             Abrir en Google Maps
+          </a>
+          <p class="small">Toca el botón y presiona “Directions”.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" id="ubicacion">
-      <div class="container">
-        <div class="section__head">
-          <h2>Ubicación</h2>
-          <p><strong>Av. Duarte 59, Pedernales 84000</strong>. Cerca del centro y fácil de llegar.</p>
-        </div>
-
-        <div class="map" role="region" aria-label="Mapa de ubicación">
-          <iframe
-            title="Mapa: Papelería Sol Naciente, Pedernales"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=Av.%20Duarte%2059%2C%20Pedernales%2084000&output=embed">
-          </iframe>
-        </div>
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <strong>Papelería Sol Naciente</strong>
+        <p class="small">
+          Av. Duarte 59, Pedernales 84000 (Frente a la fiscalía) • Tel/WhatsApp: +1 (849) 354-7326 •
+          <a href="https://www.instagram.com/papeleria_sol_naciente" rel="noopener">Instagram</a>
+        </p>
       </div>
-    </section>
-
-    <section class="section section--alt" id="contacto">
-      <div class="container">
-        <div class="section__head">
-          <h2>Contacto</h2>
-          <p>Envíanos tu archivo por WhatsApp y te cotizamos rápido.</p>
-        </div>
-
-        <div class="contact">
-          <div class="contact__box">
-            <h3>WhatsApp</h3>
-            <p>+1 (849) 354-7326</p>
-            <a class="btn btn--primary" href="https://wa.me/18493547326" rel="noopener">Escribir ahora</a>
-            <p class="small">También puedes enviar fotos o PDFs.</p>
-          </div>
-
-          <div class="contact__box">
-            <h3>Instagram</h3>
-            <p>@papeleria_sol_naciente</p>
-            <a class="btn" href="https://www.instagram.com/papeleria_sol_naciente" rel="noopener">Ver Instagram</a>
-          </div>
-
-          <div class="contact__box">
-            <h3>📍 Cómo llegar</h3>
-            <p>Av. Duarte 59, Pedernales 84000<br>(Frente a la fiscalía)</p>
-            <a class="btn btn--primary"
-               href="https://www.google.com/maps/search/?api=1&query=Av.%20Duarte%2059%2C%20Pedernales%2084000"
-               target="_blank"
-               rel="noopener">
-               Abrir en Google Maps
-            </a>
-            <p class="small">Toca el botón y presiona “Directions”.</p>
-          </div>
-        </div>
+      <div class="footer__links">
+        <a href="catalog.html?v=5">Catálogo</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#ubicacion">Ubicación</a>
       </div>
-    </section>
+    </div>
+    <div class="container">
+      <p class="tiny">© <span id="year"></span> Papelería Sol Naciente</p>
+    </div>
+  </footer>
+</main>
 
-    <footer class="footer">
-      <div class="container footer__grid">
-        <div>
-          <strong>Papelería Sol Naciente</strong>
-          <p class="small">
-            Av. Duarte 59, Pedernales 84000 (Frente a la fiscalía) • Tel/WhatsApp: +1 (849) 354-7326 •
-            <a href="https://www.instagram.com/papeleria_sol_naciente" rel="noopener">Instagram</a>
-          </p>
-        </div>
-        <div class="footer__links">
-          <a href="catalog.html?v=5">Catálogo</a>
-          <a href="#servicios">Servicios</a>
-          <a href="#ubicacion">Ubicación</a>
-        </div>
-      </div>
-      <div class="container">
-        <p class="tiny">© <span id="year"></span> Papelería Sol Naciente</p>
-      </div>
-    </footer>
-  </main>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const y = document.getElementById("year");
-      if (y) y.textContent = String(new Date().getFullYear());
-    });
-  </script>
-
-  <script>
-  (function () {
-    const sel = document.getElementById("navSelect");
-    if (!sel) return;
-
-    sel.addEventListener("change", () => {
-      const v = sel.value;
-      if (!v) return;
-
-      // If it's an in-page anchor
-      if (v.startsWith("#")) {
-        const el = document.querySelector(v);
-        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-        sel.value = "";
-        return;
-      }
-
-      // Otherwise navigate
-      window.location.href = v;
-      sel.value = "";
-    });
-  })();
-  </script>
-  <script>
-(function () {
-  const btn = document.querySelector(".menu_btn");
-  const panel = document.getElementById("mobileMenu");
-  if (!btn || !panel) return;
-
-  function closeMenu() {
-    btn.setAttribute("aria-expanded", "false");
-    panel.hidden = true;
-  }
-
-  btn.addEventListener("click", () => {
-    const isOpen = btn.getAttribute("aria-expanded") === "true";
-    btn.setAttribute("aria-expanded", String(!isOpen));
-    panel.hidden = isOpen;
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const y = document.getElementById("year");
+    if (y) y.textContent = String(new Date().getFullYear());
   });
-
-  // Close when clicking a link
-  panel.addEventListener("click", (e) => {
-    const a = e.target.closest("a");
-    if (!a) return;
-    closeMenu();
-  });
-
-  // Close when clicking outside
-  document.addEventListener("click", (e) => {
-    if (btn.contains(e.target) || panel.contains(e.target)) return;
-    closeMenu();
-  });
-
-  // Close on ESC
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeMenu();
-  });
-})();
 </script>
-  <script>
-(function () {
-  const btn = document.querySelector(".menu_btn");
-  const panel = document.getElementById("mobileMenu");
-  if (!btn || !panel) return;
-
-  function isOpen() {
-    return btn.getAttribute("aria-expanded") === "true";
-  }
-
-  function openMenu() {
-    btn.setAttribute("aria-expanded", "true");
-    panel.hidden = false;
-  }
-
-  function closeMenu() {
-    btn.setAttribute("aria-expanded", "false");
-    panel.hidden = true;
-  }
-
-  function toggleMenu() {
-    if (isOpen()) closeMenu();
-    else openMenu();
-  }
-
-  // IMPORTANT: stop propagation so "outside click" doesn't instantly close it
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    toggleMenu();
-  });
-
-  // Also stop clicks inside the panel from bubbling to the document
-  panel.addEventListener("click", (e) => {
-    e.stopPropagation();
-    const a = e.target.closest("a");
-    if (a) closeMenu();
-  });
-
-  // Click outside closes
-  document.addEventListener("click", () => {
-    if (isOpen()) closeMenu();
-  });
-
-  // ESC closes
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && isOpen()) closeMenu();
-  });
-})();
-</script>
+<script src="index.js" defer></script>
 </body>
 </html>
