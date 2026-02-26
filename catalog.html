@@ -12,22 +12,39 @@
 <body>
   <header class="topbar">
   <div class="container topbar__inner">
-    <a class="brand" href="index.html">
-      <img class="brand_logo" src="logo.png.png" alt="Papelería Sol Naciente">
-      <div class="brand__text">
-        <span>Pedernales • Av. Duarte 59 • Frente a la fiscalía</span>
-      </div>
-    </a>
 
-    <nav class="nav" aria-label="Navegación principal">
+    <!-- ROW 1: Logo centered + WhatsApp right (mobile). Desktop uses grid. -->
+    <div class="topbar__row topbar__row--main">
+      <a class="brand" href="index.html">
+        <img src="logo.png.png" alt="Papelería Sol Naciente" class="brand_logo">
+        <span class="brand_sub">Pedernales • Av. Duarte 59 • Frente a la fiscalía</span>
+      </a>
+
+      <div class="actions">
+        <a class="btn btn--whatsapp" href="https://wa.me/18493547326" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+
+    <!-- ROW 2: Dropdown (mobile only) -->
+    <div class="topbar__row topbar__row--menu">
+      <div class="nav_mobile">
+        <label class="sr_only" for="navSelect">Menú</label>
+        <select id="navSelect" class="nav_select">
+          <option value="">Ir a…</option>
+          <option value="index.html">Inicio</option>
+          <option value="catalog.html">Catálogo</option>
+          <option value="index.html#contacto">Contacto</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Desktop nav (hidden on mobile via CSS) -->
+    <nav class="nav nav--desktop" aria-label="Navegación principal">
       <a href="index.html">Inicio</a>
-      <a class="active" href="catalog.html">Catálogo</a>
+      <a href="catalog.html" aria-current="page">Catálogo</a>
       <a href="index.html#contacto">Contacto</a>
     </nav>
 
-    <div class="actions">
-      <a class="btn btn--primary" href="https://wa.me/18493547326" target="_blank" rel="noopener">WhatsApp</a>
-    </div>
   </div>
 </header>
 
