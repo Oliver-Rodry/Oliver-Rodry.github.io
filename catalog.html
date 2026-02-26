@@ -102,5 +102,41 @@
     });
   })();
   </script>
+  <script>
+(function () {
+  const btn = document.querySelector(".menu_btn");
+  const panel = document.getElementById("mobileMenu");
+  if (!btn || !panel) return;
+
+  function closeMenu() {
+    btn.setAttribute("aria-expanded", "false");
+    panel.hidden = true;
+  }
+
+  btn.addEventListener("click", () => {
+    const isOpen = btn.getAttribute("aria-expanded") === "true";
+    btn.setAttribute("aria-expanded", String(!isOpen));
+    panel.hidden = isOpen;
+  });
+
+  // Close when clicking a link
+  panel.addEventListener("click", (e) => {
+    const a = e.target.closest("a");
+    if (!a) return;
+    closeMenu();
+  });
+
+  // Close when clicking outside
+  document.addEventListener("click", (e) => {
+    if (btn.contains(e.target) || panel.contains(e.target)) return;
+    closeMenu();
+  });
+
+  // Close on ESC
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMenu();
+  });
+})();
+</script>
 </body>
 </html>
