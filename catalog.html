@@ -6,187 +6,91 @@
   <title>Catálogo | Papelería Sol Naciente (Pedernales)</title>
   <meta name="description" content="Catálogo de productos y servicios de Papelería Sol Naciente en Pedernales. Precios en DOP, búsqueda, categorías y stock." />
   <link rel="canonical" href="https://oliver-rodry.github.io/catalog.html" />
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=3" />
 </head>
 
 <body>
-  <header class="topbar">
-    <div class="container topbar__inner">
+<header class="topbar">
+  <div class="container topbar__inner">
 
-      <div class="topbar__row topbar__row--main">
-        <a class="brand" href="index.html" aria-label="Papelería Sol Naciente (Inicio)">
-          <img src="logo.png.png" alt="Papelería Sol Naciente" class="brand_logo">
-          <span class="brand_sub">Av. Duarte 59 • Frente a la fiscalía</span>
-        </a>
+    <div class="topbar__row topbar__row--main">
+      <a class="brand" href="index.html" aria-label="Papelería Sol Naciente (Inicio)">
+        <img src="logo.png.png" alt="Papelería Sol Naciente" class="brand_logo">
+        <span class="brand_sub">Av. Duarte 59 • Frente a la fiscalía</span>
+      </a>
 
-        <nav class="nav nav--desktop" aria-label="Navegación principal">
-          <a href="index.html">Inicio</a>
-          <a href="catalog.html?v=5" aria-current="page">Catálogo</a>
-          <a href="index.html#contacto">Contacto</a>
-        </nav>
-
-        <div class="actions">
-          <a class="btn btn--whatsapp" href="https://wa.me/18493547326" target="_blank" rel="noopener">WhatsApp</a>
-        </div>
-      </div>
-
-      <div class="topbar__row topbar__row--menu">
-  <button class="menu_btn" type="button" aria-expanded="false" aria-controls="mobileMenu">
-    <span class="menu_icon" aria-hidden="true"></span>
-    <span class="menu_text">Menú</span>
-  </button>
-
- <div id="mobileMenu" class="menu_panel" hidden>
-  <a href="index.html#servicios">Servicios</a>
-  <a href="index.html#destacados">Destacados</a>
-  <a href="catalog.html?v=5">Catálogo</a>
-  <a href="index.html#ubicacion">Ubicación</a>
-  <a href="index.html#contacto">Contacto</a>
-</div>
-</div>
-
-    </div>
-  </header>
-
-  <main class="section">
-    <div class="container">
-      <div class="section__head">
-        <h1 class="h2">Catálogo</h1>
-        <p>Precios en DOP.</p>
-      </div>
-
-      <div class="filters">
-        <label class="field">
-          <span>Buscar</span>
-          <input id="q" type="search" placeholder="Ej: cuaderno, folder, laminado..." autocomplete="off" />
-        </label>
-
-        <label class="field">
-          <span>Categoría</span>
-          <select id="category">
-            <option value="">Todas</option>
-          </select>
-        </label>
-
-        <label class="field field--inline">
-          <input id="inStockOnly" type="checkbox" />
-          <span>Solo con stock</span>
-        </label>
-      </div>
-
-      <div class="meta-row">
-        <div class="pill" id="countPill">Cargando…</div>
-        <div class="pill pill--muted">Moneda: DOP</div>
-      </div>
-
-      <div id="catalogGrid" class="catalog" aria-live="polite"></div>
-
-      <div class="center mt">
-        <a class="btn" href="index.html">Volver al inicio</a>
+      <div class="actions">
+        <a class="btn btn--whatsapp" href="https://wa.me/18493547326" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
-  </main>
 
-  <script src="catalog.js?v=3"></script>
+    <!-- Desktop center nav -->
+    <nav class="nav nav--desktop" aria-label="Navegación principal">
+      <a href="index.html#servicios">Servicios</a>
+      <a href="index.html#destacados">Destacados</a>
+      <a href="catalog.html?v=5" aria-current="page">Catálogo</a>
+      <a href="index.html#ubicacion">Ubicación</a>
+    </nav>
 
-  <script>
-  (function () {
-    const sel = document.getElementById("navSelect");
-    if (!sel) return;
+    <!-- Mobile hamburger dropdown (NO JS) -->
+    <details class="mnav" aria-label="Menú móvil">
+      <summary class="mnav__btn">
+        <span class="mnav__icon" aria-hidden="true"></span>
+        <span class="mnav__label">Menú</span>
+      </summary>
 
-    sel.addEventListener("change", () => {
-      const v = sel.value;
-      if (!v) return;
-      window.location.href = v;
-      sel.value = "";
-    });
-  })();
-  </script>
-  <script>
-(function () {
-  const btn = document.querySelector(".menu_btn");
-  const panel = document.getElementById("mobileMenu");
-  if (!btn || !panel) return;
+      <nav class="mnav__panel" aria-label="Navegación móvil">
+        <a href="index.html">Inicio</a>
+        <a href="index.html#servicios">Servicios</a>
+        <a href="index.html#destacados">Destacados</a>
+        <a href="catalog.html?v=5" aria-current="page">Catálogo</a>
+        <a href="index.html#ubicacion">Ubicación</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+    </details>
 
-  function closeMenu() {
-    btn.setAttribute("aria-expanded", "false");
-    panel.hidden = true;
-  }
+  </div>
+</header>
 
-  btn.addEventListener("click", () => {
-    const isOpen = btn.getAttribute("aria-expanded") === "true";
-    btn.setAttribute("aria-expanded", String(!isOpen));
-    panel.hidden = isOpen;
-  });
+<main class="section">
+  <div class="container">
+    <div class="section__head">
+      <h1 class="h2">Catálogo</h1>
+      <p>Precios en DOP.</p>
+    </div>
 
-  // Close when clicking a link
-  panel.addEventListener("click", (e) => {
-    const a = e.target.closest("a");
-    if (!a) return;
-    closeMenu();
-  });
+    <div class="filters">
+      <label class="field">
+        <span>Buscar</span>
+        <input id="q" type="search" placeholder="Ej: cuaderno, folder, laminado..." autocomplete="off" />
+      </label>
 
-  // Close when clicking outside
-  document.addEventListener("click", (e) => {
-    if (btn.contains(e.target) || panel.contains(e.target)) return;
-    closeMenu();
-  });
+      <label class="field">
+        <span>Categoría</span>
+        <select id="category">
+          <option value="">Todas</option>
+        </select>
+      </label>
 
-  // Close on ESC
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeMenu();
-  });
-})();
-</script>
-  <script>
-(function () {
-  const btn = document.querySelector(".menu_btn");
-  const panel = document.getElementById("mobileMenu");
-  if (!btn || !panel) return;
+      <label class="field field--inline">
+        <input id="inStockOnly" type="checkbox" />
+        <span>Solo con stock</span>
+      </label>
+    </div>
 
-  function isOpen() {
-    return btn.getAttribute("aria-expanded") === "true";
-  }
+    <div class="meta-row">
+      <div class="pill" id="countPill">Cargando…</div>
+      <div class="pill pill--muted">Moneda: DOP</div>
+    </div>
 
-  function openMenu() {
-    btn.setAttribute("aria-expanded", "true");
-    panel.hidden = false;
-  }
+    <div id="catalogGrid" class="catalog" aria-live="polite"></div>
 
-  function closeMenu() {
-    btn.setAttribute("aria-expanded", "false");
-    panel.hidden = true;
-  }
+    <div class="center mt">
+      <a class="btn" href="index.html">Volver al inicio</a>
+    </div>
+  </div>
+</main>
 
-  function toggleMenu() {
-    if (isOpen()) closeMenu();
-    else openMenu();
-  }
-
-  // IMPORTANT: stop propagation so "outside click" doesn't instantly close it
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    toggleMenu();
-  });
-
-  // Also stop clicks inside the panel from bubbling to the document
-  panel.addEventListener("click", (e) => {
-    e.stopPropagation();
-    const a = e.target.closest("a");
-    if (a) closeMenu();
-  });
-
-  // Click outside closes
-  document.addEventListener("click", () => {
-    if (isOpen()) closeMenu();
-  });
-
-  // ESC closes
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && isOpen()) closeMenu();
-  });
-})();
-</script>
+<script src="catalog.js?v=3"></script>
 </body>
 </html>
