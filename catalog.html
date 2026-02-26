@@ -31,16 +31,19 @@
       </div>
 
       <div class="topbar__row topbar__row--menu">
-        <div class="nav_mobile">
-          <label class="sr_only" for="navSelect">Menú</label>
-          <select id="navSelect" class="nav_select">
-            <option value="">Ir a…</option>
-            <option value="index.html">Inicio</option>
-            <option value="catalog.html?v=5">Catálogo</option>
-            <option value="index.html#contacto">Contacto</option>
-          </select>
-        </div>
-      </div>
+  <button class="menu_btn" type="button" aria-expanded="false" aria-controls="mobileMenu">
+    <span class="menu_icon" aria-hidden="true"></span>
+    <span class="menu_text">Menú</span>
+  </button>
+
+ <div id="mobileMenu" class="menu_panel" hidden>
+  <a href="index.html#servicios">Servicios</a>
+  <a href="index.html#destacados">Destacados</a>
+  <a href="catalog.html?v=5">Catálogo</a>
+  <a href="index.html#ubicacion">Ubicación</a>
+  <a href="index.html#contacto">Contacto</a>
+</div>
+</div>
 
     </div>
   </header>
