@@ -13,11 +13,11 @@
   <header class="topbar">
   <div class="container topbar__inner">
 
-    <!-- ROW 1: Logo centered + WhatsApp right (mobile). Desktop uses grid. -->
+    <!-- Row 1: Logo (center) + WhatsApp (right) -->
     <div class="topbar__row topbar__row--main">
-      <a class="brand" href="index.html">
+      <a class="brand" href="index.html" aria-label="Papelería Sol Naciente (Inicio)">
         <img src="logo.png.png" alt="Papelería Sol Naciente" class="brand_logo">
-        <span class="brand_sub">Pedernales • Av. Duarte 59 • Frente a la fiscalía</span>
+        <span class="brand_sub">Av. Duarte 59 • Frente a la fiscalía</span>
       </a>
 
       <div class="actions">
@@ -25,24 +25,32 @@
       </div>
     </div>
 
-    <!-- ROW 2: Dropdown (mobile only) -->
+    <!-- Row 2: MOBILE horizontal nav (this is what you want visible) -->
+    <nav class="nav nav--mobile" aria-label="Navegación (móvil)">
+      <a href="index.html">Inicio</a>
+      <a href="catalog.html?v=5">Catálogo</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+
+    <!-- Row 3: Dropdown (optional extra, can remove if you don’t want it) -->
     <div class="topbar__row topbar__row--menu">
       <div class="nav_mobile">
         <label class="sr_only" for="navSelect">Menú</label>
         <select id="navSelect" class="nav_select">
           <option value="">Ir a…</option>
           <option value="index.html">Inicio</option>
-          <option value="catalog.html">Catálogo</option>
+          <option value="catalog.html?v=5">Catálogo</option>
           <option value="index.html#contacto">Contacto</option>
         </select>
       </div>
     </div>
 
-    <!-- Desktop nav (hidden on mobile via CSS) -->
-    <nav class="nav nav--desktop" aria-label="Navegación principal">
-      <a href="index.html">Inicio</a>
-      <a href="catalog.html" aria-current="page">Catálogo</a>
-      <a href="index.html#contacto">Contacto</a>
+    <!-- Desktop center nav -->
+    <nav class="nav nav--desktop" aria-label="Navegación principal (desktop)">
+      <a href="#servicios">Servicios</a>
+      <a href="#destacados">Destacados</a>
+      <a href="catalog.html?v=5">Catálogo</a>
+      <a href="#ubicacion">Ubicación</a>
     </nav>
 
   </div>
