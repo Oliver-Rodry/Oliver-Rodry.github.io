@@ -323,5 +323,55 @@
   });
 })();
 </script>
+  <script>
+(function () {
+  const btn = document.querySelector(".menu_btn");
+  const panel = document.getElementById("mobileMenu");
+  if (!btn || !panel) return;
+
+  function isOpen() {
+    return btn.getAttribute("aria-expanded") === "true";
+  }
+
+  function openMenu() {
+    btn.setAttribute("aria-expanded", "true");
+    panel.hidden = false;
+  }
+
+  function closeMenu() {
+    btn.setAttribute("aria-expanded", "false");
+    panel.hidden = true;
+  }
+
+  function toggleMenu() {
+    if (isOpen()) closeMenu();
+    else openMenu();
+  }
+
+  // IMPORTANT: stop propagation so "outside click" doesn't instantly close it
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    toggleMenu();
+  });
+
+  // Also stop clicks inside the panel from bubbling to the document
+  panel.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const a = e.target.closest("a");
+    if (a) closeMenu();
+  });
+
+  // Click outside closes
+  document.addEventListener("click", () => {
+    if (isOpen()) closeMenu();
+  });
+
+  // ESC closes
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && isOpen()) closeMenu();
+  });
+})();
+</script>
 </body>
 </html>
