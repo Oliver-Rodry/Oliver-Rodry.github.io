@@ -49,10 +49,10 @@
 </head>
 
 <body>
-  <header class="topbar">
-  <div class="container topbar__inner topbar__inner--mobileStack">
+ <header class="topbar">
+  <div class="container topbar__inner">
 
-    <!-- LINE 1 (mobile): dropdown alone -->
+    <!-- MOBILE LINE 1: dropdown alone -->
     <div class="topbar__row topbar__row--menu">
       <div class="nav_mobile">
         <label class="sr_only" for="navSelect">Menú</label>
@@ -67,25 +67,25 @@
       </div>
     </div>
 
-    <!-- LINE 2 (mobile): logo centered + WhatsApp right -->
+    <!-- DESKTOP/MOBILE MAIN ROW -->
     <div class="topbar__row topbar__row--main">
-      <a class="brand" href="index.html">
+      <a class="brand" href="index.html" aria-label="Papelería Sol Naciente (Inicio)">
         <img src="logo.png.png" alt="Papelería Sol Naciente" class="brand_logo">
         <span class="brand_sub">Av. Duarte 59 • Frente a la fiscalía</span>
       </a>
 
+      <!-- DESKTOP CENTER NAV -->
+      <nav class="nav nav--desktop" aria-label="Navegación principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#destacados">Destacados</a>
+        <a href="catalog.html?v=5">Catálogo</a>
+        <a href="#ubicacion">Ubicación</a>
+      </nav>
+
       <div class="actions">
-        <a class="btn btn--primary" href="https://wa.me/18493547326" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn--whatsapp" href="https://wa.me/18493547326" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
-
-    <!-- Desktop nav (hidden on mobile via CSS) -->
-    <nav class="nav nav--desktop" aria-label="Navegación principal">
-      <a href="#servicios">Servicios</a>
-      <a href="#destacados">Destacados</a>
-      <a href="catalog.html?v=5">Catálogo</a>
-      <a href="#ubicacion">Ubicación</a>
-    </nav>
 
   </div>
 </header>
