@@ -1,3 +1,5 @@
+// index.js (FULL REPLACEMENT)
+
 document.addEventListener("DOMContentLoaded", async () => {
   const grid = document.getElementById("featuredProducts");
   if (!grid) return;
@@ -68,7 +70,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (row.some(v => v.trim() !== "")) rows.push(row);
 
     if (rows.length < 2) return [];
-
     const headers = rows[0].map(h => h.trim());
     const out = [];
 
@@ -82,7 +83,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     return out;
   }
 
-  // Image naming rule: img/products/<SKU>.jpg
+  // Image naming rule (same as catalog.js)
   function productImageUrl(p) {
     const sku = String(p?.sku || "").trim();
     if (!sku) return "";
@@ -131,6 +132,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     );
 
     const lb = document.getElementById("lightbox");
+
     lb.addEventListener("click", (e) => {
       if (e.target?.dataset?.close) closeLightbox();
     });
@@ -184,7 +186,58 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.documentElement.classList.add("no-scroll");
   }
 
-  // ---------- Load + render ----------
+  // ---------- Load & Render ----------
+  let products = [];
+
+  function renderFeatured(items) {
+    // show only product cards in the grid (no extra “Catálogo” card inside the 6)
+    grid.innerHTML = items
+      .map((p) => {
+        const skuLine = p.sku ? `<div class="product__sku">${escapeHTML(p.sku)}</div>` : "";
+        const descLine = p.description ? `<p class="product__desc">${escapeHTML(p.description)}</p>` : "";
+
+        // clickable always (even if no stock) — if you want ONLY in-stock clickable, change to: Number(p.stock||0)>0
+        return `
+          <article class="product product--clickable" data-sku="${escapeHTML(p.sku || "")}">
+            ${imgMediaHTML(p)}
+
+            <div class="product__top">
+              <div>
+                <h3 class="product__name">${escapeHTML(p.name || "Producto")}</h3>
+                ${skuLine}
+              </div>
+              <div class="price">${formatDOP(p.price_dop)}</div>
+            </div>
+
+            ${descLine}
+
+            <div class="product__row">
+              <span class="tag">${escapeHTML(p.category || "General")}</span>
+              ${statusHTML(p.stock)}
+            </div>
+          </article>
+        `;
+      })
+      .join("");
+
+    // one click handler (delegation)
+    grid.onclick = (e) => {
+      const card = e.target.closest(".product--clickable");
+      if (!card) return;
+
+      const sku = card.dataset.sku || "";
+      const p = products.find((x) => String(x.sku) === String(sku));
+      if (!p) return;
+
+      openLightbox({
+        title: p.name || "Producto",
+        meta: `${p.category || "General"} · ${formatDOP(p.price_dop)} · ${Number(p.stock || 0) > 0 ? `Disponible: ${Number(p.stock || 0)} uds` : "En camino"}`,
+        desc: p.description || "",
+        imgSrc: productImageUrl(p)
+      });
+    };
+  }
+
   try {
     const res = await fetch(`products.csv?v=${Date.now()}`, { cache: "no-store" });
     if (!res.ok) throw new Error("No se pudo cargar products.csv");
@@ -192,7 +245,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const text = await res.text();
     const raw = parseCSV(text);
 
-    const products = raw.map(p => ({
+    products = raw.map((p) => ({
       sku: p.sku || "",
       name: p.name || "",
       category: p.category || "General",
@@ -201,79 +254,18 @@ document.addEventListener("DOMContentLoaded", async () => {
       description: p.description || ""
     }));
 
-    // Featured: in-stock first, then by name; take 6
-    const featured = products
-      .slice()
-      .sort((a, b) => {
-        const as = Number(a.stock || 0) > 0 ? 0 : 1;
-        const bs = Number(b.stock || 0) > 0 ? 0 : 1;
-        if (as !== bs) return as - bs;
-        return (a.name || "").localeCompare((b.name || ""), "es");
-      })
+    // pick 6: in-stock first
+    const featured = [...products]
+      .sort((a, b) => (Number(b.stock || 0) > 0) - (Number(a.stock || 0) > 0))
       .slice(0, 6);
 
-    if (!featured.length) {
-      grid.innerHTML = `
-        <article class="product">
-          <h3 class="product__name">Sin productos</h3>
-          <p class="product__desc">Abre el catálogo completo para ver todo.</p>
-          <a class="btn btn--primary" href="catalog.html?v=5">Abrir catálogo completo</a>
-        </article>
-      `;
-      return;
-    }
-
-    grid.innerHTML = featured.map((p) => {
-      const skuLine = p.sku ? `<div class="product__sku">${escapeHTML(p.sku)}</div>` : "";
-      const descLine = p.description ? `<p class="product__desc">${escapeHTML(p.description)}</p>` : "";
-
-      const isAvailable = Number(p.stock || 0) > 0;
-      const clickableClass = isAvailable ? "product--clickable" : "";
-
-      return `
-        <article class="product ${clickableClass}" data-sku="${escapeHTML(p.sku || "")}">
-          ${imgMediaHTML(p)}
-
-          <div class="product__top">
-            <div>
-              <h3 class="product__name">${escapeHTML(p.name || "Producto")}</h3>
-              ${skuLine}
-            </div>
-            <div class="price">${formatDOP(p.price_dop)}</div>
-          </div>
-
-          ${descLine}
-
-          <div class="product__row">
-            <span class="tag">${escapeHTML(p.category || "General")}</span>
-            ${statusHTML(p.stock)}
-          </div>
-        </article>
-      `;
-    }).join("");
-
-    // Click-to-open lightbox (only for available items)
-    grid.onclick = (e) => {
-      const card = e.target.closest(".product--clickable");
-      if (!card) return;
-
-      const sku = card.dataset.sku || "";
-      const p = featured.find((x) => String(x.sku) === String(sku));
-      if (!p || !(Number(p.stock || 0) > 0)) return;
-
-      openLightbox({
-        title: p.name || "Producto",
-        meta: `${p.category || "General"} · ${formatDOP(p.price_dop)} · Disponible: ${Number(p.stock || 0)} uds`,
-        desc: p.description || "",
-        imgSrc: productImageUrl(p)
-      });
-    };
+    renderFeatured(featured);
 
   } catch (e) {
     grid.innerHTML = `
-      <article class="product">
-        <h3 class="product__name">No se pudieron cargar los destacados</h3>
-        <p class="product__desc">Abre el catálogo completo:</p>
+      <article class="card">
+        <h3>Destacados</h3>
+        <p class="small">No se pudieron cargar los productos. Abre el catálogo:</p>
         <a class="btn btn--primary" href="catalog.html?v=5">Abrir catálogo completo</a>
       </article>
     `;
