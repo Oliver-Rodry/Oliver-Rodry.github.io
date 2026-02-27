@@ -388,6 +388,10 @@ h1{font-size:2.2rem; margin:.2rem 0 .6rem}
   border-top:1px solid rgba(47,34,26,.10);
   display:grid; gap:6px;
 }
+/* Add separation before WhatsApp button inside hero card */
+.hero__card .mini{
+  margin-bottom:16px;
+}
 .mini__label{color:var(--muted)}
 .mini__value{color:var(--text)}
 
