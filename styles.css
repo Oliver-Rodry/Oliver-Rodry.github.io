@@ -160,6 +160,15 @@ a[href*="whatsapp"]:hover{
 
 /* ===== Desktop layout: single line (logo left, nav center, WhatsApp right) ===== */
 @media (min-width: 821px){
+  .nav--mobile,
+  .mobileMenu,
+  .menuToggleRow {
+    display: none !important;
+  }
+
+  .nav--desktop{
+    display: flex !important;
+  }
   .topbar__inner{
     display:grid;
     grid-template-columns: 1fr auto 1fr;
@@ -177,6 +186,16 @@ a[href*="whatsapp"]:hover{
 
 /* ===== Mobile layout: logo centered (without moving WhatsApp), then hamburger menu full width ===== */
 @media (max-width: 820px){
+
+  .topbar__row--main{
+  justify-content: space-between;
+}
+
+.topbar__row--main .actions{
+  margin-left: auto;
+  display:flex;
+  justify-content:flex-end;
+}
   .topbar__inner{
     display:flex;
     flex-direction:column;
@@ -234,52 +253,51 @@ a[href*="whatsapp"]:hover{
   background:rgba(255,255,255,.82);
 }
 
-/* Hamburger / X icon (CSS only) */
+/* Hamburger / X icon (CSS only) — EXACTLY 3 lines when closed */
 .mnav__icon{
-  width:22px;
-  height:16px;
+  width:24px;
+  height:18px;
   display:inline-block;
   position:relative;
 }
+
+/* top + bottom lines */
 .mnav__icon::before,
 .mnav__icon::after{
   content:"";
   position:absolute;
   left:0;
   right:0;
-  height:2px;
+  height:3px;
   background: rgba(47,34,26,.70);
   border-radius:999px;
   transition: transform .15s ease, top .15s ease, opacity .15s ease;
 }
-.mnav__icon::before{ top:3px; }
-.mnav__icon::after{ top:11px; }
+.mnav__icon::before{ top:0; }
+.mnav__icon::after{ top:15px; }
 
-/* middle bar using box-shadow trick */
-.mnav__icon{
+/* middle line */
+.mnav__icon span{
+  position:absolute;
+  left:0;
+  right:0;
+  top:7.5px;
+  height:3px;
   background: rgba(47,34,26,.70);
   border-radius:999px;
-}
-.mnav__icon{
-  height:2px;
-  margin-top:0;
-  box-shadow: 0 6px 0 rgba(47,34,26,.70), 0 12px 0 rgba(47,34,26,.70);
+  transition: opacity .15s ease;
 }
 
 /* When open -> X */
-.mnav[open] .mnav__icon{
-  background: transparent;
-  box-shadow:none;
-}
+.mnav[open] .mnav__icon span{ opacity:0; }
 .mnav[open] .mnav__icon::before{
-  top:7px;
+  top:7.5px;
   transform: rotate(45deg);
 }
 .mnav[open] .mnav__icon::after{
-  top:7px;
+  top:7.5px;
   transform: rotate(-45deg);
 }
-
 .mnav__label{
   font-weight:650;
   color: rgba(47,34,26,.90);
