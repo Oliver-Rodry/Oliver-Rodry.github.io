@@ -569,6 +569,26 @@ input:focus,select:focus{
 .price{font-weight:800; letter-spacing:.2px}
 .mt{margin-top:18px}
 
+/* Price block: allow 2 lines (DESDE + RD$) without shifting layout */
+.price{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  line-height:1.05;
+}
+
+.price__from{
+  font-size:11px;
+  font-weight:750;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+  color: rgba(47,34,26,.65);
+}
+
+.price__value{
+  font-weight:800; /* keep strong RD$ */
+}
+
 /* Availability label */
 .status{
   display:inline-flex;
