@@ -206,7 +206,11 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <h3 class="product__name">${escapeHTML(p.name || "Producto")}</h3>
                 ${skuLine}
               </div>
-              <div class="price">${formatDOP(p.price_dop)}</div>
+              ${
+  String(p.category || "").trim().toUpperCase() === "SERVICIOS"
+    ? `<div class="price"><span class="price__from">DESDE</span><span class="price__value">${formatDOP(p.price_dop)}</span></div>`
+    : `<div class="price"><span class="price__value">${formatDOP(p.price_dop)}</span></div>`
+}
             </div>
 
             ${descLine}
