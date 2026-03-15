@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     return out;
   }
 
-  // Image naming rule (same as catalog.js)
+  // Image naming rule
   function productImageUrl(p) {
     const sku = String(p?.sku || "").trim();
     if (!sku) return "";
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     `;
   }
 
-  // ---------- Lightbox (same behavior as catalog) ----------
+  // ---------- Lightbox ----------
   function ensureLightbox() {
     if (document.getElementById("lightbox")) return;
 
@@ -190,13 +190,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   let products = [];
 
   function renderFeatured(items) {
-    // show only product cards in the grid (no extra “Catálogo” card inside the 6)
     grid.innerHTML = items
       .map((p) => {
         const skuLine = p.sku ? `<div class="product__sku">${escapeHTML(p.sku)}</div>` : "";
         const descLine = p.description ? `<p class="product__desc">${escapeHTML(p.description)}</p>` : "";
 
-        // clickable always (even if no stock) — if you want ONLY in-stock clickable, change to: Number(p.stock||0)>0
         return `
           <article class="product product--clickable" data-sku="${escapeHTML(p.sku || "")}">
             ${imgMediaHTML(p)}
@@ -207,10 +205,10 @@ document.addEventListener("DOMContentLoaded", async () => {
                 ${skuLine}
               </div>
               ${
-  String(p.category || "").trim().toUpperCase() === "SERVICIOS"
-    ? `<div class="price"><span class="price__from">DESDE</span><span class="price__value">${formatDOP(p.price_dop)}</span></div>`
-    : `<div class="price"><span class="price__value">${formatDOP(p.price_dop)}</span></div>`
-}
+                String(p.category || "").trim().toUpperCase() === "SERVICIOS"
+                  ? `<div class="price"><span class="price__from">DESDE</span><span class="price__value">${formatDOP(p.price_dop)}</span></div>`
+                  : `<div class="price"><span class="price__value">${formatDOP(p.price_dop)}</span></div>`
+              }
             </div>
 
             ${descLine}
@@ -224,13 +222,12 @@ document.addEventListener("DOMContentLoaded", async () => {
       })
       .join("");
 
-    // one click handler (delegation)
     grid.onclick = (e) => {
       const card = e.target.closest(".product--clickable");
       if (!card) return;
 
       const sku = card.dataset.sku || "";
-      const p = products.find((x) => String(x.sku) === String(sku));
+      const p = products.find((x) => String(x.sku).trim() === String(sku).trim());
       if (!p) return;
 
       openLightbox({
@@ -258,10 +255,30 @@ document.addEventListener("DOMContentLoaded", async () => {
       description: p.description || ""
     }));
 
-    // pick 6: in-stock first
-    const featured = [...products]
-      .sort((a, b) => (Number(b.stock || 0) > 0) - (Number(a.stock || 0) > 0))
-      .slice(0, 6);
+    // ---------- MANUAL DESTACADOS ----------
+    // Replace these SKU values with the exact products you want to show
+    const featuredSkus = [
+      "7592474240035",
+      "HANI-1039-180GSM",
+      "ANI-1039-180GSM",
+      "TALOM",
+      "20260306171602966",
+      "CARTULINAMETROJ",
+    ];
+
+    // Get chosen products in the exact order written above
+    const manualFeatured = featuredSkus
+      .map((sku) => products.find((p) => String(p.sku).trim() === String(sku).trim()))
+      .filter(Boolean);
+
+    // Optional fallback: fills remaining spaces up to 6 products
+    const usedSkus = new Set(manualFeatured.map((p) => String(p.sku).trim()));
+
+    const fallbackFeatured = products.filter(
+      (p) => !usedSkus.has(String(p.sku).trim())
+    );
+
+    const featured = [...manualFeatured, ...fallbackFeatured].slice(0, 6);
 
     renderFeatured(featured);
 
