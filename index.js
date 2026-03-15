@@ -260,7 +260,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const featuredSkus = [
       "7592474240035",
       "HANI-1039-180GSM",
-      "ANI-1039-180GSM",
+      "7467144274941",
       "TALOM",
       "20260306171602966",
       "CARTULINAMETROJ",
