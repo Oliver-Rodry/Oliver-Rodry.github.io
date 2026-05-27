@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "18493547326";
+const WHATSAPP_NUMBER = "18497076103";
 const WHATSAPP_DEFAULT_TEXT = "Hola! Quiero una cotización / información sobre:";
 
 function formatDOP(value) {

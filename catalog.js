@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartBarSendBtn = document.getElementById("cartBarSendBtn");
 
   const PAGE_SIZE = 10;
-  const WHATSAPP_NUMBER = "18493547326";
+  const WHATSAPP_NUMBER = "18497076103";
 
   let products = [];
   let filtered = [];
