@@ -6,12 +6,12 @@
   <title>Catálogo | Papelería Sol Naciente (Pedernales)</title>
   <meta name="description" content="Catálogo de productos y servicios de Papelería Sol Naciente en Pedernales. Precios en DOP, búsqueda, categorías y stock." />
   <link rel="canonical" href="https://oliver-rodry.github.io/catalog.html" />
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=11" />
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="favicon.png">
 </head>
 
-<body>
+<body class="has-cart-bar">
 <header class="topbar">
   <div class="container topbar__inner">
 
@@ -85,6 +85,27 @@
       <div class="pill pill--muted">Moneda: DOP</div>
     </div>
 
+    <section class="cart" id="cartBox" aria-label="Carrito de pedido">
+      <div class="cart__head">
+        <div>
+          <h2 class="cart__title">Carrito</h2>
+          <p class="cart__note">Agrega productos y envia el pedido por WhatsApp.</p>
+        </div>
+        <div class="cart__total" id="cartTotal">RD$0</div>
+      </div>
+
+      <div id="cartItems" class="cart__items">
+        <p class="cart__empty">Tu carrito esta vacio.</p>
+      </div>
+
+      <div class="cart__actions">
+        <button id="clearCartBtn" class="btn" type="button" disabled>Vaciar</button>
+        <a id="sendCartBtn" class="btn btn--whatsapp cart__send is-disabled" href="#" aria-disabled="true">
+          Enviar por WhatsApp
+        </a>
+      </div>
+    </section>
+
     <div id="catalogGrid" class="catalog" aria-live="polite"></div>
 
     <div class="center mt">
@@ -93,6 +114,42 @@
   </div>
 </main>
 
-<script src="catalog.js?v=4"></script>
+<a class="floating-cart" id="floatingCartBtn" href="#cartBox" aria-label="Ver carrito">
+  <span class="floating-cart__icon" aria-hidden="true">🛒</span>
+  <span class="floating-cart__count" id="floatingCartCount">0</span>
+</a>
+
+<div class="cart-bar" id="cartBar" aria-live="polite">
+  <a class="cart-bar__main" href="#cartBox">
+    <span class="cart-bar__label">Total en carrito de compra</span>
+    <strong class="cart-bar__total" id="cartBarTotal">RD$0</strong>
+  </a>
+  <a id="cartBarSendBtn" class="btn btn--whatsapp cart-bar__send is-disabled" href="#" aria-disabled="true">
+    Enviar
+  </a>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const topbar = document.querySelector(".topbar");
+    const desktop = window.matchMedia("(min-width: 821px)");
+    const updateHeader = () => {
+      if (!topbar) return;
+      if (!desktop.matches) {
+        topbar.classList.remove("topbar--compact");
+        return;
+      }
+
+      const isCompact = topbar.classList.contains("topbar--compact");
+      if (!isCompact && window.scrollY > 150) topbar.classList.add("topbar--compact");
+      if (isCompact && window.scrollY < 45) topbar.classList.remove("topbar--compact");
+    };
+
+    updateHeader();
+    window.addEventListener("scroll", updateHeader, { passive: true });
+    window.addEventListener("resize", updateHeader);
+  });
+</script>
+<script src="catalog.js?v=7"></script>
 </body>
 </html>

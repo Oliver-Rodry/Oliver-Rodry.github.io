@@ -13,7 +13,7 @@
   <meta property="og:description" content="Copias, Impresiones, Escaneo, Laminado, Encuadernado, Útiles Escolares y de oficina. Av. Duarte 57, Pedernales." />
   <meta property="og:url" content="https://oliver-rodry.github.io/" />
 
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=12" />
 
   <script type="application/ld+json">
   [
@@ -98,9 +98,9 @@
     <div class="container hero__grid">
       <div class="hero__content">
         <p class="badge">📍 Av. Duarte 57, Pedernales • Frente a la fiscalía</p>
-        <h1>Papelería y Centro de Impresión en Pedernales</h1>
+        <h1>Papelería, impresión y gran formato en Pedernales</h1>
         <p class="lead">
-          Copias e Impresiones (B/N y Color), Escaneo a WhatsApp/Email, Laminado, Encuadernado, Útiles Escolares y de Oficina.
+          Copias e impresiones en blanco y negro o color, gran formato, escaneo a WhatsApp/Email, laminado, encuadernado, útiles escolares y de oficina.
           Atención rápida: entra, resuelve y sale.
         </p>
 
@@ -112,6 +112,7 @@
         <div class="chips">
           <span class="chip">Lun–Vie 7:30–6:00</span>
           <span class="chip">Sáb 8:00–12:00</span>
+          <span class="chip">Gran formato</span>
           <span class="chip">Precios en DOP, Se Aceptan Pagos con Tarjeta</span>
         </div>
       </div>
@@ -139,13 +140,17 @@
     <div class="container">
       <div class="section__head">
         <h2>Servicios</h2>
-        <p>De Alta Calidad y Rapidez, Unicos en Pedernales.</p>
+        <p>Servicios de papelería, impresión digital y gran formato con atención rápida en Pedernales.</p>
       </div>
 
       <div class="cards">
         <article class="card">
           <h3>Copias e Impresiones</h3>
-          <p>Gran Variedad de Impresiones en todos los Formatos Profesionales, Arquitectonico, Legales, Estudiante y Más</p>
+          <p>Documentos en blanco y negro o color, trabajos escolares, formularios, legales y formatos profesionales.</p>
+        </article>
+        <article class="card card--featured">
+          <h3>Impresión Gran Formato</h3>
+          <p>Banners, vinilos, posters, planos, menús, letreros y materiales para negocios, eventos y presentaciones.</p>
         </article>
         <article class="card">
           <h3>Escaneo y Envío</h3>
@@ -262,6 +267,36 @@
   document.addEventListener("DOMContentLoaded", () => {
     const y = document.getElementById("year");
     if (y) y.textContent = String(new Date().getFullYear());
+
+    const topbar = document.querySelector(".topbar");
+    const desktop = window.matchMedia("(min-width: 821px)");
+    const updateHeader = () => {
+      if (!topbar) return;
+      if (!desktop.matches) {
+        topbar.classList.remove("topbar--compact");
+        return;
+      }
+
+      const isCompact = topbar.classList.contains("topbar--compact");
+      if (!isCompact && window.scrollY > 150) topbar.classList.add("topbar--compact");
+      if (isCompact && window.scrollY < 45) topbar.classList.remove("topbar--compact");
+    };
+
+    updateHeader();
+    window.addEventListener("scroll", updateHeader, { passive: true });
+    window.addEventListener("resize", updateHeader);
+
+    const centerMapIfNeeded = () => {
+      if (window.location.hash !== "#ubicacion") return;
+      const map = document.querySelector("#ubicacion .map");
+      if (!map) return;
+      setTimeout(() => {
+        map.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 120);
+    };
+
+    centerMapIfNeeded();
+    window.addEventListener("hashchange", centerMapIfNeeded);
   });
 </script>
 <script src="index.js" defer></script>
