@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://oliver-rodry.github.io/sitemap.xml
+Sitemap: https://papeleriasolnaciente.com/sitemap.xml
