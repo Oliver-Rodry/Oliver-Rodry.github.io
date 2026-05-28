@@ -596,6 +596,14 @@ document.addEventListener("DOMContentLoaded", () => {
     render();
   });
 
+  floatingCartBtn?.addEventListener("click", (e) => {
+    const cartBox = document.getElementById("cartBox");
+    if (!cartBox) return;
+    e.preventDefault();
+    cartBox.scrollIntoView({ behavior: "smooth", block: "center" });
+    history.replaceState(null, "", "#cartBox");
+  });
+
   sendCartBtn?.addEventListener("click", (e) => {
     if (cartCount() === 0) e.preventDefault();
   });
