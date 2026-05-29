@@ -91,7 +91,7 @@
 
     <!-- Desktop center nav -->
     <nav class="nav nav--desktop" aria-label="Navegación principal">
-      <a href="#servicios">Servicios</a>
+      <a href="#servicios" onclick="return centerPageAnchor(event, '#servicios')">Servicios</a>
       <a href="#destacados">Destacados</a>
       <a href="catalog.html?v=5">Catálogo</a>
       <a href="#ubicacion">Ubicación</a>
@@ -105,7 +105,7 @@
       </summary>
 
       <nav class="mnav__panel" aria-label="Navegación móvil">
-        <a href="#servicios">Servicios</a>
+        <a href="#servicios" onclick="return centerPageAnchor(event, '#servicios')">Servicios</a>
         <a href="#destacados">Destacados</a>
         <a href="catalog.html?v=5">Catálogo</a>
         <a href="#ubicacion">Ubicación</a>
@@ -272,7 +272,7 @@
       </div>
       <div class="footer__links">
         <a href="catalog.html?v=5">Catálogo</a>
-        <a href="#servicios">Servicios</a>
+        <a href="#servicios" onclick="return centerPageAnchor(event, '#servicios')">Servicios</a>
         <a href="#ubicacion">Ubicación</a>
       </div>
     </div>
@@ -283,6 +283,27 @@
 </main>
 
 <script>
+  function centerPageAnchor(event, hash) {
+    const target = hash === "#ubicacion"
+      ? document.querySelector("#ubicacion .map")
+      : document.querySelector(hash);
+    if (!target) return true;
+
+    event.preventDefault();
+    history.pushState(null, "", hash);
+
+    setTimeout(() => {
+      const rect = target.getBoundingClientRect();
+      const isMobile = window.innerWidth <= 820;
+      const top = isMobile
+        ? window.scrollY + rect.top - 96
+        : window.scrollY + rect.top - ((window.innerHeight - rect.height) / 2);
+      window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+    }, 0);
+
+    return false;
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     const y = document.getElementById("year");
     if (y) y.textContent = String(new Date().getFullYear());
@@ -305,17 +326,45 @@
     window.addEventListener("scroll", updateHeader, { passive: true });
     window.addEventListener("resize", updateHeader);
 
-    const centerMapIfNeeded = () => {
-      if (window.location.hash !== "#ubicacion") return;
-      const map = document.querySelector("#ubicacion .map");
-      if (!map) return;
+    const centerAnchorIfNeeded = () => {
+      const hash = window.location.hash;
+      if (!hash) return;
+
+      const target = hash === "#ubicacion"
+        ? document.querySelector("#ubicacion .map")
+        : document.querySelector(hash);
+
+      if (!target) return;
       setTimeout(() => {
-        map.scrollIntoView({ behavior: "smooth", block: "center" });
-      }, 120);
+        const rect = target.getBoundingClientRect();
+        const isMobile = window.innerWidth <= 820;
+        const top = isMobile
+          ? window.scrollY + rect.top - 96
+          : window.scrollY + rect.top - ((window.innerHeight - rect.height) / 2);
+        window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+      }, 180);
     };
 
-    centerMapIfNeeded();
-    window.addEventListener("hashchange", centerMapIfNeeded);
+    document.addEventListener("click", (event) => {
+      const link = event.target.closest('a[href^="#"]');
+      if (!link) return;
+
+      const hash = link.getAttribute("href");
+      if (!hash || hash === "#") return;
+
+      const target = hash === "#ubicacion"
+        ? document.querySelector("#ubicacion .map")
+        : document.querySelector(hash);
+      if (!target) return;
+
+      event.preventDefault();
+      link.closest("details")?.removeAttribute("open");
+      history.pushState(null, "", hash);
+      centerAnchorIfNeeded();
+    }, true);
+
+    centerAnchorIfNeeded();
+    window.addEventListener("hashchange", centerAnchorIfNeeded);
   });
 </script>
 <script src="index.js" defer></script>
