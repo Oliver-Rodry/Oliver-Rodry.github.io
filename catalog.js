@@ -175,6 +175,77 @@ document.addEventListener("DOMContentLoaded", () => {
     else syncProductAddControls();
   }
 
+  function cleanCartQuantity(sku, qty) {
+    const product = getProductBySku(sku);
+    if (!product) return 0;
+
+    const max = Math.max(0, Number(product.stock || 0));
+    const parsed = Number.parseInt(qty, 10);
+    if (!Number.isFinite(parsed)) return 0;
+    return Math.max(0, Math.min(parsed, max));
+  }
+
+  function getSkuFromQuantityInput(input) {
+    const productControl = input.closest("[data-add-control-sku]");
+    if (productControl) return productControl.dataset.addControlSku || "";
+
+    const cartRow = input.closest("[data-sku]");
+    return cartRow?.dataset?.sku || "";
+  }
+
+  function refreshCartRowQuantity(sku) {
+    if (!cartItems) return;
+
+    const row = Array.from(cartItems.querySelectorAll("[data-sku]"))
+      .find((item) => String(item.dataset.sku) === String(sku));
+    if (!row) return;
+
+    const product = getProductBySku(sku);
+    const qty = Number(cart[sku] || 0);
+    const input = row.querySelector("[data-cart-qty-input]");
+    const meta = row.querySelector(".cart__itemMeta");
+
+    if (input && document.activeElement !== input) input.value = String(qty || 1);
+    if (meta && product) {
+      const lineTotal = Number(product.price_dop || 0) * qty;
+      meta.textContent = `${formatDOP(product.price_dop)} c/u · ${formatDOP(lineTotal)}`;
+    }
+  }
+
+  function commitQuantityInput(input, allowEmpty = true) {
+    if (!input) return false;
+
+    const sku = getSkuFromQuantityInput(input);
+    if (!sku) return false;
+
+    if (input.value === "") {
+      if (allowEmpty) return false;
+      input.value = "1";
+    }
+
+    const cleanQty = cleanCartQuantity(sku, input.value);
+    if (cleanQty <= 0) {
+      input.value = "1";
+      return false;
+    }
+
+    cart[sku] = cleanQty;
+    input.value = String(cleanQty);
+    saveCart();
+    updateCartButtonLinks();
+    refreshCartRowQuantity(sku);
+    syncProductAddControls();
+    return true;
+  }
+
+  function commitActiveQuantityInput() {
+    const active = document.activeElement;
+    if (!active?.matches?.("[data-cart-qty-input]")) return;
+
+    commitQuantityInput(active, false);
+    active.blur();
+  }
+
   function maxAddableQuantity(sku) {
     const product = getProductBySku(sku);
     if (!product) return 0;
@@ -536,26 +607,13 @@ document.addEventListener("DOMContentLoaded", () => {
     grid.oninput = (e) => {
       const input = e.target.closest("[data-cart-qty-input]");
       if (!input) return;
-
-      const control = input.closest("[data-add-control-sku]");
-      const sku = control?.dataset?.addControlSku || "";
-      const product = getProductBySku(sku);
-      const stock = Math.max(0, Number(product?.stock || 0));
-      const typed = Number.parseInt(input.value, 10);
-
-      if (input.value === "") return;
-      if (!Number.isFinite(typed)) return;
-      if (typed > stock) input.value = String(stock);
-      if (typed < 1) input.value = "1";
+      commitQuantityInput(input, true);
     };
 
     grid.onchange = (e) => {
       const input = e.target.closest("[data-cart-qty-input]");
       if (!input) return;
-
-      const control = input.closest("[data-add-control-sku]");
-      const sku = control?.dataset?.addControlSku || "";
-      setCartQuantity(sku, input.value || 1, false);
+      commitQuantityInput(input, false);
     };
 
     grid.onkeydown = (e) => {
@@ -668,6 +726,8 @@ document.addEventListener("DOMContentLoaded", () => {
   category?.addEventListener("change", () => applyFilters(true));
   inStockOnly?.addEventListener("change", () => applyFilters(true));
   window.addEventListener("scroll", loadMoreIfNearBottom, { passive: true });
+  window.addEventListener("touchmove", commitActiveQuantityInput, { passive: true });
+  window.addEventListener("wheel", commitActiveQuantityInput, { passive: true });
 
   cartItems?.addEventListener("click", (e) => {
     const btn = e.target.closest("[data-cart-action]");
@@ -685,26 +745,13 @@ document.addEventListener("DOMContentLoaded", () => {
   cartItems?.addEventListener("input", (e) => {
     const input = e.target.closest("[data-cart-qty-input]");
     if (!input) return;
-
-    const row = input.closest("[data-sku]");
-    const sku = row?.dataset?.sku || "";
-    const product = getProductBySku(sku);
-    const stock = Math.max(0, Number(product?.stock || 0));
-    const typed = Number.parseInt(input.value, 10);
-
-    if (input.value === "") return;
-    if (!Number.isFinite(typed)) return;
-    if (typed > stock) input.value = String(stock);
-    if (typed < 1) input.value = "1";
+    commitQuantityInput(input, true);
   });
 
   cartItems?.addEventListener("change", (e) => {
     const input = e.target.closest("[data-cart-qty-input]");
     if (!input) return;
-
-    const row = input.closest("[data-sku]");
-    const sku = row?.dataset?.sku || "";
-    setCartQuantity(sku, input.value || 1);
+    commitQuantityInput(input, false);
   });
 
   cartItems?.addEventListener("keydown", (e) => {
