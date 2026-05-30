@@ -147,8 +147,8 @@ document.addEventListener("DOMContentLoaded", () => {
               <div class="cart__itemMeta">${formatDOP(product.price_dop)} c/u · ${formatDOP(lineTotal)}</div>
             </div>
             <div class="cart__qty" aria-label="Cantidad">
-              <button class="cart__qtyBtn" type="button" data-cart-action="minus" aria-label="Quitar uno">−</button>
-              <span class="cart__qtyValue">${qty}</span>
+              <button class="cart__qtyBtn" type="button" data-cart-action="minus" aria-label="Quitar uno">&minus;</button>
+              <input class="cart__qtyInput" data-cart-qty-input type="number" inputmode="numeric" min="1" value="${qty}" aria-label="Cantidad de ${escapeHTML(product.name || "producto")}" />
               <button class="cart__qtyBtn" type="button" data-cart-action="plus" aria-label="Agregar uno">+</button>
             </div>
           </div>
@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCartButtonLinks();
   }
 
-  function setCartQuantity(sku, qty) {
+  function setCartQuantity(sku, qty, renderProducts = true) {
     const product = getProductBySku(sku);
     if (!product) return;
 
@@ -171,13 +171,54 @@ document.addEventListener("DOMContentLoaded", () => {
 
     saveCart();
     renderCart();
-    render();
+    if (renderProducts) render();
+    else syncProductAddControls();
+  }
+
+  function maxAddableQuantity(sku) {
+    const product = getProductBySku(sku);
+    if (!product) return 0;
+    const stock = Math.max(0, Number(product.stock || 0));
+    const current = Math.max(0, Number(cart[sku] || 0));
+    return Math.max(0, stock - current);
+  }
+
+  function syncProductAddControl(control) {
+    if (!control) return;
+
+    const sku = control.dataset.addControlSku || "";
+    const addBtn = control.querySelector("[data-add-sku]");
+    const minusBtn = control.querySelector("[data-product-cart-action='minus']");
+    const plusBtn = control.querySelector("[data-product-cart-action='plus']");
+    const input = control.querySelector("[data-cart-qty-input]");
+    const current = Number(cart[sku] || 0);
+    const remaining = maxAddableQuantity(sku);
+
+    control.classList.toggle("is-open", current > 0);
+
+    if (addBtn) {
+      addBtn.disabled = remaining <= 0;
+      addBtn.textContent = remaining <= 0 ? "Completo" : "Agregar";
+    }
+    if (minusBtn) minusBtn.disabled = current <= 0;
+    if (plusBtn) plusBtn.disabled = remaining <= 0;
+    if (input) {
+      input.min = "1";
+      input.max = String(Math.max(current + remaining, 1));
+      input.disabled = current <= 0;
+      if (document.activeElement !== input) input.value = String(current || 1);
+    }
+  }
+
+  function syncProductAddControls() {
+    grid?.querySelectorAll("[data-add-control-sku]").forEach(syncProductAddControl);
   }
 
   function addToCart(sku) {
     const product = getProductBySku(sku);
     if (!product || Number(product.stock || 0) <= 0) return;
-    setCartQuantity(sku, Number(cart[sku] || 0) + 1);
+    if (maxAddableQuantity(sku) <= 0) return;
+    setCartQuantity(sku, Number(cart[sku] || 0) + 1, false);
   }
 
   // Robust CSV parser (supports quotes + commas inside fields)
@@ -404,10 +445,15 @@ document.addEventListener("DOMContentLoaded", () => {
             ${
               isAvailable
                 ? `
-                  <div class="product__cart">
+                  <div class="product__cart" data-add-control-sku="${escapeHTML(p.sku || "")}">
                     <button class="btn btn--primary product__add" type="button" data-add-sku="${escapeHTML(p.sku || "")}">
-                      ${cart[p.sku] ? `En carrito: ${cart[p.sku]}` : "Agregar"}
+                      Agregar
                     </button>
+                    <div class="product__qty" aria-label="Cantidad en carrito">
+                      <button class="product__qtyBtn" type="button" data-product-cart-action="minus" aria-label="Quitar uno">&minus;</button>
+                      <input class="product__qtyInput" data-cart-qty-input type="number" inputmode="numeric" min="1" value="${Number(cart[p.sku] || 1)}" aria-label="Cantidad en carrito" />
+                      <button class="product__qtyBtn" type="button" data-product-cart-action="plus" aria-label="Agregar uno">+</button>
+                    </div>
                   </div>
                 `
                 : `
@@ -420,6 +466,8 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
       })
       .join("");
+
+    syncProductAddControls();
 
     // Footer controls
     if (already < filtered.length) {
@@ -452,11 +500,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Click-to-open: use ONE handler (event delegation)
     grid.onclick = (e) => {
+      const qtyBtn = e.target.closest("[data-product-cart-action]");
+      if (qtyBtn) {
+        const control = qtyBtn.closest("[data-add-control-sku]");
+        const sku = control?.dataset?.addControlSku || "";
+        const current = Number(cart[sku] || 0);
+        const next = qtyBtn.dataset.productCartAction === "plus" ? current + 1 : current - 1;
+        setCartQuantity(sku, next, false);
+        return;
+      }
+
       const addBtn = e.target.closest("[data-add-sku]");
       if (addBtn) {
         addToCart(addBtn.dataset.addSku || "");
         return;
       }
+
+      if (e.target.closest("[data-add-control-sku]")) return;
 
       const card = e.target.closest(".product--clickable");
       if (!card) return;
@@ -471,6 +531,39 @@ document.addEventListener("DOMContentLoaded", () => {
         desc: p.description || "",
         imgSrc: productImageUrl(p)
       });
+    };
+
+    grid.oninput = (e) => {
+      const input = e.target.closest("[data-cart-qty-input]");
+      if (!input) return;
+
+      const control = input.closest("[data-add-control-sku]");
+      const sku = control?.dataset?.addControlSku || "";
+      const product = getProductBySku(sku);
+      const stock = Math.max(0, Number(product?.stock || 0));
+      const typed = Number.parseInt(input.value, 10);
+
+      if (input.value === "") return;
+      if (!Number.isFinite(typed)) return;
+      if (typed > stock) input.value = String(stock);
+      if (typed < 1) input.value = "1";
+    };
+
+    grid.onchange = (e) => {
+      const input = e.target.closest("[data-cart-qty-input]");
+      if (!input) return;
+
+      const control = input.closest("[data-add-control-sku]");
+      const sku = control?.dataset?.addControlSku || "";
+      setCartQuantity(sku, input.value || 1, false);
+    };
+
+    grid.onkeydown = (e) => {
+      const input = e.target.closest("[data-cart-qty-input]");
+      if (!input || e.key !== "Enter") return;
+
+      e.preventDefault();
+      input.blur();
     };
 
     setLoading(false);
@@ -587,6 +680,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (action === "plus") setCartQuantity(sku, current + 1);
     if (action === "minus") setCartQuantity(sku, current - 1);
+  });
+
+  cartItems?.addEventListener("input", (e) => {
+    const input = e.target.closest("[data-cart-qty-input]");
+    if (!input) return;
+
+    const row = input.closest("[data-sku]");
+    const sku = row?.dataset?.sku || "";
+    const product = getProductBySku(sku);
+    const stock = Math.max(0, Number(product?.stock || 0));
+    const typed = Number.parseInt(input.value, 10);
+
+    if (input.value === "") return;
+    if (!Number.isFinite(typed)) return;
+    if (typed > stock) input.value = String(stock);
+    if (typed < 1) input.value = "1";
+  });
+
+  cartItems?.addEventListener("change", (e) => {
+    const input = e.target.closest("[data-cart-qty-input]");
+    if (!input) return;
+
+    const row = input.closest("[data-sku]");
+    const sku = row?.dataset?.sku || "";
+    setCartQuantity(sku, input.value || 1);
+  });
+
+  cartItems?.addEventListener("keydown", (e) => {
+    const input = e.target.closest("[data-cart-qty-input]");
+    if (!input || e.key !== "Enter") return;
+
+    e.preventDefault();
+    input.blur();
   });
 
   clearCartBtn?.addEventListener("click", () => {
