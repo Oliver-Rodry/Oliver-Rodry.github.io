@@ -360,12 +360,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Image naming rule:
-  // Put images in the SAME folder as catalog.html and name them: <SKU>.jpg
+  // Product images live at /img/products/<SKU>.jpg so the catalog works from /catalogo/.
   // Example: 7467144274941.jpg
  function productImageUrl(p) {
   const sku = String(p?.sku || "").trim();
   if (!sku) return "";
-  return `img/products/${encodeURIComponent(sku)}.jpg?v=1`;
+  return `/img/products/${encodeURIComponent(sku)}.jpg?v=1`;
 }
 
   function imgMediaHTML(p) {
@@ -682,7 +682,7 @@ document.addEventListener("DOMContentLoaded", () => {
   async function load() {
     setLoading(true);
 
-    const res = await fetch(`products.csv?v=${Date.now()}`, { cache: "no-store" });
+    const res = await fetch(`/products.csv?v=${Date.now()}`, { cache: "no-store" });
     if (!res.ok) throw new Error(`No se pudo cargar products.csv (HTTP ${res.status})`);
 
     const text = await res.text();
@@ -797,7 +797,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <h3 class="product__name">No se pudo cargar el catálogo</h3>
           <p class="product__desc">${escapeHTML(err.message)}</p>
           <p class="product__desc">
-            Prueba abrir: <a class="btn" href="products.csv" target="_blank" rel="noopener">products.csv</a>
+            Prueba abrir: <a class="btn" href="/products.csv" target="_blank" rel="noopener">products.csv</a>
           </p>
         </article>
       `;

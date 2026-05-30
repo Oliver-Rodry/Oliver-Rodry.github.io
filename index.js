@@ -287,7 +287,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       <article class="card">
         <h3>Destacados</h3>
         <p class="small">No se pudieron cargar los productos. Abre el catálogo:</p>
-        <a class="btn btn--primary" href="catalog.html?v=5">Abrir catálogo completo</a>
+        <a class="btn btn--primary" href="/catalogo/">Abrir catálogo completo</a>
       </article>
     `;
   }
