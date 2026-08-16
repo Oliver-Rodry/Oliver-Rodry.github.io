@@ -13,6 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartBar = document.getElementById("cartBar");
   const cartBarTotal = document.getElementById("cartBarTotal");
   const cartBarSendBtn = document.getElementById("cartBarSendBtn");
+  const headerCartLabel = document.getElementById("headerCartLabel");
+  const cartBox = document.getElementById("cartBox");
+  const cartCloseBtn = document.getElementById("cartCloseBtn");
+  const cartModalBackdrop = document.getElementById("cartModalBackdrop");
+  const cartBarMain = document.querySelector(".cart-bar__main");
 
   const PAGE_SIZE = 10;
   const WHATSAPP_NUMBER = "18497076103";
@@ -21,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let filtered = [];
   let visibleCount = PAGE_SIZE;
   let cart = {};
+  const mobileCartQuery = window.matchMedia("(max-width: 620px)");
 
   // ---------- Helpers ----------
   function escapeHTML(s) {
@@ -98,6 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (cartTotal) cartTotal.textContent = formatDOP(total);
     if (cartBarTotal) cartBarTotal.textContent = formatDOP(total);
+    if (headerCartLabel) headerCartLabel.textContent = formatDOP(total);
     if (floatingCartCount) floatingCartCount.textContent = String(count);
 
     floatingCartBtn?.classList.toggle("has-items", count > 0);
@@ -132,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .filter((item) => item.product && item.qty > 0);
 
     if (!entries.length) {
-      cartItems.innerHTML = `<p class="cart__empty">Tu carrito esta vacio.</p>`;
+      cartItems.innerHTML = `<p class="cart__empty">Tu carrito está vacío.</p>`;
       updateCartButtonLinks();
       return;
     }
@@ -264,12 +271,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const input = control.querySelector("[data-cart-qty-input]");
     const current = Number(cart[sku] || 0);
     const remaining = maxAddableQuantity(sku);
+    const product = getProductBySku(sku);
+    const stock = Math.max(0, Number(product?.stock || 0));
 
     control.classList.toggle("is-open", current > 0);
+    control.classList.toggle("is-unavailable", stock <= 0);
 
     if (addBtn) {
-      addBtn.disabled = remaining <= 0;
-      addBtn.textContent = remaining <= 0 ? "Completo" : "Agregar";
+      addBtn.disabled = stock <= 0 || remaining <= 0;
+      addBtn.textContent = stock <= 0 ? "No disponible" : (remaining <= 0 ? "En carrito" : "Agregar");
     }
     if (minusBtn) minusBtn.disabled = current <= 0;
     if (plusBtn) plusBtn.disabled = remaining <= 0;
@@ -283,6 +293,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function syncProductAddControls() {
     grid?.querySelectorAll("[data-add-control-sku]").forEach(syncProductAddControl);
+    document.getElementById("lbCartControl")?.dataset?.addControlSku && syncProductAddControl(document.getElementById("lbCartControl"));
   }
 
   function addToCart(sku) {
@@ -290,6 +301,35 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!product || Number(product.stock || 0) <= 0) return;
     if (maxAddableQuantity(sku) <= 0) return;
     setCartQuantity(sku, Number(cart[sku] || 0) + 1, false);
+  }
+
+  function isMobileCart() {
+    return mobileCartQuery.matches;
+  }
+
+  function openCartPanel() {
+    if (!cartBox) return;
+
+    if (!isMobileCart()) {
+      cartBox.scrollIntoView({ behavior: "smooth", block: "center" });
+      history.replaceState(null, "", "#cartBox");
+      return;
+    }
+
+    document.body.classList.add("cart-popup-open");
+    cartBox.setAttribute("aria-modal", "true");
+    cartBox.setAttribute("role", "dialog");
+    if (cartModalBackdrop) cartModalBackdrop.hidden = false;
+    cartCloseBtn?.focus({ preventScroll: true });
+  }
+
+  function closeCartPanel() {
+    document.body.classList.remove("cart-popup-open");
+    if (cartModalBackdrop) cartModalBackdrop.hidden = true;
+    if (cartBox) {
+      cartBox.removeAttribute("aria-modal");
+      cartBox.setAttribute("role", "region");
+    }
   }
 
   // Robust CSV parser (supports quotes + commas inside fields)
@@ -404,6 +444,18 @@ document.addEventListener("DOMContentLoaded", () => {
             <div id="lbTitle" class="lightbox__title"></div>
             <div id="lbMeta" class="lightbox__meta"></div>
             <div id="lbDesc" class="lightbox__desc"></div>
+            <div class="lightbox__actions">
+              <div id="lbCartControl" class="product__cart lightbox__cart">
+                <button id="lbAddBtn" class="btn btn--primary product__add lightbox__add" type="button" data-add-sku="">
+                  Agregar
+                </button>
+                <div class="product__qty" aria-label="Cantidad en carrito">
+                  <button class="product__qtyBtn" type="button" data-product-cart-action="minus" aria-label="Quitar uno">&minus;</button>
+                  <input class="product__qtyInput" data-cart-qty-input type="number" inputmode="numeric" min="1" value="1" aria-label="Cantidad en carrito" />
+                  <button class="product__qtyBtn" type="button" data-product-cart-action="plus" aria-label="Agregar uno">+</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -418,6 +470,41 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") closeLightbox();
     });
+
+    lb.addEventListener("click", (e) => {
+      const qtyBtn = e.target.closest("[data-product-cart-action]");
+      if (qtyBtn) {
+        const control = qtyBtn.closest("[data-add-control-sku]");
+        const sku = control?.dataset?.addControlSku || "";
+        const current = Number(cart[sku] || 0);
+        const next = qtyBtn.dataset.productCartAction === "plus" ? current + 1 : current - 1;
+        setCartQuantity(sku, next, false);
+        return;
+      }
+
+      const addBtn = e.target.closest("[data-add-sku]");
+      if (!addBtn) return;
+      addToCart(addBtn.dataset.addSku || "");
+    });
+
+    lb.addEventListener("input", (e) => {
+      const input = e.target.closest("[data-cart-qty-input]");
+      if (!input) return;
+      commitQuantityInput(input, true);
+    });
+
+    lb.addEventListener("change", (e) => {
+      const input = e.target.closest("[data-cart-qty-input]");
+      if (!input) return;
+      commitQuantityInput(input, false);
+    });
+
+    lb.addEventListener("keydown", (e) => {
+      const input = e.target.closest("[data-cart-qty-input]");
+      if (!input || e.key !== "Enter") return;
+      e.preventDefault();
+      input.blur();
+    });
   }
 
   function closeLightbox() {
@@ -427,7 +514,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.documentElement.classList.remove("no-scroll");
   }
 
-  function openLightbox({ title, meta, desc, imgSrc }) {
+  function openLightbox({ title, meta, desc, imgSrc, sku = "" }) {
     ensureLightbox();
 
     const lb = document.getElementById("lightbox");
@@ -435,10 +522,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const t = lb.querySelector("#lbTitle");
     const m = lb.querySelector("#lbMeta");
     const d = lb.querySelector("#lbDesc");
+    const addBtn = lb.querySelector("#lbAddBtn");
+    const lbCartControl = lb.querySelector("#lbCartControl");
     const wrap = img.closest(".lightbox__imgWrap");
+    const product = sku ? getProductBySku(sku) : null;
+    const available = product && Number(product.stock || 0) > 0;
 
+    lb.dataset.sku = sku || "";
     t.textContent = title || "";
     m.textContent = meta || "";
+    if (lbCartControl) {
+      lbCartControl.hidden = !product;
+      lbCartControl.dataset.addControlSku = sku || "";
+      lbCartControl.classList.toggle("is-unavailable", !available);
+    }
+    if (addBtn) {
+      addBtn.dataset.addSku = sku || "";
+      addBtn.textContent = available ? "Agregar" : "No disponible";
+    }
+    syncProductAddControl(lbCartControl);
 
     const cleanDesc = (desc || "").trim();
     if (cleanDesc) {
@@ -488,7 +590,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const descLine = p.description ? `<p class="product__desc">${escapeHTML(p.description)}</p>` : "";
 
         const isAvailable = Number(p.stock || 0) > 0;
-        const clickableClass = isAvailable ? "product--clickable" : "";
+        const clickableClass = "product--clickable";
 
         return `
           <article class="product ${clickableClass}" data-sku="${escapeHTML(p.sku || "")}">
@@ -563,7 +665,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "beforeend",
         `
         <div class="pill pill--muted" style="text-align:center; grid-column:1/-1; margin-top:8px;">
-          Fin del catálogo ✅
+          Fin del catálogo
         </div>
         `
       );
@@ -594,13 +696,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const sku = card.dataset.sku || "";
       const p = products.find((x) => String(x.sku) === String(sku));
-      if (!p || !(Number(p.stock || 0) > 0)) return;
+      if (!p) return;
 
       openLightbox({
         title: p.name || "Producto",
-        meta: `${p.category || "General"} · ${formatDOP(p.price_dop)} · Disponible: ${Number(p.stock || 0)} uds`,
+        meta: `${p.category || "General"} · ${formatDOP(p.price_dop)} · ${Number(p.stock || 0) > 0 ? `Disponible: ${Number(p.stock || 0)} uds` : "No disponible"}`,
         desc: p.description || "",
-        imgSrc: productImageUrl(p)
+        imgSrc: productImageUrl(p),
+        sku: p.sku || ""
       });
     };
 
@@ -712,6 +815,14 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
+    const params = new URLSearchParams(window.location.search);
+    const queryParam = params.get("q");
+    const categoryParam = params.get("category");
+    if (queryParam && q) q.value = queryParam;
+    if (categoryParam && category && cats.includes(categoryParam)) {
+      category.value = categoryParam;
+    }
+
     Object.keys(cart).forEach((sku) => {
       if (!getProductBySku(sku)) delete cart[sku];
     });
@@ -770,11 +881,29 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   floatingCartBtn?.addEventListener("click", (e) => {
-    const cartBox = document.getElementById("cartBox");
-    if (!cartBox) return;
     e.preventDefault();
-    cartBox.scrollIntoView({ behavior: "smooth", block: "center" });
-    history.replaceState(null, "", "#cartBox");
+    openCartPanel();
+  });
+
+  cartBarMain?.addEventListener("click", (e) => {
+    e.preventDefault();
+    openCartPanel();
+  });
+
+  headerCartLabel?.closest("a")?.addEventListener("click", (e) => {
+    e.preventDefault();
+    openCartPanel();
+  });
+
+  cartCloseBtn?.addEventListener("click", closeCartPanel);
+  cartModalBackdrop?.addEventListener("click", closeCartPanel);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeCartPanel();
+  });
+
+  mobileCartQuery.addEventListener?.("change", () => {
+    if (!isMobileCart()) closeCartPanel();
   });
 
   sendCartBtn?.addEventListener("click", (e) => {

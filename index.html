@@ -13,7 +13,6 @@
   <meta property="og:description" content="Centro de impresión, imprenta y papelería en Pedernales: copias, imprimir documentos, impresión digital, gran formato, escaneo y útiles escolares." />
   <meta property="og:url" content="https://papeleriasolnaciente.com/" />
 
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WF9F2DG6WR"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -22,7 +21,7 @@
     gtag("config", "G-WF9F2DG6WR");
   </script>
 
-  <link rel="stylesheet" href="styles.css?v=12" />
+  <link rel="stylesheet" href="/styles.css?v=40" />
 
   <script type="application/ld+json">
   [
@@ -36,7 +35,6 @@
       "currenciesAccepted":"DOP",
       "priceRange":"RD$",
       "areaServed":"Pedernales, República Dominicana",
-      "keywords":"papelería en Pedernales, imprenta en Pedernales, centro de impresión, imprimir documentos, copias, impresión digital, gran formato, escaneo, laminado, encuadernado, útiles escolares",
       "address":{
         "@type":"PostalAddress",
         "streetAddress":"Av. Duarte 57",
@@ -52,11 +50,10 @@
         "@type":"OfferCatalog",
         "name":"Servicios de papelería, imprenta e impresión",
         "itemListElement":[
-          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Copias e impresión de documentos","description":"Impresión en blanco y negro o color para documentos, trabajos escolares, formularios y archivos PDF."}},
-          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Impresión digital y gran formato","description":"Banners, posters, planos, menús, letreros, vinilos y material promocional."}},
-          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Escaneo, laminado y encuadernado","description":"Digitalización de documentos, plastificado y terminación de trabajos impresos."}},
-          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Stickers y etiquetas","description":"Etiquetas y stickers para negocios, productos y servicios."}},
-          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Útiles escolares y de oficina","description":"Material escolar, folders, papel, cartulinas, lapiceros y artículos de oficina."}}
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Copias e impresión de documentos"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Impresión digital y gran formato"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Escaneo, laminado y encuadernado"}},
+          {"@type":"Offer","itemOffered":{"@type":"Product","name":"Útiles escolares y artículos de oficina"}}
         ]
       },
       "sameAs":["https://www.instagram.com/papeleria_sol_naciente"]
@@ -74,299 +71,222 @@
 </head>
 
 <body>
-<header class="topbar">
-  <div class="container topbar__inner">
+<header class="site-header">
+  <div class="promo-strip">
+    <div class="container promo-strip__inner">
+      <a href="/catalogo/">Ofertas y productos para escuela, oficina e imprenta</a>
+      <span>Retiro en tienda en Av. Duarte 57, Pedernales</span>
+      <a href="https://wa.me/18497076103" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+    </div>
+  </div>
 
-    <!-- ROW 1: Brand (left on desktop / centered on mobile) + WhatsApp (right) -->
-    <div class="topbar__row topbar__row--main">
-      <a class="brand" href="index.html" aria-label="Papelería Sol Naciente (Inicio)">
-        <img src="logo.png.png" alt="Papelería Sol Naciente" class="brand_logo">
-        <span class="brand_sub">Av. Duarte 57 • Frente a la fiscalía</span>
+  <div class="masthead">
+    <div class="container masthead__inner">
+      <a class="brand" href="/?v=37" aria-label="Papelería Sol Naciente">
+        <img class="brand_logo" src="logo.png.png" alt="Papelería Sol Naciente">
+        <span class="brand_sub">Av. Duarte 57 · Frente a la fiscalía</span>
       </a>
 
-      <div class="actions">
-        <a class="btn btn--whatsapp" href="https://wa.me/18497076103" target="_blank" rel="noopener">WhatsApp</a>
+      <form class="site-search" action="/catalogo/" role="search">
+        <label class="sr_only" for="homeSearch">Buscar en el catálogo</label>
+        <input id="homeSearch" name="q" type="search" placeholder="¿Qué necesitas imprimir o comprar hoy?" autocomplete="off">
+        <button class="site-search__btn" type="submit" aria-label="Buscar">
+          <span aria-hidden="true">⌕</span>
+        </button>
+      </form>
+
+      <div class="header-actions">
+        <a class="header-action" href="#ubicacion">
+          <span class="header-action__label">Tienda</span>
+          <span class="header-action__value">
+            <svg class="header-action__map-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#EA4335" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Z"/>
+              <path fill="#FBBC04" d="M5.6 6.2 9 9.6A3.2 3.2 0 0 1 12 5.8V2a7 7 0 0 0-6.4 4.2Z"/>
+              <path fill="#34A853" d="m15 9.6 3.4-3.4A7 7 0 0 0 12 2v3.8A3.2 3.2 0 0 1 15 9.6Z"/>
+              <circle cx="12" cy="9" r="2.4" fill="#4285F4"/>
+            </svg>
+            <strong>Pedernales</strong>
+          </span>
+        </a>
+        <a class="header-action header-action--whatsapp" href="https://wa.me/18497076103" target="_blank" rel="noopener">
+          <span class="header-action__label">WhatsApp</span>
+          <strong>849-707-6103</strong>
+        </a>
       </div>
     </div>
-
-    <!-- Desktop center nav -->
-    <nav class="nav nav--desktop" aria-label="Navegación principal">
-      <a href="#servicios" onclick="return centerPageAnchor(event, '#servicios')">Servicios</a>
-      <a href="#destacados">Destacados</a>
-      <a href="/catalogo/">Catálogo</a>
-      <a href="#ubicacion">Ubicación</a>
-    </nav>
-
-    <!-- Mobile hamburger dropdown (NO JS, reliable toggle) -->
-    <details class="mnav" aria-label="Menú móvil">
-      <summary class="mnav__btn">
-        <span class="mnav__icon" aria-hidden="true"><span></span></span>
-        <span class="mnav__label">Menú</span>
-      </summary>
-
-      <nav class="mnav__panel" aria-label="Navegación móvil">
-        <a href="#servicios" onclick="return centerPageAnchor(event, '#servicios')">Servicios</a>
-        <a href="#destacados">Destacados</a>
-        <a href="/catalogo/">Catálogo</a>
-        <a href="#ubicacion">Ubicación</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-    </details>
-
   </div>
+
+  <nav class="category-nav" aria-label="Navegación principal">
+    <div class="container category-nav__inner">
+      <a href="/catalogo/">Catálogo</a>
+      <a href="/catalogo/?category=SERVICIOS">Impresión y copias</a>
+      <a href="/catalogo/?category=MATERIAL%20ESCOLAR">Material escolar</a>
+      <a href="/catalogo/?category=CAT.%20GENERAL">Oficina</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#ubicacion">Ubicación</a>
+    </div>
+  </nav>
 </header>
 
 <main>
-  <section class="hero">
-    <div class="container hero__grid">
-      <div class="hero__content">
-        <p class="badge">📍 Av. Duarte 57, Pedernales • Frente a la fiscalía</p>
-        <h1>Papelería e imprenta en Pedernales</h1>
-        <p class="lead">
-          Centro de impresión para imprimir documentos, hacer copias, impresión digital en blanco y negro o color, gran formato, escaneo a WhatsApp/Email, laminado, encuadernado, útiles escolares y de oficina.
-          Atención rápida: entra, resuelve y sale.
-        </p>
-
+  <section class="hero hero--retail">
+    <div class="container hero__layout">
+      <div class="hero__main">
+        <p class="eyebrow">Papelería, imprenta y centro de impresión</p>
+        <h1>Todo para resolver escuela, oficina e impresión en Pedernales.</h1>
+        <p class="lead">Compra útiles y artículos de oficina, cotiza trabajos de imprenta, o envía tus archivos por WhatsApp para imprimirlos rápido.</p>
         <div class="hero__cta">
-          <a class="btn btn--primary" href="/catalogo/">Ver catálogo</a>
-          <a class="btn" href="#contacto">Cotizar por WhatsApp</a>
-        </div>
-
-        <div class="chips">
-          <span class="chip">Lun–Vie 7:30–6:00</span>
-          <span class="chip">Sáb 8:00–12:00</span>
-          <span class="chip">Impresión digital</span>
-          <span class="chip">Aceptamos tarjeta</span>
+          <a class="btn btn--primary" href="/catalogo/">Comprar catálogo</a>
+          <a class="btn btn--whatsapp-soft" href="https://wa.me/18497076103" target="_blank" rel="noopener">
+            <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M12.04 4a7.92 7.92 0 0 0-6.76 12.05L4.2 20l4.05-1.06A7.93 7.93 0 1 0 12.04 4Z" />
+              <path d="M9.7 8.15c-.18-.42-.37-.43-.54-.44h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.67 2.67 4.12 3.63 2.03.8 2.45.64 2.9.6.44-.04 1.43-.58 1.63-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.18-.71-.63-1.19-1.42-1.33-1.66-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.53-1.29-.75-1.78Z" />
+            </svg>
+            Enviar archivo
+          </a>
         </div>
       </div>
 
-      <aside class="hero__card" aria-label="Información rápida">
-        <h2 class="h3">Información</h2>
-        <ul class="checklist">
-          <li><strong>Dirección:</strong> Av. Duarte 57, Pedernales 84000 (Frente a la fiscalía)</li>
-          <li><strong>Tel/WhatsApp:</strong> +1 (849) 707-6103</li>
-          <li><strong>Instagram:</strong> @papeleria_sol_naciente</li>
-          <li><strong>Email:</strong> <a href="mailto:papeleriasolnaciente@icloud.com">papeleriasolnaciente@icloud.com</a></li>
-        </ul>
-
-        <div class="mini">
-          <span class="mini__label">¿Tienes un PDF o foto?</span>
-          <span class="mini__value">Envíalo por WhatsApp y te cotizamos.</span>
-        </div>
-
-        <a class="btn btn--primary w100" href="https://wa.me/18497076103" rel="noopener">Enviar archivo por WhatsApp</a>
+      <aside class="hero-deal">
+        <span class="deal-kicker">Servicio destacado</span>
+        <h2>Copias, documentos y arte final</h2>
+        <p>Imprime, escanea, plastifica y encuaderna sin dar vueltas.</p>
+        <a href="/catalogo/?category=SERVICIOS">Ver servicios</a>
       </aside>
+    </div>
+  </section>
+
+  <section class="quick-cats" aria-label="Categorías rápidas">
+    <div class="container quick-cats__grid">
+      <a class="quick-cat" href="/catalogo/?category=SERVICIOS">
+        <span class="quick-cat__icon">▦</span>
+        <strong>Impresión</strong>
+        <small>Copias, color, planos y stickers</small>
+      </a>
+      <a class="quick-cat" href="/catalogo/?category=MATERIAL%20ESCOLAR">
+        <span class="quick-cat__icon">✎</span>
+        <strong>Escuela</strong>
+        <small>Cuadernos, lápices, cartulinas</small>
+      </a>
+      <a class="quick-cat" href="/catalogo/?category=CAT.%20GENERAL">
+        <span class="quick-cat__icon">□</span>
+        <strong>Oficina</strong>
+        <small>Papel, folders, grapas y clips</small>
+      </a>
+      <a class="quick-cat" href="https://wa.me/18497076103" target="_blank" rel="noopener">
+        <span class="quick-cat__icon">↗</span>
+        <strong>Cotiza rápido</strong>
+        <small>Envía PDF, foto o lista por WhatsApp</small>
+      </a>
     </div>
   </section>
 
   <section class="section" id="servicios">
     <div class="container">
-      <div class="section__head">
-        <h2>Servicios de imprenta, impresión y papelería</h2>
-        <p>Lo esencial para resolver documentos, trabajos, materiales de oficina y pedidos de impresión en un solo lugar.</p>
+      <div class="section__head section__head--row">
+        <div>
+          <p class="eyebrow">Soluciones locales</p>
+          <h2>Servicios populares</h2>
+        </div>
+        <a class="text-link" href="/catalogo/?category=SERVICIOS">Ver todos</a>
       </div>
 
-      <div class="cards cards--services">
-        <article class="card">
-          <h3>Impresión y copias</h3>
-          <p>PDFs, documentos, trabajos escolares, formularios y archivos de oficina en blanco y negro o color.</p>
-        </article>
-        <article class="card card--featured">
-          <h3>Gran formato</h3>
-          <p>Banners, vinilos, posters, planos, menús, letreros, stickers y etiquetas para negocios o eventos.</p>
-        </article>
-        <article class="card">
-          <h3>Terminaciones</h3>
-          <p>Escaneo, envío digital, laminado, encuadernado y preparación final de tus documentos.</p>
-        </article>
-        <article class="card">
-          <h3>Papelería</h3>
-          <p>Útiles escolares, papel, folders, cartulinas, lapiceros, marcadores, talonarios y artículos de oficina.</p>
-        </article>
+      <div class="service-showcase">
+        <section class="service-group">
+          <div class="service-group__head">
+            <h3>Documentos y copias</h3>
+            <p>Blanco y negro, color, hoja legal, carta y notarial.</p>
+          </div>
+          <div class="service-card-row" id="copyServices" aria-live="polite"></div>
+        </section>
+        <section class="service-group service-group--accent">
+          <div class="service-group__head">
+            <h3>Gran formato</h3>
+            <p>Planos, stickers y materiales de impresión de mayor formato.</p>
+          </div>
+          <div class="service-card-row" id="largeFormatServices" aria-live="polite"></div>
+        </section>
+        <section class="service-group">
+          <div class="service-group__head">
+            <h3>Terminación</h3>
+            <p>Plastificado, laminado y terminaciones disponibles en catálogo.</p>
+          </div>
+          <div class="service-card-row" id="finishingServices" aria-live="polite"></div>
+        </section>
       </div>
     </div>
   </section>
 
   <section class="section section--alt" id="destacados">
     <div class="container">
-      <div class="section__head">
-        <h2>Destacados</h2>
-        <p>Una muestra del catálogo. Para ver todo, entra al catálogo completo.</p>
+      <div class="section__head section__head--row">
+        <div>
+          <p class="eyebrow">Selección del catálogo</p>
+          <h2>Destacados para comprar hoy</h2>
+        </div>
+        <a class="text-link" href="/catalogo/">Abrir catálogo completo</a>
       </div>
+      <div id="featuredProducts" class="catalog catalog--rail" aria-live="polite"></div>
+    </div>
+  </section>
 
-      <div id="featuredProducts" class="catalog" aria-live="polite"></div>
-
-      <div class="center">
-        <a class="btn btn--primary" href="/catalogo/">Abrir catálogo completo</a>
+  <section class="info-band">
+    <div class="container info-band__grid">
+      <div>
+        <p class="eyebrow">Listo para retirar</p>
+        <h2>Haz tu pedido por WhatsApp y pasa por tienda.</h2>
       </div>
+      <div class="info-list">
+        <span>Lun-Vie 7:30 AM-6:00 PM</span>
+        <span>Sáb 8:00 AM-12:00 PM</span>
+        <span>Aceptamos pago con tarjeta</span>
+      </div>
+      <a class="btn btn--primary" href="https://wa.me/18497076103" target="_blank" rel="noopener">Escribir ahora</a>
     </div>
   </section>
 
   <section class="section" id="ubicacion">
-    <div class="container">
-      <div class="section__head">
-        <h2>Ubicación</h2>
-        <p><strong>Av. Duarte 57, Pedernales 84000</strong>. Cerca del centro y fácil de llegar.</p>
-      </div>
-
-      <div class="map" role="region" aria-label="Mapa de ubicación">
-        <iframe
-          title="Mapa: Papelería Sol Naciente, Pedernales"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps?q=Av.%20Duarte%2059%2C%20Pedernales%2084000&output=embed">
-        </iframe>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--alt" id="contacto">
-    <div class="container">
-      <div class="section__head">
-        <h2>Contacto</h2>
-        <p>Envíanos tu archivo por WhatsApp y te cotizamos rápido.</p>
-      </div>
-
-      <div class="contact">
-        <div class="contact__box">
-          <h3>WhatsApp</h3>
-          <p>+1 (849) 707-6103</p>
-          <a class="btn btn--primary" href="https://wa.me/18497076103" rel="noopener">Escribir ahora</a>
-          <p class="small">También puedes enviar fotos o PDFs.</p>
-        </div>
-
-        <div class="contact__box">
-          <h3>Instagram</h3>
-          <p>@papeleria_sol_naciente</p>
-          <a class="btn btn--instagram"
-   href="https://www.instagram.com/papeleria_sol_naciente"
-   target="_blank"
-   rel="noopener">
-   Ver Instagram
-</a>
-        </div>
-
-        <div class="contact__box">
-          <h3>📍 Cómo llegar</h3>
-          <p>Av. Duarte 57, Pedernales 84000<br>(Frente a la fiscalía)</p>
-          <a class="btn btn--primary"
-             href="https://www.google.com/maps/search/?api=1&query=Av.%20Duarte%2059%2C%20Pedernales%2084000"
-             target="_blank"
-             rel="noopener">
-             Abrir en Google Maps
-          </a>
-          <p class="small">Toca el botón y presiona “Directions”.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container footer__grid">
+    <div class="container location-grid">
       <div>
-        <strong>Papelería Sol Naciente</strong>
-        <p class="small">
-          Av. Duarte 57, Pedernales 84000 (Frente a la fiscalía) • Tel/WhatsApp: +1 (849) 707-6103 •
-          <a href="https://www.instagram.com/papeleria_sol_naciente" rel="noopener">Instagram</a>
-        </p>
+        <p class="eyebrow">Visítanos</p>
+        <h2>Av. Duarte 57, Pedernales 84000</h2>
+        <p class="muted">Frente a la fiscalía. Tel/WhatsApp: +1 (849) 707-6103. Instagram: @papeleria_sol_naciente.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="https://www.google.com/maps/search/?api=1&query=Av.%20Duarte%2059%2C%20Pedernales%2084000" target="_blank" rel="noopener">Abrir mapa</a>
+          <a class="btn" href="mailto:papeleriasolnaciente@icloud.com">Email</a>
+        </div>
       </div>
-      <div class="footer__links">
-        <a href="/catalogo/">Catálogo</a>
-        <a href="#servicios" onclick="return centerPageAnchor(event, '#servicios')">Servicios</a>
-        <a href="#ubicacion">Ubicación</a>
+      <div class="map" role="region" aria-label="Mapa de ubicación">
+        <iframe title="Mapa: Papelería Sol Naciente, Pedernales" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Av.%20Duarte%2059%2C%20Pedernales%2084000&output=embed"></iframe>
       </div>
     </div>
-    <div class="container">
-      <p class="tiny">© <span id="year"></span> Papelería Sol Naciente</p>
-    </div>
-  </footer>
+  </section>
 </main>
 
+<footer class="footer">
+  <div class="container footer__grid">
+    <div>
+      <strong>Papelería Sol Naciente</strong>
+      <p class="small">Papelería, imprenta y centro de impresión en Pedernales.</p>
+    </div>
+    <div class="footer__links">
+      <a href="/catalogo/">Catálogo</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="https://www.instagram.com/papeleria_sol_naciente" rel="noopener">Instagram</a>
+    </div>
+  </div>
+  <div class="container">
+    <p class="tiny">© <span id="year"></span> Papelería Sol Naciente</p>
+  </div>
+</footer>
+
 <script>
-  function centerPageAnchor(event, hash) {
-    const target = hash === "#ubicacion"
-      ? document.querySelector("#ubicacion .map")
-      : document.querySelector(hash);
-    if (!target) return true;
-
-    event.preventDefault();
-    history.pushState(null, "", hash);
-
-    setTimeout(() => {
-      const rect = target.getBoundingClientRect();
-      const isMobile = window.innerWidth <= 820;
-      const top = isMobile
-        ? window.scrollY + rect.top - 96
-        : window.scrollY + rect.top - ((window.innerHeight - rect.height) / 2);
-      window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
-    }, 0);
-
-    return false;
-  }
-
   document.addEventListener("DOMContentLoaded", () => {
     const y = document.getElementById("year");
     if (y) y.textContent = String(new Date().getFullYear());
-
-    const topbar = document.querySelector(".topbar");
-    const desktop = window.matchMedia("(min-width: 821px)");
-    const updateHeader = () => {
-      if (!topbar) return;
-      if (!desktop.matches) {
-        topbar.classList.remove("topbar--compact");
-        return;
-      }
-
-      const isCompact = topbar.classList.contains("topbar--compact");
-      if (!isCompact && window.scrollY > 150) topbar.classList.add("topbar--compact");
-      if (isCompact && window.scrollY < 45) topbar.classList.remove("topbar--compact");
-    };
-
-    updateHeader();
-    window.addEventListener("scroll", updateHeader, { passive: true });
-    window.addEventListener("resize", updateHeader);
-
-    const centerAnchorIfNeeded = () => {
-      const hash = window.location.hash;
-      if (!hash) return;
-
-      const target = hash === "#ubicacion"
-        ? document.querySelector("#ubicacion .map")
-        : document.querySelector(hash);
-
-      if (!target) return;
-      setTimeout(() => {
-        const rect = target.getBoundingClientRect();
-        const isMobile = window.innerWidth <= 820;
-        const top = isMobile
-          ? window.scrollY + rect.top - 96
-          : window.scrollY + rect.top - ((window.innerHeight - rect.height) / 2);
-        window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
-      }, 180);
-    };
-
-    document.addEventListener("click", (event) => {
-      const link = event.target.closest('a[href^="#"]');
-      if (!link) return;
-
-      const hash = link.getAttribute("href");
-      if (!hash || hash === "#") return;
-
-      const target = hash === "#ubicacion"
-        ? document.querySelector("#ubicacion .map")
-        : document.querySelector(hash);
-      if (!target) return;
-
-      event.preventDefault();
-      link.closest("details")?.removeAttribute("open");
-      history.pushState(null, "", hash);
-      centerAnchorIfNeeded();
-    }, true);
-
-    centerAnchorIfNeeded();
-    window.addEventListener("hashchange", centerAnchorIfNeeded);
   });
 </script>
-<script src="index.js" defer></script>
+<script src="/index.js?v=37" defer></script>
 </body>
 </html>

@@ -2,7 +2,10 @@
 
 document.addEventListener("DOMContentLoaded", async () => {
   const grid = document.getElementById("featuredProducts");
-  if (!grid) return;
+  const copyServices = document.getElementById("copyServices");
+  const largeFormatServices = document.getElementById("largeFormatServices");
+  const finishingServices = document.getElementById("finishingServices");
+  if (!grid && !copyServices && !largeFormatServices && !finishingServices) return;
 
   // ---------- Helpers ----------
   function escapeHTML(s) {
@@ -103,6 +106,49 @@ document.addEventListener("DOMContentLoaded", async () => {
              onerror="this.closest('.product__media')?.remove()" />
       </div>
     `;
+  }
+
+  function serviceCardHTML(p) {
+    const isService = String(p.category || "").trim().toUpperCase() === "SERVICIOS";
+    return `
+      <a class="mini-product" href="/catalogo/?q=${encodeURIComponent(p.sku || p.name || "")}">
+        ${imgMediaHTML(p)}
+        <span class="mini-product__name">${escapeHTML(p.name || "Servicio")}</span>
+        <span class="mini-product__meta">${isService ? "Desde " : ""}${formatDOP(p.price_dop)}</span>
+      </a>
+    `;
+  }
+
+  function rankBySku(items, skus) {
+    const bySku = new Map(items.map((p) => [String(p.sku).trim(), p]));
+    const selected = skus.map((sku) => bySku.get(sku)).filter(Boolean);
+    const used = new Set(selected.map((p) => String(p.sku).trim()));
+    return [...selected, ...items.filter((p) => !used.has(String(p.sku).trim()))];
+  }
+
+  function renderServiceRows() {
+    const serviceItems = products.filter((p) => String(p.category || "").trim().toUpperCase() === "SERVICIOS" || String(p.sku).trim() === "PLAST");
+    const textFor = (p) => `${p.sku} ${p.name} ${p.description}`.toUpperCase();
+
+    const copy = rankBySku(
+      serviceItems.filter((p) => /COPIA|FOTOCOPIADO/.test(textFor(p))),
+      ["COPIACOLOR8.5X11", "COPIACOLOR8.5X14", "COPIA85X11", "COPIA85X14"]
+    ).slice(0, 4);
+
+    const large = rankBySku(
+      serviceItems.filter((p) => /PLANO|ARQUITECTONICO|GRAN FORMATO|BANNER|VINIL|LETRERO/.test(textFor(p))),
+      ["20260316115246695", "20260316115028591"]
+    ).slice(0, 4);
+
+    const finishing = rankBySku(
+      serviceItems.filter((p) => /PLASTIFICADO|PLASTIIFICADO|LAMIN|ENCUADER|ESCAN/.test(textFor(p)) || String(p.sku).trim() === "20260306171602966" || String(p.sku).trim() === "PLAST")
+        .filter((p) => String(p.sku).trim() !== "20260327141009578"),
+      ["PLAST", "20260529134240319", "20260306171602966"]
+    ).slice(0, 4);
+
+    if (copyServices) copyServices.innerHTML = copy.map(serviceCardHTML).join("") || `<p class="small">Ver opciones en catálogo.</p>`;
+    if (largeFormatServices) largeFormatServices.innerHTML = large.map(serviceCardHTML).join("") || `<p class="small">Ver opciones en catálogo.</p>`;
+    if (finishingServices) finishingServices.innerHTML = finishing.map(serviceCardHTML).join("") || `<p class="small">Ver opciones en catálogo.</p>`;
   }
 
   // ---------- Lightbox ----------
@@ -281,6 +327,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const featured = [...manualFeatured, ...fallbackFeatured].slice(0, 6);
 
     renderFeatured(featured);
+    renderServiceRows();
 
   } catch (e) {
     grid.innerHTML = `
