@@ -126,6 +126,7 @@ def build_catalog(
 def compare(
     old_by_sku: dict[str, dict[str, str]],
     new_rows: list[dict[str, str]],
+    stock_override_skus: set[str],
 ) -> dict[str, object]:
     new_by_sku = {row["sku"]: row for row in new_rows}
     sold: list[dict[str, object]] = []
@@ -145,6 +146,8 @@ def compare(
         new_price = number(new["price_dop"], "new price", sku)
         change = new_stock - old_stock
         item = {"sku": sku, "name": new["name"]}
+        if sku in stock_override_skus:
+            change = Decimal(0)
         if change < 0:
             units = -change
             sale_value = units * old_price
@@ -218,7 +221,7 @@ def main() -> int:
     new_rows, raw_rows, applied_overrides = build_catalog(
         workbook_rows, old_by_sku, config.get("stock_overrides", {})
     )
-    report = compare(old_by_sku, raw_rows)
+    report = compare(old_by_sku, raw_rows, set(config.get("stock_overrides", {})))
     report.update(
         {
             "status": "applied" if args.apply else "preview",

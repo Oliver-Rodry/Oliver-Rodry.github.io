@@ -2,3 +2,6 @@
 inventory_update_report.json
 inventory-email-*.xlsx
 __pycache__/
+.venv/
+token.json
+client_secret*.json
