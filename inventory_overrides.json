@@ -8,8 +8,5 @@
       "stock": 0,
       "reason": "Manually confirmed out of stock; inventory software has not been corrected yet."
     }
-  },
-  "sales_exclusions": [
-    "DIGITACIONBYN"
-  ]
+  }
 }

@@ -68,7 +68,7 @@ def read_workbook(path: Path) -> list[dict[str, object]]:
 
 def load_config(path: Path | None) -> dict[str, object]:
     if not path:
-        return {"stock_overrides": {}, "sales_exclusions": []}
+        return {"stock_overrides": {}}
     return json.loads(path.read_text(encoding="utf-8"))
 
 
@@ -126,7 +126,6 @@ def build_catalog(
 def compare(
     old_by_sku: dict[str, dict[str, str]],
     new_rows: list[dict[str, str]],
-    sales_exclusions: set[str],
 ) -> dict[str, object]:
     new_by_sku = {row["sku"]: row for row in new_rows}
     sold: list[dict[str, object]] = []
@@ -146,14 +145,20 @@ def compare(
         new_price = number(new["price_dop"], "new price", sku)
         change = new_stock - old_stock
         item = {"sku": sku, "name": new["name"]}
-        is_service = new["category"].strip().upper() == "SERVICIOS" or sku in sales_exclusions
         if change < 0:
             units = -change
             sale_value = units * old_price
-            sold.append({**item, "units": display_number(units), "estimated_dop": display_number(sale_value), "excluded_service": is_service})
-            if not is_service:
-                sold_units += units
-                estimated_sales += sale_value
+            sold.append(
+                {
+                    **item,
+                    "category": new["category"],
+                    "units": display_number(units),
+                    "unit_price_dop": display_number(old_price),
+                    "estimated_dop": display_number(sale_value),
+                }
+            )
+            sold_units += units
+            estimated_sales += sale_value
         elif change > 0:
             restocked.append({**item, "units_added": display_number(change)})
         if old_price != new_price:
@@ -164,9 +169,9 @@ def compare(
     return {
         "summary": {
             "products_in_catalog": len(new_rows),
-            "sold_units_excluding_services": display_number(sold_units),
-            "estimated_sales_dop_excluding_services": display_number(estimated_sales),
-            "sold_product_count": sum(not row["excluded_service"] for row in sold),
+            "sold_units_including_services": display_number(sold_units),
+            "estimated_sales_dop_including_services": display_number(estimated_sales),
+            "sold_product_count": len(sold),
             "restocked_product_count": len(restocked),
             "price_change_count": len(price_changes),
             "newly_out_of_stock_count": len(newly_out),
@@ -213,7 +218,7 @@ def main() -> int:
     new_rows, raw_rows, applied_overrides = build_catalog(
         workbook_rows, old_by_sku, config.get("stock_overrides", {})
     )
-    report = compare(old_by_sku, raw_rows, set(config.get("sales_exclusions", [])))
+    report = compare(old_by_sku, raw_rows)
     report.update(
         {
             "status": "applied" if args.apply else "preview",

@@ -21,7 +21,7 @@ class CatalogUpdateTest(unittest.TestCase):
             temp = Path(folder)
             baseline = temp / "baseline.csv"
             baseline.write_bytes(
-                subprocess.check_output(["git", "show", "HEAD^:products.csv"], cwd=ROOT)
+                subprocess.check_output(["git", "show", "ad3a4e9^:products.csv"], cwd=ROOT)
             )
             report = temp / "report.json"
             subprocess.run(
@@ -43,8 +43,10 @@ class CatalogUpdateTest(unittest.TestCase):
             data = json.loads(report.read_text())
             self.assertEqual(data["status"], "preview")
             self.assertEqual(len(data["manual_overrides"]), 2)
-            self.assertEqual(data["summary"]["sold_units_excluding_services"], "106")
-            self.assertEqual(data["summary"]["estimated_sales_dop_excluding_services"], "2295")
+            self.assertEqual(data["summary"]["sold_units_including_services"], "195")
+            self.assertEqual(data["summary"]["estimated_sales_dop_including_services"], "4075")
+            self.assertEqual(data["summary"]["newly_out_of_stock_count"], 1)
+            self.assertEqual(data["newly_out_of_stock"][0]["name"], "TABLOIDE CON SUJETADOR A4")
             self.assertEqual((ROOT / "products.csv").read_bytes(), original)
 
     def test_apply_and_duplicate_detection(self):
