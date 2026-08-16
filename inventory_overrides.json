@@ -1,0 +1,15 @@
+{
+  "stock_overrides": {
+    "SOBREM": {
+      "stock": 0,
+      "reason": "Manually confirmed out of stock; inventory software has not been corrected yet."
+    },
+    "HANI-1039-180GSM": {
+      "stock": 0,
+      "reason": "Manually confirmed out of stock; inventory software has not been corrected yet."
+    }
+  },
+  "sales_exclusions": [
+    "DIGITACIONBYN"
+  ]
+}
