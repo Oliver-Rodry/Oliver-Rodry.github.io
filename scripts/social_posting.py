@@ -164,9 +164,20 @@ def publish_instagram(pending: dict, token: str, instagram_id: str) -> None:
 
 
 def publish_facebook(pending: dict, token: str, page_id: str) -> None:
+    accounts = request_json(
+        "me/accounts",
+        token,
+        values={"fields": "id,access_token", "limit": 100},
+    ).get("data", [])
+    page_token = next(
+        (account.get("access_token") for account in accounts if account.get("id") == page_id),
+        None,
+    )
+    if not page_token:
+        raise MetaError(f"No Page access token was returned for Page {page_id}")
     result = request_json(
         f"{page_id}/photos",
-        token,
+        page_token,
         method="POST",
         values={"url": pending["image_url"], "caption": pending["caption"]},
     )
