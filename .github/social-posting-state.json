@@ -1,7 +1,8 @@
 {
   "posted_skus": [
     "BORRADELECHEUND",
-    "BORRADORMAGNE"
+    "BORRADORMAGNE",
+    "CART 2"
   ],
   "history": [
     {
@@ -24,6 +25,17 @@
       "facebook_post_id": "1056461310893148_122131292349354776",
       "instagram_post_id": "18092540969550987",
       "completed_at": "2026-08-17T14:52:07.129200+00:00"
+    },
+    {
+      "sku": "CART 2",
+      "name": "CARTULINA AMARILLO CLARO UND",
+      "caption": "🛍️ Un práctico básico para tener a mano: Cartulina amarilla clara.\n\nEsto es lo que encontrarás: cartulina amarilla pastel, 1 unidad, 65x50 cm, ideal para uso escolar.\n\n💰 Precio: RD$20\n📦 Disponible mientras haya existencias.\n\nPasa por Papelería Sol Naciente o escríbenos para ordenar. 🛍️\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-17T10:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/CART%202.jpg",
+      "started_at": "2026-08-17T14:54:58.644397+00:00",
+      "facebook_post_id": "1056461310893148_122131293201354776",
+      "instagram_post_id": "18124543039817552",
+      "completed_at": "2026-08-17T14:55:16.307460+00:00"
     }
   ],
   "pending": null,
