@@ -140,29 +140,22 @@ def caption_for(product: dict[str, str], variant: int) -> str:
     price = float(product["price_dop"])
     price_text = f"{price:,.2f}" if not price.is_integer() else f"{price:,.0f}"
     openings = [
-        f"✨ Hoy te mostramos: {name}.",
-        f"📚 Para tus útiles y proyectos: {name}.",
-        f"🛍️ Un práctico básico para tener a mano: {name}.",
-        f"✅ Encuentra {name} en Papelería Sol Naciente.",
-        f"¿Buscando {name.lower()}? Mira esta opción. 👀",
-        f"Para la escuela, la oficina o tus proyectos: {name}. ✏️",
-        f"Pequeños detalles que hacen más fácil tu día: {name}. 🌟",
-        f"Tenemos una opción que puede completar tu lista: {name}. 📝",
-    ]
-    detail_leads = [
-        "Detalles del producto:",
-        "Esto es lo que encontrarás:",
-        "Conoce sus detalles:",
-        "Información del catálogo:",
-        "Te contamos un poco más:",
+        f"¿Te hace falta {name.lower()}? Lo tenemos disponible. 🙌",
+        f"Para completar tu lista sin dar muchas vueltas: {name}. ✅",
+        f"Un básico que siempre resuelve: {name}. ✨",
+        f"Mira esta opción que tenemos en Papelería Sol Naciente: {name}. 👀",
+        f"Si todavía te falta {name.lower()}, aquí lo encuentras. 📝",
+        f"Para la escuela, la oficina o ese proyecto que tienes en mano: {name}. ✏️",
+        f"Eso que te faltaba para seguir trabajando tranquilo: {name}. 🙌",
+        f"Hoy te compartimos una opción práctica: {name}. 🌟",
     ]
     calls_to_action = [
-        "Escríbenos para ordenar o visítanos. 💬",
-        "¿Lo necesitas? Escríbenos y con gusto te atendemos. 💬",
-        "Guárdalo en tu lista y contáctanos para ordenar. 📝",
-        "Visítanos o envíanos un mensaje para más información. 📩",
-        "Pasa por Papelería Sol Naciente o escríbenos para ordenar. 🛍️",
-        "¿Te hace falta? Estamos listos para ayudarte. 😊",
+        "Pasa por la papelería o escríbenos por DM para pedirlo. 💬",
+        "¿Lo necesitas? Escríbenos y te ayudamos de una vez. 📩",
+        "Agrégalo a tu lista y escríbenos para ordenar. 📝",
+        "Date una vuelta por Papelería Sol Naciente o escríbenos por DM. 🛍️",
+        "Estamos a la orden para ayudarte con tu pedido. 😊",
+        "Escríbenos y con gusto te resolvemos. 💬",
     ]
     hashtags = {
         "MATERIAL ESCOLAR": "#MaterialEscolar #RegresoAClases #Papelería",
@@ -170,7 +163,7 @@ def caption_for(product: dict[str, str], variant: int) -> str:
     }.get(product["category"].strip().upper(), "#Papelería #Oficina #SantoDomingo")
     return (
         f"{openings[variant % len(openings)]}\n\n"
-        f"{detail_leads[(variant * 3) % len(detail_leads)]} {description}.\n\n"
+        f"{description[:1].upper() + description[1:]}.\n\n"
         f"💰 Precio: RD${price_text}\n"
         "📦 Disponible mientras haya existencias.\n\n"
         f"{calls_to_action[(variant * 5) % len(calls_to_action)]}\n\n"
@@ -224,6 +217,20 @@ def prepare_campaign(state: dict) -> None:
             for index, (slot, product) in enumerate(zip(slots, products))
         ],
     }
+
+
+def refresh_campaign_captions(state: dict) -> int:
+    """Refresh copy for unposted campaign items without changing their schedule."""
+    by_sku = {product["sku"]: product for product in eligible_products()}
+    posted = set(state.get("posted_skus", []))
+    schedule = state.get("campaign", {}).get("schedule", [])
+    refreshed = 0
+    for index, item in enumerate(schedule):
+        product = by_sku.get(item["sku"])
+        if product and item["sku"] not in posted:
+            item["caption"] = caption_for(product, index + len(state.get("history", [])))
+            refreshed += 1
+    return refreshed
 
 
 def within_campaign_window(now: datetime | None = None) -> bool:
@@ -305,6 +312,7 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--prepare-campaign", action="store_true")
+    parser.add_argument("--refresh-captions", action="store_true")
     parser.add_argument("--enforce-window", action="store_true")
     args = parser.parse_args()
     state = load_state()
@@ -312,6 +320,11 @@ def main() -> int:
         prepare_campaign(state)
         save_state(state)
         print(f"Prepared {len(state['campaign']['schedule'])} posts through {CAMPAIGN_END.isoformat()}.")
+        return 0
+    if args.refresh_captions:
+        refreshed = refresh_campaign_captions(state)
+        save_state(state)
+        print(f"Refreshed {refreshed} unposted campaign captions.")
         return 0
     if args.enforce_window and not within_campaign_window():
         print("Outside the August 17-23 campaign posting window; nothing to publish.")
