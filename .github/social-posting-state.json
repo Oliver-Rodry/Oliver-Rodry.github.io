@@ -3,7 +3,8 @@
     "BORRADELECHEUND",
     "BORRADORMAGNE",
     "CART 2",
-    "6820220039048"
+    "6820220039048",
+    "CINTTRANSGRAN"
   ],
   "history": [
     {
@@ -48,6 +49,17 @@
       "facebook_post_id": "1056461310893148_122131312893354776",
       "instagram_post_id": "17936671002358165",
       "completed_at": "2026-08-17T16:22:33.713062+00:00"
+    },
+    {
+      "sku": "CINTTRANSGRAN",
+      "name": "CINTA ADHESIVA ANCHA",
+      "caption": "Eso que te faltaba para seguir trabajando tranquilo: Cinta adhesiva ancha. 🙌\n\nCinta adhesiva, 1 rollo, 5 cm de ancho, ideal para uso escolar.\n\n💰 Precio: RD$100\n📦 Disponible mientras haya existencias.\n\nPasa por la papelería o escríbenos por DM para pedirlo. 💬\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-17T14:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/CINTTRANSGRAN.jpg",
+      "started_at": "2026-08-17T18:32:30.481416+00:00",
+      "facebook_post_id": "1056461310893148_122131343109354776",
+      "instagram_post_id": "18093229739564586",
+      "completed_at": "2026-08-17T18:32:46.926638+00:00"
     }
   ],
   "pending": null,
