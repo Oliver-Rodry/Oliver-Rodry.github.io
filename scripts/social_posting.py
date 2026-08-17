@@ -26,9 +26,9 @@ SITE_URL = "https://papeleriasolnaciente.com"
 GRAPH_VERSION = os.environ.get("META_GRAPH_VERSION", "v26.0")
 GRAPH_URL = f"https://graph.facebook.com/{GRAPH_VERSION}"
 LOCAL_TZ = ZoneInfo("America/Santo_Domingo")
-CAMPAIGN_START = date(2026, 8, 18)
+CAMPAIGN_START = date(2026, 8, 17)
 CAMPAIGN_END = date(2026, 8, 23)
-POSTING_HOURS = (8, 10, 12, 14, 16, 18, 20)
+POSTING_HOURS = (8, 10, 12, 14, 16, 20)
 
 
 class MetaError(RuntimeError):
@@ -314,7 +314,7 @@ def main() -> int:
         print(f"Prepared {len(state['campaign']['schedule'])} posts through {CAMPAIGN_END.isoformat()}.")
         return 0
     if args.enforce_window and not within_campaign_window():
-        print("Outside the August 18-23 campaign posting window; nothing to publish.")
+        print("Outside the August 17-23 campaign posting window; nothing to publish.")
         output("status", "skipped")
         return 0
     pending = state.get("pending") or new_pending(state)

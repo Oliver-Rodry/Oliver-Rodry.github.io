@@ -9,8 +9,8 @@ on:
         type: boolean
         default: true
   schedule:
-    # Every two hours. The script limits live posts to 8 AM-8 PM AST,
-    # August 18-23, 2026, and safely skips all other runs.
+    # Every two hours. The script limits live posts to the prepared 8 AM-8 PM
+    # AST slots from August 17-23, 2026, and safely skips all other runs.
     - cron: "0 */2 * * *"
 
 permissions:
