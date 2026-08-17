@@ -14,5 +14,264 @@
       "completed_at": "2026-08-17T04:28:49.519482+00:00"
     }
   ],
-  "pending": null
+  "pending": null,
+  "campaign": {
+    "timezone": "America/Santo_Domingo",
+    "starts": "2026-08-18T08:00:00-04:00",
+    "ends": "2026-08-23T20:00:00-04:00",
+    "schedule": [
+      {
+        "scheduled_for": "2026-08-18T08:00:00-04:00",
+        "sku": "BORRADORMAGNE",
+        "name": "BORRADOR PIZARRA BLANCA MAG VARIEDAD",
+        "caption": "📚 Para tus útiles y proyectos: Borrador para pizarra blanca.\n\nInformación del catálogo: borrador para pizarra blanca, 1 unidad, 13x5.5 cm, varios colores.\n\n💰 Precio: RD$80\n📦 Disponible mientras haya existencias.\n\n¿Te hace falta? Estamos listos para ayudarte. 😊\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-18T10:00:00-04:00",
+        "sku": "CART 2",
+        "name": "CARTULINA AMARILLO CLARO UND",
+        "caption": "🛍️ Un práctico básico para tener a mano: Cartulina amarilla clara.\n\nEsto es lo que encontrarás: cartulina amarilla pastel, 1 unidad, 65x50 cm, ideal para uso escolar.\n\n💰 Precio: RD$20\n📦 Disponible mientras haya existencias.\n\nPasa por Papelería Sol Naciente o escríbenos para ordenar. 🛍️\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-18T12:00:00-04:00",
+        "sku": "6820220039048",
+        "name": "CHINCHETAS SURTIDAS CAJITA",
+        "caption": "✅ Encuentra Chinchetas surtidas cajita en Papelería Sol Naciente.\n\nTe contamos un poco más: chinchetas, 1 caja, 4x5.5 cm, ideal para uso en oficinas.\n\n💰 Precio: RD$65\n📦 Disponible mientras haya existencias.\n\nVisítanos o envíanos un mensaje para más información. 📩\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-18T14:00:00-04:00",
+        "sku": "CINTTRANSGRAN",
+        "name": "CINTA ADHESIVA ANCHA",
+        "caption": "¿Buscando cinta adhesiva ancha? Mira esta opción. 👀\n\nConoce sus detalles: cinta adhesiva, 1 rollo, 5 cm de ancho, ideal para uso escolar.\n\n💰 Precio: RD$100\n📦 Disponible mientras haya existencias.\n\nGuárdalo en tu lista y contáctanos para ordenar. 📝\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-18T16:00:00-04:00",
+        "sku": "6970873981048",
+        "name": "CLIPS BILLETERO 19MM PAQUETE 12 UND",
+        "caption": "Para la escuela, la oficina o tus proyectos: Clips billetero 19mm paquete 12. ✏️\n\nDetalles del producto: clips billetero negro, 1 caja,12 unidades, 1.9 cm de ancho, ideal para uso de oficina.\n\n💰 Precio: RD$40\n📦 Disponible mientras haya existencias.\n\n¿Lo necesitas? Escríbenos y con gusto te atendemos. 💬\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-18T18:00:00-04:00",
+        "sku": "1313526879944",
+        "name": "COMPAS PLASTICO 11.6X3",
+        "caption": "Pequeños detalles que hacen más fácil tu día: Compás plástico 11.6x3. 🌟\n\nInformación del catálogo: compás plastico,11.6x3 cm, ideal para uso escolar.\n\n💰 Precio: RD$60\n📦 Disponible mientras haya existencias.\n\nEscríbenos para ordenar o visítanos. 💬\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-18T20:00:00-04:00",
+        "sku": "COPIACOLOR8.5X11",
+        "name": "COPIA A COLOR 8.5X11 POR PAGINA",
+        "caption": "Tenemos una opción que puede completar tu lista: Copia a color 8.5x11 por página. 📝\n\nEsto es lo que encontrarás: servicio de fotocopiado en tamaño 8.5x11 a color por página.\n\n💰 Precio: RD$10\n📦 Disponible mientras haya existencias.\n\n¿Te hace falta? Estamos listos para ayudarte. 😊\n\n#Servicios #Papelería #SantoDomingo #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-19T08:00:00-04:00",
+        "sku": "6936926333011",
+        "name": "CORRECTOR LIQUIDO BLANCO 7ML",
+        "caption": "✨ Hoy te mostramos: Corrector líquido blanco 7ml.\n\nTe contamos un poco más: liquid paper blanco duo lavboa und.\n\n💰 Precio: RD$40\n📦 Disponible mientras haya existencias.\n\nPasa por Papelería Sol Naciente o escríbenos para ordenar. 🛍️\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-19T10:00:00-04:00",
+        "sku": "1313526871399",
+        "name": "CRAYONES DE CERA CAJA 12",
+        "caption": "📚 Para tus útiles y proyectos: Crayones de cera caja 12.\n\nConoce sus detalles: paquete crayones de cera multi color 12 weibo.\n\n💰 Precio: RD$50.00\n📦 Disponible mientras haya existencias.\n\nVisítanos o envíanos un mensaje para más información. 📩\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-19T12:00:00-04:00",
+        "sku": "7462955102896",
+        "name": "CUADERNO SCRITO COSIDO",
+        "caption": "🛍️ Un práctico básico para tener a mano: Cuaderno scrito cosido.\n\nDetalles del producto: cuaderno scrito cosido, 38.7x24.6cm,para uso escolar.\n\n💰 Precio: RD$65\n📦 Disponible mientras haya existencias.\n\nGuárdalo en tu lista y contáctanos para ordenar. 📝\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-19T14:00:00-04:00",
+        "sku": "DIGI8X14",
+        "name": "DIGITACION A BLANCO Y NEGRO LEGAL POR PAGINA",
+        "caption": "✅ Encuentra Digitación a blanco y negro legal por página en Papelería Sol Naciente.\n\nInformación del catálogo: servicio de impresión en hoja legal a blanco y negro, 8.5x14, por página.\n\n💰 Precio: RD$30\n📦 Disponible mientras haya existencias.\n\n¿Lo necesitas? Escríbenos y con gusto te atendemos. 💬\n\n#Servicios #Papelería #SantoDomingo #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-19T16:00:00-04:00",
+        "sku": "ESTUCHETRANSPUND",
+        "name": "ESTUCHE VARIEDAD COLOR TRANSPARENTE UND",
+        "caption": "¿Buscando estuche variedad color transparente? Mira esta opción. 👀\n\nEsto es lo que encontrarás: estuche variedad color transparente, 23x12cm, ideal para uso escolar.\n\n💰 Precio: RD$55\n📦 Disponible mientras haya existencias.\n\nEscríbenos para ordenar o visítanos. 💬\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-19T18:00:00-04:00",
+        "sku": "FOLDER85X11UND",
+        "name": "FOLDER MANILA 8.5X11 UND",
+        "caption": "Para la escuela, la oficina o tus proyectos: Folder manila 8.5x11. ✏️\n\nTe contamos un poco más: folder manila ifofolder, 8.5x11 und, ideal para oficina.\n\n💰 Precio: RD$10\n📦 Disponible mientras haya existencias.\n\n¿Te hace falta? Estamos listos para ayudarte. 😊\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-19T20:00:00-04:00",
+        "sku": "2022124765533",
+        "name": "GOMITAS BANDA 200/1 PAQUETE",
+        "caption": "Pequeños detalles que hacen más fácil tu día: Gomitas banda 200/1 paquete. 🌟\n\nConoce sus detalles: caja de gomas para documentos, colores surtidos.\n\n💰 Precio: RD$70\n📦 Disponible mientras haya existencias.\n\nPasa por Papelería Sol Naciente o escríbenos para ordenar. 🛍️\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-20T08:00:00-04:00",
+        "sku": "1313526879487",
+        "name": "GRAPADORA ESTANDARD GRANDE DGG",
+        "caption": "Tenemos una opción que puede completar tu lista: Grapadora estándar grande dgg. 📝\n\nDetalles del producto: grapadora estándar grande , 16cm, ideal para oficina.\n\n💰 Precio: RD$180\n📦 Disponible mientras haya existencias.\n\nVisítanos o envíanos un mensaje para más información. 📩\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-20T10:00:00-04:00",
+        "sku": "HOJABOND85X11",
+        "name": "HOJA PAPEL BOND 8.5X11 PAQUETE 5 UND",
+        "caption": "✨ Hoy te mostramos: Hoja papel bond 8.5x11 paquete 5.\n\nInformación del catálogo: infoprint papel bond 8.5x11 unidad.\n\n💰 Precio: RD$5\n📦 Disponible mientras haya existencias.\n\nGuárdalo en tu lista y contáctanos para ordenar. 📝\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-20T12:00:00-04:00",
+        "sku": "1313526879951",
+        "name": "JUEGO DE REGLAS CON COMPAS ESTUCHE",
+        "caption": "📚 Para tus útiles y proyectos: Juego de reglas con compás estuche.\n\nEsto es lo que encontrarás: compás juegos de reglas, 16x8cm, ideal para uso escolar.\n\n💰 Precio: RD$150\n📦 Disponible mientras haya existencias.\n\n¿Lo necesitas? Escríbenos y con gusto te atendemos. 💬\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-20T14:00:00-04:00",
+        "sku": "7465547688013",
+        "name": "LAPICERO AZUL ARLES UND",
+        "caption": "🛍️ Un práctico básico para tener a mano: Lapicero azul arles.\n\nTe contamos un poco más: bolígrafo azul con tapa arles unidad.\n\n💰 Precio: RD$15\n📦 Disponible mientras haya existencias.\n\nEscríbenos para ordenar o visítanos. 💬\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-20T16:00:00-04:00",
+        "sku": "2022124765564",
+        "name": "LAPICES DE COLOR CAJA 12",
+        "caption": "✅ Encuentra Lapices de color caja 12 en Papelería Sol Naciente.\n\nConoce sus detalles: caja de lapices multi color paquete de 12 generico.\n\n💰 Precio: RD$40\n📦 Disponible mientras haya existencias.\n\n¿Te hace falta? Estamos listos para ayudarte. 😊\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-20T18:00:00-04:00",
+        "sku": "LAPIZCONBORRAUND",
+        "name": "LAPIZ CON BORRA UND",
+        "caption": "¿Buscando lápiz con borra? Mira esta opción. 👀\n\nDetalles del producto: lápiz con borra, 12 und.\n\n💰 Precio: RD$10\n📦 Disponible mientras haya existencias.\n\nPasa por Papelería Sol Naciente o escríbenos para ordenar. 🛍️\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-20T20:00:00-04:00",
+        "sku": "7468355583037",
+        "name": "LIBRETA RAYADA AMARILLA 5.5X8.5",
+        "caption": "Para la escuela, la oficina o tus proyectos: Libreta rayada amarilla 5.5x8.5. ✏️\n\nInformación del catálogo: libreta rayada, 5.55x8.5, 50 hojas.\n\n💰 Precio: RD$60\n📦 Disponible mientras haya existencias.\n\nVisítanos o envíanos un mensaje para más información. 📩\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-21T08:00:00-04:00",
+        "sku": "6976693300410",
+        "name": "MARCADOR DE PIZARRA AZUL",
+        "caption": "Pequeños detalles que hacen más fácil tu día: Marcador de pizarra azul. 🌟\n\nEsto es lo que encontrarás: marcador de pizarra weibo azul und.\n\n💰 Precio: RD$35\n📦 Disponible mientras haya existencias.\n\nGuárdalo en tu lista y contáctanos para ordenar. 📝\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-21T10:00:00-04:00",
+        "sku": "7453038441155",
+        "name": "MASILLA 12 COLORES",
+        "caption": "Tenemos una opción que puede completar tu lista: Masilla 12 colores. 📝\n\nTe contamos un poco más: masilla 12 colores, 9cm, ideal para uso escolar.\n\n💰 Precio: RD$100\n📦 Disponible mientras haya existencias.\n\n¿Lo necesitas? Escríbenos y con gusto te atendemos. 💬\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-21T12:00:00-04:00",
+        "sku": "6824120314052",
+        "name": "MOCHILAS COMBO LONCHERA-STUCHE",
+        "caption": "✨ Hoy te mostramos: Mochilas combo lonchera-stuche.\n\nConoce sus detalles: mochilas, loncheras y estuches, varios diseños.\n\n💰 Precio: RD$1,300\n📦 Disponible mientras haya existencias.\n\nEscríbenos para ordenar o visítanos. 💬\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-21T14:00:00-04:00",
+        "sku": "HANI1039180GSM",
+        "name": "PAPEL FOTOGRAFICO BRILLANTE 180 HOJA",
+        "caption": "📚 Para tus útiles y proyectos: Papel fotografico brillante 180 hoja.\n\nDetalles del producto: papel fotografico brillante, 1 und 180 gramos.\n\n💰 Precio: RD$15\n📦 Disponible mientras haya existencias.\n\n¿Te hace falta? Estamos listos para ayudarte. 😊\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-21T16:00:00-04:00",
+        "sku": "6902105168132",
+        "name": "PAQUETE CLIPS DE METAL 33MM",
+        "caption": "🛍️ Un práctico básico para tener a mano: Paquete clips de metal 33mm.\n\nInformación del catálogo: caja de clips de metal, 33mm, ideal para uso de oficina.\n\n💰 Precio: RD$25\n📦 Disponible mientras haya existencias.\n\nPasa por Papelería Sol Naciente o escríbenos para ordenar. 🛍️\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-21T18:00:00-04:00",
+        "sku": "1313526871481",
+        "name": "PEGAMENTO BLANCO 225ML",
+        "caption": "✅ Encuentra Pegamento blanco 225ml en Papelería Sol Naciente.\n\nEsto es lo que encontrarás: pegamento blanco weibo botella mediana 225ml.\n\n💰 Precio: RD$95\n📦 Disponible mientras haya existencias.\n\nVisítanos o envíanos un mensaje para más información. 📩\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-21T20:00:00-04:00",
+        "sku": "6957871007000",
+        "name": "PERFORADORA 2 HOYOS HUACHI",
+        "caption": "¿Buscando perforadora 2 hoyos huachi? Mira esta opción. 👀\n\nTe contamos un poco más: perforadora dos hoyos huachi, puede perforar hasta 40 hojas,mide 88mm entre hoyos.\n\n💰 Precio: RD$345\n📦 Disponible mientras haya existencias.\n\nGuárdalo en tu lista y contáctanos para ordenar. 📝\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-22T08:00:00-04:00",
+        "sku": "1313526879739",
+        "name": "PISTOLA SILICONA BARRA FINA",
+        "caption": "Para la escuela, la oficina o tus proyectos: Pistola silicona barra fina. ✏️\n\nConoce sus detalles: pistola de silicona para barra fina de 1.7x20.7cm, ideal para manualidades.\n\n💰 Precio: RD$250\n📦 Disponible mientras haya existencias.\n\n¿Lo necesitas? Escríbenos y con gusto te atendemos. 💬\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-22T10:00:00-04:00",
+        "sku": "2022124765601",
+        "name": "POST-IT AMARILLOS 3X3",
+        "caption": "Pequeños detalles que hacen más fácil tu día: Post-it amarillos 3x3. 🌟\n\nDetalles del producto: papel adhesivo post-it sticks.\n\n💰 Precio: RD$45\n📦 Disponible mientras haya existencias.\n\nEscríbenos para ordenar o visítanos. 💬\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-22T12:00:00-04:00",
+        "sku": "1313526871252",
+        "name": "REGLA DE METAL LISA 30 CM",
+        "caption": "Tenemos una opción que puede completar tu lista: Regla de metal lisa 30 cm. 📝\n\nInformación del catálogo: regla de metal fina lisa genérica 30cm/12\".\n\n💰 Precio: RD$25\n📦 Disponible mientras haya existencias.\n\n¿Te hace falta? Estamos listos para ayudarte. 😊\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-22T14:00:00-04:00",
+        "sku": "1313526879913",
+        "name": "REGLAS SET PEQUENO 15 CM 4 ARTCL",
+        "caption": "✨ Hoy te mostramos: Reglas set pequeno 15 cm 4 artcl.\n\nEsto es lo que encontrarás: set de regla pequeno paquete 4 articulos.\n\n💰 Precio: RD$55\n📦 Disponible mientras haya existencias.\n\nPasa por Papelería Sol Naciente o escríbenos para ordenar. 🛍️\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-22T16:00:00-04:00",
+        "sku": "1313526871313",
+        "name": "RESALTADOR AMARILLO FRESH",
+        "caption": "📚 Para tus útiles y proyectos: Resaltador amarillo fresh.\n\nTe contamos un poco más: resaltador amarillo plano fresh und.\n\n💰 Precio: RD$35\n📦 Disponible mientras haya existencias.\n\nVisítanos o envíanos un mensaje para más información. 📩\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-22T18:00:00-04:00",
+        "sku": "HOJANOT",
+        "name": "RESMA DE HOJA NOTARIAL",
+        "caption": "🛍️ Un práctico básico para tener a mano: Resma de hoja notarial.\n\nConoce sus detalles: resma de hoja notarial, 100 hojas 8.5x13.5.\n\n💰 Precio: RD$250\n📦 Disponible mientras haya existencias.\n\nGuárdalo en tu lista y contáctanos para ordenar. 📝\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-22T20:00:00-04:00",
+        "sku": "20260314103517505",
+        "name": "ROLLO PAPEL TERMICO 80 MM",
+        "caption": "✅ Encuentra Rollo papel termico 80 mm en Papelería Sol Naciente.\n\nDetalles del producto: rollo termico para facturas, 80 milimetros.\n\n💰 Precio: RD$85\n📦 Disponible mientras haya existencias.\n\n¿Lo necesitas? Escríbenos y con gusto te atendemos. 💬\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-23T08:00:00-04:00",
+        "sku": "7453010030759",
+        "name": "SACA PUNTA LAPIZ METAL",
+        "caption": "¿Buscando saca punta lápiz metal? Mira esta opción. 👀\n\nInformación del catálogo: saca punta metal generico pequen.\n\n💰 Precio: RD$15\n📦 Disponible mientras haya existencias.\n\nEscríbenos para ordenar o visítanos. 💬\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-23T10:00:00-04:00",
+        "sku": "6940509500738",
+        "name": "SACAGRAPAS NEGRO NUSTAR",
+        "caption": "Para la escuela, la oficina o tus proyectos: Sacagrapas negro nustar. ✏️\n\nEsto es lo que encontrarás: saca grapas negro , 6.1cm, ideal para uso escolar o de oficina.\n\n💰 Precio: RD$35\n📦 Disponible mientras haya existencias.\n\n¿Te hace falta? Estamos listos para ayudarte. 😊\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-23T12:00:00-04:00",
+        "sku": "SILICONBARRAUND",
+        "name": "SILICON EN BARRA FINA 11X220MM",
+        "caption": "Pequeños detalles que hacen más fácil tu día: Silicon en barra fina 11x220mm. 🌟\n\nTe contamos un poco más: silicon en barra para pistola pequena.\n\n💰 Precio: RD$15\n📦 Disponible mientras haya existencias.\n\nPasa por Papelería Sol Naciente o escríbenos para ordenar. 🛍️\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-23T14:00:00-04:00",
+        "sku": "SOBRECARTAVENTANA",
+        "name": "SOBRE DE PAPEL CON VENTANA",
+        "caption": "Tenemos una opción que puede completar tu lista: Sobre de papel con ventana. 📝\n\nConoce sus detalles: sobre de papel con ventana, 1 und, 11.6x25.6.\n\n💰 Precio: RD$20\n📦 Disponible mientras haya existencias.\n\nVisítanos o envíanos un mensaje para más información. 📩\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-23T16:00:00-04:00",
+        "sku": "TALONARIOPEQUEN",
+        "name": "TALONARIO DE RECIBO MEDIANO CON COPIA",
+        "caption": "✨ Hoy te mostramos: Talonario de recibo mediano con copia.\n\nDetalles del producto: talonario de facturas, 8.5x3.5, 1 unidad.\n\n💰 Precio: RD$35\n📦 Disponible mientras haya existencias.\n\nGuárdalo en tu lista y contáctanos para ordenar. 📝\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-23T18:00:00-04:00",
+        "sku": "1313526871139",
+        "name": "TEMPERA 6 COLORES PINTURA",
+        "caption": "📚 Para tus útiles y proyectos: Tempera 6 colores pintura.\n\nInformación del catálogo: tempera 6 colores pintura, 3.8x5.5cm, incluye pincel pequeño.\n\n💰 Precio: RD$90\n📦 Disponible mientras haya existencias.\n\n¿Lo necesitas? Escríbenos y con gusto te atendemos. 💬\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente"
+      },
+      {
+        "scheduled_for": "2026-08-23T20:00:00-04:00",
+        "sku": "6978524748705",
+        "name": "TIJERA ESCOLAR COLOR UND",
+        "caption": "🛍️ Un práctico básico para tener a mano: Tijera escolar color.\n\nEsto es lo que encontrarás: tijeras mango plástico escolar, 14cm, ideal para uso escolar.\n\n💰 Precio: RD$40\n📦 Disponible mientras haya existencias.\n\nEscríbenos para ordenar o visítanos. 💬\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente"
+      }
+    ]
+  }
 }

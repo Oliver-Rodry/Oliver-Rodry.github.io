@@ -7,13 +7,15 @@ import argparse
 import csv
 import json
 import os
+import re
 import sys
 import time
 import urllib.error
 import urllib.parse
 import urllib.request
-from datetime import datetime, timezone
+from datetime import date, datetime, time as dt_time, timedelta, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -23,6 +25,10 @@ STATE = ROOT / ".github" / "social-posting-state.json"
 SITE_URL = "https://papeleriasolnaciente.com"
 GRAPH_VERSION = os.environ.get("META_GRAPH_VERSION", "v26.0")
 GRAPH_URL = f"https://graph.facebook.com/{GRAPH_VERSION}"
+LOCAL_TZ = ZoneInfo("America/Santo_Domingo")
+CAMPAIGN_START = date(2026, 8, 18)
+CAMPAIGN_END = date(2026, 8, 23)
+POSTING_HOURS = (8, 10, 12, 14, 16, 18, 20)
 
 
 class MetaError(RuntimeError):
@@ -94,16 +100,69 @@ def eligible_products() -> list[dict[str, str]]:
     return eligible
 
 
+def natural_text(value: str) -> str:
+    """Turn catalog all-caps text into readable Spanish without adding claims."""
+    text = re.sub(r"\s+", " ", value.strip()).lower()
+    replacements = {
+        " generica ": " genérica ",
+        " compas ": " compás ",
+        " digitacion ": " digitación ",
+        " estandard ": " estándar ",
+        " lapiz ": " lápiz ",
+        " liquido ": " líquido ",
+        " pagina ": " página ",
+        " boligrafo ": " bolígrafo ",
+        " plastico ": " plástico ",
+        " plastica ": " plástica ",
+        " centimetros": " centímetros",
+    }
+    padded = f" {text} "
+    for old, new in replacements.items():
+        padded = padded.replace(old, new)
+    return padded.strip()
+
+
+def display_name(value: str) -> str:
+    text = natural_text(value)
+    text = re.sub(r"\s+(?:und|unid|unidad)$", "", text)
+    text = text.replace("borrador pizarra blanca mag variedad", "borrador para pizarra blanca")
+    text = text.replace("cartulina amarillo claro", "cartulina amarilla clara")
+    text = text.replace("cartulina amarillo fuerte", "cartulina amarilla brillante")
+    text = text.replace("cartulina verde claro", "cartulina verde clara")
+    text = text.replace("cartulina naranja claro", "cartulina naranja clara")
+    return text[:1].upper() + text[1:]
+
+
 def caption_for(product: dict[str, str], variant: int) -> str:
-    name = product["name"].strip().title()
-    description = product["description"].strip().capitalize()
+    """Compose varied copy using only facts present in the catalog row."""
+    name = display_name(product["name"])
+    description = natural_text(product["description"]).rstrip(".")
     price = float(product["price_dop"])
     price_text = f"{price:,.2f}" if not price.is_integer() else f"{price:,.0f}"
     openings = [
-        f"✨ ¡Tenemos {name} disponible!",
-        f"📚 Lo que necesitas para estudiar y trabajar: {name}.",
-        f"🛍️ Conoce nuestro producto destacado: {name}.",
-        f"✅ Ya puedes conseguir {name} en Papelería Sol Naciente.",
+        f"✨ Hoy te mostramos: {name}.",
+        f"📚 Para tus útiles y proyectos: {name}.",
+        f"🛍️ Un práctico básico para tener a mano: {name}.",
+        f"✅ Encuentra {name} en Papelería Sol Naciente.",
+        f"¿Buscando {name.lower()}? Mira esta opción. 👀",
+        f"Para la escuela, la oficina o tus proyectos: {name}. ✏️",
+        f"Pequeños detalles que hacen más fácil tu día: {name}. 🌟",
+        f"Tenemos una opción que puede completar tu lista: {name}. 📝",
+    ]
+    detail_leads = [
+        "Detalles del producto:",
+        "Esto es lo que encontrarás:",
+        "Conoce sus detalles:",
+        "Información del catálogo:",
+        "Te contamos un poco más:",
+    ]
+    calls_to_action = [
+        "Escríbenos para ordenar o visítanos. 💬",
+        "¿Lo necesitas? Escríbenos y con gusto te atendemos. 💬",
+        "Guárdalo en tu lista y contáctanos para ordenar. 📝",
+        "Visítanos o envíanos un mensaje para más información. 📩",
+        "Pasa por Papelería Sol Naciente o escríbenos para ordenar. 🛍️",
+        "¿Te hace falta? Estamos listos para ayudarte. 😊",
     ]
     hashtags = {
         "MATERIAL ESCOLAR": "#MaterialEscolar #RegresoAClases #Papelería",
@@ -111,12 +170,65 @@ def caption_for(product: dict[str, str], variant: int) -> str:
     }.get(product["category"].strip().upper(), "#Papelería #Oficina #SantoDomingo")
     return (
         f"{openings[variant % len(openings)]}\n\n"
-        f"{description}\n\n"
+        f"{detail_leads[(variant * 3) % len(detail_leads)]} {description}.\n\n"
         f"💰 Precio: RD${price_text}\n"
         "📦 Disponible mientras haya existencias.\n\n"
-        "Escríbenos para ordenar o visítanos. 💬\n\n"
+        f"{calls_to_action[(variant * 5) % len(calls_to_action)]}\n\n"
         f"{hashtags} #PapeleriaSolNaciente"
     )
+
+
+def campaign_slots() -> list[datetime]:
+    slots = []
+    day = CAMPAIGN_START
+    while day <= CAMPAIGN_END:
+        for hour in POSTING_HOURS:
+            slots.append(datetime.combine(day, dt_time(hour), LOCAL_TZ))
+        day += timedelta(days=1)
+    return slots
+
+
+def diversified(products: list[dict[str, str]]) -> list[dict[str, str]]:
+    """Spread similar products across the week instead of grouping them together."""
+    groups: dict[str, list[dict[str, str]]] = {}
+    for product in products:
+        key = natural_text(product["name"]).split()[0]
+        groups.setdefault(key, []).append(product)
+    ordered = []
+    while groups:
+        for key in list(groups):
+            ordered.append(groups[key].pop(0))
+            if not groups[key]:
+                del groups[key]
+    return ordered
+
+
+def prepare_campaign(state: dict) -> None:
+    products = eligible_products()
+    already_posted = set(state.get("posted_skus", []))
+    products = diversified([product for product in products if product["sku"] not in already_posted])
+    slots = campaign_slots()
+    if len(products) < len(slots):
+        raise RuntimeError(f"Campaign needs {len(slots)} products, but only {len(products)} are eligible.")
+    state["campaign"] = {
+        "timezone": str(LOCAL_TZ),
+        "starts": slots[0].isoformat(),
+        "ends": slots[-1].isoformat(),
+        "schedule": [
+            {
+                "scheduled_for": slot.isoformat(),
+                "sku": product["sku"],
+                "name": product["name"],
+                "caption": caption_for(product, index + len(state.get("history", []))),
+            }
+            for index, (slot, product) in enumerate(zip(slots, products))
+        ],
+    }
+
+
+def within_campaign_window(now: datetime | None = None) -> bool:
+    local_now = (now or datetime.now(timezone.utc)).astimezone(LOCAL_TZ)
+    return CAMPAIGN_START <= local_now.date() <= CAMPAIGN_END and local_now.hour in POSTING_HOURS
 
 
 def new_pending(state: dict) -> dict:
@@ -129,12 +241,17 @@ def new_pending(state: dict) -> dict:
     if not remaining:
         posted = []
         remaining = products
-    product = remaining[0]
+    queued = next(
+        (item for item in state.get("campaign", {}).get("schedule", []) if item["sku"] in {p["sku"] for p in remaining}),
+        None,
+    )
+    product = by_sku[queued["sku"]] if queued else remaining[0]
     image_url = f"{SITE_URL}/{urllib.parse.quote(product['image_path'], safe='/')}"
     return {
         "sku": product["sku"],
         "name": product["name"],
-        "caption": caption_for(product, len(state.get("history", []))),
+        "caption": queued["caption"] if queued else caption_for(product, len(state.get("history", []))),
+        "scheduled_for": queued.get("scheduled_for") if queued else None,
         "image_url": image_url,
         "started_at": datetime.now(timezone.utc).isoformat(),
         "facebook_post_id": None,
@@ -187,8 +304,19 @@ def publish_facebook(pending: dict, token: str, page_id: str) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--prepare-campaign", action="store_true")
+    parser.add_argument("--enforce-window", action="store_true")
     args = parser.parse_args()
     state = load_state()
+    if args.prepare_campaign:
+        prepare_campaign(state)
+        save_state(state)
+        print(f"Prepared {len(state['campaign']['schedule'])} posts through {CAMPAIGN_END.isoformat()}.")
+        return 0
+    if args.enforce_window and not within_campaign_window():
+        print("Outside the August 18-23 campaign posting window; nothing to publish.")
+        output("status", "skipped")
+        return 0
     pending = state.get("pending") or new_pending(state)
     if args.dry_run:
         print(json.dumps(pending, ensure_ascii=False, indent=2))
