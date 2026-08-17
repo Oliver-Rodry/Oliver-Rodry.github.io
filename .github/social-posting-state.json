@@ -1,6 +1,7 @@
 {
   "posted_skus": [
-    "BORRADELECHEUND"
+    "BORRADELECHEUND",
+    "BORRADORMAGNE"
   ],
   "history": [
     {
@@ -12,20 +13,20 @@
       "facebook_post_id": "1056461310893148_122131156689354776",
       "instagram_post_id": "18073005806402868",
       "completed_at": "2026-08-17T04:28:49.519482+00:00"
+    },
+    {
+      "sku": "BORRADORMAGNE",
+      "name": "BORRADOR PIZARRA BLANCA MAG VARIEDAD",
+      "caption": "📚 Para tus útiles y proyectos: Borrador para pizarra blanca.\n\nInformación del catálogo: borrador para pizarra blanca, 1 unidad, 13x5.5 cm, varios colores.\n\n💰 Precio: RD$80\n📦 Disponible mientras haya existencias.\n\n¿Te hace falta? Estamos listos para ayudarte. 😊\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-17T08:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/BORRADORMAGNE.jpg",
+      "started_at": "2026-08-17T14:18:38.503210+00:00",
+      "facebook_post_id": "1056461310893148_122131292349354776",
+      "instagram_post_id": "18092540969550987",
+      "completed_at": "2026-08-17T14:52:07.129200+00:00"
     }
   ],
-  "pending": {
-    "sku": "BORRADORMAGNE",
-    "name": "BORRADOR PIZARRA BLANCA MAG VARIEDAD",
-    "caption": "📚 Para tus útiles y proyectos: Borrador para pizarra blanca.\n\nInformación del catálogo: borrador para pizarra blanca, 1 unidad, 13x5.5 cm, varios colores.\n\n💰 Precio: RD$80\n📦 Disponible mientras haya existencias.\n\n¿Te hace falta? Estamos listos para ayudarte. 😊\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente",
-    "scheduled_for": "2026-08-17T08:00:00-04:00",
-    "image_url": "https://papeleriasolnaciente.com/img/products/BORRADORMAGNE.jpg",
-    "started_at": "2026-08-17T14:18:38.503210+00:00",
-    "facebook_post_id": null,
-    "instagram_post_id": null,
-    "last_error": "{\"error\": {\"message\": \"Error validating access token: Session has expired on Sunday, 16-Aug-26 22:00:00 PDT. The current time is Monday, 17-Aug-26 07:23:04 PDT.\", \"type\": \"OAuthException\", \"code\": 190, \"error_subcode\": 463, \"fbtrace_id\": \"A31SjMNxrUZbn8ePF--9Smr\"}}",
-    "last_error_at": "2026-08-17T14:23:04.669079+00:00"
-  },
+  "pending": null,
   "campaign": {
     "timezone": "America/Santo_Domingo",
     "starts": "2026-08-17T08:00:00-04:00",
