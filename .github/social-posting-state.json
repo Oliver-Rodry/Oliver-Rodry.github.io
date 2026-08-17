@@ -23,8 +23,8 @@
     "started_at": "2026-08-17T14:18:38.503210+00:00",
     "facebook_post_id": null,
     "instagram_post_id": null,
-    "last_error": "{\"error\": {\"message\": \"Error validating access token: Session has expired on Sunday, 16-Aug-26 22:00:00 PDT. The current time is Monday, 17-Aug-26 07:18:38 PDT.\", \"type\": \"OAuthException\", \"code\": 190, \"error_subcode\": 463, \"fbtrace_id\": \"AlXv7oSxnSQcdUMaZPP-7Gr\"}}",
-    "last_error_at": "2026-08-17T14:18:38.659164+00:00"
+    "last_error": "{\"error\": {\"message\": \"Error validating access token: Session has expired on Sunday, 16-Aug-26 22:00:00 PDT. The current time is Monday, 17-Aug-26 07:23:04 PDT.\", \"type\": \"OAuthException\", \"code\": 190, \"error_subcode\": 463, \"fbtrace_id\": \"A31SjMNxrUZbn8ePF--9Smr\"}}",
+    "last_error_at": "2026-08-17T14:23:04.669079+00:00"
   },
   "campaign": {
     "timezone": "America/Santo_Domingo",
