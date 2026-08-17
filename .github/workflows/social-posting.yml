@@ -1,0 +1,58 @@
+name: Post catalog product to Facebook and Instagram
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Preview the selected product and caption without posting
+        required: true
+        type: boolean
+        default: true
+  schedule:
+    - cron: "0 14 * * 1-6"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: catalog-and-social-automation
+  cancel-in-progress: false
+
+jobs:
+  post-product:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Select and publish product
+        id: posting
+        env:
+          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+          META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+          META_INSTAGRAM_ID: ${{ secrets.META_INSTAGRAM_ID }}
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.dry_run }}" == "true" ]]; then
+            python scripts/social_posting.py --dry-run
+          else
+            python scripts/social_posting.py
+          fi
+
+      - name: Persist posting state
+        if: steps.posting.outputs.status != 'dry-run'
+        run: |
+          git config user.name "Social Posting Automation"
+          git config user.email "actions@users.noreply.github.com"
+          git add .github/social-posting-state.json
+          git diff --cached --quiet || git commit -m "Update social posting state $(date -u +%F)"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Fail after preserving retry state
+        if: steps.posting.outputs.status == 'error'
+        run: exit 1
