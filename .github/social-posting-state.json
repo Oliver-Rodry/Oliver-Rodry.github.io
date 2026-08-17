@@ -2,7 +2,8 @@
   "posted_skus": [
     "BORRADELECHEUND",
     "BORRADORMAGNE",
-    "CART 2"
+    "CART 2",
+    "6820220039048"
   ],
   "history": [
     {
@@ -36,6 +37,17 @@
       "facebook_post_id": "1056461310893148_122131293201354776",
       "instagram_post_id": "18124543039817552",
       "completed_at": "2026-08-17T14:55:16.307460+00:00"
+    },
+    {
+      "sku": "6820220039048",
+      "name": "CHINCHETAS SURTIDAS CAJITA",
+      "caption": "Para la escuela, la oficina o ese proyecto que tienes en mano: Chinchetas surtidas cajita. ✏️\n\nChinchetas, 1 caja, 4x5.5 cm, ideal para uso en oficinas.\n\n💰 Precio: RD$65\n📦 Disponible mientras haya existencias.\n\n¿Lo necesitas? Escríbenos y te ayudamos de una vez. 📩\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-17T12:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/6820220039048.jpg",
+      "started_at": "2026-08-17T16:22:14.137370+00:00",
+      "facebook_post_id": "1056461310893148_122131312893354776",
+      "instagram_post_id": "17936671002358165",
+      "completed_at": "2026-08-17T16:22:33.713062+00:00"
     }
   ],
   "pending": null,
