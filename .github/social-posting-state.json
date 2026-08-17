@@ -1,5 +1,15 @@
 {
   "posted_skus": [],
   "history": [],
-  "pending": null
+  "pending": {
+    "sku": "BORRADELECHEUND",
+    "name": "BORRA DE LECHE GENERICA MEDIANA",
+    "caption": "✨ ¡Tenemos Borra De Leche Generica Mediana disponible!\n\nBorra de leche escolar, 1 unidad, 6.5x2 cm, ideal para uso escolar\n\n💰 Precio: RD$15\n📦 Disponible mientras haya existencias.\n\nEscríbenos para ordenar o visítanos. 💬\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente",
+    "image_url": "https://papeleriasolnaciente.com/img/products/BORRADELECHEUND.jpg",
+    "started_at": "2026-08-17T04:21:29.460252+00:00",
+    "facebook_post_id": null,
+    "instagram_post_id": "18073005806402868",
+    "last_error": "{\"error\": {\"message\": \"(#200) The permission(s) publish_actions are not available. It has been deprecated. If you want to provide a way for your app users to share content to Facebook, we encourage you to use our Sharing products instead.\", \"type\": \"OAuthException\", \"code\": 200, \"fbtrace_id\": \"A3dgHVidb37dZ1Io5KQQtA6\"}}",
+    "last_error_at": "2026-08-17T04:21:42.435822+00:00"
+  }
 }
