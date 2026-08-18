@@ -5,7 +5,8 @@
     "CART 2",
     "6820220039048",
     "CINTTRANSGRAN",
-    "6970873981048"
+    "6970873981048",
+    "1313526879944"
   ],
   "history": [
     {
@@ -72,6 +73,17 @@
       "facebook_post_id": "1056461310893148_122131358847354776",
       "instagram_post_id": "18222793339332986",
       "completed_at": "2026-08-17T20:21:21.266056+00:00"
+    },
+    {
+      "sku": "1313526879944",
+      "name": "COMPAS PLASTICO 11.6X3",
+      "caption": "¿Te hace falta compás plástico 11.6x3? Lo tenemos disponible. 🙌\n\nCompás plastico,11.6x3 cm, ideal para uso escolar.\n\n💰 Precio: RD$60\n📦 Disponible mientras haya existencias.\n\nEstamos a la orden para ayudarte con tu pedido. 😊\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-17T20:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/1313526879944.jpg",
+      "started_at": "2026-08-18T00:59:27.095983+00:00",
+      "facebook_post_id": "1056461310893148_122131397157354776",
+      "instagram_post_id": "18123715171830572",
+      "completed_at": "2026-08-18T00:59:48.721550+00:00"
     }
   ],
   "pending": null,
