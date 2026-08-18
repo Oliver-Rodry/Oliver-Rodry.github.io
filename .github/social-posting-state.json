@@ -11,7 +11,8 @@
     "6936926333011",
     "1313526871399",
     "7462955102896",
-    "DIGI8X14"
+    "DIGI8X14",
+    "ESTUCHETRANSPUND"
   ],
   "history": [
     {
@@ -144,6 +145,17 @@
       "facebook_post_id": "1056461310893148_122131588863354776",
       "instagram_post_id": "18110009063090490",
       "completed_at": "2026-08-18T20:18:32.597002+00:00"
+    },
+    {
+      "sku": "ESTUCHETRANSPUND",
+      "name": "ESTUCHE VARIEDAD COLOR TRANSPARENTE UND",
+      "caption": "Eso que te faltaba para seguir trabajando tranquilo: Estuche variedad color transparente. 🙌\n\nEstuche variedad color transparente, 23x12cm, ideal para uso escolar.\n\n💰 Precio: RD$55\n📦 Disponible mientras haya existencias.\n\nEstamos a la orden para ayudarte con tu pedido. 😊\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-18T20:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/ESTUCHETRANSPUND.jpg",
+      "started_at": "2026-08-18T22:18:24.503272+00:00",
+      "facebook_post_id": "1056461310893148_122131603485354776",
+      "instagram_post_id": "18110866202472071",
+      "completed_at": "2026-08-18T22:18:44.393492+00:00"
     }
   ],
   "pending": null,
