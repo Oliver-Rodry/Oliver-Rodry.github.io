@@ -28,7 +28,7 @@ GRAPH_URL = f"https://graph.facebook.com/{GRAPH_VERSION}"
 LOCAL_TZ = ZoneInfo("America/Santo_Domingo")
 CAMPAIGN_START = date(2026, 8, 17)
 CAMPAIGN_END = date(2026, 8, 23)
-POSTING_HOURS = (8, 10, 12, 14, 16, 20)
+POSTING_HOURS = (8, 10, 12, 14, 16, 18, 20)
 
 
 class MetaError(RuntimeError):
