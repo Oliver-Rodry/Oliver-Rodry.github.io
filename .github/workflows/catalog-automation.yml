@@ -46,6 +46,7 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add products.csv .github/catalog-automation-state.json
           git commit -m "Update catalog from inventory email $(date -u +%F)"
+          git pull --rebase origin main
           git push origin HEAD:main
 
       - name: Send confirmation email
