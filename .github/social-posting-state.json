@@ -12,7 +12,8 @@
     "1313526871399",
     "7462955102896",
     "DIGI8X14",
-    "ESTUCHETRANSPUND"
+    "ESTUCHETRANSPUND",
+    "CINTAPEQ"
   ],
   "history": [
     {
@@ -156,6 +157,17 @@
       "facebook_post_id": "1056461310893148_122131603485354776",
       "instagram_post_id": "18110866202472071",
       "completed_at": "2026-08-18T22:18:44.393492+00:00"
+    },
+    {
+      "sku": "CINTAPEQ",
+      "name": "CINTA ADHESIVA FINA UNID",
+      "caption": "¿Te hace falta cinta adhesiva fina? Lo tenemos disponible. 🙌\n\nCinta adhesiva, 1 rollo, 1 cm de ancho, ideal para uso escolar.\n\n💰 Precio: RD$80\n📦 Disponible mientras haya existencias.\n\nEstamos a la orden para ayudarte con tu pedido. 😊\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-18T18:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/CINTAPEQ.jpg",
+      "started_at": "2026-08-19T03:53:59.497343+00:00",
+      "facebook_post_id": "1056461310893148_122131667127354776",
+      "instagram_post_id": "18097778645382656",
+      "completed_at": "2026-08-19T03:54:16.188907+00:00"
     }
   ],
   "pending": null,
