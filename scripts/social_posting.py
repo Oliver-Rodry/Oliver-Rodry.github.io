@@ -233,12 +233,67 @@ def refresh_campaign_captions(state: dict) -> int:
     return refreshed
 
 
-def within_campaign_window(now: datetime | None = None) -> bool:
+def fill_missing_campaign_slots(state: dict, today: date | None = None) -> int:
+    """Add newly configured posting slots without changing existing assignments."""
+    first_day = today or datetime.now(timezone.utc).astimezone(LOCAL_TZ).date()
+    schedule = state.get("campaign", {}).get("schedule", [])
+    existing_times = {item["scheduled_for"] for item in schedule}
+    used_skus = {item["sku"] for item in schedule} | set(state.get("posted_skus", []))
+    available = diversified([product for product in eligible_products() if product["sku"] not in used_skus])
+    added = 0
+    for slot in campaign_slots():
+        if slot.date() < first_day:
+            continue
+        scheduled_for = slot.isoformat()
+        if scheduled_for in existing_times:
+            continue
+        if not available:
+            raise RuntimeError("Not enough eligible products to fill the missing campaign slots.")
+        product = available.pop(0)
+        schedule.append(
+            {
+                "scheduled_for": scheduled_for,
+                "sku": product["sku"],
+                "name": product["name"],
+                "caption": caption_for(product, len(schedule) + len(state.get("history", []))),
+            }
+        )
+        added += 1
+    schedule.sort(key=lambda item: item["scheduled_for"])
+    return added
+
+
+def scheduled_time(item: dict) -> datetime:
+    return datetime.fromisoformat(item["scheduled_for"]).astimezone(LOCAL_TZ)
+
+
+def campaign_item(state: dict, now: datetime | None = None, due_only: bool = False) -> dict | None:
+    """Return the next eligible unposted campaign item, optionally only if due."""
     local_now = (now or datetime.now(timezone.utc)).astimezone(LOCAL_TZ)
-    return CAMPAIGN_START <= local_now.date() <= CAMPAIGN_END and local_now.hour in POSTING_HOURS
+    eligible_skus = {product["sku"] for product in eligible_products()}
+    posted = set(state.get("posted_skus", []))
+    candidates = sorted(state.get("campaign", {}).get("schedule", []), key=lambda item: item["scheduled_for"])
+    return next(
+        (
+            item
+            for item in candidates
+            if item["sku"] in eligible_skus
+            and item["sku"] not in posted
+            and (not due_only or scheduled_time(item) <= local_now)
+        ),
+        None,
+    )
 
 
-def new_pending(state: dict) -> dict:
+def campaign_post_due(state: dict, now: datetime | None = None) -> bool:
+    pending = state.get("pending")
+    if pending:
+        scheduled_for = pending.get("scheduled_for")
+        return not scheduled_for or datetime.fromisoformat(scheduled_for) <= (now or datetime.now(timezone.utc))
+    return campaign_item(state, now=now, due_only=True) is not None
+
+
+def new_pending(state: dict, now: datetime | None = None, due_only: bool = False) -> dict:
     products = eligible_products()
     if not products:
         raise RuntimeError("No in-stock products with matching images were found.")
@@ -248,10 +303,9 @@ def new_pending(state: dict) -> dict:
     if not remaining:
         posted = []
         remaining = products
-    queued = next(
-        (item for item in state.get("campaign", {}).get("schedule", []) if item["sku"] in {p["sku"] for p in remaining}),
-        None,
-    )
+    queued = campaign_item(state, now=now, due_only=due_only)
+    if due_only and queued is None:
+        raise RuntimeError("No campaign post is due.")
     product = by_sku[queued["sku"]] if queued else remaining[0]
     image_url = f"{SITE_URL}/{urllib.parse.quote(product['image_path'], safe='/')}"
     return {
@@ -313,6 +367,7 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--prepare-campaign", action="store_true")
     parser.add_argument("--refresh-captions", action="store_true")
+    parser.add_argument("--fill-missing-slots", action="store_true")
     parser.add_argument("--enforce-window", action="store_true")
     args = parser.parse_args()
     state = load_state()
@@ -326,11 +381,16 @@ def main() -> int:
         save_state(state)
         print(f"Refreshed {refreshed} unposted campaign captions.")
         return 0
-    if args.enforce_window and not within_campaign_window():
-        print("Outside the August 17-23 campaign posting window; nothing to publish.")
+    if args.fill_missing_slots:
+        added = fill_missing_campaign_slots(state)
+        save_state(state)
+        print(f"Added {added} missing campaign slots.")
+        return 0
+    if args.enforce_window and not campaign_post_due(state):
+        print("No campaign post is due; nothing to publish.")
         output("status", "skipped")
         return 0
-    pending = state.get("pending") or new_pending(state)
+    pending = state.get("pending") or new_pending(state, due_only=args.enforce_window)
     if args.dry_run:
         print(json.dumps(pending, ensure_ascii=False, indent=2))
         output("status", "dry-run")

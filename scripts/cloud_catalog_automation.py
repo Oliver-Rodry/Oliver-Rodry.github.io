@@ -14,6 +14,7 @@ import sys
 import tempfile
 import urllib.parse
 import urllib.request
+from datetime import datetime, timezone
 from pathlib import Path
 
 
@@ -88,9 +89,10 @@ def prepare() -> int:
     token = access_token()
     workbook, filename, message_id = newest_workbook(token)
     digest = hashlib.sha256(workbook).hexdigest()
-    if STATE.exists() and json.loads(STATE.read_text()).get("last_workbook_sha256") == digest:
+    previous_state = json.loads(STATE.read_text()) if STATE.exists() else {}
+    if previous_state.get("gmail_message_id") == message_id:
         output("duplicate", "true")
-        print("Latest workbook was already processed.")
+        print("Latest Gmail message was already processed.")
         return 0
     with tempfile.NamedTemporaryFile(suffix=".xlsx") as source:
         source.write(workbook)
@@ -104,14 +106,17 @@ def prepare() -> int:
                 "--output", str(ROOT / "products.csv"),
                 "--overrides", str(ROOT / "inventory_overrides.json"),
                 "--report", str(REPORT),
-                "--state", str(STATE),
                 "--apply",
             ],
             cwd=ROOT,
             check=True,
         )
-    state = json.loads(STATE.read_text())
-    state.update({"gmail_message_id": message_id, "workbook_filename": filename})
+    state = {
+        "last_workbook_sha256": digest,
+        "processed_at": datetime.now(timezone.utc).isoformat(),
+        "gmail_message_id": message_id,
+        "workbook_filename": filename,
+    }
     STATE.parent.mkdir(parents=True, exist_ok=True)
     STATE.write_text(json.dumps(state, indent=2) + "\n")
     output("duplicate", "false")

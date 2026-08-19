@@ -3,8 +3,9 @@ name: Update catalog from Gmail
 on:
   workflow_dispatch:
   schedule:
-    - cron: "40 20 * * 1-5"
-    - cron: "10 16 * * 6"
+    # Check every 30 minutes from noon through 8 PM Dominican time, Monday-Saturday.
+    # A Gmail message already recorded in state is safely skipped.
+    - cron: "10,40 16-23 * * 1-6"
 
 permissions:
   contents: write

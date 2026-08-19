@@ -9,9 +9,9 @@ on:
         type: boolean
         default: true
   schedule:
-    # Every two hours. The script limits live posts to the prepared 8 AM-8 PM
-    # AST slots from August 17-23, 2026, and safely skips all other runs.
-    - cron: "0 */2 * * *"
+    # Check frequently because GitHub scheduled jobs can start late. The script
+    # publishes only the oldest prepared slot whose scheduled time has passed.
+    - cron: "*/15 * * * *"
 
 permissions:
   contents: write
