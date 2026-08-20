@@ -21,7 +21,8 @@
     "1313526879951",
     "6970873980966",
     "7465547688013",
-    "2022124765564"
+    "2022124765564",
+    "LAPIZCONBORRAUND"
   ],
   "history": [
     {
@@ -264,6 +265,17 @@
       "facebook_post_id": "1056461310893148_122132045991354776",
       "instagram_post_id": "18147599350538288",
       "completed_at": "2026-08-20T12:02:59.884593+00:00"
+    },
+    {
+      "sku": "LAPIZCONBORRAUND",
+      "name": "LAPIZ CON BORRA UND",
+      "caption": "Eso que te faltaba para seguir trabajando tranquilo: Lápiz con borra. 🙌\n\nLápiz con borra, 12 und.\n\n💰 Precio: RD$10\n📦 Disponible mientras haya existencias.\n\nAgrégalo a tu lista y escríbenos para ordenar. 📝\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-20T10:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/LAPIZCONBORRAUND.jpg",
+      "started_at": "2026-08-20T14:00:05.407373+00:00",
+      "facebook_post_id": "1056461310893148_122132071407354776",
+      "instagram_post_id": "18126881176688699",
+      "completed_at": "2026-08-20T14:00:25.442743+00:00"
     }
   ],
   "pending": null,
