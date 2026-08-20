@@ -25,7 +25,8 @@
     "LAPIZCONBORRAUND",
     "7468355583037",
     "6976693300410",
-    "7453038441155"
+    "7453038441155",
+    "COPIACOLOR8.5X14"
   ],
   "history": [
     {
@@ -312,6 +313,17 @@
       "facebook_post_id": "1056461310893148_122132139411354776",
       "instagram_post_id": "18102872675251887",
       "completed_at": "2026-08-20T20:28:07.306887+00:00"
+    },
+    {
+      "sku": "COPIACOLOR8.5X14",
+      "name": "COPIA A COLOR 8.5X14 POR PAGINA",
+      "caption": "Un básico que siempre resuelve: Copia a color 8.5x14 por página. ✨\n\nServicio de fotocopiado en tamaño 8.5x14 a color por página.\n\n💰 Precio: RD$20\n📦 Disponible mientras haya existencias.\n\nAgrégalo a tu lista y escríbenos para ordenar. 📝\n\n#Servicios #Papelería #SantoDomingo #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-20T18:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/COPIACOLOR8.5X14.jpg",
+      "started_at": "2026-08-20T22:01:30.179276+00:00",
+      "facebook_post_id": "1056461310893148_122132149005354776",
+      "instagram_post_id": "17904657072501385",
+      "completed_at": "2026-08-20T22:01:53.080472+00:00"
     }
   ],
   "pending": null,
