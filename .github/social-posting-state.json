@@ -32,7 +32,8 @@
     "6902105168132",
     "1313526871481",
     "6957871007000",
-    "1313526879739"
+    "1313526879739",
+    "DIGITACIONCOLOR"
   ],
   "history": [
     {
@@ -396,6 +397,17 @@
       "facebook_post_id": "1056461310893148_122132388207354776",
       "instagram_post_id": "18046048895606247",
       "completed_at": "2026-08-21T20:29:53.686048+00:00"
+    },
+    {
+      "sku": "DIGITACIONCOLOR",
+      "name": "DIGITACION A COLOR 8.5X11 POR PAGINA",
+      "caption": "Mira esta opción que tenemos en Papelería Sol Naciente: Digitación a color 8.5x11 por página. 👀\n\nServicio de impresión tamaño carta a color, 8.5x11, por página.\n\n💰 Precio: RD$30\n📦 Disponible mientras haya existencias.\n\n¿Lo necesitas? Escríbenos y te ayudamos de una vez. 📩\n\n#Servicios #Papelería #SantoDomingo #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-21T18:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/DIGITACIONCOLOR.jpg",
+      "started_at": "2026-08-21T22:22:24.144011+00:00",
+      "facebook_post_id": "1056461310893148_122132401281354776",
+      "instagram_post_id": "18076440569367946",
+      "completed_at": "2026-08-21T22:22:47.942802+00:00"
     }
   ],
   "pending": null,
