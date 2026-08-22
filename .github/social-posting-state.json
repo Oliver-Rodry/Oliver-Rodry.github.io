@@ -37,7 +37,8 @@
     "2022124765601",
     "1313526871252",
     "1313526879913",
-    "1313526871313"
+    "1313526871313",
+    "HOJANOT"
   ],
   "history": [
     {
@@ -456,6 +457,17 @@
       "facebook_post_id": "1056461310893148_122132592303354776",
       "instagram_post_id": "18210935293357161",
       "completed_at": "2026-08-22T16:21:26.631821+00:00"
+    },
+    {
+      "sku": "HOJANOT",
+      "name": "RESMA DE HOJA NOTARIAL",
+      "caption": "Si todavía te falta resma de hoja notarial, aquí lo encuentras. 📝\n\nResma de hoja notarial, 100 hojas 8.5x13.5.\n\n💰 Precio: RD$250\n📦 Disponible mientras haya existencias.\n\nPasa por la papelería o escríbenos por DM para pedirlo. 💬\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-22T14:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/HOJANOT.jpg",
+      "started_at": "2026-08-22T18:27:37.351600+00:00",
+      "facebook_post_id": "1056461310893148_122132620299354776",
+      "instagram_post_id": "18003836147778425",
+      "completed_at": "2026-08-22T18:28:01.316836+00:00"
     }
   ],
   "pending": null,
