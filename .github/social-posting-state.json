@@ -38,7 +38,8 @@
     "1313526871252",
     "1313526879913",
     "1313526871313",
-    "HOJANOT"
+    "HOJANOT",
+    "20260314103517505"
   ],
   "history": [
     {
@@ -468,6 +469,17 @@
       "facebook_post_id": "1056461310893148_122132620299354776",
       "instagram_post_id": "18003836147778425",
       "completed_at": "2026-08-22T18:28:01.316836+00:00"
+    },
+    {
+      "sku": "20260314103517505",
+      "name": "ROLLO PAPEL TERMICO 80 MM",
+      "caption": "Para la escuela, la oficina o ese proyecto que tienes en mano: Rollo papel termico 80 mm. ✏️\n\nRollo termico para facturas, 80 milimetros.\n\n💰 Precio: RD$85\n📦 Disponible mientras haya existencias.\n\nEscríbenos y con gusto te resolvemos. 💬\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-22T16:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/20260314103517505.jpg",
+      "started_at": "2026-08-22T20:20:12.686464+00:00",
+      "facebook_post_id": "1056461310893148_122132634147354776",
+      "instagram_post_id": "18426030742183594",
+      "completed_at": "2026-08-22T20:20:28.179692+00:00"
     }
   ],
   "pending": null,
