@@ -44,7 +44,8 @@
     "7453010030759",
     "6940509500738",
     "SILICONBARRAUND",
-    "SOBRECARTAVENTANA"
+    "SOBRECARTAVENTANA",
+    "TALONARIOPEQUEN"
   ],
   "history": [
     {
@@ -540,6 +541,17 @@
       "facebook_post_id": "1056461310893148_122132853993354776",
       "instagram_post_id": "18017076566872425",
       "completed_at": "2026-08-23T16:22:54.463919+00:00"
+    },
+    {
+      "sku": "TALONARIOPEQUEN",
+      "name": "TALONARIO DE RECIBO MEDIANO CON COPIA",
+      "caption": "Un básico que siempre resuelve: Talonario de recibo mediano con copia. ✨\n\nTalonario de facturas, 8.5x3.5, 1 unidad.\n\n💰 Precio: RD$35\n📦 Disponible mientras haya existencias.\n\nPasa por la papelería o escríbenos por DM para pedirlo. 💬\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-23T14:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/TALONARIOPEQUEN.jpg",
+      "started_at": "2026-08-23T18:26:11.941652+00:00",
+      "facebook_post_id": "1056461310893148_122132873331354776",
+      "instagram_post_id": "18079383551696597",
+      "completed_at": "2026-08-23T18:26:30.066094+00:00"
     }
   ],
   "pending": null,
