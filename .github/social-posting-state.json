@@ -42,7 +42,8 @@
     "20260314103517505",
     "FOLDER85X14UND",
     "7453010030759",
-    "6940509500738"
+    "6940509500738",
+    "SILICONBARRAUND"
   ],
   "history": [
     {
@@ -516,6 +517,17 @@
       "facebook_post_id": "1056461310893148_122132814207354776",
       "instagram_post_id": "18060664370607689",
       "completed_at": "2026-08-23T12:36:22.969260+00:00"
+    },
+    {
+      "sku": "SILICONBARRAUND",
+      "name": "SILICON EN BARRA FINA 11X220MM",
+      "caption": "¿Te hace falta silicon en barra fina 11x220mm? Lo tenemos disponible. 🙌\n\nSilicon en barra para pistola pequena.\n\n💰 Precio: RD$15\n📦 Disponible mientras haya existencias.\n\nAgrégalo a tu lista y escríbenos para ordenar. 📝\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-23T10:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/SILICONBARRAUND.jpg",
+      "started_at": "2026-08-23T14:20:54.476476+00:00",
+      "facebook_post_id": "1056461310893148_122132835375354776",
+      "instagram_post_id": "18104710826221254",
+      "completed_at": "2026-08-23T14:21:14.528833+00:00"
     }
   ],
   "pending": null,
