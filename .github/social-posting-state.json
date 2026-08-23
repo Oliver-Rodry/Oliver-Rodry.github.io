@@ -43,7 +43,8 @@
     "FOLDER85X14UND",
     "7453010030759",
     "6940509500738",
-    "SILICONBARRAUND"
+    "SILICONBARRAUND",
+    "SOBRECARTAVENTANA"
   ],
   "history": [
     {
@@ -528,6 +529,17 @@
       "facebook_post_id": "1056461310893148_122132835375354776",
       "instagram_post_id": "18104710826221254",
       "completed_at": "2026-08-23T14:21:14.528833+00:00"
+    },
+    {
+      "sku": "SOBRECARTAVENTANA",
+      "name": "SOBRE DE PAPEL CON VENTANA",
+      "caption": "Para completar tu lista sin dar muchas vueltas: Sobre de papel con ventana. ✅\n\nSobre de papel con ventana, 1 und, 11.6x25.6.\n\n💰 Precio: RD$20\n📦 Disponible mientras haya existencias.\n\n¿Lo necesitas? Escríbenos y te ayudamos de una vez. 📩\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-23T12:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/SOBRECARTAVENTANA.jpg",
+      "started_at": "2026-08-23T16:22:35.174128+00:00",
+      "facebook_post_id": "1056461310893148_122132853993354776",
+      "instagram_post_id": "18017076566872425",
+      "completed_at": "2026-08-23T16:22:54.463919+00:00"
     }
   ],
   "pending": null,
