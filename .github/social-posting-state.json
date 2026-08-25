@@ -53,7 +53,8 @@
     "6920151191058",
     "1313526879692",
     "COPIA85X11",
-    "HOJALEGA DIGI"
+    "HOJALEGA DIGI",
+    "HOJABOND85X14UND"
   ],
   "history": [
     {
@@ -648,6 +649,17 @@
       "facebook_post_id": "1056461310893148_122133221367354776",
       "instagram_post_id": "18106031342246424",
       "completed_at": "2026-08-25T05:05:21.836117+00:00"
+    },
+    {
+      "sku": "HOJABOND85X14UND",
+      "name": "HOJA PAPEL BOND 8.5X14 UND",
+      "caption": "Eso que te faltaba para seguir trabajando tranquilo: Hoja papel bond 8.5x14. 🙌\n\nInfoprint papel bond 8.5x14 unidad.\n\n💰 Precio: RD$5\n📦 Disponible mientras haya existencias.\n\nPasa por la papelería o escríbenos por DM para pedirlo. 💬\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-24T18:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/HOJABOND85X14UND.jpg",
+      "started_at": "2026-08-25T05:47:41.039494+00:00",
+      "facebook_post_id": "1056461310893148_122133230121354776",
+      "instagram_post_id": "18111707005817386",
+      "completed_at": "2026-08-25T05:48:02.762372+00:00"
     }
   ],
   "pending": null,
