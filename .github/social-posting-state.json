@@ -52,7 +52,8 @@
     "CART7",
     "6920151191058",
     "1313526879692",
-    "COPIA85X11"
+    "COPIA85X11",
+    "HOJALEGA DIGI"
   ],
   "history": [
     {
@@ -636,6 +637,17 @@
       "facebook_post_id": "1056461310893148_122133216261354776",
       "instagram_post_id": "18090370886197840",
       "completed_at": "2026-08-25T04:23:41.062003+00:00"
+    },
+    {
+      "sku": "HOJALEGA DIGI",
+      "name": "DIGITACION A COLOR LEGAL POR PAGINA",
+      "caption": "Para la escuela, la oficina o ese proyecto que tienes en mano: Digitación a color legal por página. ✏️\n\nServicio de impresión en hoja legal a color, 8.5x14, por página.\n\n💰 Precio: RD$40\n📦 Disponible mientras haya existencias.\n\n¿Lo necesitas? Escríbenos y te ayudamos de una vez. 📩\n\n#Servicios #Papelería #SantoDomingo #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-24T16:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/HOJALEGA%20DIGI.jpg",
+      "started_at": "2026-08-25T05:05:03.304605+00:00",
+      "facebook_post_id": "1056461310893148_122133221367354776",
+      "instagram_post_id": "18106031342246424",
+      "completed_at": "2026-08-25T05:05:21.836117+00:00"
     }
   ],
   "pending": null,
