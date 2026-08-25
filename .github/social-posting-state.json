@@ -57,7 +57,8 @@
     "HOJABOND85X14UND",
     "2022124765526",
     "2022124765595",
-    "7468355583044"
+    "7468355583044",
+    "MARCADORPIZZARRANEGROUND"
   ],
   "history": [
     {
@@ -696,6 +697,17 @@
       "facebook_post_id": "1056461310893148_122133288687354776",
       "instagram_post_id": "18113876032959473",
       "completed_at": "2026-08-25T12:16:17.741311+00:00"
+    },
+    {
+      "sku": "MARCADORPIZZARRANEGROUND",
+      "name": "MARCADOR DE PIZARRA NEGRO",
+      "caption": "Un básico que siempre resuelve: Marcador de pizarra negro. ✨\n\nMarcador de pizarra negro unidad.\n\n💰 Precio: RD$35\n📦 Disponible mientras haya existencias.\n\nAgrégalo a tu lista y escríbenos para ordenar. 📝\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-25T10:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/MARCADORPIZZARRANEGROUND.jpg",
+      "started_at": "2026-08-25T14:21:46.095753+00:00",
+      "facebook_post_id": "1056461310893148_122133317013354776",
+      "instagram_post_id": "18129125956708674",
+      "completed_at": "2026-08-25T14:22:00.790049+00:00"
     }
   ],
   "pending": null,
