@@ -54,7 +54,8 @@
     "1313526879692",
     "COPIA85X11",
     "HOJALEGA DIGI",
-    "HOJABOND85X14UND"
+    "HOJABOND85X14UND",
+    "2022124765526"
   ],
   "history": [
     {
@@ -660,6 +661,17 @@
       "facebook_post_id": "1056461310893148_122133230121354776",
       "instagram_post_id": "18111707005817386",
       "completed_at": "2026-08-25T05:48:02.762372+00:00"
+    },
+    {
+      "sku": "2022124765526",
+      "name": "LAPICERO MULTICOLOR",
+      "caption": "Hoy te compartimos una opción práctica: Lapicero multicolor. 🌟\n\nBolígrafo multicolor reda company 0.7mm.\n\n💰 Precio: RD$25\n📦 Disponible mientras haya existencias.\n\nEscríbenos y con gusto te resolvemos. 💬\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-24T20:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/2022124765526.jpg",
+      "started_at": "2026-08-25T06:42:54.900311+00:00",
+      "facebook_post_id": "1056461310893148_122133237399354776",
+      "instagram_post_id": "18086814839230058",
+      "completed_at": "2026-08-25T06:43:09.013741+00:00"
     }
   ],
   "pending": null,
