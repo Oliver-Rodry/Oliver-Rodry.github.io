@@ -48,7 +48,8 @@
     "TALONARIOPEQUEN",
     "1313526871139",
     "6970873984599",
-    "6978524748705"
+    "6978524748705",
+    "CART7"
   ],
   "history": [
     {
@@ -588,6 +589,17 @@
       "facebook_post_id": "1056461310893148_122132931309354776",
       "instagram_post_id": "18034746767830131",
       "completed_at": "2026-08-24T01:10:36.251568+00:00"
+    },
+    {
+      "sku": "CART7",
+      "name": "CARTULINA AMARILLO FUERTE UNID",
+      "caption": "Para completar tu lista sin dar muchas vueltas: Cartulina amarilla brillante. ✅\n\nCartulina amarillo brillante, 1 unidad, 65x50 c, ideal para uso escolar.\n\n💰 Precio: RD$30\n📦 Disponible mientras haya existencias.\n\nEscríbenos y con gusto te resolvemos. 💬\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-24T08:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/CART7.jpg",
+      "started_at": "2026-08-25T01:08:55.639995+00:00",
+      "facebook_post_id": "1056461310893148_122133184137354776",
+      "instagram_post_id": "18162794374463964",
+      "completed_at": "2026-08-25T01:09:17.273431+00:00"
     }
   ],
   "pending": null,
