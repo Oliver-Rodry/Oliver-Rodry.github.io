@@ -49,7 +49,8 @@
     "1313526871139",
     "6970873984599",
     "6978524748705",
-    "CART7"
+    "CART7",
+    "6920151191058"
   ],
   "history": [
     {
@@ -600,6 +601,17 @@
       "facebook_post_id": "1056461310893148_122133184137354776",
       "instagram_post_id": "18162794374463964",
       "completed_at": "2026-08-25T01:09:17.273431+00:00"
+    },
+    {
+      "sku": "6920151191058",
+      "name": "CINTA DOBLE CARA UNIDAD",
+      "caption": "Un básico que siempre resuelve: Cinta doble cara. ✨\n\nCinta doble cara, 1 rollo, 8 cm de ancho, ideal para manualidades.\n\n💰 Precio: RD$250\n📦 Disponible mientras haya existencias.\n\nEstamos a la orden para ayudarte con tu pedido. 😊\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-24T10:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/6920151191058.jpg",
+      "started_at": "2026-08-25T02:31:10.733538+00:00",
+      "facebook_post_id": "1056461310893148_122133198627354776",
+      "instagram_post_id": "17905581498536406",
+      "completed_at": "2026-08-25T02:31:38.781044+00:00"
     }
   ],
   "pending": null,
