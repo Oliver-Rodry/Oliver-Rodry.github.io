@@ -26,9 +26,12 @@ SITE_URL = "https://papeleriasolnaciente.com"
 GRAPH_VERSION = os.environ.get("META_GRAPH_VERSION", "v26.0")
 GRAPH_URL = f"https://graph.facebook.com/{GRAPH_VERSION}"
 LOCAL_TZ = ZoneInfo("America/Santo_Domingo")
-CAMPAIGN_START = date(2026, 8, 17)
-CAMPAIGN_END = date(2026, 8, 23)
+CAMPAIGN_START = date(2026, 8, 24)
+CAMPAIGN_END = date(2026, 8, 31)
 POSTING_HOURS = (8, 10, 12, 14, 16, 18, 20)
+EXTRA_POSTING_HOURS_BY_DATE = {
+    date(2026, 8, 24): (22,),
+}
 
 
 class MetaError(RuntimeError):
@@ -96,7 +99,7 @@ def eligible_products() -> list[dict[str, str]]:
             in_stock = False
         image = image_for(row["sku"])
         if in_stock and image:
-            eligible.append({**row, "image_path": str(image.relative_to(ROOT))})
+            eligible.append({**row, "image_path": image.relative_to(ROOT).as_posix()})
     return eligible
 
 
@@ -175,7 +178,8 @@ def campaign_slots() -> list[datetime]:
     slots = []
     day = CAMPAIGN_START
     while day <= CAMPAIGN_END:
-        for hour in POSTING_HOURS:
+        hours = (*POSTING_HOURS, *EXTRA_POSTING_HOURS_BY_DATE.get(day, ()))
+        for hour in sorted(set(hours)):
             slots.append(datetime.combine(day, dt_time(hour), LOCAL_TZ))
         day += timedelta(days=1)
     return slots
