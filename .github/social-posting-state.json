@@ -51,7 +51,8 @@
     "6978524748705",
     "CART7",
     "6920151191058",
-    "1313526879692"
+    "1313526879692",
+    "COPIA85X11"
   ],
   "history": [
     {
@@ -624,6 +625,17 @@
       "facebook_post_id": "1056461310893148_122133207561354776",
       "instagram_post_id": "18111696902101238",
       "completed_at": "2026-08-25T03:31:40.680977+00:00"
+    },
+    {
+      "sku": "COPIA85X11",
+      "name": "COPIA BLANCO Y NEGRO 8.5X11 POR PAGINA",
+      "caption": "Si todavía te falta copia blanco y negro 8.5x11 por página, aquí lo encuentras. 📝\n\nServicio de fotocopiado en tamaño 8.5x11 a blanco y negro por página.\n\n💰 Precio: RD$5\n📦 Disponible mientras haya existencias.\n\nAgrégalo a tu lista y escríbenos para ordenar. 📝\n\n#Servicios #Papelería #SantoDomingo #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-24T14:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/COPIA85X11.jpg",
+      "started_at": "2026-08-25T04:23:22.062018+00:00",
+      "facebook_post_id": "1056461310893148_122133216261354776",
+      "instagram_post_id": "18090370886197840",
+      "completed_at": "2026-08-25T04:23:41.062003+00:00"
     }
   ],
   "pending": null,
