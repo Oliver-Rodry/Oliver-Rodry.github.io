@@ -14,6 +14,7 @@ import sys
 import tempfile
 import urllib.parse
 import urllib.request
+from urllib.error import HTTPError
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -47,8 +48,16 @@ def access_token() -> str:
         data=urllib.parse.urlencode(values).encode(),
         headers={"Content-Type": "application/x-www-form-urlencoded"},
     )
-    with urllib.request.urlopen(request, timeout=30) as response:
-        return json.load(response)["access_token"]
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            return json.load(response)["access_token"]
+    except HTTPError as error:
+        detail = error.read().decode("utf-8", errors="replace")
+        raise RuntimeError(
+            "Gmail OAuth refresh failed. Re-run scripts/authorize_gmail.py to "
+            "refresh the GMAIL_CLIENT_ID, GMAIL_CLIENT_SECRET, and "
+            f"GMAIL_REFRESH_TOKEN GitHub secrets. Google response: {detail}"
+        ) from error
 
 
 def walk_parts(part: dict):
