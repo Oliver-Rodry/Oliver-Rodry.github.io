@@ -67,7 +67,8 @@
     "1313526879937",
     "1313526871344",
     "7467823500002",
-    "SILICONBARRAGRUESUND"
+    "SILICONBARRAGRUESUND",
+    "SOBRESENCILLOCARTA"
   ],
   "history": [
     {
@@ -816,6 +817,17 @@
       "facebook_post_id": "1056461310893148_122133610509354776",
       "instagram_post_id": "17875152324555885",
       "completed_at": "2026-08-26T19:12:29.426282+00:00"
+    },
+    {
+      "sku": "SOBRESENCILLOCARTA",
+      "name": "SOBRE DE PAPEL SENCILLO UNIDAD",
+      "caption": "Si todavía te falta sobre de papel sencillo, aquí lo encuentras. 📝\n\nSobre de papel, 1 und, 11.5x24.9.\n\n💰 Precio: RD$15\n📦 Disponible mientras haya existencias.\n\nEstamos a la orden para ayudarte con tu pedido. 😊\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-26T16:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/SOBRESENCILLOCARTA.jpg",
+      "started_at": "2026-08-26T22:08:21.478723+00:00",
+      "facebook_post_id": "1056461310893148_122133634251354776",
+      "instagram_post_id": "18118522123912297",
+      "completed_at": "2026-08-26T22:08:39.469968+00:00"
     }
   ],
   "pending": null,
