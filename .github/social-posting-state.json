@@ -62,7 +62,8 @@
     "7453038444118",
     "6902105168828",
     "1313526871467",
-    "1313526879722"
+    "1313526879722",
+    "2022124765618"
   ],
   "history": [
     {
@@ -756,6 +757,17 @@
       "facebook_post_id": "1056461310893148_122133396831354776",
       "instagram_post_id": "18337863274270482",
       "completed_at": "2026-08-25T22:02:46.913263+00:00"
+    },
+    {
+      "sku": "2022124765618",
+      "name": "POST-IT MULTICOLOR 3X3",
+      "caption": "Hoy te compartimos una opción práctica: Post-it multicolor 3x3. 🌟\n\nPost-it varios colores, tamaño 3x3.\n\n💰 Precio: RD$45\n📦 Disponible mientras haya existencias.\n\nDate una vuelta por Papelería Sol Naciente o escríbenos por DM. 🛍️\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-25T20:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/2022124765618.jpg",
+      "started_at": "2026-08-26T01:50:47.612210+00:00",
+      "facebook_post_id": "1056461310893148_122133438735354776",
+      "instagram_post_id": "17938422924346232",
+      "completed_at": "2026-08-26T01:51:11.112302+00:00"
     }
   ],
   "pending": null,
