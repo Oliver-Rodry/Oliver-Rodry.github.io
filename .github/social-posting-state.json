@@ -64,7 +64,8 @@
     "1313526871467",
     "1313526879722",
     "2022124765618",
-    "1313526879937"
+    "1313526879937",
+    "1313526871344"
   ],
   "history": [
     {
@@ -780,6 +781,17 @@
       "facebook_post_id": "1056461310893148_122133545883354776",
       "instagram_post_id": "17979806898077301",
       "completed_at": "2026-08-26T12:18:35.403454+00:00"
+    },
+    {
+      "sku": "1313526871344",
+      "name": "RESALTADOR AZUL FRESH",
+      "caption": "Para completar tu lista sin dar muchas vueltas: Resaltador azul fresh. ✅\n\nResaltador azul fresh und.\n\n💰 Precio: RD$35\n📦 Disponible mientras haya existencias.\n\n¿Lo necesitas? Escríbenos y te ayudamos de una vez. 📩\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-26T10:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/1313526871344.jpg",
+      "started_at": "2026-08-26T14:26:26.198605+00:00",
+      "facebook_post_id": "1056461310893148_122133569067354776",
+      "instagram_post_id": "17923056981411980",
+      "completed_at": "2026-08-26T14:26:46.487297+00:00"
     }
   ],
   "pending": null,
