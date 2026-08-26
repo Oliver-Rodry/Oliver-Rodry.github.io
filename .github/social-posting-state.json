@@ -65,7 +65,8 @@
     "1313526879722",
     "2022124765618",
     "1313526879937",
-    "1313526871344"
+    "1313526871344",
+    "7467823500002"
   ],
   "history": [
     {
@@ -792,6 +793,17 @@
       "facebook_post_id": "1056461310893148_122133569067354776",
       "instagram_post_id": "17923056981411980",
       "completed_at": "2026-08-26T14:26:46.487297+00:00"
+    },
+    {
+      "sku": "7467823500002",
+      "name": "RESMA DE PAPEL COLOR",
+      "caption": "Un básico que siempre resuelve: Resma de papel color. ✨\n\nResma de papel color, 100 hojas 8.5x11.\n\n💰 Precio: RD$200\n📦 Disponible mientras haya existencias.\n\nPasa por la papelería o escríbenos por DM para pedirlo. 💬\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-26T12:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/7467823500002.jpg",
+      "started_at": "2026-08-26T16:00:17.425444+00:00",
+      "facebook_post_id": "1056461310893148_122133583359354776",
+      "instagram_post_id": "18119989610304581",
+      "completed_at": "2026-08-26T16:00:36.607530+00:00"
     }
   ],
   "pending": null,
