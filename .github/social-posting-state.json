@@ -68,7 +68,8 @@
     "1313526871344",
     "7467823500002",
     "SILICONBARRAGRUESUND",
-    "SOBRESENCILLOCARTA"
+    "SOBRESENCILLOCARTA",
+    "TALONARIOGRAND"
   ],
   "history": [
     {
@@ -828,6 +829,17 @@
       "facebook_post_id": "1056461310893148_122133634251354776",
       "instagram_post_id": "18118522123912297",
       "completed_at": "2026-08-26T22:08:39.469968+00:00"
+    },
+    {
+      "sku": "TALONARIOGRAND",
+      "name": "TALONARIO FACTURA GRANDE CON COPIA",
+      "caption": "Para la escuela, la oficina o ese proyecto que tienes en mano: Talonario factura grande con copia. ✏️\n\nTalonario de facturas, 8.5x5.5, 1 unidad.\n\n💰 Precio: RD$40\n📦 Disponible mientras haya existencias.\n\nDate una vuelta por Papelería Sol Naciente o escríbenos por DM. 🛍️\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-26T18:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/TALONARIOGRAND.jpg",
+      "started_at": "2026-08-27T03:17:46.467066+00:00",
+      "facebook_post_id": "1056461310893148_122133697389354776",
+      "instagram_post_id": "18021846884704612",
+      "completed_at": "2026-08-27T03:18:04.961091+00:00"
     }
   ],
   "pending": null,
