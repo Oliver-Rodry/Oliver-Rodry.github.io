@@ -71,7 +71,8 @@
     "SOBRESENCILLOCARTA",
     "TALONARIOGRAND",
     "1313526879784",
-    "TIZA"
+    "TIZA",
+    "CART8"
   ],
   "history": [
     {
@@ -864,6 +865,17 @@
       "facebook_post_id": "1056461310893148_122133913749354776",
       "instagram_post_id": "17959708341184980",
       "completed_at": "2026-08-27T23:52:33.404812+00:00"
+    },
+    {
+      "sku": "CART8",
+      "name": "CARTULINA AZUL FUERTE UND",
+      "caption": "¿Te hace falta cartulina azul fuerte? Lo tenemos disponible. 🙌\n\nCartulina azul rey, 1 unidad, 65x50 cm, ideal para uso escolar.\n\n💰 Precio: RD$30\n📦 Disponible mientras haya existencias.\n\nPasa por la papelería o escríbenos por DM para pedirlo. 💬\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-27T10:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/CART8.jpg",
+      "started_at": "2026-08-28T09:37:18.807700+00:00",
+      "facebook_post_id": "1056461310893148_122134019289354776",
+      "instagram_post_id": "18122650588853026",
+      "completed_at": "2026-08-28T09:37:37.655431+00:00"
     }
   ],
   "pending": null,
