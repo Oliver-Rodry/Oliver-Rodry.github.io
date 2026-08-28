@@ -72,7 +72,8 @@
     "TALONARIOGRAND",
     "1313526879784",
     "TIZA",
-    "CART8"
+    "CART8",
+    "COPIA85X14"
   ],
   "history": [
     {
@@ -876,6 +877,17 @@
       "facebook_post_id": "1056461310893148_122134019289354776",
       "instagram_post_id": "18122650588853026",
       "completed_at": "2026-08-28T09:37:37.655431+00:00"
+    },
+    {
+      "sku": "COPIA85X14",
+      "name": "COPIA BLANCO Y NEGRO 8.5X14 POR PAGINA",
+      "caption": "Para completar tu lista sin dar muchas vueltas: Copia blanco y negro 8.5x14 por página. ✅\n\nServicio de fotocopiado en tamaño8.5x14 a blanco y negro por página.\n\n💰 Precio: RD$10\n📦 Disponible mientras haya existencias.\n\nEscríbenos y con gusto te resolvemos. 💬\n\n#Servicios #Papelería #SantoDomingo #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-27T12:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/COPIA85X14.jpg",
+      "started_at": "2026-08-28T20:58:48.679367+00:00",
+      "facebook_post_id": "1056461310893148_122134170669354776",
+      "instagram_post_id": "18200617417372258",
+      "completed_at": "2026-08-28T20:59:08.543144+00:00"
     }
   ],
   "pending": null,
