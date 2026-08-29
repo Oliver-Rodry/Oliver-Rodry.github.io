@@ -73,7 +73,8 @@
     "1313526879784",
     "TIZA",
     "CART8",
-    "COPIA85X14"
+    "COPIA85X14",
+    "DIGITACIONBYN"
   ],
   "history": [
     {
@@ -888,6 +889,17 @@
       "facebook_post_id": "1056461310893148_122134170669354776",
       "instagram_post_id": "18200617417372258",
       "completed_at": "2026-08-28T20:59:08.543144+00:00"
+    },
+    {
+      "sku": "DIGITACIONBYN",
+      "name": "DIGITACION BLANCO Y NEGRO 8.5X11 POR PAGINA",
+      "caption": "Un básico que siempre resuelve: Digitación blanco y negro 8.5x11 por página. ✨\n\nServicio de impresión tamaño carta blanco y negro, 8.5x11, por página.\n\n💰 Precio: RD$20\n📦 Disponible mientras haya existencias.\n\nEstamos a la orden para ayudarte con tu pedido. 😊\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-27T14:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/DIGITACIONBYN.jpg",
+      "started_at": "2026-08-29T03:07:52.587321+00:00",
+      "facebook_post_id": "1056461310893148_122134237053354776",
+      "instagram_post_id": "17964572781186670",
+      "completed_at": "2026-08-29T03:08:12.869333+00:00"
     }
   ],
   "pending": null,
