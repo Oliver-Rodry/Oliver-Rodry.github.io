@@ -74,7 +74,8 @@
     "TIZA",
     "CART8",
     "COPIA85X14",
-    "DIGITACIONBYN"
+    "DIGITACIONBYN",
+    "LAPICERONEGROARLES"
   ],
   "history": [
     {
@@ -900,6 +901,17 @@
       "facebook_post_id": "1056461310893148_122134237053354776",
       "instagram_post_id": "17964572781186670",
       "completed_at": "2026-08-29T03:08:12.869333+00:00"
+    },
+    {
+      "sku": "LAPICERONEGROARLES",
+      "name": "LAPICERO NEGRO ARLES",
+      "caption": "Mira esta opción que tenemos en Papelería Sol Naciente: Lapicero negro arles. 👀\n\nBolígrafo negro arles unidad.\n\n💰 Precio: RD$15\n📦 Disponible mientras haya existencias.\n\nDate una vuelta por Papelería Sol Naciente o escríbenos por DM. 🛍️\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-27T16:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/LAPICERONEGROARLES.jpg",
+      "started_at": "2026-08-29T10:02:42.403991+00:00",
+      "facebook_post_id": "1056461310893148_122134304349354776",
+      "instagram_post_id": "18108296102168244",
+      "completed_at": "2026-08-29T10:02:55.636236+00:00"
     }
   ],
   "pending": null,
