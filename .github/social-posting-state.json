@@ -84,7 +84,8 @@
     "1313526871702",
     "SOBREMANILACARTA",
     "TALOM",
-    "071662008161"
+    "071662008161",
+    "C1"
   ],
   "history": [
     {
@@ -1020,6 +1021,17 @@
       "facebook_post_id": "1056461310893148_122134643637354776",
       "instagram_post_id": "17954138913247368",
       "completed_at": "2026-08-30T19:50:41.102019+00:00"
+    },
+    {
+      "sku": "C1",
+      "name": "CARTULINA BLANCA UND",
+      "caption": "Para la escuela, la oficina o ese proyecto que tienes en mano: Cartulina blanca. ✏️\n\nCartulina blanca, 1 unidad, 65x50 cm, ideal para uso escolar.\n\n💰 Precio: RD$20\n📦 Disponible mientras haya existencias.\n\nEscríbenos y con gusto te resolvemos. 💬\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-29T08:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/C1.jpg",
+      "started_at": "2026-08-30T22:23:51.188768+00:00",
+      "facebook_post_id": "1056461310893148_122134661247354776",
+      "instagram_post_id": "17927379975166927",
+      "completed_at": "2026-08-30T22:24:10.342754+00:00"
     }
   ],
   "pending": null,
