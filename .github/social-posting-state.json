@@ -81,7 +81,8 @@
     "6924561100259",
     "1313526871320",
     "7467144274941",
-    "1313526871702"
+    "1313526871702",
+    "SOBREMANILACARTA"
   ],
   "history": [
     {
@@ -984,6 +985,17 @@
       "facebook_post_id": "1056461310893148_122134508739354776",
       "instagram_post_id": "17903597928334405",
       "completed_at": "2026-08-30T07:09:58.192466+00:00"
+    },
+    {
+      "sku": "SOBREMANILACARTA",
+      "name": "SOBRE MANILA TAMAÑO CARTA",
+      "caption": "Un básico que siempre resuelve: Sobre manila tamaño carta. ✨\n\nSobre manila tamaño carta, 9x12.\n\n💰 Precio: RD$10\n📦 Disponible mientras haya existencias.\n\nAgrégalo a tu lista y escríbenos para ordenar. 📝\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-28T16:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/SOBREMANILACARTA.jpg",
+      "started_at": "2026-08-30T12:53:18.734677+00:00",
+      "facebook_post_id": "1056461310893148_122134566819354776",
+      "instagram_post_id": "17930175657146383",
+      "completed_at": "2026-08-30T12:53:37.847825+00:00"
     }
   ],
   "pending": null,
