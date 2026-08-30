@@ -82,7 +82,8 @@
     "1313526871320",
     "7467144274941",
     "1313526871702",
-    "SOBREMANILACARTA"
+    "SOBREMANILACARTA",
+    "TALOM"
   ],
   "history": [
     {
@@ -996,6 +997,17 @@
       "facebook_post_id": "1056461310893148_122134566819354776",
       "instagram_post_id": "17930175657146383",
       "completed_at": "2026-08-30T12:53:37.847825+00:00"
+    },
+    {
+      "sku": "TALOM",
+      "name": "TALONARIO FACTURA PEQ CON COPIA",
+      "caption": "Mira esta opción que tenemos en Papelería Sol Naciente: Talonario factura peq con copia. 👀\n\nTalonario de facturas con papel carbon, 3.5x5, 1 unidad.\n\n💰 Precio: RD$35\n📦 Disponible mientras haya existencias.\n\n¿Lo necesitas? Escríbenos y te ayudamos de una vez. 📩\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-28T18:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/TALOM.jpg",
+      "started_at": "2026-08-30T17:12:19.418897+00:00",
+      "facebook_post_id": "1056461310893148_122134612041354776",
+      "instagram_post_id": "18016014770928466",
+      "completed_at": "2026-08-30T17:12:35.980941+00:00"
     }
   ],
   "pending": null,
