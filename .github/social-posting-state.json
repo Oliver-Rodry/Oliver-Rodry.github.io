@@ -92,7 +92,8 @@
     "1313526871337",
     "7467144270554",
     "SOBREMANILALEGAL",
-    "TALONARI"
+    "TALONARI",
+    "CART12"
   ],
   "history": [
     {
@@ -1116,6 +1117,17 @@
       "facebook_post_id": "1056461310893148_122134999971354776",
       "instagram_post_id": "18136691584616048",
       "completed_at": "2026-09-01T09:45:15.843747+00:00"
+    },
+    {
+      "sku": "CART12",
+      "name": "CARTULINA GRIS FUERTE UND",
+      "caption": "Para la escuela, la oficina o ese proyecto que tienes en mano: Cartulina gris fuerte. ✏️\n\nCartulina gris, 1 unidad, 65x50 cm, ideal para uso escolar.\n\n💰 Precio: RD$30\n📦 Disponible mientras haya existencias.\n\nDate una vuelta por Papelería Sol Naciente o escríbenos por DM. 🛍️\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-30T10:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/CART12.jpg",
+      "started_at": "2026-09-01T14:19:08.461797+00:00",
+      "facebook_post_id": "1056461310893148_122135056515354776",
+      "instagram_post_id": "18108051617142597",
+      "completed_at": "2026-09-01T14:19:23.876362+00:00"
     }
   ],
   "pending": null,
