@@ -91,7 +91,8 @@
     "6971082811058",
     "1313526871337",
     "7467144270554",
-    "SOBREMANILALEGAL"
+    "SOBREMANILALEGAL",
+    "TALONARI"
   ],
   "history": [
     {
@@ -1104,6 +1105,17 @@
       "facebook_post_id": "1056461310893148_122134938591354776",
       "instagram_post_id": "18340524883249622",
       "completed_at": "2026-09-01T04:53:38.546195+00:00"
+    },
+    {
+      "sku": "TALONARI",
+      "name": "TALONARIO FACTURA PEQ SIN COPIA",
+      "caption": "Si todavía te falta talonario factura peq sin copia, aquí lo encuentras. 📝\n\nTalonario de facturas, 3.5x5, 1 unidad.\n\n💰 Precio: RD$20\n📦 Disponible mientras haya existencias.\n\nEstamos a la orden para ayudarte con tu pedido. 😊\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-30T08:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/TALONARI.jpg",
+      "started_at": "2026-09-01T09:45:01.147141+00:00",
+      "facebook_post_id": "1056461310893148_122134999971354776",
+      "instagram_post_id": "18136691584616048",
+      "completed_at": "2026-09-01T09:45:15.843747+00:00"
     }
   ],
   "pending": null,
