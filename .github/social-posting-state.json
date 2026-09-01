@@ -93,7 +93,8 @@
     "7467144270554",
     "SOBREMANILALEGAL",
     "TALONARI",
-    "CART12"
+    "CART12",
+    "MARCADORPERMANNEGRO"
   ],
   "history": [
     {
@@ -1128,6 +1129,17 @@
       "facebook_post_id": "1056461310893148_122135056515354776",
       "instagram_post_id": "18108051617142597",
       "completed_at": "2026-09-01T14:19:23.876362+00:00"
+    },
+    {
+      "sku": "MARCADORPERMANNEGRO",
+      "name": "MARCADOR PERMANENTE NEGRO",
+      "caption": "Eso que te faltaba para seguir trabajando tranquilo: Marcador permanente negro. 🙌\n\nMarcador permanente weibo negro und.\n\n💰 Precio: RD$35\n📦 Disponible mientras haya existencias.\n\nAgrégalo a tu lista y escríbenos para ordenar. 📝\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-30T12:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/MARCADORPERMANNEGRO.jpg",
+      "started_at": "2026-09-01T17:54:46.067367+00:00",
+      "facebook_post_id": "1056461310893148_122135087949354776",
+      "instagram_post_id": "18110532188122649",
+      "completed_at": "2026-09-01T17:55:03.288696+00:00"
     }
   ],
   "pending": null,
