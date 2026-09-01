@@ -90,7 +90,8 @@
     "1313526879876",
     "6971082811058",
     "1313526871337",
-    "7467144270554"
+    "7467144270554",
+    "SOBREMANILALEGAL"
   ],
   "history": [
     {
@@ -1092,6 +1093,17 @@
       "facebook_post_id": "1056461310893148_122134894989354776",
       "instagram_post_id": "18367117768208532",
       "completed_at": "2026-08-31T23:59:13.459377+00:00"
+    },
+    {
+      "sku": "SOBREMANILALEGAL",
+      "name": "SOBRE MANILA TAMAÑO LEGAL",
+      "caption": "Mira esta opción que tenemos en Papelería Sol Naciente: Sobre manila tamaño legal. 👀\n\nSobre manila tamaño legal, 9x15.\n\n💰 Precio: RD$15\n📦 Disponible mientras haya existencias.\n\nEscríbenos y con gusto te resolvemos. 💬\n\n#Papelería #Oficina #SantoDomingo #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-29T20:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/SOBREMANILALEGAL.jpg",
+      "started_at": "2026-09-01T04:53:25.123937+00:00",
+      "facebook_post_id": "1056461310893148_122134938591354776",
+      "instagram_post_id": "18340524883249622",
+      "completed_at": "2026-09-01T04:53:38.546195+00:00"
     }
   ],
   "pending": null,
