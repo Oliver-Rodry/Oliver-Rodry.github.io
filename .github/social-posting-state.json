@@ -95,7 +95,8 @@
     "TALONARI",
     "CART12",
     "MARCADORPERMANNEGRO",
-    "1313526879869"
+    "1313526879869",
+    "CARTULINMETAZU"
   ],
   "history": [
     {
@@ -1152,6 +1153,17 @@
       "facebook_post_id": "1056461310893148_122135108325354776",
       "instagram_post_id": "18111569882017345",
       "completed_at": "2026-09-01T20:34:59.143552+00:00"
+    },
+    {
+      "sku": "CARTULINMETAZU",
+      "name": "CARTULINA METALIZADA AZUL",
+      "caption": "¿Te hace falta cartulina metalizada azul? Lo tenemos disponible. 🙌\n\nCartulina metalizada azul, 65x50cm, 1 unidad, ideal para manualidades.\n\n💰 Precio: RD$90\n📦 Disponible mientras haya existencias.\n\nPasa por la papelería o escríbenos por DM para pedirlo. 💬\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-30T16:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/CARTULINMETAZU.jpg",
+      "started_at": "2026-09-01T22:49:37.627286+00:00",
+      "facebook_post_id": "1056461310893148_122135123805354776",
+      "instagram_post_id": "18216048211341713",
+      "completed_at": "2026-09-01T22:49:53.077200+00:00"
     }
   ],
   "pending": null,
