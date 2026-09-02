@@ -101,7 +101,8 @@
     "CARTULINAMETROJ",
     "7462313902540",
     "CARTULINAMETVERD",
-    "1313526879579"
+    "1313526879579",
+    "CART10"
   ],
   "history": [
     {
@@ -1224,6 +1225,17 @@
       "facebook_post_id": "1056461310893148_122135318481354776",
       "instagram_post_id": "18049979732592065",
       "completed_at": "2026-09-02T17:54:08.880020+00:00"
+    },
+    {
+      "sku": "CART10",
+      "name": "CARTULINA MORADA FUERTE UND",
+      "caption": "Hoy te compartimos una opción práctica: Cartulina morada fuerte. 🌟\n\nCartulina morada brillante, 1 unidad, 65x50 cm, ideal para uso escolar.\n\n💰 Precio: RD$30\n📦 Disponible mientras haya existencias.\n\nEscríbenos y con gusto te resolvemos. 💬\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-31T16:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/CART10.jpg",
+      "started_at": "2026-09-02T20:31:01.188861+00:00",
+      "facebook_post_id": "1056461310893148_122135340141354776",
+      "instagram_post_id": "18112149146279633",
+      "completed_at": "2026-09-02T20:31:19.910425+00:00"
     }
   ],
   "pending": null,
