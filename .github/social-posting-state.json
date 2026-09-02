@@ -99,7 +99,8 @@
     "CARTULINMETAZU",
     "MARCADORPERMANROJO",
     "CARTULINAMETROJ",
-    "7462313902540"
+    "7462313902540",
+    "CARTULINAMETVERD"
   ],
   "history": [
     {
@@ -1200,6 +1201,17 @@
       "facebook_post_id": "1056461310893148_122135237847354776",
       "instagram_post_id": "18158128228499528",
       "completed_at": "2026-09-02T09:50:04.162209+00:00"
+    },
+    {
+      "sku": "CARTULINAMETVERD",
+      "name": "CARTULINA METALIZADA VERDE",
+      "caption": "Para la escuela, la oficina o ese proyecto que tienes en mano: Cartulina metalizada verde. ✏️\n\nCartulina metalizada verde, 65x50 cm, 1 unidad, ideal para manualidades.\n\n💰 Precio: RD$90\n📦 Disponible mientras haya existencias.\n\n¿Lo necesitas? Escríbenos y te ayudamos de una vez. 📩\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-31T12:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/CARTULINAMETVERD.jpg",
+      "started_at": "2026-09-02T14:05:17.373927+00:00",
+      "facebook_post_id": "1056461310893148_122135279565354776",
+      "instagram_post_id": "18139080643593315",
+      "completed_at": "2026-09-02T14:05:32.506109+00:00"
     }
   ],
   "pending": null,
