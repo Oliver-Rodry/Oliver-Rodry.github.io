@@ -96,7 +96,8 @@
     "CART12",
     "MARCADORPERMANNEGRO",
     "1313526879869",
-    "CARTULINMETAZU"
+    "CARTULINMETAZU",
+    "MARCADORPERMANROJO"
   ],
   "history": [
     {
@@ -1164,6 +1165,17 @@
       "facebook_post_id": "1056461310893148_122135123805354776",
       "instagram_post_id": "18216048211341713",
       "completed_at": "2026-09-01T22:49:53.077200+00:00"
+    },
+    {
+      "sku": "MARCADORPERMANROJO",
+      "name": "MARCADOR PERMANENTE ROJO",
+      "caption": "Para completar tu lista sin dar muchas vueltas: Marcador permanente rojo. ✅\n\nMarcador permanente rojo weibo und.\n\n💰 Precio: RD$35\n📦 Disponible mientras haya existencias.\n\nEscríbenos y con gusto te resolvemos. 💬\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-30T18:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/MARCADORPERMANROJO.jpg",
+      "started_at": "2026-09-02T00:48:58.102231+00:00",
+      "facebook_post_id": "1056461310893148_122135140125354776",
+      "instagram_post_id": "18148058242550851",
+      "completed_at": "2026-09-02T00:49:16.982920+00:00"
     }
   ],
   "pending": null,
