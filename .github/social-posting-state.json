@@ -97,7 +97,8 @@
     "MARCADORPERMANNEGRO",
     "1313526879869",
     "CARTULINMETAZU",
-    "MARCADORPERMANROJO"
+    "MARCADORPERMANROJO",
+    "CARTULINAMETROJ"
   ],
   "history": [
     {
@@ -1176,6 +1177,17 @@
       "facebook_post_id": "1056461310893148_122135140125354776",
       "instagram_post_id": "18148058242550851",
       "completed_at": "2026-09-02T00:49:16.982920+00:00"
+    },
+    {
+      "sku": "CARTULINAMETROJ",
+      "name": "CARTULINA METALIZADA ROJA",
+      "caption": "Mira esta opción que tenemos en Papelería Sol Naciente: Cartulina metalizada roja. 👀\n\nCartulina metalizada roja, 65x50 cm, 1 unidad, ideal para manualidades.\n\n💰 Precio: RD$90\n📦 Disponible mientras haya existencias.\n\nDate una vuelta por Papelería Sol Naciente o escríbenos por DM. 🛍️\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-31T08:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/CARTULINAMETROJ.jpg",
+      "started_at": "2026-09-02T05:26:49.736770+00:00",
+      "facebook_post_id": "1056461310893148_122135186559354776",
+      "instagram_post_id": "17937208473358510",
+      "completed_at": "2026-09-02T05:27:03.067795+00:00"
     }
   ],
   "pending": null,
