@@ -102,7 +102,8 @@
     "7462313902540",
     "CARTULINAMETVERD",
     "1313526879579",
-    "CART10"
+    "CART10",
+    "CARTVAR"
   ],
   "history": [
     {
@@ -1236,6 +1237,17 @@
       "facebook_post_id": "1056461310893148_122135340141354776",
       "instagram_post_id": "18112149146279633",
       "completed_at": "2026-09-02T20:31:19.910425+00:00"
+    },
+    {
+      "sku": "CARTVAR",
+      "name": "CARTULINA NARANJA CLARO UND",
+      "caption": "¿Te hace falta cartulina naranja clara? Lo tenemos disponible. 🙌\n\nCartulina naranja clara, 65x50 cm, 1 unidad, ideal para manualidades.\n\n💰 Precio: RD$30\n📦 Disponible mientras haya existencias.\n\nEstamos a la orden para ayudarte con tu pedido. 😊\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-31T18:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/CARTVAR.jpg",
+      "started_at": "2026-09-02T22:50:37.522517+00:00",
+      "facebook_post_id": "1056461310893148_122135356647354776",
+      "instagram_post_id": "18119385091909333",
+      "completed_at": "2026-09-02T22:50:52.546782+00:00"
     }
   ],
   "pending": null,
