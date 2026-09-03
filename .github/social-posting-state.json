@@ -103,7 +103,8 @@
     "CARTULINAMETVERD",
     "1313526879579",
     "CART10",
-    "CARTVAR"
+    "CARTVAR",
+    "CART9"
   ],
   "history": [
     {
@@ -1248,6 +1249,17 @@
       "facebook_post_id": "1056461310893148_122135356647354776",
       "instagram_post_id": "18119385091909333",
       "completed_at": "2026-09-02T22:50:52.546782+00:00"
+    },
+    {
+      "sku": "CART9",
+      "name": "CARTULINA NARANJA FUERTE UND",
+      "caption": "Para completar tu lista sin dar muchas vueltas: Cartulina naranja fuerte. ✅\n\nCartulina naranja brillante, 1 unidad, 65x50 cm, ideal para uso escolar.\n\n💰 Precio: RD$30\n📦 Disponible mientras haya existencias.\n\nDate una vuelta por Papelería Sol Naciente o escríbenos por DM. 🛍️\n\n#MaterialEscolar #RegresoAClases #Papelería #PapeleriaSolNaciente",
+      "scheduled_for": "2026-08-31T20:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/CART9.jpg",
+      "started_at": "2026-09-03T00:56:52.577869+00:00",
+      "facebook_post_id": "1056461310893148_122135383989354776",
+      "instagram_post_id": "18124310462489747",
+      "completed_at": "2026-09-03T00:57:07.162797+00:00"
     }
   ],
   "pending": null,
