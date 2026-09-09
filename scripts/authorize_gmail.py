@@ -59,6 +59,7 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--credentials", required=True, type=Path)
     parser.add_argument("--repo", help="Optional owner/repository target")
+    parser.add_argument("--no-browser", action="store_true", help="Print the authorization URL instead of launching a browser")
     args = parser.parse_args()
 
     document = json.loads(args.credentials.read_text(encoding="utf-8"))
@@ -79,8 +80,11 @@ def main() -> int:
         "state": state,
     }
     url = client.get("auth_uri", "https://accounts.google.com/o/oauth2/auth") + "?" + urllib.parse.urlencode(parameters)
-    print("Opening Google authorization in your browser...")
-    webbrowser.open(url)
+    if args.no_browser:
+        print(url, flush=True)
+    else:
+        print("Opening Google authorization in your browser...")
+        webbrowser.open(url)
     thread = threading.Thread(target=server.handle_request, daemon=True)
     thread.start()
     thread.join(timeout=300)

@@ -120,6 +120,11 @@ def prepare() -> int:
             cwd=ROOT,
             check=True,
         )
+    report = json.loads(REPORT.read_text(encoding="utf-8"))
+    report["workbook"] = filename
+    report["previous_workbook"] = previous_state.get("workbook_filename", "No registrado")
+    report["previous_update_at"] = previous_state.get("processed_at", "No registrado")
+    REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     state = {
         "last_workbook_sha256": digest,
         "processed_at": datetime.now(timezone.utc).isoformat(),
@@ -136,6 +141,12 @@ def report_body(report: dict) -> str:
     summary = report["summary"]
     lines = [
         "El catálogo fue actualizado correctamente.",
+        "",
+        f"Inventario anterior: {report.get('previous_workbook', 'No registrado')}",
+        f"Última actualización anterior (UTC): {report.get('previous_update_at', 'No registrado')}",
+        f"Inventario actual: {report.get('workbook', 'No registrado')}",
+        f"Reporte generado (UTC): {report.get('generated_at', 'No registrado')}",
+        "Comparación acumulada entre estos inventarios; no corresponde únicamente a ventas de hoy.",
         "",
         f"Unidades vendidas (incluyendo servicios): {summary['sold_units_including_services']}",
         f"Venta estimada: RD${DecimalFormat(summary['estimated_sales_dop_including_services'])}",
@@ -167,6 +178,12 @@ def report_body(report: dict) -> str:
         lines.extend(f"- {item['name']}: +{item['units_added']}" for item in report["restocked"])
     else:
         lines.append("- Sin reposiciones.")
+    for key, title in (("new_products", "Productos nuevos"), ("removed_products", "Productos retirados")):
+        lines.extend(["", f"{title}:"])
+        items = report.get(key, [])
+        lines.extend(f"- {item['name']} (SKU: {item['sku']})" for item in items)
+        if not items:
+            lines.append("- Ninguno.")
     lines.extend(
         [
             "",
@@ -187,7 +204,7 @@ def send() -> int:
     report = json.loads(REPORT.read_text(encoding="utf-8"))
     message = email.message.EmailMessage()
     message["To"] = "oliver_rodry@icloud.com"
-    message["Subject"] = "Catálogo actualizado - resumen diario"
+    message["Subject"] = "Catálogo actualizado - comparación con la última actualización"
     message.set_content(report_body(report))
     raw = base64.urlsafe_b64encode(message.as_bytes()).decode().rstrip("=")
     request_json(

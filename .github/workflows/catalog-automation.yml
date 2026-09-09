@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: write
+  pages: write
 
 concurrency:
   group: catalog-and-social-automation
@@ -48,6 +49,16 @@ jobs:
           git commit -m "Update catalog from inventory email $(date -u +%F)"
           git pull --rebase origin main
           git push origin HEAD:main
+
+      - name: Request website publication
+        if: steps.inventory.outputs.duplicate != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds"
+
+      - name: Verify published inventory
+        if: steps.inventory.outputs.duplicate != 'true'
+        run: python scripts/verify_catalog.py
 
       - name: Send confirmation email
         if: steps.inventory.outputs.duplicate != 'true'
