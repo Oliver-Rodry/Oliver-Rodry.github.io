@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catalog Automation | Papelería Sol Naciente</title>
+  <style>
+    body { margin: 0; background: #f7f5ef; color: #202d2a; font: 18px/1.65 system-ui, sans-serif; }
+    main { max-width: 760px; margin: 48px auto; padding: 32px; background: white; border-radius: 16px; }
+    h1, h2 { line-height: 1.2; } h2 { margin-top: 40px; } a { color: #14624c; }
+    nav { display: flex; flex-wrap: wrap; gap: 20px; } .date { color: #586760; font-size: 15px; }
+    @media (max-width: 600px) { main { margin: 0; padding: 24px; border-radius: 0; } }
+  </style>
+</head>
+<body><main>
+  <a href="/">Papelería Sol Naciente</a>
+  <h1>Catalog Automation</h1>
+  <p>Herramienta de uso personal del propietario de Papelería Sol Naciente, Oliver Rodriguez.
+    Lee los archivos de inventario enviados a su cuenta de Gmail, actualiza el catálogo de la tienda
+    y envía al propietario un reporte de cambios respecto del inventario anterior.</p>
+  <p>Los clientes de la tienda no necesitan conectar una cuenta de Google para consultar el catálogo.</p>
+  <nav aria-label="Información de la aplicación">
+    <a href="#privacidad">Política de privacidad</a>
+    <a href="#uso">Condiciones de uso</a>
+    <a href="/catalogo/">Ver catálogo</a>
+  </nav>
+  <p class="date">Actualizado: 9 de septiembre de 2026.</p>
+
+  <h2 id="privacidad">Política de privacidad</h2>
+  <p><strong>Acceso y finalidad.</strong> La aplicación solicita permiso para leer mensajes y configuración
+    de Gmail y para enviar correo en nombre del propietario. Aunque el permiso de lectura abarca la cuenta,
+    el proceso busca mensajes con archivos de inventario Excel reenviados por el propietario y consulta
+    los reportes enviados para evitar envíos repetidos. No solicita permiso para borrar o modificar mensajes.</p>
+  <p><strong>Datos utilizados.</strong> Procesa el identificador del mensaje, el nombre y contenido del archivo
+    Excel y los campos de productos: código, nombre, descripción, categoría, precio y existencias.
+    Compara inventarios y envía al correo configurado del propietario los cambios y una estimación basada
+    en disminuciones de existencias. No utiliza estos datos para publicidad ni entrenamiento de modelos de IA.</p>
+  <p><strong>Almacenamiento y divulgación.</strong> Google proporciona el correo y la autorización.
+    GitHub Actions ejecuta el proceso; las credenciales se guardan como secretos cifrados del repositorio.
+    Los archivos Excel y reportes se procesan temporalmente durante la ejecución. Los productos se publican
+    en el sitio web y en el repositorio público de la tienda, cuyo historial conserva versiones anteriores.
+    El estado de procesamiento incluye identificadores de mensajes, nombres de archivos, fechas y huellas
+    digitales; los registros de ejecución pueden incluir totales de cambios. Los reportes enviados permanecen
+    en las cuentas de correo correspondientes. Los registros y el correo están sujetos a la retención de
+    GitHub y de los proveedores de correo.</p>
+  <p><strong>Control del acceso.</strong> El propietario puede detener el proceso en GitHub Actions y revocar
+    la conexión en <a href="https://myaccount.google.com/connections">las conexiones de su cuenta de Google</a>.
+    Revocar la conexión impide futuros accesos; no elimina automáticamente el correo, los registros o el
+    historial de inventarios ya publicados. Las solicitudes sobre datos y su eliminación se atienden mediante
+    el contacto indicado abajo; las copias públicas descargadas por terceros no están bajo control de la aplicación.</p>
+  <p>El uso y la transferencia de información recibida de las API de Google se ajustan a la
+    <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de Datos del Usuario
+    de los Servicios de las API de Google</a>, incluidos sus requisitos de Uso Limitado.</p>
+
+  <h2 id="uso">Condiciones de uso</h2>
+  <p>Esta aplicación está destinada a la gestión del inventario propio de Papelería Sol Naciente.
+    Solo el propietario debe autorizar su cuenta e introducir archivos que tenga permiso para procesar.
+    Los archivos deben contener exclusivamente la información de productos necesaria para el catálogo.</p>
+  <p>La actualización depende de que llegue un archivo de inventario válido y de la disponibilidad de Google
+    y GitHub. La estimación del reporte no sustituye los registros de ventas o contabilidad: una reducción
+    de existencias puede deberse a ventas, ajustes u otros movimientos. El propietario debe revisar los datos
+    de origen y corregir cualquier error de inventario.</p>
+  <p>La aplicación no procesa pagos ni requiere que los visitantes del catálogo concedan permisos de Gmail.</p>
+  <h2>Contacto</h2>
+  <p>Oliver Rodriguez · Papelería Sol Naciente<br>
+    <a href="mailto:oliver_rodry@icloud.com">oliver_rodry@icloud.com</a></p>
+</main></body>
+</html>
