@@ -46,7 +46,7 @@ jobs:
           git config user.name "Catalog Automation"
           git config user.email "actions@users.noreply.github.com"
           git add products.csv .github/catalog-automation-state.json
-          git commit -m "Update catalog from inventory email $(date -u +%F)"
+          git diff --cached --quiet || git commit -m "Update catalog from inventory email $(date -u +%F)"
           git pull --rebase origin main
           git push origin HEAD:main
 
@@ -67,3 +67,11 @@ jobs:
           GMAIL_CLIENT_SECRET: ${{ secrets.GMAIL_CLIENT_SECRET }}
           GMAIL_REFRESH_TOKEN: ${{ secrets.GMAIL_REFRESH_TOKEN }}
         run: python scripts/cloud_catalog_automation.py send
+
+      - name: Record report delivery
+        if: steps.inventory.outputs.duplicate != 'true'
+        run: |
+          git add .github/catalog-automation-state.json
+          git diff --cached --quiet || git commit -m "Record catalog report delivery $(date -u +%F)"
+          git pull --rebase origin main
+          git push origin HEAD:main

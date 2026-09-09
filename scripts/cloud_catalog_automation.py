@@ -71,18 +71,23 @@ def newest_workbook(token: str) -> tuple[bytes, str, str]:
     url = "https://gmail.googleapis.com/gmail/v1/users/me/messages?" + urllib.parse.urlencode({"q": query, "maxResults": 20})
     listing = request_json(url, token)
     for item in listing.get("messages", []):
-        message_id = item["id"]
-        message = request_json(f"https://gmail.googleapis.com/gmail/v1/users/me/messages/{message_id}?format=full", token)
-        for part in walk_parts(message.get("payload", {})):
-            filename = part.get("filename", "")
-            attachment_id = part.get("body", {}).get("attachmentId")
-            if filename.lower().endswith(".xlsx") and attachment_id:
-                attachment = request_json(
-                    f"https://gmail.googleapis.com/gmail/v1/users/me/messages/{message_id}/attachments/{attachment_id}", token
-                )
-                raw = base64.urlsafe_b64decode(attachment["data"] + "===")
-                return raw, filename, message_id
+        workbook = message_workbook(token, item["id"])
+        if workbook is not None:
+            return workbook
     raise RuntimeError("No forwarded Gmail message with an .xlsx attachment was found.")
+
+
+def message_workbook(token: str, message_id: str) -> tuple[bytes, str, str] | None:
+    message = request_json(f"https://gmail.googleapis.com/gmail/v1/users/me/messages/{message_id}?format=full", token)
+    for part in walk_parts(message.get("payload", {})):
+        filename = part.get("filename", "")
+        attachment_id = part.get("body", {}).get("attachmentId")
+        if filename.lower().endswith(".xlsx") and attachment_id:
+            attachment = request_json(
+                f"https://gmail.googleapis.com/gmail/v1/users/me/messages/{message_id}/attachments/{attachment_id}", token
+            )
+            return base64.urlsafe_b64decode(attachment["data"] + "==="), filename, message_id
+    return None
 
 
 def output(name: str, value: str) -> None:
@@ -96,22 +101,39 @@ def output(name: str, value: str) -> None:
 
 def prepare() -> int:
     token = access_token()
-    workbook, filename, message_id = newest_workbook(token)
-    digest = hashlib.sha256(workbook).hexdigest()
     previous_state = json.loads(STATE.read_text()) if STATE.exists() else {}
-    if previous_state.get("gmail_message_id") == message_id:
+    pending = previous_state.get("report_pending", False)
+    if pending:
+        result = message_workbook(token, previous_state["gmail_message_id"])
+        if result is None:
+            raise RuntimeError("Pending inventory attachment is missing; keeping the original baseline for recovery.")
+        workbook, filename, message_id = result
+    else:
+        workbook, filename, message_id = newest_workbook(token)
+    digest = hashlib.sha256(workbook).hexdigest()
+    if not pending and previous_state.get("gmail_message_id") == message_id:
         output("duplicate", "true")
         print("Latest Gmail message was already processed.")
         return 0
-    with tempfile.NamedTemporaryFile(suffix=".xlsx") as source:
+    if pending and digest != previous_state["last_workbook_sha256"]:
+        raise RuntimeError("Pending inventory attachment does not match its saved checksum.")
+    base_commit = previous_state["report_base_commit"] if pending else subprocess.check_output(
+        ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True
+    ).strip()
+    base_state = previous_state["report_previous_state"] if pending else {
+        key: previous_state.get(key, "No registrado") for key in ("workbook_filename", "processed_at")
+    }
+    with tempfile.NamedTemporaryFile(suffix=".xlsx") as source, tempfile.NamedTemporaryFile(suffix=".csv") as baseline:
         source.write(workbook)
         source.flush()
+        baseline.write(subprocess.check_output(["git", "show", f"{base_commit}:products.csv"], cwd=ROOT))
+        baseline.flush()
         subprocess.run(
             [
                 sys.executable,
                 str(ROOT / "scripts" / "update_catalog.py"),
                 "--input", source.name,
-                "--baseline", str(ROOT / "products.csv"),
+                "--baseline", baseline.name,
                 "--output", str(ROOT / "products.csv"),
                 "--overrides", str(ROOT / "inventory_overrides.json"),
                 "--report", str(REPORT),
@@ -122,14 +144,18 @@ def prepare() -> int:
         )
     report = json.loads(REPORT.read_text(encoding="utf-8"))
     report["workbook"] = filename
-    report["previous_workbook"] = previous_state.get("workbook_filename", "No registrado")
-    report["previous_update_at"] = previous_state.get("processed_at", "No registrado")
+    report["previous_workbook"] = base_state["workbook_filename"]
+    report["previous_update_at"] = base_state["processed_at"]
+    report["gmail_message_id"] = message_id
     REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     state = {
         "last_workbook_sha256": digest,
-        "processed_at": datetime.now(timezone.utc).isoformat(),
+        "processed_at": previous_state["processed_at"] if pending else datetime.now(timezone.utc).isoformat(),
         "gmail_message_id": message_id,
         "workbook_filename": filename,
+        "report_pending": True,
+        "report_base_commit": base_commit,
+        "report_previous_state": base_state,
     }
     STATE.parent.mkdir(parents=True, exist_ok=True)
     STATE.write_text(json.dumps(state, indent=2) + "\n")
@@ -202,17 +228,36 @@ def DecimalFormat(value: object) -> str:  # noqa: N802
 
 def send() -> int:
     report = json.loads(REPORT.read_text(encoding="utf-8"))
+    state = json.loads(STATE.read_text(encoding="utf-8"))
+    if not state.get("report_pending"):
+        print("Report is already marked as sent.")
+        return 0
+    if report.get("gmail_message_id") != state["gmail_message_id"]:
+        raise RuntimeError("Report does not belong to the pending inventory.")
+    token = access_token()
+    # Search Sent before retrying: the send may have succeeded before a runner or push failed.
+    message_id = f"catalog-inventory-{state['gmail_message_id']}@papeleriasolnaciente.com"
+    query = urllib.parse.urlencode({"q": f"in:sent rfc822msgid:{message_id}", "maxResults": 1})
+    sent = request_json(f"https://gmail.googleapis.com/gmail/v1/users/me/messages?{query}", token)
+    if sent.get("messages"):
+        state["report_pending"] = False
+        STATE.write_text(json.dumps(state, indent=2) + "\n")
+        print("Existing sent report found; skipping duplicate delivery.")
+        return 0
     message = email.message.EmailMessage()
+    message["Message-ID"] = f"<{message_id}>"
     message["To"] = "oliver_rodry@icloud.com"
     message["Subject"] = "Catálogo actualizado - comparación con la última actualización"
     message.set_content(report_body(report))
     raw = base64.urlsafe_b64encode(message.as_bytes()).decode().rstrip("=")
     request_json(
         "https://gmail.googleapis.com/gmail/v1/users/me/messages/send",
-        access_token(),
+        token,
         method="POST",
         body={"raw": raw},
     )
+    state["report_pending"] = False
+    STATE.write_text(json.dumps(state, indent=2) + "\n")
     print("Confirmation email sent to oliver_rodry@icloud.com.")
     return 0
 
