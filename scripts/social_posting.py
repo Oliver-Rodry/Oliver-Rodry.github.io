@@ -26,12 +26,11 @@ SITE_URL = "https://papeleriasolnaciente.com"
 GRAPH_VERSION = os.environ.get("META_GRAPH_VERSION", "v26.0")
 GRAPH_URL = f"https://graph.facebook.com/{GRAPH_VERSION}"
 LOCAL_TZ = ZoneInfo("America/Santo_Domingo")
-CAMPAIGN_START = date(2026, 8, 24)
-CAMPAIGN_END = date(2026, 8, 31)
+CAMPAIGN_START = date(2026, 9, 12)
+CAMPAIGN_END = date(2026, 9, 18)
 POSTING_HOURS = (8, 10, 12, 14, 16, 18, 20)
-EXTRA_POSTING_HOURS_BY_DATE = {
-    date(2026, 8, 24): (22,),
-}
+EXTRA_POSTING_HOURS_BY_DATE = {}
+COPY_FILE = ROOT / "content" / "social-copy.json"
 
 
 class MetaError(RuntimeError):
@@ -137,41 +136,21 @@ def display_name(value: str) -> str:
 
 
 def caption_for(product: dict[str, str], variant: int) -> str:
-    """Compose varied copy using only facts present in the catalog row."""
-    name = display_name(product["name"])
-    description = natural_text(product["description"]).rstrip(".")
+    """Use reviewed product-specific Dominican Spanish copy and current prices."""
+    copy = next((item for item in json.loads(COPY_FILE.read_text()) if item["sku"] == product["sku"]), None)
+    if copy is None:
+        raise RuntimeError(f"No reviewed caption for {product['sku']}")
     price = float(product["price_dop"])
     price_text = f"{price:,.2f}" if not price.is_integer() else f"{price:,.0f}"
-    openings = [
-        f"¿Te hace falta {name.lower()}? Lo tenemos disponible. 🙌",
-        f"Para completar tu lista sin dar muchas vueltas: {name}. ✅",
-        f"Un básico que siempre resuelve: {name}. ✨",
-        f"Mira esta opción que tenemos en Papelería Sol Naciente: {name}. 👀",
-        f"Si todavía te falta {name.lower()}, aquí lo encuentras. 📝",
-        f"Para la escuela, la oficina o ese proyecto que tienes en mano: {name}. ✏️",
-        f"Eso que te faltaba para seguir trabajando tranquilo: {name}. 🙌",
-        f"Hoy te compartimos una opción práctica: {name}. 🌟",
+    unit = " por página" if product["category"].strip().upper() == "SERVICIOS" else ""
+    calls = [
+        "Pasa por Papelería Sol Naciente o escríbenos por DM. ☀️",
+        "Escríbenos por DM y te ayudamos con tu pedido. ☀️",
+        "Te esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️",
+        "¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️",
     ]
-    calls_to_action = [
-        "Pasa por la papelería o escríbenos por DM para pedirlo. 💬",
-        "¿Lo necesitas? Escríbenos y te ayudamos de una vez. 📩",
-        "Agrégalo a tu lista y escríbenos para ordenar. 📝",
-        "Date una vuelta por Papelería Sol Naciente o escríbenos por DM. 🛍️",
-        "Estamos a la orden para ayudarte con tu pedido. 😊",
-        "Escríbenos y con gusto te resolvemos. 💬",
-    ]
-    hashtags = {
-        "MATERIAL ESCOLAR": "#MaterialEscolar #RegresoAClases #Papelería",
-        "SERVICIOS": "#Servicios #Papelería #SantoDomingo",
-    }.get(product["category"].strip().upper(), "#Papelería #Oficina #SantoDomingo")
-    return (
-        f"{openings[variant % len(openings)]}\n\n"
-        f"{description[:1].upper() + description[1:]}.\n\n"
-        f"💰 Precio: RD${price_text}\n"
-        "📦 Disponible mientras haya existencias.\n\n"
-        f"{calls_to_action[(variant * 5) % len(calls_to_action)]}\n\n"
-        f"{hashtags} #PapeleriaSolNaciente"
-    )
+    return (f"{copy['body']}\n\n{copy['local_name']} · RD${price_text}{unit}\n\n"
+            f"{calls[variant % len(calls)]}\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo")
 
 
 def campaign_slots() -> list[datetime]:
@@ -201,26 +180,36 @@ def diversified(products: list[dict[str, str]]) -> list[dict[str, str]]:
 
 
 def prepare_campaign(state: dict) -> None:
-    products = eligible_products()
-    already_posted = set(state.get("posted_skus", []))
-    products = diversified([product for product in products if product["sku"] not in already_posted])
-    slots = campaign_slots()
-    if len(products) < len(slots):
-        raise RuntimeError(f"Campaign needs {len(slots)} products, but only {len(products)} are eligible.")
+    if state.get("pending"):
+        raise RuntimeError("Finish the pending post before preparing another campaign.")
+    by_sku = {p["sku"]: p for p in eligible_products()}
+    reviewed = json.loads(COPY_FILE.read_text())
+    products = [by_sku[item["sku"]] for item in reviewed]
+    slots = [datetime.now(LOCAL_TZ).replace(microsecond=0), *campaign_slots()]
+    if len(products) != len(slots) or len({p["sku"] for p in products}) != len(slots):
+        raise RuntimeError("Campaign requires one distinct reviewed product for each slot.")
+    if state.get("campaign"):
+        state.setdefault("past_campaigns", []).append(state["campaign"])
     state["campaign"] = {
         "timezone": str(LOCAL_TZ),
-        "starts": slots[0].isoformat(),
+        "starts": slots[1].isoformat(),
         "ends": slots[-1].isoformat(),
         "schedule": [
             {
                 "scheduled_for": slot.isoformat(),
                 "sku": product["sku"],
                 "name": product["name"],
-                "caption": caption_for(product, index + len(state.get("history", []))),
+                "caption": caption_for(product, index),
+                "variant": index,
             }
             for index, (slot, product) in enumerate(zip(slots, products))
         ],
     }
+
+
+def item_posted(state: dict, item: dict) -> bool:
+    return any(h["sku"] == item["sku"] and h.get("scheduled_for") == item["scheduled_for"]
+               for h in state.get("history", []))
 
 
 def refresh_campaign_captions(state: dict) -> int:
@@ -231,8 +220,8 @@ def refresh_campaign_captions(state: dict) -> int:
     refreshed = 0
     for index, item in enumerate(schedule):
         product = by_sku.get(item["sku"])
-        if product and item["sku"] not in posted:
-            item["caption"] = caption_for(product, index + len(state.get("history", [])))
+        if product and not item_posted(state, item):
+            item["caption"] = caption_for(product, item.get("variant", index))
             refreshed += 1
     return refreshed
 
@@ -282,7 +271,7 @@ def campaign_item(state: dict, now: datetime | None = None, due_only: bool = Fal
             item
             for item in candidates
             if item["sku"] in eligible_skus
-            and item["sku"] not in posted
+            and not item_posted(state, item)
             and (not due_only or scheduled_time(item) <= local_now)
         ),
         None,
@@ -315,7 +304,7 @@ def new_pending(state: dict, now: datetime | None = None, due_only: bool = False
     return {
         "sku": product["sku"],
         "name": product["name"],
-        "caption": queued["caption"] if queued else caption_for(product, len(state.get("history", []))),
+        "caption": caption_for(product, queued.get("variant", 0)) if queued else caption_for(product, len(state.get("history", []))),
         "scheduled_for": queued.get("scheduled_for") if queued else None,
         "image_url": image_url,
         "started_at": datetime.now(timezone.utc).isoformat(),

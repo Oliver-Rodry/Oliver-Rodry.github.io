@@ -44,7 +44,7 @@ jobs:
           elif [[ "${{ github.event_name }}" == "schedule" ]]; then
             python scripts/social_posting.py --enforce-window
           else
-            python scripts/social_posting.py
+            python scripts/social_posting.py --enforce-window
           fi
 
       - name: Persist posting state
