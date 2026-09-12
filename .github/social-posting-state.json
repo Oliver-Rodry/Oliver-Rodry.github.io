@@ -106,7 +106,8 @@
     "CARTVAR",
     "CART9",
     "1313526871467",
-    "BORRADELECHEUND"
+    "BORRADELECHEUND",
+    "7465547688013"
   ],
   "history": [
     {
@@ -1284,6 +1285,17 @@
       "facebook_post_id": "1056461310893148_122137711215354776",
       "instagram_post_id": "18176590846442638",
       "completed_at": "2026-09-12T13:53:19.378912+00:00"
+    },
+    {
+      "sku": "7465547688013",
+      "name": "LAPICERO AZUL ARLES UND",
+      "caption": "Para la firma, la tarea o esa idea que llegó de repente. 💙 Ten tu lapicero azul a mano y que no se te escape nada.\n\nLapicero azul · RD$15\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-12T10:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/7465547688013.jpg",
+      "started_at": "2026-09-12T16:45:30.632360+00:00",
+      "facebook_post_id": "1056461310893148_122137731747354776",
+      "instagram_post_id": "17969310420144191",
+      "completed_at": "2026-09-12T16:45:47.604450+00:00"
     }
   ],
   "pending": null,
