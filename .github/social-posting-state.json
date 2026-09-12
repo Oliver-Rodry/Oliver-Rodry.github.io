@@ -104,7 +104,8 @@
     "1313526879579",
     "CART10",
     "CARTVAR",
-    "CART9"
+    "CART9",
+    "1313526871467"
   ],
   "history": [
     {
@@ -1260,6 +1261,17 @@
       "facebook_post_id": "1056461310893148_122135383989354776",
       "instagram_post_id": "18124310462489747",
       "completed_at": "2026-09-03T00:57:07.162797+00:00"
+    },
+    {
+      "sku": "1313526871467",
+      "name": "PEGAMENTO BLANCO 40ML",
+      "caption": "La tarea está casi lista… ¡solo falta pegarlo todo! 😄 Esta ega blanca te acompaña con el papel, los recortes y las ideas.\n\nEga blanca pequeña · RD$65\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-11T21:32:17-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/1313526871467.jpg",
+      "started_at": "2026-09-12T01:37:22.707927+00:00",
+      "facebook_post_id": "1056461310893148_122137582473354776",
+      "instagram_post_id": "18097727624156490",
+      "completed_at": "2026-09-12T01:37:37.928155+00:00"
     }
   ],
   "pending": null,
