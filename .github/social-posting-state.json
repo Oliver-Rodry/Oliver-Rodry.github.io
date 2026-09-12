@@ -105,7 +105,8 @@
     "CART10",
     "CARTVAR",
     "CART9",
-    "1313526871467"
+    "1313526871467",
+    "BORRADELECHEUND"
   ],
   "history": [
     {
@@ -1272,6 +1273,17 @@
       "facebook_post_id": "1056461310893148_122137582473354776",
       "instagram_post_id": "18097727624156490",
       "completed_at": "2026-09-12T01:37:37.928155+00:00"
+    },
+    {
+      "sku": "BORRADELECHEUND",
+      "name": "BORRA DE LECHE GENERICA MEDIANA",
+      "caption": "¿Ese número no iba ahí? Borrón y seguimos. ✏️ Una borra de leche siempre merece su espacio en el estuche.\n\nBorra de leche · RD$15\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-12T08:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/BORRADELECHEUND.jpg",
+      "started_at": "2026-09-12T13:52:59.201679+00:00",
+      "facebook_post_id": "1056461310893148_122137711215354776",
+      "instagram_post_id": "18176590846442638",
+      "completed_at": "2026-09-12T13:53:19.378912+00:00"
     }
   ],
   "pending": null,
