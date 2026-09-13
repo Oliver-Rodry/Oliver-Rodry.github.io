@@ -110,7 +110,8 @@
     "7465547688013",
     "7462955102896",
     "DIGITACIONCOLOR",
-    "1313526879876"
+    "1313526879876",
+    "2022124765601"
   ],
   "history": [
     {
@@ -1332,6 +1333,17 @@
       "facebook_post_id": "1056461310893148_122137781253354776",
       "instagram_post_id": "17995891451826561",
       "completed_at": "2026-09-12T23:09:26.400310+00:00"
+    },
+    {
+      "sku": "2022124765601",
+      "name": "POST-IT AMARILLOS 3X3",
+      "caption": "Tu memoria tiene mucho trabajo… dale una ayudita. 💛 Anota ese pendiente en una notita adhesiva y déjalo a la vista.\n\nNotas adhesivas amarillas · RD$45\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-12T18:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/2022124765601.jpg",
+      "started_at": "2026-09-13T01:00:06.869424+00:00",
+      "facebook_post_id": "1056461310893148_122137794609354776",
+      "instagram_post_id": "18120645143316028",
+      "completed_at": "2026-09-13T01:00:19.901038+00:00"
     }
   ],
   "pending": null,
