@@ -115,7 +115,8 @@
     "6978524748705",
     "1313526871399",
     "FOLDER85X11UND",
-    "6936926333011"
+    "6936926333011",
+    "CART11"
   ],
   "history": [
     {
@@ -1392,6 +1393,17 @@
       "facebook_post_id": "1056461310893148_122138105415354776",
       "instagram_post_id": "17934694098126568",
       "completed_at": "2026-09-13T21:01:08.601572+00:00"
+    },
+    {
+      "sku": "CART11",
+      "name": "CARTULINA NEGRA UND",
+      "caption": "Un fondo negro y muchas ideas por delante. 🖤 Esta cartulina puede ser el comienzo de tu próximo letrero o manualidad.\n\nCartulina negra · RD$30\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-13T14:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/CART11.jpg",
+      "started_at": "2026-09-13T23:09:49.022879+00:00",
+      "facebook_post_id": "1056461310893148_122138119491354776",
+      "instagram_post_id": "18129947197781177",
+      "completed_at": "2026-09-13T23:10:09.156087+00:00"
     }
   ],
   "pending": null,
