@@ -118,7 +118,8 @@
     "6936926333011",
     "CART11",
     "1313526871139",
-    "7467144274941"
+    "7467144274941",
+    "7453010030759"
   ],
   "history": [
     {
@@ -1428,6 +1429,17 @@
       "facebook_post_id": "1056461310893148_122138189247354776",
       "instagram_post_id": "18114010387821589",
       "completed_at": "2026-09-14T06:17:13.978585+00:00"
+    },
+    {
+      "sku": "7453010030759",
+      "name": "SACA PUNTA LAPIZ METAL",
+      "caption": "Si el lápiz ya no quiere escribir, quizá solo pide una ayudita. ✏️ Un sacapuntas y volvemos a la tarea.\n\nSacapuntas de metal · RD$15\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-13T20:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/7453010030759.jpg",
+      "started_at": "2026-09-14T13:09:39.277644+00:00",
+      "facebook_post_id": "1056461310893148_122138310111354776",
+      "instagram_post_id": "17897274642666726",
+      "completed_at": "2026-09-14T13:09:52.639931+00:00"
     }
   ],
   "pending": null,
