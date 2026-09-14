@@ -119,7 +119,8 @@
     "CART11",
     "1313526871139",
     "7467144274941",
-    "7453010030759"
+    "7453010030759",
+    "6924561100259"
   ],
   "history": [
     {
@@ -1440,6 +1441,17 @@
       "facebook_post_id": "1056461310893148_122138310111354776",
       "instagram_post_id": "17897274642666726",
       "completed_at": "2026-09-14T13:09:52.639931+00:00"
+    },
+    {
+      "sku": "6924561100259",
+      "name": "PEGAMENTO EN BARRA 15G UND",
+      "caption": "Recortes listos, cuaderno abierto… ¡a pegar! 🙌 La ega en barra es una compañera práctica para tus trabajos en papel.\n\nEga en barra · RD$50\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-14T08:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/6924561100259.jpg",
+      "started_at": "2026-09-14T18:38:01.664441+00:00",
+      "facebook_post_id": "1056461310893148_122138398293354776",
+      "instagram_post_id": "18103858340350461",
+      "completed_at": "2026-09-14T18:38:23.781396+00:00"
     }
   ],
   "pending": null,
