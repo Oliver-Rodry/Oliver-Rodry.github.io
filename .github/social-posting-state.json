@@ -120,7 +120,8 @@
     "1313526871139",
     "7467144274941",
     "7453010030759",
-    "6924561100259"
+    "6924561100259",
+    "7468355583037"
   ],
   "history": [
     {
@@ -1452,6 +1453,17 @@
       "facebook_post_id": "1056461310893148_122138398293354776",
       "instagram_post_id": "18103858340350461",
       "completed_at": "2026-09-14T18:38:23.781396+00:00"
+    },
+    {
+      "sku": "7468355583037",
+      "name": "LIBRETA RAYADA AMARILLA 5.5X8.5",
+      "caption": "La lista de compras, una idea, un pendiente… 📝 Esa libreta amarilla siempre encuentra en qué ayudarte.\n\nLibreta amarilla pequeña · RD$60\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-14T10:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/7468355583037.jpg",
+      "started_at": "2026-09-14T22:03:49.004142+00:00",
+      "facebook_post_id": "1056461310893148_122138442825354776",
+      "instagram_post_id": "18126468478828826",
+      "completed_at": "2026-09-14T22:04:09.941880+00:00"
     }
   ],
   "pending": null,
