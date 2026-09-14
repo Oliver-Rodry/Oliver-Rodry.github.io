@@ -3,7 +3,7 @@
   "processed_at": "2026-09-14T23:25:50.553789+00:00",
   "gmail_message_id": "1a0a1a3b8375d618",
   "workbook_filename": "Productos_2026-9-14.xlsx",
-  "report_pending": true,
+  "report_pending": false,
   "report_base_commit": "b8db98124283606b3995eed7baa7fabcc9751f01",
   "report_previous_state": {
     "workbook_filename": "Productos_2026-9-11.xlsx",
