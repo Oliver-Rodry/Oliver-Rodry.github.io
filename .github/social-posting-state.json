@@ -116,7 +116,8 @@
     "1313526871399",
     "FOLDER85X11UND",
     "6936926333011",
-    "CART11"
+    "CART11",
+    "1313526871139"
   ],
   "history": [
     {
@@ -1404,6 +1405,17 @@
       "facebook_post_id": "1056461310893148_122138119491354776",
       "instagram_post_id": "18129947197781177",
       "completed_at": "2026-09-13T23:10:09.156087+00:00"
+    },
+    {
+      "sku": "1313526871139",
+      "name": "TEMPERA 6 COLORES PINTURA",
+      "caption": "Hoy toca cambiar el lápiz por el pincel. 🎨 Abre tus témperas y deja que las ideas salgan a color.\n\nTémperas de 6 colores con pincel · RD$90\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-13T16:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/1313526871139.jpg",
+      "started_at": "2026-09-14T01:04:24.081778+00:00",
+      "facebook_post_id": "1056461310893148_122138130789354776",
+      "instagram_post_id": "18121183834898880",
+      "completed_at": "2026-09-14T01:04:45.069276+00:00"
     }
   ],
   "pending": null,
