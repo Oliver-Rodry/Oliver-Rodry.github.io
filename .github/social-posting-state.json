@@ -122,7 +122,8 @@
     "7453010030759",
     "6924561100259",
     "7468355583037",
-    "6976693300410"
+    "6976693300410",
+    "COPIACOLOR8.5X11"
   ],
   "history": [
     {
@@ -1476,6 +1477,17 @@
       "facebook_post_id": "1056461310893148_122138472237354776",
       "instagram_post_id": "18103286150579063",
       "completed_at": "2026-09-15T00:37:52.640937+00:00"
+    },
+    {
+      "sku": "COPIACOLOR8.5X11",
+      "name": "COPIA A COLOR 8.5X11 POR PAGINA",
+      "caption": "¿Necesitas otra copia con todo su color? 🌈 Trae tu documento y te ayudamos a sacar las copias que te hacen falta.\n\nCopias a color tamaño carta · RD$10 por página\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-14T14:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/COPIACOLOR8.5X11.jpg",
+      "started_at": "2026-09-15T05:23:05.855639+00:00",
+      "facebook_post_id": "1056461310893148_122138534907354776",
+      "instagram_post_id": "18088901480467293",
+      "completed_at": "2026-09-15T05:23:22.805930+00:00"
     }
   ],
   "pending": null,
