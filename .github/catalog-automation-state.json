@@ -1,12 +1,12 @@
 {
-  "last_workbook_sha256": "81749303d25ab334675107b4c42c95b1fe2766173c0cf7bd003147cf6923982e",
-  "processed_at": "2026-09-14T23:25:50.553789+00:00",
-  "gmail_message_id": "1a0a1a3b8375d618",
-  "workbook_filename": "Productos_2026-9-14.xlsx",
-  "report_pending": false,
-  "report_base_commit": "b8db98124283606b3995eed7baa7fabcc9751f01",
+  "last_workbook_sha256": "6af2ab8c2ccf2f142fe46e068f4565dd116372adf9b78c2fa16ad1fb5d16a3e5",
+  "processed_at": "2026-09-15T22:52:00.401711+00:00",
+  "gmail_message_id": "1a0a6c1e29090426",
+  "workbook_filename": "Productos_2026-9-15.xlsx",
+  "report_pending": true,
+  "report_base_commit": "c58f18d8c211db8bb43f052d36aaf4889c89a57c",
   "report_previous_state": {
-    "workbook_filename": "Productos_2026-9-11.xlsx",
-    "processed_at": "2026-09-11T21:42:19.929513+00:00"
+    "workbook_filename": "Productos_2026-9-14.xlsx",
+    "processed_at": "2026-09-14T23:25:50.553789+00:00"
   }
 }
