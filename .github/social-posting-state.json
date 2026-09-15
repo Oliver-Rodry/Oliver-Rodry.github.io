@@ -124,7 +124,8 @@
     "7468355583037",
     "6976693300410",
     "COPIACOLOR8.5X11",
-    "6824120314052"
+    "6824120314052",
+    "1313526871313"
   ],
   "history": [
     {
@@ -1500,6 +1501,17 @@
       "facebook_post_id": "1056461310893148_122138602545354776",
       "instagram_post_id": "18111966716117076",
       "completed_at": "2026-09-15T10:17:07.399459+00:00"
+    },
+    {
+      "sku": "1313526871313",
+      "name": "RESALTADOR AMARILLO FRESH",
+      "caption": "Ese dato que viene en el examen merece su momento de brillar. 💛 Resáltalo y encuéntralo cuando repases.\n\nResaltador amarillo · RD$35\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-14T18:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/1313526871313.jpg",
+      "started_at": "2026-09-15T15:09:49.544357+00:00",
+      "facebook_post_id": "1056461310893148_122138677401354776",
+      "instagram_post_id": "17908165752476913",
+      "completed_at": "2026-09-15T15:10:02.880474+00:00"
     }
   ],
   "pending": null,
