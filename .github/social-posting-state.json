@@ -125,7 +125,8 @@
     "6976693300410",
     "COPIACOLOR8.5X11",
     "6824120314052",
-    "1313526871313"
+    "1313526871313",
+    "CINTAPEQ"
   ],
   "history": [
     {
@@ -1512,6 +1513,17 @@
       "facebook_post_id": "1056461310893148_122138677401354776",
       "instagram_post_id": "17908165752476913",
       "completed_at": "2026-09-15T15:10:02.880474+00:00"
+    },
+    {
+      "sku": "CINTAPEQ",
+      "name": "CINTA ADHESIVA FINA UNID",
+      "caption": "Siempre aparece algo que necesita un pedacito de cinta. 😄 Ten este rollito cerca para esas pequeñas soluciones del día.\n\nCinta adhesiva fina · RD$80\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-14T20:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/CINTAPEQ.jpg",
+      "started_at": "2026-09-15T18:59:46.980039+00:00",
+      "facebook_post_id": "1056461310893148_122138713539354776",
+      "instagram_post_id": "18217640269344875",
+      "completed_at": "2026-09-15T19:00:06.050182+00:00"
     }
   ],
   "pending": null,
