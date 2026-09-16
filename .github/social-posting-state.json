@@ -130,7 +130,8 @@
     "7453038441155",
     "6970873981048",
     "1313526879951",
-    "20260314103517505"
+    "20260314103517505",
+    "1313526871481"
   ],
   "history": [
     {
@@ -1572,6 +1573,17 @@
       "facebook_post_id": "1056461310893148_122138898381354776",
       "instagram_post_id": "18117123557075862",
       "completed_at": "2026-09-16T09:56:47.802977+00:00"
+    },
+    {
+      "sku": "1313526871481",
+      "name": "PEGAMENTO BLANCO 225ML",
+      "caption": "Ese proyecto trae muchos recortes y tú ya tienes las ideas. ✂️ Completa la mesa de trabajo con tu ega blanca.\n\nEga blanca mediana · RD$95\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-15T16:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/1313526871481.jpg",
+      "started_at": "2026-09-16T14:41:00.624455+00:00",
+      "facebook_post_id": "1056461310893148_122138960745354776",
+      "instagram_post_id": "17908225713498272",
+      "completed_at": "2026-09-16T14:41:15.820325+00:00"
     }
   ],
   "pending": null,
