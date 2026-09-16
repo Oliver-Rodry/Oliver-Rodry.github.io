@@ -128,7 +128,8 @@
     "1313526871313",
     "CINTAPEQ",
     "7453038441155",
-    "6970873981048"
+    "6970873981048",
+    "1313526879951"
   ],
   "history": [
     {
@@ -1548,6 +1549,17 @@
       "facebook_post_id": "1056461310893148_122138789133354776",
       "instagram_post_id": "18101722379358343",
       "completed_at": "2026-09-16T00:19:34.477507+00:00"
+    },
+    {
+      "sku": "1313526879951",
+      "name": "JUEGO DE REGLAS CON COMPAS ESTUCHE",
+      "caption": "Líneas, ángulos y círculos: llegó el equipo de geometría. 📐 Prepara el estuche para la próxima tarea.\n\nJuego de reglas con compás · RD$150\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-15T12:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/1313526879951.jpg",
+      "started_at": "2026-09-16T05:03:45.677856+00:00",
+      "facebook_post_id": "1056461310893148_122138854707354776",
+      "instagram_post_id": "17883799209501779",
+      "completed_at": "2026-09-16T05:04:00.498422+00:00"
     }
   ],
   "pending": null,
