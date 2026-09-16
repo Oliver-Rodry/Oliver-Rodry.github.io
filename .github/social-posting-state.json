@@ -133,7 +133,8 @@
     "20260314103517505",
     "1313526871481",
     "SOBREMANILACARTA",
-    "ESTUCHETRANSPUND"
+    "ESTUCHETRANSPUND",
+    "1313526879487"
   ],
   "history": [
     {
@@ -1608,6 +1609,17 @@
       "facebook_post_id": "1056461310893148_122139066927354776",
       "instagram_post_id": "18097284893530892",
       "completed_at": "2026-09-16T21:34:02.768694+00:00"
+    },
+    {
+      "sku": "1313526879487",
+      "name": "GRAPADORA ESTANDARD GRANDE DGG",
+      "caption": "Tus hojas ya hicieron equipo. Ahora toca unirlas. 📚 Una grapadora para organizar los documentos del escritorio.\n\nGrapadora grande · RD$180\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-16T08:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/1313526879487.jpg",
+      "started_at": "2026-09-16T23:51:03.981528+00:00",
+      "facebook_post_id": "1056461310893148_122139083187354776",
+      "instagram_post_id": "17861500995694332",
+      "completed_at": "2026-09-16T23:51:16.948831+00:00"
     }
   ],
   "pending": null,
