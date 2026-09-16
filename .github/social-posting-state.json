@@ -132,7 +132,8 @@
     "1313526879951",
     "20260314103517505",
     "1313526871481",
-    "SOBREMANILACARTA"
+    "SOBREMANILACARTA",
+    "ESTUCHETRANSPUND"
   ],
   "history": [
     {
@@ -1596,6 +1597,17 @@
       "facebook_post_id": "1056461310893148_122139021831354776",
       "instagram_post_id": "17874596025633172",
       "completed_at": "2026-09-16T18:27:22.678285+00:00"
+    },
+    {
+      "sku": "ESTUCHETRANSPUND",
+      "name": "ESTUCHE VARIEDAD COLOR TRANSPARENTE UND",
+      "caption": "¿Dónde quedó la borra? 👀 Con un estuche transparente puedes ver tus útiles y reunirlos en un solo lugar.\n\nEstuche transparente de colores · RD$55\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-15T20:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/ESTUCHETRANSPUND.jpg",
+      "started_at": "2026-09-16T21:33:39.843865+00:00",
+      "facebook_post_id": "1056461310893148_122139066927354776",
+      "instagram_post_id": "18097284893530892",
+      "completed_at": "2026-09-16T21:34:02.768694+00:00"
     }
   ],
   "pending": null,
