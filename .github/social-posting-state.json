@@ -131,7 +131,8 @@
     "6970873981048",
     "1313526879951",
     "20260314103517505",
-    "1313526871481"
+    "1313526871481",
+    "SOBREMANILACARTA"
   ],
   "history": [
     {
@@ -1584,6 +1585,17 @@
       "facebook_post_id": "1056461310893148_122138960745354776",
       "instagram_post_id": "17908225713498272",
       "completed_at": "2026-09-16T14:41:15.820325+00:00"
+    },
+    {
+      "sku": "SOBREMANILACARTA",
+      "name": "SOBRE MANILA TAMAÑO CARTA",
+      "caption": "¿Documentos para entregar? Que salgan juntitos. ✉️ Un sobre manila para llevar tus papeles a esa diligencia.\n\nSobre manila tamaño carta · RD$10\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-15T18:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/SOBREMANILACARTA.jpg",
+      "started_at": "2026-09-16T18:26:55.906829+00:00",
+      "facebook_post_id": "1056461310893148_122139021831354776",
+      "instagram_post_id": "17874596025633172",
+      "completed_at": "2026-09-16T18:27:22.678285+00:00"
     }
   ],
   "pending": null,
