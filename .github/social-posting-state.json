@@ -139,7 +139,8 @@
     "2022124765564",
     "1313526879869",
     "DIGITACIONBYN",
-    "6940509500738"
+    "6940509500738",
+    "CART5"
   ],
   "history": [
     {
@@ -1680,6 +1681,17 @@
       "facebook_post_id": "1056461310893148_122139401019354776",
       "instagram_post_id": "18131603356678769",
       "completed_at": "2026-09-17T21:25:39.684329+00:00"
+    },
+    {
+      "sku": "CART5",
+      "name": "CARTULINA ROJA ESCARLATA UND",
+      "caption": "Un toque de rojo para que tu idea se haga ver. ❤️ Cartulina para tus carteles, tareas y manualidades.\n\nCartulina roja · RD$30\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-16T20:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/CART5.jpg",
+      "started_at": "2026-09-17T23:36:25.625905+00:00",
+      "facebook_post_id": "1056461310893148_122139420129354776",
+      "instagram_post_id": "18462599383137672",
+      "completed_at": "2026-09-17T23:36:43.851650+00:00"
     }
   ],
   "pending": null,
