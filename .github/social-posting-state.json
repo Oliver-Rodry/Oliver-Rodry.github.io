@@ -138,7 +138,8 @@
     "HANI1039180GSM",
     "2022124765564",
     "1313526879869",
-    "DIGITACIONBYN"
+    "DIGITACIONBYN",
+    "6940509500738"
   ],
   "history": [
     {
@@ -1668,6 +1669,17 @@
       "facebook_post_id": "1056461310893148_122139329079354776",
       "instagram_post_id": "17971322790151530",
       "completed_at": "2026-09-17T18:13:25.060840+00:00"
+    },
+    {
+      "sku": "6940509500738",
+      "name": "SACAGRAPAS NEGRO NUSTAR",
+      "caption": "¿Toca cambiar una hoja del documento? 📄 El sacagrapas te ayuda a quitar la grapa y reorganizarlo.\n\nSacagrapas · RD$35\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-16T18:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/6940509500738.jpg",
+      "started_at": "2026-09-17T21:25:22.084206+00:00",
+      "facebook_post_id": "1056461310893148_122139401019354776",
+      "instagram_post_id": "18131603356678769",
+      "completed_at": "2026-09-17T21:25:39.684329+00:00"
     }
   ],
   "pending": null,
