@@ -134,7 +134,8 @@
     "1313526871481",
     "SOBREMANILACARTA",
     "ESTUCHETRANSPUND",
-    "1313526879487"
+    "1313526879487",
+    "HANI1039180GSM"
   ],
   "history": [
     {
@@ -1620,6 +1621,17 @@
       "facebook_post_id": "1056461310893148_122139083187354776",
       "instagram_post_id": "17861500995694332",
       "completed_at": "2026-09-16T23:51:16.948831+00:00"
+    },
+    {
+      "sku": "HANI1039180GSM",
+      "name": "PAPEL FOTOGRAFICO BRILLANTE 180 HOJA",
+      "caption": "Esa foto merece salir de la galería del celular. 📸 Papel fotográfico brillante para darle un espacio entre tus recuerdos.\n\nHoja de papel fotográfico brillante · RD$15\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-16T10:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/HANI1039180GSM.jpg",
+      "started_at": "2026-09-17T03:30:10.258649+00:00",
+      "facebook_post_id": "1056461310893148_122139132621354776",
+      "instagram_post_id": "18040676534830425",
+      "completed_at": "2026-09-17T03:30:25.708919+00:00"
     }
   ],
   "pending": null,
