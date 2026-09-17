@@ -136,7 +136,8 @@
     "ESTUCHETRANSPUND",
     "1313526879487",
     "HANI1039180GSM",
-    "2022124765564"
+    "2022124765564",
+    "1313526879869"
   ],
   "history": [
     {
@@ -1644,6 +1645,17 @@
       "facebook_post_id": "1056461310893148_122139204261354776",
       "instagram_post_id": "18115890128069502",
       "completed_at": "2026-09-17T08:55:03.816611+00:00"
+    },
+    {
+      "sku": "1313526879869",
+      "name": "PAQUETE FOAMY LISO 8X12",
+      "caption": "Letras para un cartel, figuras para una tarea… ✨ El foamy está listo; la idea la pones tú.\n\nFoamy liso de colores · RD$90\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-16T14:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/1313526879869.jpg",
+      "started_at": "2026-09-17T14:06:20.621876+00:00",
+      "facebook_post_id": "1056461310893148_122139297741354776",
+      "instagram_post_id": "18074176667445502",
+      "completed_at": "2026-09-17T14:06:34.044857+00:00"
     }
   ],
   "pending": null,
