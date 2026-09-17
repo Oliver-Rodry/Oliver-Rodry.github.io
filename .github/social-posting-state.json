@@ -137,7 +137,8 @@
     "1313526879487",
     "HANI1039180GSM",
     "2022124765564",
-    "1313526879869"
+    "1313526879869",
+    "DIGITACIONBYN"
   ],
   "history": [
     {
@@ -1656,6 +1657,17 @@
       "facebook_post_id": "1056461310893148_122139297741354776",
       "instagram_post_id": "18074176667445502",
       "completed_at": "2026-09-17T14:06:34.044857+00:00"
+    },
+    {
+      "sku": "DIGITACIONBYN",
+      "name": "DIGITACION BLANCO Y NEGRO 8.5X11 POR PAGINA",
+      "caption": "Ese archivo no se entrega solo. 😄 Te ayudamos a imprimirlo en blanco y negro para que sigas con tu día.\n\nImpresiones en blanco y negro tamaño carta · RD$20\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-16T16:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/DIGITACIONBYN.jpg",
+      "started_at": "2026-09-17T18:13:08.802566+00:00",
+      "facebook_post_id": "1056461310893148_122139329079354776",
+      "instagram_post_id": "17971322790151530",
+      "completed_at": "2026-09-17T18:13:25.060840+00:00"
     }
   ],
   "pending": null,
