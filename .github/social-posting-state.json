@@ -135,7 +135,8 @@
     "SOBREMANILACARTA",
     "ESTUCHETRANSPUND",
     "1313526879487",
-    "HANI1039180GSM"
+    "HANI1039180GSM",
+    "2022124765564"
   ],
   "history": [
     {
@@ -1632,6 +1633,17 @@
       "facebook_post_id": "1056461310893148_122139132621354776",
       "instagram_post_id": "18040676534830425",
       "completed_at": "2026-09-17T03:30:25.708919+00:00"
+    },
+    {
+      "sku": "2022124765564",
+      "name": "LAPICES DE COLOR CAJA 12",
+      "caption": "La tarea dice «colorea» y tú ya tienes con qué. 🌈 Abre tus lápices de colores y ponle tu toque a cada dibujo.\n\nCaja de 12 lápices de colores · RD$40\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-16T12:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/2022124765564.jpg",
+      "started_at": "2026-09-17T08:54:48.489085+00:00",
+      "facebook_post_id": "1056461310893148_122139204261354776",
+      "instagram_post_id": "18115890128069502",
+      "completed_at": "2026-09-17T08:55:03.816611+00:00"
     }
   ],
   "pending": null,
