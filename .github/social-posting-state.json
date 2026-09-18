@@ -143,7 +143,8 @@
     "CART5",
     "2022124765533",
     "1313526879937",
-    "2022124765526"
+    "2022124765526",
+    "SOBRECARTAVENTANA"
   ],
   "history": [
     {
@@ -1728,6 +1729,17 @@
       "facebook_post_id": "1056461310893148_122139570591354776",
       "instagram_post_id": "18093170771536029",
       "completed_at": "2026-09-18T11:50:26.484616+00:00"
+    },
+    {
+      "sku": "SOBRECARTAVENTANA",
+      "name": "SOBRE DE PAPEL CON VENTANA",
+      "caption": "Los documentos también se preparan para salir. ✉️ Un sobre con ventana para tus comunicaciones y entregas.\n\nSobre con ventana · RD$20\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-17T14:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/SOBRECARTAVENTANA.jpg",
+      "started_at": "2026-09-18T15:51:26.062482+00:00",
+      "facebook_post_id": "1056461310893148_122139639555354776",
+      "instagram_post_id": "18025775267855964",
+      "completed_at": "2026-09-18T15:51:41.111009+00:00"
     }
   ],
   "pending": null,
