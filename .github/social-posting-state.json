@@ -142,7 +142,8 @@
     "6940509500738",
     "CART5",
     "2022124765533",
-    "1313526879937"
+    "1313526879937",
+    "2022124765526"
   ],
   "history": [
     {
@@ -1716,6 +1717,17 @@
       "facebook_post_id": "1056461310893148_122139512265354776",
       "instagram_post_id": "18149375251550259",
       "completed_at": "2026-09-18T06:40:43.408559+00:00"
+    },
+    {
+      "sku": "2022124765526",
+      "name": "LAPICERO MULTICOLOR",
+      "caption": "Un color para cada idea, en el mismo lapicero. 🌈 Dale variedad a tus apuntes sin cambiar de compañero.\n\nLapicero multicolor · RD$25\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-17T12:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/2022124765526.jpg",
+      "started_at": "2026-09-18T11:50:11.857291+00:00",
+      "facebook_post_id": "1056461310893148_122139570591354776",
+      "instagram_post_id": "18093170771536029",
+      "completed_at": "2026-09-18T11:50:26.484616+00:00"
     }
   ],
   "pending": null,
