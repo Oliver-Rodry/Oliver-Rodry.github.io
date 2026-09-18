@@ -144,7 +144,8 @@
     "2022124765533",
     "1313526879937",
     "2022124765526",
-    "SOBRECARTAVENTANA"
+    "SOBRECARTAVENTANA",
+    "2022124765618"
   ],
   "history": [
     {
@@ -1740,6 +1741,17 @@
       "facebook_post_id": "1056461310893148_122139639555354776",
       "instagram_post_id": "18025775267855964",
       "completed_at": "2026-09-18T15:51:41.111009+00:00"
+    },
+    {
+      "sku": "2022124765618",
+      "name": "POST-IT MULTICOLOR 3X3",
+      "caption": "Un color para cada pendiente… ¡y a organizarse! 🌈 Estas notitas adhesivas le ponen alegría a tu escritorio.\n\nNotas adhesivas de colores · RD$45\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-17T16:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/2022124765618.jpg",
+      "started_at": "2026-09-18T18:52:28.724311+00:00",
+      "facebook_post_id": "1056461310893148_122139683865354776",
+      "instagram_post_id": "18106707940935773",
+      "completed_at": "2026-09-18T18:52:47.566481+00:00"
     }
   ],
   "pending": null,
