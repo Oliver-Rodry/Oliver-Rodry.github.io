@@ -145,7 +145,8 @@
     "1313526879937",
     "2022124765526",
     "SOBRECARTAVENTANA",
-    "2022124765618"
+    "2022124765618",
+    "1313526879944"
   ],
   "history": [
     {
@@ -1752,6 +1753,17 @@
       "facebook_post_id": "1056461310893148_122139683865354776",
       "instagram_post_id": "18106707940935773",
       "completed_at": "2026-09-18T18:52:47.566481+00:00"
+    },
+    {
+      "sku": "1313526879944",
+      "name": "COMPAS PLASTICO 11.6X3",
+      "caption": "Que los círculos no salgan con esquinas. 😄 Prepara tu compás para la próxima clase de geometría.\n\nCompás escolar · RD$60\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-17T18:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/1313526879944.jpg",
+      "started_at": "2026-09-18T21:25:17.019966+00:00",
+      "facebook_post_id": "1056461310893148_122139729441354776",
+      "instagram_post_id": "18112252562518435",
+      "completed_at": "2026-09-18T21:25:34.090521+00:00"
     }
   ],
   "pending": null,
