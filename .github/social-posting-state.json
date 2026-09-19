@@ -149,7 +149,8 @@
     "1313526879944",
     "6920151191058",
     "MARCADORPIZZARRANEGROUND",
-    "CART3"
+    "CART3",
+    "COPIA85X11"
   ],
   "history": [
     {
@@ -1800,6 +1801,17 @@
       "facebook_post_id": "1056461310893148_122139874887354776",
       "instagram_post_id": "18077695127381146",
       "completed_at": "2026-09-19T06:29:17.725830+00:00"
+    },
+    {
+      "sku": "COPIA85X11",
+      "name": "COPIA BLANCO Y NEGRO 8.5X11 POR PAGINA",
+      "caption": "¿Te pidieron una copia más? Aquí te resolvemos. 📄 Trae tu documento y completa esa entrega pendiente.\n\nCopias en blanco y negro tamaño carta · RD$5 por página\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-18T12:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/COPIA85X11.jpg",
+      "started_at": "2026-09-19T11:24:09.419535+00:00",
+      "facebook_post_id": "1056461310893148_122139967605354776",
+      "instagram_post_id": "18029613275909564",
+      "completed_at": "2026-09-19T11:24:30.853425+00:00"
     }
   ],
   "pending": null,
