@@ -147,7 +147,8 @@
     "SOBRECARTAVENTANA",
     "2022124765618",
     "1313526879944",
-    "6920151191058"
+    "6920151191058",
+    "MARCADORPIZZARRANEGROUND"
   ],
   "history": [
     {
@@ -1776,6 +1777,17 @@
       "facebook_post_id": "1056461310893148_122139748539354776",
       "instagram_post_id": "18129111943739923",
       "completed_at": "2026-09-18T23:28:43.196018+00:00"
+    },
+    {
+      "sku": "MARCADORPIZZARRANEGROUND",
+      "name": "MARCADOR DE PIZARRA NEGRO",
+      "caption": "La pizarra está en blanco y las ideas están listas. 🖊️ Completa tu clase o reunión con un marcador negro para pizarra blanca.\n\nMarcador negro para pizarra blanca · RD$35\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-18T08:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/MARCADORPIZZARRANEGROUND.jpg",
+      "started_at": "2026-09-19T01:28:34.030770+00:00",
+      "facebook_post_id": "1056461310893148_122139770325354776",
+      "instagram_post_id": "18012235814755908",
+      "completed_at": "2026-09-19T01:28:52.296375+00:00"
     }
   ],
   "pending": null,
