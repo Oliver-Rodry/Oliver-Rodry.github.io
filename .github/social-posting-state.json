@@ -153,7 +153,8 @@
     "COPIA85X11",
     "1313526871344",
     "1313526879784",
-    "LAPICERONEGROARLES"
+    "LAPICERONEGROARLES",
+    "1313526879579"
   ],
   "history": [
     {
@@ -1848,6 +1849,17 @@
       "facebook_post_id": "1056461310893148_122140135779354776",
       "instagram_post_id": "18132111004670189",
       "completed_at": "2026-09-19T21:41:39.141976+00:00"
+    },
+    {
+      "sku": "1313526879579",
+      "name": "PAQUETE GRAPAS TAMANO STANDARD 26/6",
+      "caption": "La grapadora también necesita que la abastezcan. 😄 Revisa tus grapas antes de organizar la próxima pila de documentos.\n\nCaja de grapas estándar · RD$75\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-18T20:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/1313526879579.jpg",
+      "started_at": "2026-09-19T23:35:04.652593+00:00",
+      "facebook_post_id": "1056461310893148_122140173147354776",
+      "instagram_post_id": "18368571115240774",
+      "completed_at": "2026-09-19T23:35:30.071980+00:00"
     }
   ],
   "pending": null,
