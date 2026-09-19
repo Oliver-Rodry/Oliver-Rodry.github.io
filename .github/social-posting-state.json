@@ -148,7 +148,8 @@
     "2022124765618",
     "1313526879944",
     "6920151191058",
-    "MARCADORPIZZARRANEGROUND"
+    "MARCADORPIZZARRANEGROUND",
+    "CART3"
   ],
   "history": [
     {
@@ -1788,6 +1789,17 @@
       "facebook_post_id": "1056461310893148_122139770325354776",
       "instagram_post_id": "18012235814755908",
       "completed_at": "2026-09-19T01:28:52.296375+00:00"
+    },
+    {
+      "sku": "CART3",
+      "name": "CARTULINA ROSADA CLARA UND",
+      "caption": "Un rosado suave para una idea muy tuya. 🌸 Lleva esta cartulina a tu próxima tarea, cartel o decoración.\n\nCartulina rosada clara · RD$20\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-18T10:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/CART3.jpg",
+      "started_at": "2026-09-19T06:28:59.542629+00:00",
+      "facebook_post_id": "1056461310893148_122139874887354776",
+      "instagram_post_id": "18077695127381146",
+      "completed_at": "2026-09-19T06:29:17.725830+00:00"
     }
   ],
   "pending": null,
