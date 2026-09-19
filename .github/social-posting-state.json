@@ -150,7 +150,8 @@
     "6920151191058",
     "MARCADORPIZZARRANEGROUND",
     "CART3",
-    "COPIA85X11"
+    "COPIA85X11",
+    "1313526871344"
   ],
   "history": [
     {
@@ -1812,6 +1813,17 @@
       "facebook_post_id": "1056461310893148_122139967605354776",
       "instagram_post_id": "18029613275909564",
       "completed_at": "2026-09-19T11:24:30.853425+00:00"
+    },
+    {
+      "sku": "1313526871344",
+      "name": "RESALTADOR AZUL FRESH",
+      "caption": "No todo tiene que ir de amarillo. 💙 Organiza tus apuntes con un toque azul y marca lo que quieres encontrar después.\n\nResaltador azul · RD$35\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-09-18T14:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/1313526871344.jpg",
+      "started_at": "2026-09-19T14:38:26.249625+00:00",
+      "facebook_post_id": "1056461310893148_122140037559354776",
+      "instagram_post_id": "17971351449157320",
+      "completed_at": "2026-09-19T14:38:41.116236+00:00"
     }
   ],
   "pending": null,
