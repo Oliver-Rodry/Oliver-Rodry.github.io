@@ -279,6 +279,18 @@ def campaign_item(state: dict, now: datetime | None = None, due_only: bool = Fal
 
 
 def campaign_post_due(state: dict, now: datetime | None = None) -> bool:
+    local_now = (now or datetime.now(timezone.utc)).astimezone(LOCAL_TZ)
+    campaign = state.get("campaign", {})
+    if campaign.get("expires_at") and local_now >= datetime.fromisoformat(campaign["expires_at"]):
+        return False
+    if campaign.get("daily_window"):
+        start, end = campaign["daily_window"]
+        if not start <= local_now.strftime("%H:%M") <= end:
+            return False
+    if campaign.get("minimum_interval_minutes") and state.get("history"):
+        latest = max(datetime.fromisoformat(h["completed_at"]) for h in state["history"])
+        if local_now < latest + timedelta(minutes=campaign["minimum_interval_minutes"]):
+            return False
     pending = state.get("pending")
     if pending:
         scheduled_for = pending.get("scheduled_for")
