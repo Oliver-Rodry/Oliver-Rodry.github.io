@@ -154,7 +154,8 @@
     "1313526871344",
     "1313526879784",
     "LAPICERONEGROARLES",
-    "1313526879579"
+    "1313526879579",
+    "CART6"
   ],
   "history": [
     {
@@ -1860,6 +1861,17 @@
       "facebook_post_id": "1056461310893148_122140173147354776",
       "instagram_post_id": "18368571115240774",
       "completed_at": "2026-09-19T23:35:30.071980+00:00"
+    },
+    {
+      "sku": "CART6",
+      "name": "CARTULINA ROSA FUERTE UND",
+      "caption": "¡Ese mural pide color! 💗 Dale vida a tus letras, recortes y proyectos con una cartulina rosa fuerte.\n\nCartulina rosa fuerte · RD$30\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-10-07T15:59:39-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/CART6.jpg",
+      "started_at": "2026-10-07T20:00:23.173003+00:00",
+      "facebook_post_id": "1056461310893148_122146241397354776",
+      "instagram_post_id": "18496720966097422",
+      "completed_at": "2026-10-07T20:00:44.626413+00:00"
     }
   ],
   "pending": null,
