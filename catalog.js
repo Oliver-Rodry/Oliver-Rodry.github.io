@@ -405,7 +405,7 @@ document.addEventListener("DOMContentLoaded", () => {
  function productImageUrl(p) {
   const sku = String(p?.sku || "").trim();
   if (!sku) return "";
-  return `/img/products/${encodeURIComponent(sku)}.jpg?v=1`;
+  return `/img/products/${encodeURIComponent(sku)}.jpg?v=20261008`;
 }
 
   function imgMediaHTML(p) {
