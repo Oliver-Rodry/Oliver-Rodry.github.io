@@ -155,7 +155,8 @@
     "1313526879784",
     "LAPICERONEGROARLES",
     "1313526879579",
-    "CART6"
+    "CART6",
+    "CART4"
   ],
   "history": [
     {
@@ -1872,6 +1873,17 @@
       "facebook_post_id": "1056461310893148_122146241397354776",
       "instagram_post_id": "18496720966097422",
       "completed_at": "2026-10-07T20:00:44.626413+00:00"
+    },
+    {
+      "sku": "CART4",
+      "name": "CARTULINA VERDE CLARO UND",
+      "caption": "Un chin de verde para tu próxima idea. 💚 Busca tu cartulina y pon esas manos creativas a trabajar.\n\nCartulina verde claro · RD$20\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-10-08T07:30:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/CART4.jpg",
+      "started_at": "2026-10-08T15:30:17.356092+00:00",
+      "facebook_post_id": "1056461310893148_122146482543354776",
+      "instagram_post_id": "18145189012587347",
+      "completed_at": "2026-10-08T15:30:39.978597+00:00"
     }
   ],
   "pending": null,
