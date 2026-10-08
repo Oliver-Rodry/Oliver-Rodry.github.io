@@ -156,7 +156,8 @@
     "LAPICERONEGROARLES",
     "1313526879579",
     "CART6",
-    "CART4"
+    "CART4",
+    "BORRADORMAGNE"
   ],
   "history": [
     {
@@ -1884,6 +1885,17 @@
       "facebook_post_id": "1056461310893148_122146482543354776",
       "instagram_post_id": "18145189012587347",
       "completed_at": "2026-10-08T15:30:39.978597+00:00"
+    },
+    {
+      "sku": "BORRADORMAGNE",
+      "name": "BORRADOR PIZARRA BLANCA MAG VARIEDAD",
+      "caption": "Se acabó la explicación… ¡espacio para la próxima idea! 😄 Ten tu borrador de pizarra a mano.\n\nBorrador para pizarra blanca · RD$80\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-10-08T09:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/BORRADORMAGNE.jpg",
+      "started_at": "2026-10-08T20:49:15.250173+00:00",
+      "facebook_post_id": "1056461310893148_122146545981354776",
+      "instagram_post_id": "18414561694090593",
+      "completed_at": "2026-10-08T20:49:31.989136+00:00"
     }
   ],
   "pending": null,
