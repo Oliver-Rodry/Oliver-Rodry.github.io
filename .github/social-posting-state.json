@@ -160,7 +160,8 @@
     "BORRADORMAGNE",
     "CART 2",
     "6820220039048",
-    "CINTTRANSGRAN"
+    "CINTTRANSGRAN",
+    "DIGI8X14"
   ],
   "history": [
     {
@@ -1932,6 +1933,17 @@
       "facebook_post_id": "1056461310893148_122146872651354776",
       "instagram_post_id": "17983999884120889",
       "completed_at": "2026-10-09T19:40:36.218001+00:00"
+    },
+    {
+      "sku": "DIGI8X14",
+      "name": "DIGITACION A BLANCO Y NEGRO LEGAL POR PAGINA",
+      "caption": "¿Tu archivo necesita hoja larga? 📄 Trae tu documento para imprimirlo en blanco y negro tamaño legal.\n\nImpresiones en blanco y negro tamaño legal · RD$30 por página\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-10-08T15:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/DIGI8X14.jpg",
+      "started_at": "2026-10-09T23:30:51.137772+00:00",
+      "facebook_post_id": "1056461310893148_122146926759354776",
+      "instagram_post_id": "18151320658535235",
+      "completed_at": "2026-10-09T23:31:10.045512+00:00"
     }
   ],
   "pending": null,
