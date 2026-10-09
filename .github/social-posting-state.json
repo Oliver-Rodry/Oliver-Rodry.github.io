@@ -158,7 +158,8 @@
     "CART6",
     "CART4",
     "BORRADORMAGNE",
-    "CART 2"
+    "CART 2",
+    "6820220039048"
   ],
   "history": [
     {
@@ -1908,6 +1909,17 @@
       "facebook_post_id": "1056461310893148_122146587081354776",
       "instagram_post_id": "18374130823241786",
       "completed_at": "2026-10-09T00:58:50.929470+00:00"
+    },
+    {
+      "sku": "6820220039048",
+      "name": "CHINCHETAS SURTIDAS CAJITA",
+      "caption": "Ese recordatorio merece estar a la vista. 📌 Sujeta tus notas en el tablero y que no se te pase lo importante.\n\nChinchetas surtidas · RD$65\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-10-08T12:00:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/6820220039048.jpg",
+      "started_at": "2026-10-09T14:29:23.904598+00:00",
+      "facebook_post_id": "1056461310893148_122146791567354776",
+      "instagram_post_id": "17909417973551228",
+      "completed_at": "2026-10-09T14:29:45.655637+00:00"
     }
   ],
   "pending": null,
