@@ -159,7 +159,8 @@
     "CART4",
     "BORRADORMAGNE",
     "CART 2",
-    "6820220039048"
+    "6820220039048",
+    "CINTTRANSGRAN"
   ],
   "history": [
     {
@@ -1920,6 +1921,17 @@
       "facebook_post_id": "1056461310893148_122146791567354776",
       "instagram_post_id": "17909417973551228",
       "completed_at": "2026-10-09T14:29:45.655637+00:00"
+    },
+    {
+      "sku": "CINTTRANSGRAN",
+      "name": "CINTA ADHESIVA ANCHA",
+      "caption": "¿Una caja por cerrar? 📦 Resuelve con cinta adhesiva ancha y sigue con tus pendientes.\n\nCinta adhesiva ancha · RD$100\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-10-08T13:30:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/CINTTRANSGRAN.jpg",
+      "started_at": "2026-10-09T19:40:14.974031+00:00",
+      "facebook_post_id": "1056461310893148_122146872651354776",
+      "instagram_post_id": "17983999884120889",
+      "completed_at": "2026-10-09T19:40:36.218001+00:00"
     }
   ],
   "pending": null,
