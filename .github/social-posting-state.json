@@ -157,7 +157,8 @@
     "1313526879579",
     "CART6",
     "CART4",
-    "BORRADORMAGNE"
+    "BORRADORMAGNE",
+    "CART 2"
   ],
   "history": [
     {
@@ -1896,6 +1897,17 @@
       "facebook_post_id": "1056461310893148_122146545981354776",
       "instagram_post_id": "18414561694090593",
       "completed_at": "2026-10-08T20:49:31.989136+00:00"
+    },
+    {
+      "sku": "CART 2",
+      "name": "CARTULINA AMARILLO CLARO UND",
+      "caption": "Para un cartel bonito o una tarea con tu toque. 💛 La cartulina amarillo claro está lista para tus ideas.\n\nCartulina amarillo claro · RD$20\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-10-08T10:30:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/CART%202.jpg",
+      "started_at": "2026-10-09T00:58:33.515475+00:00",
+      "facebook_post_id": "1056461310893148_122146587081354776",
+      "instagram_post_id": "18374130823241786",
+      "completed_at": "2026-10-09T00:58:50.929470+00:00"
     }
   ],
   "pending": null,
