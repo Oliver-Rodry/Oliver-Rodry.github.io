@@ -161,7 +161,8 @@
     "CART 2",
     "6820220039048",
     "CINTTRANSGRAN",
-    "DIGI8X14"
+    "DIGI8X14",
+    "HOJABOND85X11"
   ],
   "history": [
     {
@@ -1944,6 +1945,17 @@
       "facebook_post_id": "1056461310893148_122146926759354776",
       "instagram_post_id": "18151320658535235",
       "completed_at": "2026-10-09T23:31:10.045512+00:00"
+    },
+    {
+      "sku": "HOJABOND85X11",
+      "name": "HOJA PAPEL BOND 8.5X11 PAQUETE 5 UND",
+      "caption": "Para practicar, escribir o sacar esa idea del aire. ✏️ El papel bond tamaño carta siempre resuelve.\n\nPapel bond tamaño carta · RD$5\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-10-08T16:30:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/HOJABOND85X11.jpg",
+      "started_at": "2026-10-10T15:30:47.427560+00:00",
+      "facebook_post_id": "1056461310893148_122147135877354776",
+      "instagram_post_id": "18111124472144202",
+      "completed_at": "2026-10-10T15:31:00.190126+00:00"
     }
   ],
   "pending": null,
