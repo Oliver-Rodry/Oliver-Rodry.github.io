@@ -163,7 +163,8 @@
     "CINTTRANSGRAN",
     "DIGI8X14",
     "HOJABOND85X11",
-    "6970873980966"
+    "6970873980966",
+    "LAPIZCONBORRAUND"
   ],
   "history": [
     {
@@ -1968,6 +1969,17 @@
       "facebook_post_id": "1056461310893148_122147205291354776",
       "instagram_post_id": "17914210878530135",
       "completed_at": "2026-10-10T19:32:06.497589+00:00"
+    },
+    {
+      "sku": "LAPIZCONBORRAUND",
+      "name": "LAPIZ CON BORRA UND",
+      "caption": "Escribe, borra y vuelve a intentar. ✏️ Un lápiz con borra no puede faltar en el estuche.\n\nLápiz con borra · RD$10\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-10-08T19:30:00-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/LAPIZCONBORRAUND.jpg",
+      "started_at": "2026-10-10T22:56:50.441299+00:00",
+      "facebook_post_id": "1056461310893148_122147256921354776",
+      "instagram_post_id": "17988892518060909",
+      "completed_at": "2026-10-10T22:57:04.584586+00:00"
     }
   ],
   "pending": null,
