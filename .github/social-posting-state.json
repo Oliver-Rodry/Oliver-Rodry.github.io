@@ -167,7 +167,8 @@
     "LAPIZCONBORRAUND",
     "20260302084532030",
     "CURR",
-    "20260302084740031"
+    "20260302084740031",
+    "20260316115246695"
   ],
   "history": [
     {
@@ -2016,6 +2017,17 @@
       "facebook_post_id": "1056461310893148_122151462651354776",
       "instagram_post_id": "17910010500480973",
       "completed_at": "2026-10-24T19:48:41.768225+00:00"
+    },
+    {
+      "sku": "20260316115246695",
+      "name": "IMPRESION DE PLANO ARQUITECTONICO A COLOR",
+      "caption": "Ese proyecto merece verse en papel. 📐 Trae tu plano arquitectónico y consulta la impresión a color que necesitas para revisarlo con calma.\n\nImpresión de planos a color · RD$650 por página\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-10-24T15:14:20-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/20260316115246695.jpg",
+      "started_at": "2026-10-24T22:14:44.143949+00:00",
+      "facebook_post_id": "1056461310893148_122151490707354776",
+      "instagram_post_id": "18000682419008696",
+      "completed_at": "2026-10-24T22:15:03.689385+00:00"
     }
   ],
   "pending": null,
