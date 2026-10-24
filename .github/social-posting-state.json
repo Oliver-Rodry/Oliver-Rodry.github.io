@@ -1985,232 +1985,358 @@
   "pending": null,
   "campaign": {
     "timezone": "America/Santo_Domingo",
-    "starts": "2026-10-07T15:59:39-04:00",
-    "ends": "2026-10-10T21:00:00-04:00",
-    "expires_at": "2026-10-10T21:31:00-04:00",
+    "starts": "2026-10-24T09:14:20-04:00",
+    "ends": "2026-10-30T21:14:20-04:00",
+    "expires_at": "2026-10-31T09:14:20-04:00",
     "daily_window": [
       "07:30",
       "21:30"
     ],
-    "minimum_interval_minutes": 90,
-    "selection": "Never posted first, then oldest last publication; distinct SKUs",
+    "minimum_interval_minutes": 120,
+    "selection": "Never posted first, then oldest publication; distinct products; fresh October 24 captions",
     "schedule": [
       {
-        "scheduled_for": "2026-10-07T15:59:39-04:00",
-        "sku": "CART6",
-        "name": "CARTULINA ROSA FUERTE UND",
-        "caption": "¡Ese mural pide color! 💗 Dale vida a tus letras, recortes y proyectos con una cartulina rosa fuerte.\n\nCartulina rosa fuerte · RD$30\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-24T09:14:20-04:00",
+        "sku": "20260302084532030",
+        "name": "COPIA A COLOR HOJA NOTARIAL POR PAGINA",
+        "caption": "¿Tienes un documento que va en hoja notarial? 📄 Pregunta por nuestras copias a color y trae tu archivo para preparar la cantidad que necesitas.\n\nCopias a color en hoja notarial · RD$50 por página\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 0
       },
       {
-        "scheduled_for": "2026-10-08T07:30:00-04:00",
-        "sku": "CART4",
-        "name": "CARTULINA VERDE CLARO UND",
-        "caption": "Un chin de verde para tu próxima idea. 💚 Busca tu cartulina y pon esas manos creativas a trabajar.\n\nCartulina verde claro · RD$20\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-24T11:14:20-04:00",
+        "sku": "CURR",
+        "name": "CURRICULUM DIGITALIZADO",
+        "caption": "Tu próxima oportunidad empieza con tus datos al día. 💼 Pasa a preparar tu currículum digitalizado y tenlo a mano para cuando te lo pidan.\n\nCurrículum digitalizado · RD$70 por página\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 1
       },
       {
-        "scheduled_for": "2026-10-08T09:00:00-04:00",
-        "sku": "BORRADORMAGNE",
-        "name": "BORRADOR PIZARRA BLANCA MAG VARIEDAD",
-        "caption": "Se acabó la explicación… ¡espacio para la próxima idea! 😄 Ten tu borrador de pizarra a mano.\n\nBorrador para pizarra blanca · RD$80\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-24T13:14:20-04:00",
+        "sku": "20260302084740031",
+        "name": "DIGITACION HOJA NOTARIAL POR PAGINA",
+        "caption": "Del texto pendiente al documento preparado. ⌨️ Consulta nuestro servicio de digitación en hoja notarial y adelanta esa diligencia.\n\nDigitación en hoja notarial · RD$60 por página\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 2
       },
       {
-        "scheduled_for": "2026-10-08T10:30:00-04:00",
-        "sku": "CART 2",
-        "name": "CARTULINA AMARILLO CLARO UND",
-        "caption": "Para un cartel bonito o una tarea con tu toque. 💛 La cartulina amarillo claro está lista para tus ideas.\n\nCartulina amarillo claro · RD$20\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-24T15:14:20-04:00",
+        "sku": "20260316115246695",
+        "name": "IMPRESION DE PLANO ARQUITECTONICO A COLOR",
+        "caption": "Ese proyecto merece verse en papel. 📐 Trae tu plano arquitectónico y consulta la impresión a color que necesitas para revisarlo con calma.\n\nImpresión de planos a color · RD$650 por página\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 3
       },
       {
-        "scheduled_for": "2026-10-08T12:00:00-04:00",
-        "sku": "6820220039048",
-        "name": "CHINCHETAS SURTIDAS CAJITA",
-        "caption": "Ese recordatorio merece estar a la vista. 📌 Sujeta tus notas en el tablero y que no se te pase lo importante.\n\nChinchetas surtidas · RD$65\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-24T17:14:20-04:00",
+        "sku": "20260621195111387",
+        "name": "PAQUETE DE ROLLO TERMICO 80MM 10UNID",
+        "caption": "Que no se termine el rollo en plena venta. 🧾 Revisa tus reservas y lleva tu paquete de rollos térmicos de 80 mm.\n\nPaquete de 10 rollos térmicos de 80 mm · RD$500\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 4
       },
       {
-        "scheduled_for": "2026-10-08T13:30:00-04:00",
-        "sku": "CINTTRANSGRAN",
-        "name": "CINTA ADHESIVA ANCHA",
-        "caption": "¿Una caja por cerrar? 📦 Resuelve con cinta adhesiva ancha y sigue con tus pendientes.\n\nCinta adhesiva ancha · RD$100\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-24T19:14:20-04:00",
+        "sku": "PLAST",
+        "name": "PLASTIFICADO POR LAMINA 8.5X11",
+        "caption": "Dale una capa de protección a ese documento que usas a cada rato. 📄 Tenemos plastificado tamaño carta para tus hojas de 8.5 × 11.\n\nPlastificado tamaño carta · RD$40\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 5
       },
       {
-        "scheduled_for": "2026-10-08T15:00:00-04:00",
-        "sku": "DIGI8X14",
-        "name": "DIGITACION A BLANCO Y NEGRO LEGAL POR PAGINA",
-        "caption": "¿Tu archivo necesita hoja larga? 📄 Trae tu documento para imprimirlo en blanco y negro tamaño legal.\n\nImpresiones en blanco y negro tamaño legal · RD$30 por página\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-24T21:14:20-04:00",
+        "sku": "20260529134240319",
+        "name": "PLASTIIFICADO POR LAMINA 11X17",
+        "caption": "¿Tu lámina es más grande que una hoja carta? ✨ Pregunta por el plastificado de 11 × 17 y prepara esa pieza para seguir usándola.\n\nPlastificado de 11 × 17 · RD$100 por página\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 6
       },
       {
-        "scheduled_for": "2026-10-08T16:30:00-04:00",
-        "sku": "HOJABOND85X11",
-        "name": "HOJA PAPEL BOND 8.5X11 PAQUETE 5 UND",
-        "caption": "Para practicar, escribir o sacar esa idea del aire. ✏️ El papel bond tamaño carta siempre resuelve.\n\nPapel bond tamaño carta · RD$5\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-25T09:14:20-04:00",
+        "sku": "6923787402321",
+        "name": "SOBRE PLASTICO PARA DOCUMENTOS 9X5",
+        "caption": "Los papeles pequeños también necesitan su lugar. ✉️ Guarda tus documentos de ese tamaño en un sobre plástico y encuéntralos sin revolverlo todo.\n\nSobre plástico para documentos de 9 × 5 · RD$95\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 7
       },
       {
-        "scheduled_for": "2026-10-08T18:00:00-04:00",
-        "sku": "6970873980966",
-        "name": "CLIPS BILLETERO 32MM PAQUETE 12 UND",
-        "caption": "Papeles juntos, escritorio más tranquilo. 🙌 Organiza tus documentos con clips billeteros.\n\nClips billeteros · RD$80\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-25T11:14:20-04:00",
+        "sku": "ASH1038A4",
+        "name": "TABLOIDE CON SUJETADOR A4",
+        "caption": "Anota aunque no tengas una mesa cerca. 📝 Un tablero con sujetador A4 viene bien para listas, formularios y apuntes del día.\n\nTablero con sujetador A4 · RD$150\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 8
       },
       {
-        "scheduled_for": "2026-10-08T19:30:00-04:00",
-        "sku": "LAPIZCONBORRAUND",
-        "name": "LAPIZ CON BORRA UND",
-        "caption": "Escribe, borra y vuelve a intentar. ✏️ Un lápiz con borra no puede faltar en el estuche.\n\nLápiz con borra · RD$10\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-25T13:14:20-04:00",
+        "sku": "6957871007000",
+        "name": "PERFORADORA 2 HOYOS HUACHI",
+        "caption": "A esos papeles les falta llegar a su carpeta. 🗂️ Con una perforadora de dos hoyos, preparas tus hojas para organizarlas a tu manera.\n\nPerforadora de dos hoyos · RD$345\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 9
       },
       {
-        "scheduled_for": "2026-10-08T21:00:00-04:00",
-        "sku": "COPIACOLOR8.5X14",
-        "name": "COPIA A COLOR 8.5X14 POR PAGINA",
-        "caption": "¿Necesitas una copia a color en hoja larga? 🌈 Pasa con tu documento y te ayudamos.\n\nCopias a color tamaño legal · RD$20 por página\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-25T15:14:20-04:00",
+        "sku": "1313526879739",
+        "name": "PISTOLA SILICONA BARRA FINA",
+        "caption": "¿Ya tienes en mente la próxima manualidad? 🎨 Revisa tu pistola de silicón para barras finas y reúne los materiales antes de empezar.\n\nPistola para barras de silicón finas · RD$250\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 10
       },
       {
-        "scheduled_for": "2026-10-09T07:30:00-04:00",
-        "sku": "6902105168132",
-        "name": "PAQUETE CLIPS DE METAL 33MM",
-        "caption": "Que esa pila de papeles no se te riegue. 📎 Agrupa tus documentos con clips de metal.\n\nClips de metal pequeños · RD$25\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-25T17:14:20-04:00",
+        "sku": "1313526871252",
+        "name": "REGLA DE METAL LISA 30 CM",
+        "caption": "Primero mide, después marca. 📏 Una regla metálica de 30 cm te acompaña cuando el trabajo pide líneas y medidas bien puestas.\n\nRegla metálica de 30 cm · RD$25\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 11
       },
       {
-        "scheduled_for": "2026-10-09T09:00:00-04:00",
-        "sku": "6957871007000",
-        "name": "PERFORADORA 2 HOYOS HUACHI",
-        "caption": "Tus papeles también merecen orden. 🗂️ Prepara tus documentos para archivarlos con una perforadora de dos hoyos.\n\nPerforadora de dos hoyos · RD$345\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-25T19:14:20-04:00",
+        "sku": "1313526879913",
+        "name": "REGLAS SET PEQUENO 15 CM 4 ARTCL",
+        "caption": "Poco espacio en el estuche, muchas líneas por hacer. 📐 Lleva este juego pequeño de reglas para tus ejercicios y dibujos.\n\nJuego pequeño de reglas de 15 cm · RD$55\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 12
       },
       {
-        "scheduled_for": "2026-10-09T10:30:00-04:00",
-        "sku": "1313526879739",
-        "name": "PISTOLA SILICONA BARRA FINA",
-        "caption": "¡A darle forma a esa manualidad! ✨ Busca tu pistola de silicón para barra fina y prepara tu espacio creativo.\n\nPistola de silicón para barra fina · RD$250\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-25T21:14:20-04:00",
+        "sku": "HOJANOT",
+        "name": "RESMA DE HOJA NOTARIAL",
+        "caption": "Si trabajas con documentos en hoja notarial, revisa cuánto papel te queda. 📄 Tener tu resma lista ayuda a organizar la próxima tanda.\n\nResma de hojas notariales · RD$250\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 13
       },
       {
-        "scheduled_for": "2026-10-09T12:00:00-04:00",
-        "sku": "1313526871252",
-        "name": "REGLA DE METAL LISA 30 CM",
-        "caption": "Esa línea derechita no sale por casualidad. 📏 Ten tu regla de metal a mano para medir y trazar.\n\nRegla de metal de 30 cm · RD$25\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-26T09:14:20-04:00",
+        "sku": "FOLDER85X14UND",
+        "name": "FOLDER MANILA 8.5X14 UND",
+        "caption": "Los documentos largos también van organizados. 📂 Este fólder manila de 8.5 × 14 les da su espacio para la próxima diligencia.\n\nFólder manila tamaño legal · RD$15\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 14
       },
       {
-        "scheduled_for": "2026-10-09T13:30:00-04:00",
-        "sku": "1313526879913",
-        "name": "REGLAS SET PEQUENO 15 CM 4 ARTCL",
-        "caption": "Para esas figuras que la tarea está pidiendo. 📐 Completa tu estuche con un juego de reglas pequeño.\n\nJuego de reglas pequeño · RD$55\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-26T11:14:20-04:00",
+        "sku": "SILICONBARRAUND",
+        "name": "SILICON EN BARRA FINA 11X220MM",
+        "caption": "La idea ya está; revisa con qué la vas a pegar. ✨ Tenemos barras de silicón finas: confirma la medida de tu pistola antes de elegirlas.\n\nBarras de silicón finas · RD$15\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 15
       },
       {
-        "scheduled_for": "2026-10-09T15:00:00-04:00",
-        "sku": "HOJANOT",
-        "name": "RESMA DE HOJA NOTARIAL",
-        "caption": "¿Te hace falta papel notarial para tus documentos? 📄 Pasa por la papelería y completa lo que necesitas.\n\nPapel notarial · RD$250\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-26T13:14:20-04:00",
+        "sku": "TALONARIOPEQUEN",
+        "name": "TALONARIO DE RECIBO MEDIANO CON COPIA",
+        "caption": "Entregaste, cobraste… ahora deja tu constancia. 🧾 Un talonario de recibos con copia te ayuda a llevar el registro de cada movimiento.\n\nTalonario mediano de recibos con copia · RD$35\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 16
       },
       {
-        "scheduled_for": "2026-10-09T16:30:00-04:00",
-        "sku": "FOLDER85X14UND",
-        "name": "FOLDER MANILA 8.5X14 UND",
-        "caption": "Documentos largos, cada uno en su lugar. 🗂️ Organízalos con un fólder manila tamaño legal.\n\nFólder manila tamaño legal · RD$15\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-26T15:14:20-04:00",
+        "sku": "6970873984599",
+        "name": "GRAPADORA ESTANDARD MEDIANA DGG",
+        "caption": "Que las hojas de esa entrega lleguen juntas. 📎 Ten una grapadora mediana a mano para reunir tus trabajos y documentos.\n\nGrapadora mediana DGG · RD$150\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 17
       },
       {
-        "scheduled_for": "2026-10-09T18:00:00-04:00",
-        "sku": "SILICONBARRAUND",
-        "name": "SILICON EN BARRA FINA 11X220MM",
-        "caption": "Que tu manualidad no se quede a mitad. ✨ Repón tus barras de silicón finas y sigue creando.\n\nBarra de silicón fina · RD$15\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-26T17:14:20-04:00",
+        "sku": "CART7",
+        "name": "CARTULINA AMARILLO FUERTE UNID",
+        "caption": "Un toque amarillo cambia el ánimo del proyecto. 💛 Usa esta cartulina para letras, fondos o figuras que pidan un color alegre.\n\nCartulina amarilla brillante · RD$30\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 18
       },
       {
-        "scheduled_for": "2026-10-09T19:30:00-04:00",
-        "sku": "TALONARIOPEQUEN",
-        "name": "TALONARIO DE RECIBO MEDIANO CON COPIA",
-        "caption": "Anótalo y guarda tu copia. 🧾 Un talonario de recibos te ayuda con el orden del día a día.\n\nTalonario de recibos con copia · RD$35\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-26T19:14:20-04:00",
+        "sku": "1313526879692",
+        "name": "CLIPS DE ARCHIVERO PAQUETE 50 UND",
+        "caption": "Hay papeles que necesitas juntar y volver a separar. 📎 Resuelve con clips de archivero y organiza tus grupos sin graparlos.\n\nPaquete de 50 clips de archivero · RD$70\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 19
       },
       {
-        "scheduled_for": "2026-10-09T21:00:00-04:00",
-        "sku": "6970873984599",
-        "name": "GRAPADORA ESTANDARD MEDIANA DGG",
-        "caption": "Trabajo listo, hojas juntas. 🙌 Ten tu grapadora a mano para esas entregas y documentos.\n\nGrapadora mediana · RD$150\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-26T21:14:20-04:00",
+        "sku": "HOJABOND85X14UND",
+        "name": "HOJA PAPEL BOND 8.5X14 UND",
+        "caption": "¿El archivo está en 8.5 × 14? 📄 Antes de imprimir, busca papel bond tamaño legal y revisa que la configuración coincida.\n\nPapel bond tamaño legal · RD$5\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 20
       },
       {
-        "scheduled_for": "2026-10-10T07:30:00-04:00",
-        "sku": "CART7",
-        "name": "CARTULINA AMARILLO FUERTE UNID",
-        "caption": "¡Amarillo que se hace ver! 💛 Dale color a tu cartel, tus letras o ese proyecto de la escuela.\n\nCartulina amarillo fuerte · RD$30\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-27T09:14:20-04:00",
+        "sku": "2022124765595",
+        "name": "LAPICES PAQUTE DE 12 UNIDADES",
+        "caption": "Uno para la tarea, otro de reserva. ✏️ Con un paquete de 12 lápices puedes repartir y mantener el estuche preparado.\n\nPaquete de 12 lápices · RD$60\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 21
       },
       {
-        "scheduled_for": "2026-10-10T09:00:00-04:00",
-        "sku": "1313526879692",
-        "name": "CLIPS DE ARCHIVERO PAQUETE 50 UND",
-        "caption": "Menos papeles sueltos, más orden. 📎 Busca tus clips de archivero y reúne lo que va junto.\n\nClips de archivero · RD$70\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-27T11:14:20-04:00",
+        "sku": "7468355583044",
+        "name": "LIBRETA RAYADA AMARILLA 8.5X11",
+        "caption": "Dale un lugar fijo a las notas que andan sueltas. 📝 Esta libreta rayada te espera para listas, clases y pendientes.\n\nLibreta rayada amarilla de 8.5 × 11 · RD$85\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 22
       },
       {
-        "scheduled_for": "2026-10-10T10:30:00-04:00",
-        "sku": "HOJALEGA DIGI",
-        "name": "DIGITACION A COLOR LEGAL POR PAGINA",
-        "caption": "Tu archivo, a color y en hoja larga. 🌈 Te ayudamos con tus impresiones tamaño legal.\n\nImpresiones a color tamaño legal · RD$40 por página\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-27T13:14:20-04:00",
+        "sku": "TIZA",
+        "name": "TIZA BLANCA 2 UND",
+        "caption": "Una explicación en la pizarra puede empezar con algo pequeño. 🤍 Ten tu tiza blanca a mano para escribir la próxima idea.\n\nTiza blanca · RD$5\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 23
       },
       {
-        "scheduled_for": "2026-10-10T12:00:00-04:00",
-        "sku": "HOJABOND85X14UND",
-        "name": "HOJA PAPEL BOND 8.5X14 UND",
-        "caption": "Cuando la hoja carta se queda corta. 📄 Busca tu papel bond tamaño legal para esos documentos largos.\n\nPapel bond tamaño legal · RD$5\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-27T15:14:20-04:00",
+        "sku": "MARCADORPIZZARRAROJOUND",
+        "name": "MARCADOR DE PIZARRA ROJO",
+        "caption": "Ese dato que nadie debe pasar por alto va en rojo. 🔴 Añade un marcador de pizarra rojo a tus materiales de clase o trabajo.\n\nMarcador rojo para pizarra · RD$35\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 24
       },
       {
-        "scheduled_for": "2026-10-10T13:30:00-04:00",
-        "sku": "2022124765595",
-        "name": "LAPICES PAQUTE DE 12 UNIDADES",
-        "caption": "Uno para el estuche y los demás de reserva. ✏️ Equípate con tu caja de lápices para las tareas.\n\nCaja de 12 lápices · RD$60\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-27T17:14:20-04:00",
+        "sku": "1313526871320",
+        "name": "RESALTADOR ROSADO FRESH",
+        "caption": "No todo en la página tiene la misma prioridad. 🌸 Usa tu resaltador rosado para ubicar los datos que quieres repasar primero.\n\nResaltador rosado · RD$35\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 25
       },
       {
-        "scheduled_for": "2026-10-10T15:00:00-04:00",
-        "sku": "7468355583044",
-        "name": "LIBRETA RAYADA AMARILLA 8.5X11",
-        "caption": "Esa llamada, esa lista, esa idea… anótala. 💛 Una libreta rayada siempre viene bien en el escritorio.\n\nLibreta rayada amarilla · RD$85\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-27T19:14:20-04:00",
+        "sku": "6971082811058",
+        "name": "PEGAMENTO EN BARRA 21G UND",
+        "caption": "Recortes preparados, hoja lista… a pegar. ✂️ Este pegamento en barra de 21 g merece un espacio entre tus materiales de trabajo.\n\nPegamento en barra de 21 g · RD$60\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 26
       },
       {
-        "scheduled_for": "2026-10-10T16:30:00-04:00",
-        "sku": "6902105168828",
-        "name": "PAQUETE CLIPS METAL 50MM",
-        "caption": "Dale orden a esos documentos. 📎 Los clips grandes te ayudan a mantener tus papeles juntos.\n\nClips de metal grandes · RD$65\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-27T21:14:20-04:00",
+        "sku": "BORRADELECHEUND",
+        "name": "BORRA DE LECHE GENERICA MEDIANA",
+        "caption": "Si el lápiz se fue por otro lado, todavía puedes corregir. ✏️ Lleva una borra de leche mediana para seguir con tus ejercicios.\n\nBorra de leche mediana · RD$15\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 27
       },
       {
-        "scheduled_for": "2026-10-10T18:00:00-04:00",
-        "sku": "1313526879722",
-        "name": "PISTOLA SILICONA BARRA GRUESA",
-        "caption": "¿Ya tienes tu próxima manualidad en mente? ✨ Completa tus materiales con una pistola de silicón para barra gruesa.\n\nPistola de silicón para barra gruesa · RD$300\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-28T09:14:20-04:00",
+        "sku": "7465547688013",
+        "name": "LAPICERO AZUL ARLES UND",
+        "caption": "Hay firmas y apuntes que no pueden esperar a encontrar un lapicero. 💙 Guarda uno azul en tu cartera y otro en el escritorio.\n\nLapicero azul Arles · RD$15\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 28
       },
       {
-        "scheduled_for": "2026-10-10T19:30:00-04:00",
-        "sku": "7467823500002",
-        "name": "RESMA DE PAPEL COLOR",
-        "caption": "Las ideas también vienen a color. 🌈 Busca tu papel de colores para recortes, notas y proyectos.\n\nPapel de colores · RD$200\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-28T11:14:20-04:00",
+        "sku": "7462955102896",
+        "name": "CUADERNO SCRITO COSIDO",
+        "caption": "¿Materia nueva o cuaderno que ya se llenó? 📚 Empieza tus próximos apuntes en un cuaderno cosido Scrito.\n\nCuaderno cosido Scrito · RD$65\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 29
       },
       {
-        "scheduled_for": "2026-10-10T21:00:00-04:00",
-        "sku": "SILICONBARRAGRUESUND",
-        "name": "SILICON EN BARRA GRUESA 7X200MM",
-        "caption": "Antes de empezar, revisa tus materiales. ✨ Ten tus barras de silicón gruesas listas para seguir con el proyecto.\n\nBarra de silicón gruesa · RD$20\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "scheduled_for": "2026-10-28T13:14:20-04:00",
+        "sku": "2022124765601",
+        "name": "POST-IT AMARILLOS 3X3",
+        "caption": "Ese pendiente no tiene que quedarse dando vueltas en tu cabeza. 💛 Escríbelo en una nota adhesiva y colócalo donde lo veas.\n\nNotas adhesivas amarillas de 3 × 3 · RD$45\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
         "variant": 30
+      },
+      {
+        "scheduled_for": "2026-10-28T15:14:20-04:00",
+        "sku": "6978524748705",
+        "name": "TIJERA ESCOLAR COLOR UND",
+        "caption": "Antes de comenzar los recortes, reúne tus útiles. ✂️ Tenemos tijeras escolares de colores para completar los materiales de la tarea.\n\nTijera escolar de colores · RD$40\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "variant": 31
+      },
+      {
+        "scheduled_for": "2026-10-28T17:14:20-04:00",
+        "sku": "1313526871399",
+        "name": "CRAYONES DE CERA CAJA 12",
+        "caption": "Hoy el dibujo lo decides tú. 🖍️ Abre tu caja de 12 crayones y combina colores para darle tu toque a cada página.\n\nCaja de 12 crayones de cera · RD$50.00\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "variant": 32
+      },
+      {
+        "scheduled_for": "2026-10-28T19:14:20-04:00",
+        "sku": "6936926333011",
+        "name": "CORRECTOR LIQUIDO BLANCO 7ML",
+        "caption": "¿Un detalle de tinta en medio de tus apuntes? 📝 Ten corrector líquido blanco a mano para retocar y continuar.\n\nCorrector líquido blanco de 7 ml · RD$40\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "variant": 33
+      },
+      {
+        "scheduled_for": "2026-10-28T21:14:20-04:00",
+        "sku": "1313526871139",
+        "name": "TEMPERA 6 COLORES PINTURA",
+        "caption": "La hoja está en blanco y los colores están esperando. 🎨 Prepara tus pinceles y empieza tu próxima creación con témperas.\n\nTémperas de seis colores · RD$90\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "variant": 34
+      },
+      {
+        "scheduled_for": "2026-10-29T09:14:20-04:00",
+        "sku": "7453010030759",
+        "name": "SACA PUNTA LAPIZ METAL",
+        "caption": "Cuando la punta ya no acompaña el trazo, toca una pausa. ✏️ Un sacapuntas metálico es de esos útiles pequeños que siempre hacen falta.\n\nSacapuntas metálico · RD$15\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "variant": 35
+      },
+      {
+        "scheduled_for": "2026-10-29T11:14:20-04:00",
+        "sku": "6824120314052",
+        "name": "MOCHILAS COMBO LONCHERA-STUCHE",
+        "caption": "Cuadernos por un lado, merienda por otro y lápices en su lugar. 🎒 Consulta nuestro combo de mochila, lonchera y estuche.\n\nCombo de mochila, lonchera y estuche · RD$1,300\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "variant": 36
+      },
+      {
+        "scheduled_for": "2026-10-29T13:14:20-04:00",
+        "sku": "CINTAPEQ",
+        "name": "CINTA ADHESIVA FINA UNID",
+        "caption": "Cerrar un sobre o sujetar un detalle: la cinta siempre aparece en la lista. 📦 Ten tu rollito de cinta adhesiva fina a mano.\n\nCinta adhesiva fina · RD$80\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "variant": 37
+      },
+      {
+        "scheduled_for": "2026-10-29T15:14:20-04:00",
+        "sku": "1313526879951",
+        "name": "JUEGO DE REGLAS CON COMPAS ESTUCHE",
+        "caption": "Líneas, ángulos y círculos en la misma tarea. 📐 Reúne tus instrumentos con este juego de reglas con compás en estuche.\n\nJuego de reglas con compás en estuche · RD$150\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "variant": 38
+      },
+      {
+        "scheduled_for": "2026-10-29T17:14:20-04:00",
+        "sku": "20260314103517505",
+        "name": "ROLLO PAPEL TERMICO 80 MM",
+        "caption": "Dale un vistazo a la impresora de recibos antes de abrir. 🧾 Si usa papel térmico de 80 mm, aquí puedes buscar tu rollo de repuesto.\n\nRollo de papel térmico de 80 mm · RD$85\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "variant": 39
+      },
+      {
+        "scheduled_for": "2026-10-29T19:14:20-04:00",
+        "sku": "ESTUCHETRANSPUND",
+        "name": "ESTUCHE VARIEDAD COLOR TRANSPARENTE UND",
+        "caption": "Encuentra el lápiz sin vaciar la mochila entera. ✏️ Un estuche transparente te deja ver tus útiles mientras los mantienes reunidos.\n\nEstuche transparente de colores · RD$55\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "variant": 40
+      },
+      {
+        "scheduled_for": "2026-10-29T21:14:20-04:00",
+        "sku": "HANI1039180GSM",
+        "name": "PAPEL FOTOGRAFICO BRILLANTE 180 HOJA",
+        "caption": "Esa foto favorita también puede salir de la pantalla. 📸 Consulta nuestro papel fotográfico brillante y revisa la compatibilidad de tu impresora.\n\nPapel fotográfico brillante de 180 g · RD$15\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "variant": 41
+      },
+      {
+        "scheduled_for": "2026-10-30T09:14:20-04:00",
+        "sku": "6940509500738",
+        "name": "SACAGRAPAS NEGRO NUSTAR",
+        "caption": "Cambió el orden de las hojas y toca organizarlas otra vez. 📎 Un sacagrapas te ayuda con ese primer paso.\n\nSacagrapas negro · RD$35\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "variant": 42
+      },
+      {
+        "scheduled_for": "2026-10-30T11:14:20-04:00",
+        "sku": "2022124765533",
+        "name": "GOMITAS BANDA 200/1 PAQUETE",
+        "caption": "Junta tus grupos de papeles y separa lo que va con cada pedido. 📦 Las bandas de goma son un básico para organizar a tu manera.\n\nPaquete de bandas de goma · RD$70\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "variant": 43
+      },
+      {
+        "scheduled_for": "2026-10-30T13:14:20-04:00",
+        "sku": "1313526879944",
+        "name": "COMPAS PLASTICO 11.6X3",
+        "caption": "Ese círculo del ejercicio necesita su herramienta. 📐 Añade un compás plástico a tus útiles para la próxima clase de geometría.\n\nCompás plástico · RD$60\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "variant": 44
+      },
+      {
+        "scheduled_for": "2026-10-30T15:14:20-04:00",
+        "sku": "1313526879784",
+        "name": "TIJERAS 7.5 PULGADAS MANGO NEGRO",
+        "caption": "Hay recortes que piden una tijera más grande. ✂️ Tenemos tijeras de 7.5 pulgadas con mango negro para sumar a tus materiales.\n\nTijera de 7.5 pulgadas · RD$100\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "variant": 45
+      },
+      {
+        "scheduled_for": "2026-10-30T17:14:20-04:00",
+        "sku": "BORRADORMAGNE",
+        "name": "BORRADOR PIZARRA BLANCA MAG VARIEDAD",
+        "caption": "La explicación terminó; viene una idea nueva. 🧽 Ten tu borrador para pizarra blanca cerca y prepara el espacio para seguir.\n\nBorrador para pizarra blanca · RD$80\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "variant": 46
+      },
+      {
+        "scheduled_for": "2026-10-30T19:14:20-04:00",
+        "sku": "6820220039048",
+        "name": "CHINCHETAS SURTIDAS CAJITA",
+        "caption": "Pon a la vista el aviso que siempre te preguntan. 📌 Usa chinchetas en una superficie adecuada y organiza tu rincón de anuncios.\n\nCajita de chinchetas surtidas · RD$65\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "variant": 47
+      },
+      {
+        "scheduled_for": "2026-10-30T21:14:20-04:00",
+        "sku": "LAPIZCONBORRAUND",
+        "name": "LAPIZ CON BORRA UND",
+        "caption": "Para los ejercicios que empiezan con un intento y siguen con otro. ✏️ Un lápiz con borra te acompaña de la primera línea a la última.\n\nLápiz con borra · RD$10\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+        "variant": 48
       }
     ]
   },
@@ -2918,6 +3044,237 @@
           "name": "PAQUETE GRAPAS TAMANO STANDARD 26/6",
           "caption": "La grapadora también necesita que la abastezcan. 😄 Revisa tus grapas antes de organizar la próxima pila de documentos.\n\nCaja de grapas estándar · RD$75\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
           "variant": 49
+        }
+      ]
+    },
+    {
+      "timezone": "America/Santo_Domingo",
+      "starts": "2026-10-07T15:59:39-04:00",
+      "ends": "2026-10-10T21:00:00-04:00",
+      "expires_at": "2026-10-10T21:31:00-04:00",
+      "daily_window": [
+        "07:30",
+        "21:30"
+      ],
+      "minimum_interval_minutes": 90,
+      "selection": "Never posted first, then oldest last publication; distinct SKUs",
+      "schedule": [
+        {
+          "scheduled_for": "2026-10-07T15:59:39-04:00",
+          "sku": "CART6",
+          "name": "CARTULINA ROSA FUERTE UND",
+          "caption": "¡Ese mural pide color! 💗 Dale vida a tus letras, recortes y proyectos con una cartulina rosa fuerte.\n\nCartulina rosa fuerte · RD$30\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 0
+        },
+        {
+          "scheduled_for": "2026-10-08T07:30:00-04:00",
+          "sku": "CART4",
+          "name": "CARTULINA VERDE CLARO UND",
+          "caption": "Un chin de verde para tu próxima idea. 💚 Busca tu cartulina y pon esas manos creativas a trabajar.\n\nCartulina verde claro · RD$20\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 1
+        },
+        {
+          "scheduled_for": "2026-10-08T09:00:00-04:00",
+          "sku": "BORRADORMAGNE",
+          "name": "BORRADOR PIZARRA BLANCA MAG VARIEDAD",
+          "caption": "Se acabó la explicación… ¡espacio para la próxima idea! 😄 Ten tu borrador de pizarra a mano.\n\nBorrador para pizarra blanca · RD$80\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 2
+        },
+        {
+          "scheduled_for": "2026-10-08T10:30:00-04:00",
+          "sku": "CART 2",
+          "name": "CARTULINA AMARILLO CLARO UND",
+          "caption": "Para un cartel bonito o una tarea con tu toque. 💛 La cartulina amarillo claro está lista para tus ideas.\n\nCartulina amarillo claro · RD$20\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 3
+        },
+        {
+          "scheduled_for": "2026-10-08T12:00:00-04:00",
+          "sku": "6820220039048",
+          "name": "CHINCHETAS SURTIDAS CAJITA",
+          "caption": "Ese recordatorio merece estar a la vista. 📌 Sujeta tus notas en el tablero y que no se te pase lo importante.\n\nChinchetas surtidas · RD$65\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 4
+        },
+        {
+          "scheduled_for": "2026-10-08T13:30:00-04:00",
+          "sku": "CINTTRANSGRAN",
+          "name": "CINTA ADHESIVA ANCHA",
+          "caption": "¿Una caja por cerrar? 📦 Resuelve con cinta adhesiva ancha y sigue con tus pendientes.\n\nCinta adhesiva ancha · RD$100\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 5
+        },
+        {
+          "scheduled_for": "2026-10-08T15:00:00-04:00",
+          "sku": "DIGI8X14",
+          "name": "DIGITACION A BLANCO Y NEGRO LEGAL POR PAGINA",
+          "caption": "¿Tu archivo necesita hoja larga? 📄 Trae tu documento para imprimirlo en blanco y negro tamaño legal.\n\nImpresiones en blanco y negro tamaño legal · RD$30 por página\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 6
+        },
+        {
+          "scheduled_for": "2026-10-08T16:30:00-04:00",
+          "sku": "HOJABOND85X11",
+          "name": "HOJA PAPEL BOND 8.5X11 PAQUETE 5 UND",
+          "caption": "Para practicar, escribir o sacar esa idea del aire. ✏️ El papel bond tamaño carta siempre resuelve.\n\nPapel bond tamaño carta · RD$5\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 7
+        },
+        {
+          "scheduled_for": "2026-10-08T18:00:00-04:00",
+          "sku": "6970873980966",
+          "name": "CLIPS BILLETERO 32MM PAQUETE 12 UND",
+          "caption": "Papeles juntos, escritorio más tranquilo. 🙌 Organiza tus documentos con clips billeteros.\n\nClips billeteros · RD$80\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 8
+        },
+        {
+          "scheduled_for": "2026-10-08T19:30:00-04:00",
+          "sku": "LAPIZCONBORRAUND",
+          "name": "LAPIZ CON BORRA UND",
+          "caption": "Escribe, borra y vuelve a intentar. ✏️ Un lápiz con borra no puede faltar en el estuche.\n\nLápiz con borra · RD$10\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 9
+        },
+        {
+          "scheduled_for": "2026-10-08T21:00:00-04:00",
+          "sku": "COPIACOLOR8.5X14",
+          "name": "COPIA A COLOR 8.5X14 POR PAGINA",
+          "caption": "¿Necesitas una copia a color en hoja larga? 🌈 Pasa con tu documento y te ayudamos.\n\nCopias a color tamaño legal · RD$20 por página\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 10
+        },
+        {
+          "scheduled_for": "2026-10-09T07:30:00-04:00",
+          "sku": "6902105168132",
+          "name": "PAQUETE CLIPS DE METAL 33MM",
+          "caption": "Que esa pila de papeles no se te riegue. 📎 Agrupa tus documentos con clips de metal.\n\nClips de metal pequeños · RD$25\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 11
+        },
+        {
+          "scheduled_for": "2026-10-09T09:00:00-04:00",
+          "sku": "6957871007000",
+          "name": "PERFORADORA 2 HOYOS HUACHI",
+          "caption": "Tus papeles también merecen orden. 🗂️ Prepara tus documentos para archivarlos con una perforadora de dos hoyos.\n\nPerforadora de dos hoyos · RD$345\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 12
+        },
+        {
+          "scheduled_for": "2026-10-09T10:30:00-04:00",
+          "sku": "1313526879739",
+          "name": "PISTOLA SILICONA BARRA FINA",
+          "caption": "¡A darle forma a esa manualidad! ✨ Busca tu pistola de silicón para barra fina y prepara tu espacio creativo.\n\nPistola de silicón para barra fina · RD$250\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 13
+        },
+        {
+          "scheduled_for": "2026-10-09T12:00:00-04:00",
+          "sku": "1313526871252",
+          "name": "REGLA DE METAL LISA 30 CM",
+          "caption": "Esa línea derechita no sale por casualidad. 📏 Ten tu regla de metal a mano para medir y trazar.\n\nRegla de metal de 30 cm · RD$25\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 14
+        },
+        {
+          "scheduled_for": "2026-10-09T13:30:00-04:00",
+          "sku": "1313526879913",
+          "name": "REGLAS SET PEQUENO 15 CM 4 ARTCL",
+          "caption": "Para esas figuras que la tarea está pidiendo. 📐 Completa tu estuche con un juego de reglas pequeño.\n\nJuego de reglas pequeño · RD$55\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 15
+        },
+        {
+          "scheduled_for": "2026-10-09T15:00:00-04:00",
+          "sku": "HOJANOT",
+          "name": "RESMA DE HOJA NOTARIAL",
+          "caption": "¿Te hace falta papel notarial para tus documentos? 📄 Pasa por la papelería y completa lo que necesitas.\n\nPapel notarial · RD$250\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 16
+        },
+        {
+          "scheduled_for": "2026-10-09T16:30:00-04:00",
+          "sku": "FOLDER85X14UND",
+          "name": "FOLDER MANILA 8.5X14 UND",
+          "caption": "Documentos largos, cada uno en su lugar. 🗂️ Organízalos con un fólder manila tamaño legal.\n\nFólder manila tamaño legal · RD$15\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 17
+        },
+        {
+          "scheduled_for": "2026-10-09T18:00:00-04:00",
+          "sku": "SILICONBARRAUND",
+          "name": "SILICON EN BARRA FINA 11X220MM",
+          "caption": "Que tu manualidad no se quede a mitad. ✨ Repón tus barras de silicón finas y sigue creando.\n\nBarra de silicón fina · RD$15\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 18
+        },
+        {
+          "scheduled_for": "2026-10-09T19:30:00-04:00",
+          "sku": "TALONARIOPEQUEN",
+          "name": "TALONARIO DE RECIBO MEDIANO CON COPIA",
+          "caption": "Anótalo y guarda tu copia. 🧾 Un talonario de recibos te ayuda con el orden del día a día.\n\nTalonario de recibos con copia · RD$35\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 19
+        },
+        {
+          "scheduled_for": "2026-10-09T21:00:00-04:00",
+          "sku": "6970873984599",
+          "name": "GRAPADORA ESTANDARD MEDIANA DGG",
+          "caption": "Trabajo listo, hojas juntas. 🙌 Ten tu grapadora a mano para esas entregas y documentos.\n\nGrapadora mediana · RD$150\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 20
+        },
+        {
+          "scheduled_for": "2026-10-10T07:30:00-04:00",
+          "sku": "CART7",
+          "name": "CARTULINA AMARILLO FUERTE UNID",
+          "caption": "¡Amarillo que se hace ver! 💛 Dale color a tu cartel, tus letras o ese proyecto de la escuela.\n\nCartulina amarillo fuerte · RD$30\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 21
+        },
+        {
+          "scheduled_for": "2026-10-10T09:00:00-04:00",
+          "sku": "1313526879692",
+          "name": "CLIPS DE ARCHIVERO PAQUETE 50 UND",
+          "caption": "Menos papeles sueltos, más orden. 📎 Busca tus clips de archivero y reúne lo que va junto.\n\nClips de archivero · RD$70\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 22
+        },
+        {
+          "scheduled_for": "2026-10-10T10:30:00-04:00",
+          "sku": "HOJALEGA DIGI",
+          "name": "DIGITACION A COLOR LEGAL POR PAGINA",
+          "caption": "Tu archivo, a color y en hoja larga. 🌈 Te ayudamos con tus impresiones tamaño legal.\n\nImpresiones a color tamaño legal · RD$40 por página\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 23
+        },
+        {
+          "scheduled_for": "2026-10-10T12:00:00-04:00",
+          "sku": "HOJABOND85X14UND",
+          "name": "HOJA PAPEL BOND 8.5X14 UND",
+          "caption": "Cuando la hoja carta se queda corta. 📄 Busca tu papel bond tamaño legal para esos documentos largos.\n\nPapel bond tamaño legal · RD$5\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 24
+        },
+        {
+          "scheduled_for": "2026-10-10T13:30:00-04:00",
+          "sku": "2022124765595",
+          "name": "LAPICES PAQUTE DE 12 UNIDADES",
+          "caption": "Uno para el estuche y los demás de reserva. ✏️ Equípate con tu caja de lápices para las tareas.\n\nCaja de 12 lápices · RD$60\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 25
+        },
+        {
+          "scheduled_for": "2026-10-10T15:00:00-04:00",
+          "sku": "7468355583044",
+          "name": "LIBRETA RAYADA AMARILLA 8.5X11",
+          "caption": "Esa llamada, esa lista, esa idea… anótala. 💛 Una libreta rayada siempre viene bien en el escritorio.\n\nLibreta rayada amarilla · RD$85\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 26
+        },
+        {
+          "scheduled_for": "2026-10-10T16:30:00-04:00",
+          "sku": "6902105168828",
+          "name": "PAQUETE CLIPS METAL 50MM",
+          "caption": "Dale orden a esos documentos. 📎 Los clips grandes te ayudan a mantener tus papeles juntos.\n\nClips de metal grandes · RD$65\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 27
+        },
+        {
+          "scheduled_for": "2026-10-10T18:00:00-04:00",
+          "sku": "1313526879722",
+          "name": "PISTOLA SILICONA BARRA GRUESA",
+          "caption": "¿Ya tienes tu próxima manualidad en mente? ✨ Completa tus materiales con una pistola de silicón para barra gruesa.\n\nPistola de silicón para barra gruesa · RD$300\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 28
+        },
+        {
+          "scheduled_for": "2026-10-10T19:30:00-04:00",
+          "sku": "7467823500002",
+          "name": "RESMA DE PAPEL COLOR",
+          "caption": "Las ideas también vienen a color. 🌈 Busca tu papel de colores para recortes, notas y proyectos.\n\nPapel de colores · RD$200\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 29
+        },
+        {
+          "scheduled_for": "2026-10-10T21:00:00-04:00",
+          "sku": "SILICONBARRAGRUESUND",
+          "name": "SILICON EN BARRA GRUESA 7X200MM",
+          "caption": "Antes de empezar, revisa tus materiales. ✨ Ten tus barras de silicón gruesas listas para seguir con el proyecto.\n\nBarra de silicón gruesa · RD$20\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+          "variant": 30
         }
       ]
     }

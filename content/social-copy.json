@@ -1,23 +1,253 @@
 [
   {
-    "sku": "1313526871467",
-    "local_name": "Ega blanca pequeña",
-    "body": "La tarea está casi lista… ¡solo falta pegarlo todo! 😄 Esta ega blanca te acompaña con el papel, los recortes y las ideas."
+    "sku": "20260302084532030",
+    "local_name": "Copias a color en hoja notarial",
+    "body": "¿Tienes un documento que va en hoja notarial? 📄 Pregunta por nuestras copias a color y trae tu archivo para preparar la cantidad que necesitas."
+  },
+  {
+    "sku": "CURR",
+    "local_name": "Currículum digitalizado",
+    "body": "Tu próxima oportunidad empieza con tus datos al día. 💼 Pasa a preparar tu currículum digitalizado y tenlo a mano para cuando te lo pidan."
+  },
+  {
+    "sku": "20260302084740031",
+    "local_name": "Digitación en hoja notarial",
+    "body": "Del texto pendiente al documento preparado. ⌨️ Consulta nuestro servicio de digitación en hoja notarial y adelanta esa diligencia."
+  },
+  {
+    "sku": "20260316115246695",
+    "local_name": "Impresión de planos a color",
+    "body": "Ese proyecto merece verse en papel. 📐 Trae tu plano arquitectónico y consulta la impresión a color que necesitas para revisarlo con calma."
+  },
+  {
+    "sku": "20260621195111387",
+    "local_name": "Paquete de 10 rollos térmicos de 80 mm",
+    "body": "Que no se termine el rollo en plena venta. 🧾 Revisa tus reservas y lleva tu paquete de rollos térmicos de 80 mm."
+  },
+  {
+    "sku": "PLAST",
+    "local_name": "Plastificado tamaño carta",
+    "body": "Dale una capa de protección a ese documento que usas a cada rato. 📄 Tenemos plastificado tamaño carta para tus hojas de 8.5 × 11."
+  },
+  {
+    "sku": "20260529134240319",
+    "local_name": "Plastificado de 11 × 17",
+    "body": "¿Tu lámina es más grande que una hoja carta? ✨ Pregunta por el plastificado de 11 × 17 y prepara esa pieza para seguir usándola."
+  },
+  {
+    "sku": "6923787402321",
+    "local_name": "Sobre plástico para documentos de 9 × 5",
+    "body": "Los papeles pequeños también necesitan su lugar. ✉️ Guarda tus documentos de ese tamaño en un sobre plástico y encuéntralos sin revolverlo todo."
+  },
+  {
+    "sku": "ASH1038A4",
+    "local_name": "Tablero con sujetador A4",
+    "body": "Anota aunque no tengas una mesa cerca. 📝 Un tablero con sujetador A4 viene bien para listas, formularios y apuntes del día."
+  },
+  {
+    "sku": "6957871007000",
+    "local_name": "Perforadora de dos hoyos",
+    "body": "A esos papeles les falta llegar a su carpeta. 🗂️ Con una perforadora de dos hoyos, preparas tus hojas para organizarlas a tu manera."
+  },
+  {
+    "sku": "1313526879739",
+    "local_name": "Pistola para barras de silicón finas",
+    "body": "¿Ya tienes en mente la próxima manualidad? 🎨 Revisa tu pistola de silicón para barras finas y reúne los materiales antes de empezar."
+  },
+  {
+    "sku": "1313526871252",
+    "local_name": "Regla metálica de 30 cm",
+    "body": "Primero mide, después marca. 📏 Una regla metálica de 30 cm te acompaña cuando el trabajo pide líneas y medidas bien puestas."
+  },
+  {
+    "sku": "1313526879913",
+    "local_name": "Juego pequeño de reglas de 15 cm",
+    "body": "Poco espacio en el estuche, muchas líneas por hacer. 📐 Lleva este juego pequeño de reglas para tus ejercicios y dibujos."
+  },
+  {
+    "sku": "HOJANOT",
+    "local_name": "Resma de hojas notariales",
+    "body": "Si trabajas con documentos en hoja notarial, revisa cuánto papel te queda. 📄 Tener tu resma lista ayuda a organizar la próxima tanda."
+  },
+  {
+    "sku": "FOLDER85X14UND",
+    "local_name": "Fólder manila tamaño legal",
+    "body": "Los documentos largos también van organizados. 📂 Este fólder manila de 8.5 × 14 les da su espacio para la próxima diligencia."
+  },
+  {
+    "sku": "SILICONBARRAUND",
+    "local_name": "Barras de silicón finas",
+    "body": "La idea ya está; revisa con qué la vas a pegar. ✨ Tenemos barras de silicón finas: confirma la medida de tu pistola antes de elegirlas."
+  },
+  {
+    "sku": "TALONARIOPEQUEN",
+    "local_name": "Talonario mediano de recibos con copia",
+    "body": "Entregaste, cobraste… ahora deja tu constancia. 🧾 Un talonario de recibos con copia te ayuda a llevar el registro de cada movimiento."
+  },
+  {
+    "sku": "6970873984599",
+    "local_name": "Grapadora mediana DGG",
+    "body": "Que las hojas de esa entrega lleguen juntas. 📎 Ten una grapadora mediana a mano para reunir tus trabajos y documentos."
+  },
+  {
+    "sku": "CART7",
+    "local_name": "Cartulina amarilla brillante",
+    "body": "Un toque amarillo cambia el ánimo del proyecto. 💛 Usa esta cartulina para letras, fondos o figuras que pidan un color alegre."
+  },
+  {
+    "sku": "1313526879692",
+    "local_name": "Paquete de 50 clips de archivero",
+    "body": "Hay papeles que necesitas juntar y volver a separar. 📎 Resuelve con clips de archivero y organiza tus grupos sin graparlos."
+  },
+  {
+    "sku": "HOJABOND85X14UND",
+    "local_name": "Papel bond tamaño legal",
+    "body": "¿El archivo está en 8.5 × 14? 📄 Antes de imprimir, busca papel bond tamaño legal y revisa que la configuración coincida."
+  },
+  {
+    "sku": "2022124765595",
+    "local_name": "Paquete de 12 lápices",
+    "body": "Uno para la tarea, otro de reserva. ✏️ Con un paquete de 12 lápices puedes repartir y mantener el estuche preparado."
+  },
+  {
+    "sku": "7468355583044",
+    "local_name": "Libreta rayada amarilla de 8.5 × 11",
+    "body": "Dale un lugar fijo a las notas que andan sueltas. 📝 Esta libreta rayada te espera para listas, clases y pendientes."
+  },
+  {
+    "sku": "TIZA",
+    "local_name": "Tiza blanca",
+    "body": "Una explicación en la pizarra puede empezar con algo pequeño. 🤍 Ten tu tiza blanca a mano para escribir la próxima idea."
+  },
+  {
+    "sku": "MARCADORPIZZARRAROJOUND",
+    "local_name": "Marcador rojo para pizarra",
+    "body": "Ese dato que nadie debe pasar por alto va en rojo. 🔴 Añade un marcador de pizarra rojo a tus materiales de clase o trabajo."
+  },
+  {
+    "sku": "1313526871320",
+    "local_name": "Resaltador rosado",
+    "body": "No todo en la página tiene la misma prioridad. 🌸 Usa tu resaltador rosado para ubicar los datos que quieres repasar primero."
+  },
+  {
+    "sku": "6971082811058",
+    "local_name": "Pegamento en barra de 21 g",
+    "body": "Recortes preparados, hoja lista… a pegar. ✂️ Este pegamento en barra de 21 g merece un espacio entre tus materiales de trabajo."
   },
   {
     "sku": "BORRADELECHEUND",
-    "local_name": "Borra de leche",
-    "body": "¿Ese número no iba ahí? Borrón y seguimos. ✏️ Una borra de leche siempre merece su espacio en el estuche."
+    "local_name": "Borra de leche mediana",
+    "body": "Si el lápiz se fue por otro lado, todavía puedes corregir. ✏️ Lleva una borra de leche mediana para seguir con tus ejercicios."
   },
   {
     "sku": "7465547688013",
-    "local_name": "Lapicero azul",
-    "body": "Para la firma, la tarea o esa idea que llegó de repente. 💙 Ten tu lapicero azul a mano y que no se te escape nada."
+    "local_name": "Lapicero azul Arles",
+    "body": "Hay firmas y apuntes que no pueden esperar a encontrar un lapicero. 💙 Guarda uno azul en tu cartera y otro en el escritorio."
   },
   {
     "sku": "7462955102896",
     "local_name": "Cuaderno cosido Scrito",
-    "body": "Página nueva, ideas nuevas. ☀️ Este cuaderno está listo para acompañarte en clases y guardar todo lo que vas aprendiendo."
+    "body": "¿Materia nueva o cuaderno que ya se llenó? 📚 Empieza tus próximos apuntes en un cuaderno cosido Scrito."
+  },
+  {
+    "sku": "2022124765601",
+    "local_name": "Notas adhesivas amarillas de 3 × 3",
+    "body": "Ese pendiente no tiene que quedarse dando vueltas en tu cabeza. 💛 Escríbelo en una nota adhesiva y colócalo donde lo veas."
+  },
+  {
+    "sku": "6978524748705",
+    "local_name": "Tijera escolar de colores",
+    "body": "Antes de comenzar los recortes, reúne tus útiles. ✂️ Tenemos tijeras escolares de colores para completar los materiales de la tarea."
+  },
+  {
+    "sku": "1313526871399",
+    "local_name": "Caja de 12 crayones de cera",
+    "body": "Hoy el dibujo lo decides tú. 🖍️ Abre tu caja de 12 crayones y combina colores para darle tu toque a cada página."
+  },
+  {
+    "sku": "6936926333011",
+    "local_name": "Corrector líquido blanco de 7 ml",
+    "body": "¿Un detalle de tinta en medio de tus apuntes? 📝 Ten corrector líquido blanco a mano para retocar y continuar."
+  },
+  {
+    "sku": "1313526871139",
+    "local_name": "Témperas de seis colores",
+    "body": "La hoja está en blanco y los colores están esperando. 🎨 Prepara tus pinceles y empieza tu próxima creación con témperas."
+  },
+  {
+    "sku": "7453010030759",
+    "local_name": "Sacapuntas metálico",
+    "body": "Cuando la punta ya no acompaña el trazo, toca una pausa. ✏️ Un sacapuntas metálico es de esos útiles pequeños que siempre hacen falta."
+  },
+  {
+    "sku": "6824120314052",
+    "local_name": "Combo de mochila, lonchera y estuche",
+    "body": "Cuadernos por un lado, merienda por otro y lápices en su lugar. 🎒 Consulta nuestro combo de mochila, lonchera y estuche."
+  },
+  {
+    "sku": "CINTAPEQ",
+    "local_name": "Cinta adhesiva fina",
+    "body": "Cerrar un sobre o sujetar un detalle: la cinta siempre aparece en la lista. 📦 Ten tu rollito de cinta adhesiva fina a mano."
+  },
+  {
+    "sku": "1313526879951",
+    "local_name": "Juego de reglas con compás en estuche",
+    "body": "Líneas, ángulos y círculos en la misma tarea. 📐 Reúne tus instrumentos con este juego de reglas con compás en estuche."
+  },
+  {
+    "sku": "20260314103517505",
+    "local_name": "Rollo de papel térmico de 80 mm",
+    "body": "Dale un vistazo a la impresora de recibos antes de abrir. 🧾 Si usa papel térmico de 80 mm, aquí puedes buscar tu rollo de repuesto."
+  },
+  {
+    "sku": "ESTUCHETRANSPUND",
+    "local_name": "Estuche transparente de colores",
+    "body": "Encuentra el lápiz sin vaciar la mochila entera. ✏️ Un estuche transparente te deja ver tus útiles mientras los mantienes reunidos."
+  },
+  {
+    "sku": "HANI1039180GSM",
+    "local_name": "Papel fotográfico brillante de 180 g",
+    "body": "Esa foto favorita también puede salir de la pantalla. 📸 Consulta nuestro papel fotográfico brillante y revisa la compatibilidad de tu impresora."
+  },
+  {
+    "sku": "6940509500738",
+    "local_name": "Sacagrapas negro",
+    "body": "Cambió el orden de las hojas y toca organizarlas otra vez. 📎 Un sacagrapas te ayuda con ese primer paso."
+  },
+  {
+    "sku": "2022124765533",
+    "local_name": "Paquete de bandas de goma",
+    "body": "Junta tus grupos de papeles y separa lo que va con cada pedido. 📦 Las bandas de goma son un básico para organizar a tu manera."
+  },
+  {
+    "sku": "1313526879944",
+    "local_name": "Compás plástico",
+    "body": "Ese círculo del ejercicio necesita su herramienta. 📐 Añade un compás plástico a tus útiles para la próxima clase de geometría."
+  },
+  {
+    "sku": "1313526879784",
+    "local_name": "Tijera de 7.5 pulgadas",
+    "body": "Hay recortes que piden una tijera más grande. ✂️ Tenemos tijeras de 7.5 pulgadas con mango negro para sumar a tus materiales."
+  },
+  {
+    "sku": "BORRADORMAGNE",
+    "local_name": "Borrador para pizarra blanca",
+    "body": "La explicación terminó; viene una idea nueva. 🧽 Ten tu borrador para pizarra blanca cerca y prepara el espacio para seguir."
+  },
+  {
+    "sku": "6820220039048",
+    "local_name": "Cajita de chinchetas surtidas",
+    "body": "Pon a la vista el aviso que siempre te preguntan. 📌 Usa chinchetas en una superficie adecuada y organiza tu rincón de anuncios."
+  },
+  {
+    "sku": "LAPIZCONBORRAUND",
+    "local_name": "Lápiz con borra",
+    "body": "Para los ejercicios que empiezan con un intento y siguen con otro. ✏️ Un lápiz con borra te acompaña de la primera línea a la última."
+  },
+  {
+    "sku": "1313526871467",
+    "local_name": "Ega blanca pequeña",
+    "body": "La tarea está casi lista… ¡solo falta pegarlo todo! 😄 Esta ega blanca te acompaña con el papel, los recortes y las ideas."
   },
   {
     "sku": "DIGITACIONCOLOR",
@@ -30,29 +260,9 @@
     "body": "Hay proyectos que piden un chin de brillo. ✨ Este foamy escarchado está listo para tus letras, figuras y decoraciones."
   },
   {
-    "sku": "2022124765601",
-    "local_name": "Notas adhesivas amarillas",
-    "body": "Tu memoria tiene mucho trabajo… dale una ayudita. 💛 Anota ese pendiente en una notita adhesiva y déjalo a la vista."
-  },
-  {
-    "sku": "6978524748705",
-    "local_name": "Tijera escolar",
-    "body": "Recorta por aquí, crea por allá. ✂️ Una tijera escolar para acompañar esas tareas que vienen con recortes e imaginación."
-  },
-  {
-    "sku": "1313526871399",
-    "local_name": "Caja de 12 crayones",
-    "body": "¿El sol va amarillo o de todos los colores? Tú decides. 🖍️ Con estos crayones, la imaginación manda."
-  },
-  {
     "sku": "FOLDER85X11UND",
     "local_name": "Fólder manila tamaño carta",
     "body": "Que tus documentos no anden sueltos por la cartera. 📂 Reúnelos en un fólder manila y tenlos listos para tu próxima diligencia."
-  },
-  {
-    "sku": "6936926333011",
-    "local_name": "Corrector líquido",
-    "body": "Un error de tinta no tiene que llevarse la página entera. 😉 Dale una segunda oportunidad a tus apuntes con corrector líquido."
   },
   {
     "sku": "CART11",
@@ -60,19 +270,9 @@
     "body": "Un fondo negro y muchas ideas por delante. 🖤 Esta cartulina puede ser el comienzo de tu próximo letrero o manualidad."
   },
   {
-    "sku": "1313526871139",
-    "local_name": "Témperas de 6 colores con pincel",
-    "body": "Hoy toca cambiar el lápiz por el pincel. 🎨 Abre tus témperas y deja que las ideas salgan a color."
-  },
-  {
     "sku": "7467144274941",
     "local_name": "Resma de papel bond tamaño carta",
     "body": "La impresora lista y… ¿se acabó el papel? 😅 Ten tu resma a mano para las tareas y los documentos del día."
-  },
-  {
-    "sku": "7453010030759",
-    "local_name": "Sacapuntas de metal",
-    "body": "Si el lápiz ya no quiere escribir, quizá solo pide una ayudita. ✏️ Un sacapuntas y volvemos a la tarea."
   },
   {
     "sku": "6924561100259",
@@ -95,19 +295,9 @@
     "body": "¿Necesitas otra copia con todo su color? 🌈 Trae tu documento y te ayudamos a sacar las copias que te hacen falta."
   },
   {
-    "sku": "6824120314052",
-    "local_name": "Combo de mochila, lonchera y estuche",
-    "body": "La merienda por un lado, los útiles por otro. 🎒 Este combo de mochila, lonchera y estuche acompaña la rutina escolar."
-  },
-  {
     "sku": "1313526871313",
     "local_name": "Resaltador amarillo",
     "body": "Ese dato que viene en el examen merece su momento de brillar. 💛 Resáltalo y encuéntralo cuando repases."
-  },
-  {
-    "sku": "CINTAPEQ",
-    "local_name": "Cinta adhesiva fina",
-    "body": "Siempre aparece algo que necesita un pedacito de cinta. 😄 Ten este rollito cerca para esas pequeñas soluciones del día."
   },
   {
     "sku": "7453038441155",
@@ -120,16 +310,6 @@
     "body": "Que los papeles se queden juntos aunque el día esté movido. 📑 Estos clips sujetapapeles te ayudan a poner orden."
   },
   {
-    "sku": "1313526879951",
-    "local_name": "Juego de reglas con compás",
-    "body": "Líneas, ángulos y círculos: llegó el equipo de geometría. 📐 Prepara el estuche para la próxima tarea."
-  },
-  {
-    "sku": "20260314103517505",
-    "local_name": "Rollo de papel térmico de 80 mm",
-    "body": "La venta salió bien… ahora falta el recibo. 🧾 Revisa el papel de tu negocio y ten tu rollo listo. Para equipos que usan rollos de 80 mm."
-  },
-  {
     "sku": "1313526871481",
     "local_name": "Ega blanca mediana",
     "body": "Ese proyecto trae muchos recortes y tú ya tienes las ideas. ✂️ Completa la mesa de trabajo con tu ega blanca."
@@ -140,19 +320,9 @@
     "body": "¿Documentos para entregar? Que salgan juntitos. ✉️ Un sobre manila para llevar tus papeles a esa diligencia."
   },
   {
-    "sku": "ESTUCHETRANSPUND",
-    "local_name": "Estuche transparente de colores",
-    "body": "¿Dónde quedó la borra? 👀 Con un estuche transparente puedes ver tus útiles y reunirlos en un solo lugar."
-  },
-  {
     "sku": "1313526879487",
     "local_name": "Grapadora grande",
     "body": "Tus hojas ya hicieron equipo. Ahora toca unirlas. 📚 Una grapadora para organizar los documentos del escritorio."
-  },
-  {
-    "sku": "HANI1039180GSM",
-    "local_name": "Hoja de papel fotográfico brillante",
-    "body": "Esa foto merece salir de la galería del celular. 📸 Papel fotográfico brillante para darle un espacio entre tus recuerdos."
   },
   {
     "sku": "2022124765564",
@@ -170,19 +340,9 @@
     "body": "Ese archivo no se entrega solo. 😄 Te ayudamos a imprimirlo en blanco y negro para que sigas con tu día."
   },
   {
-    "sku": "6940509500738",
-    "local_name": "Sacagrapas",
-    "body": "¿Toca cambiar una hoja del documento? 📄 El sacagrapas te ayuda a quitar la grapa y reorganizarlo."
-  },
-  {
     "sku": "CART5",
     "local_name": "Cartulina roja",
     "body": "Un toque de rojo para que tu idea se haga ver. ❤️ Cartulina para tus carteles, tareas y manualidades."
-  },
-  {
-    "sku": "2022124765533",
-    "local_name": "Gomitas para documentos",
-    "body": "Hay pequeños básicos que resuelven mucho. 🙌 Ten tus gomitas a mano para agrupar papeles y mantener el orden."
   },
   {
     "sku": "1313526879937",
@@ -203,11 +363,6 @@
     "sku": "2022124765618",
     "local_name": "Notas adhesivas de colores",
     "body": "Un color para cada pendiente… ¡y a organizarse! 🌈 Estas notitas adhesivas le ponen alegría a tu escritorio."
-  },
-  {
-    "sku": "1313526879944",
-    "local_name": "Compás escolar",
-    "body": "Que los círculos no salgan con esquinas. 😄 Prepara tu compás para la próxima clase de geometría."
   },
   {
     "sku": "6920151191058",
@@ -235,11 +390,6 @@
     "body": "No todo tiene que ir de amarillo. 💙 Organiza tus apuntes con un toque azul y marca lo que quieres encontrar después."
   },
   {
-    "sku": "1313526879784",
-    "local_name": "Tijeras de oficina",
-    "body": "Una oficina también necesita su rincón de recortes. ✂️ Ten tus tijeras a mano para el trabajo del día."
-  },
-  {
     "sku": "LAPICERONEGROARLES",
     "local_name": "Lapicero negro",
     "body": "La firma importante y la lista de todos los días tienen algo en común. 🖊️ Siempre viene bien tener un lapicero negro cerca."
@@ -260,19 +410,9 @@
     "body": "Un chin de verde para tu próxima idea. 💚 Busca tu cartulina y pon esas manos creativas a trabajar."
   },
   {
-    "sku": "BORRADORMAGNE",
-    "local_name": "Borrador para pizarra blanca",
-    "body": "Se acabó la explicación… ¡espacio para la próxima idea! 😄 Ten tu borrador de pizarra a mano."
-  },
-  {
     "sku": "CART 2",
     "local_name": "Cartulina amarillo claro",
     "body": "Para un cartel bonito o una tarea con tu toque. 💛 La cartulina amarillo claro está lista para tus ideas."
-  },
-  {
-    "sku": "6820220039048",
-    "local_name": "Chinchetas surtidas",
-    "body": "Ese recordatorio merece estar a la vista. 📌 Sujeta tus notas en el tablero y que no se te pase lo importante."
   },
   {
     "sku": "CINTTRANSGRAN",
@@ -295,11 +435,6 @@
     "body": "Papeles juntos, escritorio más tranquilo. 🙌 Organiza tus documentos con clips billeteros."
   },
   {
-    "sku": "LAPIZCONBORRAUND",
-    "local_name": "Lápiz con borra",
-    "body": "Escribe, borra y vuelve a intentar. ✏️ Un lápiz con borra no puede faltar en el estuche."
-  },
-  {
     "sku": "COPIACOLOR8.5X14",
     "local_name": "Copias a color tamaño legal",
     "body": "¿Necesitas una copia a color en hoja larga? 🌈 Pasa con tu documento y te ayudamos."
@@ -310,79 +445,9 @@
     "body": "Que esa pila de papeles no se te riegue. 📎 Agrupa tus documentos con clips de metal."
   },
   {
-    "sku": "6957871007000",
-    "local_name": "Perforadora de dos hoyos",
-    "body": "Tus papeles también merecen orden. 🗂️ Prepara tus documentos para archivarlos con una perforadora de dos hoyos."
-  },
-  {
-    "sku": "1313526879739",
-    "local_name": "Pistola de silicón para barra fina",
-    "body": "¡A darle forma a esa manualidad! ✨ Busca tu pistola de silicón para barra fina y prepara tu espacio creativo."
-  },
-  {
-    "sku": "1313526871252",
-    "local_name": "Regla de metal de 30 cm",
-    "body": "Esa línea derechita no sale por casualidad. 📏 Ten tu regla de metal a mano para medir y trazar."
-  },
-  {
-    "sku": "1313526879913",
-    "local_name": "Juego de reglas pequeño",
-    "body": "Para esas figuras que la tarea está pidiendo. 📐 Completa tu estuche con un juego de reglas pequeño."
-  },
-  {
-    "sku": "HOJANOT",
-    "local_name": "Papel notarial",
-    "body": "¿Te hace falta papel notarial para tus documentos? 📄 Pasa por la papelería y completa lo que necesitas."
-  },
-  {
-    "sku": "FOLDER85X14UND",
-    "local_name": "Fólder manila tamaño legal",
-    "body": "Documentos largos, cada uno en su lugar. 🗂️ Organízalos con un fólder manila tamaño legal."
-  },
-  {
-    "sku": "SILICONBARRAUND",
-    "local_name": "Barra de silicón fina",
-    "body": "Que tu manualidad no se quede a mitad. ✨ Repón tus barras de silicón finas y sigue creando."
-  },
-  {
-    "sku": "TALONARIOPEQUEN",
-    "local_name": "Talonario de recibos con copia",
-    "body": "Anótalo y guarda tu copia. 🧾 Un talonario de recibos te ayuda con el orden del día a día."
-  },
-  {
-    "sku": "6970873984599",
-    "local_name": "Grapadora mediana",
-    "body": "Trabajo listo, hojas juntas. 🙌 Ten tu grapadora a mano para esas entregas y documentos."
-  },
-  {
-    "sku": "CART7",
-    "local_name": "Cartulina amarillo fuerte",
-    "body": "¡Amarillo que se hace ver! 💛 Dale color a tu cartel, tus letras o ese proyecto de la escuela."
-  },
-  {
-    "sku": "1313526879692",
-    "local_name": "Clips de archivero",
-    "body": "Menos papeles sueltos, más orden. 📎 Busca tus clips de archivero y reúne lo que va junto."
-  },
-  {
     "sku": "HOJALEGA DIGI",
     "local_name": "Impresiones a color tamaño legal",
     "body": "Tu archivo, a color y en hoja larga. 🌈 Te ayudamos con tus impresiones tamaño legal."
-  },
-  {
-    "sku": "HOJABOND85X14UND",
-    "local_name": "Papel bond tamaño legal",
-    "body": "Cuando la hoja carta se queda corta. 📄 Busca tu papel bond tamaño legal para esos documentos largos."
-  },
-  {
-    "sku": "2022124765595",
-    "local_name": "Caja de 12 lápices",
-    "body": "Uno para el estuche y los demás de reserva. ✏️ Equípate con tu caja de lápices para las tareas."
-  },
-  {
-    "sku": "7468355583044",
-    "local_name": "Libreta rayada amarilla",
-    "body": "Esa llamada, esa lista, esa idea… anótala. 💛 Una libreta rayada siempre viene bien en el escritorio."
   },
   {
     "sku": "6902105168828",
