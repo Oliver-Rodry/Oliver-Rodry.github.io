@@ -165,7 +165,8 @@
     "HOJABOND85X11",
     "6970873980966",
     "LAPIZCONBORRAUND",
-    "20260302084532030"
+    "20260302084532030",
+    "CURR"
   ],
   "history": [
     {
@@ -1992,6 +1993,17 @@
       "facebook_post_id": "1056461310893148_122151365943354776",
       "instagram_post_id": "17908724127569225",
       "completed_at": "2026-10-24T13:15:21.310657+00:00"
+    },
+    {
+      "sku": "CURR",
+      "name": "CURRICULUM DIGITALIZADO",
+      "caption": "Tu próxima oportunidad empieza con tus datos al día. 💼 Pasa a preparar tu currículum digitalizado y tenlo a mano para cuando te lo pidan.\n\nCurrículum digitalizado · RD$70 por página\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-10-24T11:14:20-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/CURR.jpg",
+      "started_at": "2026-10-24T17:36:01.042273+00:00",
+      "facebook_post_id": "1056461310893148_122151426873354776",
+      "instagram_post_id": "17987886660073856",
+      "completed_at": "2026-10-24T17:36:15.020064+00:00"
     }
   ],
   "pending": null,
