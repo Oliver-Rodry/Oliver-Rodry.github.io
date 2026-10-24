@@ -166,7 +166,8 @@
     "6970873980966",
     "LAPIZCONBORRAUND",
     "20260302084532030",
-    "CURR"
+    "CURR",
+    "20260302084740031"
   ],
   "history": [
     {
@@ -2004,6 +2005,17 @@
       "facebook_post_id": "1056461310893148_122151426873354776",
       "instagram_post_id": "17987886660073856",
       "completed_at": "2026-10-24T17:36:15.020064+00:00"
+    },
+    {
+      "sku": "20260302084740031",
+      "name": "DIGITACION HOJA NOTARIAL POR PAGINA",
+      "caption": "Del texto pendiente al documento preparado. ⌨️ Consulta nuestro servicio de digitación en hoja notarial y adelanta esa diligencia.\n\nDigitación en hoja notarial · RD$60 por página\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-10-24T13:14:20-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/20260302084740031.jpg",
+      "started_at": "2026-10-24T19:48:30.173885+00:00",
+      "facebook_post_id": "1056461310893148_122151462651354776",
+      "instagram_post_id": "17910010500480973",
+      "completed_at": "2026-10-24T19:48:41.768225+00:00"
     }
   ],
   "pending": null,
