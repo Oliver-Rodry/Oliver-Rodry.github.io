@@ -164,7 +164,8 @@
     "DIGI8X14",
     "HOJABOND85X11",
     "6970873980966",
-    "LAPIZCONBORRAUND"
+    "LAPIZCONBORRAUND",
+    "20260302084532030"
   ],
   "history": [
     {
@@ -1980,6 +1981,17 @@
       "facebook_post_id": "1056461310893148_122147256921354776",
       "instagram_post_id": "17988892518060909",
       "completed_at": "2026-10-10T22:57:04.584586+00:00"
+    },
+    {
+      "sku": "20260302084532030",
+      "name": "COPIA A COLOR HOJA NOTARIAL POR PAGINA",
+      "caption": "¿Tienes un documento que va en hoja notarial? 📄 Pregunta por nuestras copias a color y trae tu archivo para preparar la cantidad que necesitas.\n\nCopias a color en hoja notarial · RD$50 por página\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-10-24T09:14:20-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/20260302084532030.jpg",
+      "started_at": "2026-10-24T13:14:55.958268+00:00",
+      "facebook_post_id": "1056461310893148_122151365943354776",
+      "instagram_post_id": "17908724127569225",
+      "completed_at": "2026-10-24T13:15:21.310657+00:00"
     }
   ],
   "pending": null,
