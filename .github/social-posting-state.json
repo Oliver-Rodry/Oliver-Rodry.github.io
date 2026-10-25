@@ -169,7 +169,8 @@
     "CURR",
     "20260302084740031",
     "20260316115246695",
-    "20260621195111387"
+    "20260621195111387",
+    "PLAST"
   ],
   "history": [
     {
@@ -2040,6 +2041,17 @@
       "facebook_post_id": "1056461310893148_122151509349354776",
       "instagram_post_id": "18171792925464334",
       "completed_at": "2026-10-25T00:22:06.829884+00:00"
+    },
+    {
+      "sku": "PLAST",
+      "name": "PLASTIFICADO POR LAMINA 8.5X11",
+      "caption": "Dale una capa de protección a ese documento que usas a cada rato. 📄 Tenemos plastificado tamaño carta para tus hojas de 8.5 × 11.\n\nPlastificado tamaño carta · RD$40\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-10-24T19:14:20-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/PLAST.jpg",
+      "started_at": "2026-10-25T14:05:54.792692+00:00",
+      "facebook_post_id": "1056461310893148_122151706491354776",
+      "instagram_post_id": "18029919389879486",
+      "completed_at": "2026-10-25T14:06:10.134848+00:00"
     }
   ],
   "pending": null,
