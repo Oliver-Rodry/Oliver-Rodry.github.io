@@ -170,7 +170,8 @@
     "20260302084740031",
     "20260316115246695",
     "20260621195111387",
-    "PLAST"
+    "PLAST",
+    "20260529134240319"
   ],
   "history": [
     {
@@ -2052,6 +2053,17 @@
       "facebook_post_id": "1056461310893148_122151706491354776",
       "instagram_post_id": "18029919389879486",
       "completed_at": "2026-10-25T14:06:10.134848+00:00"
+    },
+    {
+      "sku": "20260529134240319",
+      "name": "PLASTIIFICADO POR LAMINA 11X17",
+      "caption": "¿Tu lámina es más grande que una hoja carta? ✨ Pregunta por el plastificado de 11 × 17 y prepara esa pieza para seguir usándola.\n\nPlastificado de 11 × 17 · RD$100 por página\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-10-24T21:14:20-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/20260529134240319.jpg",
+      "started_at": "2026-10-25T17:38:28.307453+00:00",
+      "facebook_post_id": "1056461310893148_122151745017354776",
+      "instagram_post_id": "18111704120266476",
+      "completed_at": "2026-10-25T17:38:44.050021+00:00"
     }
   ],
   "pending": null,
