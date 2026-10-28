@@ -180,7 +180,8 @@
     "1313526879913",
     "HOJANOT",
     "FOLDER85X14UND",
-    "SILICONBARRAUND"
+    "SILICONBARRAUND",
+    "TALONARIOPEQUEN"
   ],
   "history": [
     {
@@ -2172,6 +2173,17 @@
       "facebook_post_id": "1056461310893148_122152465893354776",
       "instagram_post_id": "18015785105972415",
       "completed_at": "2026-10-27T22:28:53.558088+00:00"
+    },
+    {
+      "sku": "TALONARIOPEQUEN",
+      "name": "TALONARIO DE RECIBO MEDIANO CON COPIA",
+      "caption": "Entregaste, cobraste… ahora deja tu constancia. 🧾 Un talonario de recibos con copia te ayuda a llevar el registro de cada movimiento.\n\nTalonario mediano de recibos con copia · RD$35\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-10-26T13:14:20-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/TALONARIOPEQUEN.jpg",
+      "started_at": "2026-10-28T14:18:33.619233+00:00",
+      "facebook_post_id": "1056461310893148_122152677327354776",
+      "instagram_post_id": "17952052359289438",
+      "completed_at": "2026-10-28T14:18:45.032247+00:00"
     }
   ],
   "pending": null,
