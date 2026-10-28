@@ -208,7 +208,7 @@ def prepare_campaign(state: dict) -> None:
 
 
 def item_posted(state: dict, item: dict) -> bool:
-    return any(h["sku"] == item["sku"] and h.get("scheduled_for") == item["scheduled_for"]
+    return bool(item.get("skipped_at")) or any(h["sku"] == item["sku"] and h.get("scheduled_for") == item["scheduled_for"]
                for h in state.get("history", []))
 
 
@@ -276,6 +276,46 @@ def campaign_item(state: dict, now: datetime | None = None, due_only: bool = Fal
         ),
         None,
     )
+
+
+def reconcile_missed_slots(state: dict, now: datetime | None = None) -> int:
+    """Keep only the latest due slot; never discard a partially published post."""
+    local_now = (now or datetime.now(timezone.utc)).astimezone(LOCAL_TZ)
+    campaign = state.get("campaign", {})
+    pending = state.get("pending")
+    if pending:
+        return 0
+    due = sorted(
+        (item for item in campaign.get("schedule", [])
+         if not item_posted(state, item) and scheduled_time(item) <= local_now),
+        key=scheduled_time,
+    )
+    expired = campaign.get("expires_at") and local_now >= datetime.fromisoformat(campaign["expires_at"])
+    # Yesterday's slots and all but the newest due slot are stale.
+    stale = [item for item in due if expired or scheduled_time(item).date() < local_now.date() or item is not due[-1]]
+    for item in stale:
+        item["skipped_at"] = local_now.isoformat()
+        item["skip_reason"] = "campaign_expired" if expired else "missed_slot"
+    return len(stale)
+
+
+def report_schedule(state: dict, now: datetime | None = None) -> None:
+    local_now = (now or datetime.now(timezone.utc)).astimezone(LOCAL_TZ)
+    campaign = state.get("campaign", {})
+    schedule = campaign.get("schedule", [])
+    missed = sum(bool(item.get("skipped_at")) for item in schedule)
+    remaining = sum(not item_posted(state, item) for item in schedule)
+    expired = bool(campaign.get("expires_at") and local_now >= datetime.fromisoformat(campaign["expires_at"]))
+    message = f"Campaign: {remaining} remaining; {missed} missed slots; expired={expired}."
+    print(message)
+    if missed:
+        print(f"::warning::{missed} campaign slots were missed and will not be posted late.")
+    if expired:
+        print("::warning::Campaign expired. Prepare a new campaign before posting can resume.")
+    summary = os.environ.get("GITHUB_STEP_SUMMARY")
+    if summary:
+        with open(summary, "a", encoding="utf-8") as handle:
+            handle.write(f"### Social posting schedule\n\n{message}\n")
 
 
 def campaign_post_due(state: dict, now: datetime | None = None) -> bool:
@@ -391,6 +431,11 @@ def main() -> int:
         save_state(state)
         print(f"Added {added} missing campaign slots.")
         return 0
+    if args.enforce_window:
+        reconcile_missed_slots(state)
+        report_schedule(state)
+        if not args.dry_run:
+            save_state(state)
     if args.enforce_window and not campaign_post_due(state):
         print("No campaign post is due; nothing to publish.")
         output("status", "skipped")

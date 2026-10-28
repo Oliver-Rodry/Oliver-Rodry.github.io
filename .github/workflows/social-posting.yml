@@ -10,8 +10,8 @@ on:
         default: true
   schedule:
     # Check frequently because GitHub scheduled jobs can start late. The script
-    # publishes only the oldest prepared slot whose scheduled time has passed.
-    - cron: "*/15 * * * *"
+    # skips missed slots and publishes only the latest due slot.
+    - cron: "7,22,37,52 * * * *"
 
 permissions:
   contents: write
@@ -23,14 +23,19 @@ concurrency:
 jobs:
   post-product:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: main
 
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+
+      - name: Test scheduling and missed-slot recovery
+        run: python -m unittest discover -s tests -p 'test_social_posting.py' -v
 
       - name: Select and publish product
         id: posting
@@ -40,7 +45,7 @@ jobs:
           META_INSTAGRAM_ID: ${{ secrets.META_INSTAGRAM_ID }}
         run: |
           if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.dry_run }}" == "true" ]]; then
-            python scripts/social_posting.py --dry-run
+            python scripts/social_posting.py --dry-run --enforce-window
           elif [[ "${{ github.event_name }}" == "schedule" ]]; then
             python scripts/social_posting.py --enforce-window
           else
@@ -48,7 +53,7 @@ jobs:
           fi
 
       - name: Persist posting state
-        if: steps.posting.outputs.status != 'dry-run'
+        if: always() && steps.posting.outputs.status != 'dry-run' && steps.posting.outputs.status != ''
         run: |
           git config user.name "Social Posting Automation"
           git config user.email "actions@users.noreply.github.com"
