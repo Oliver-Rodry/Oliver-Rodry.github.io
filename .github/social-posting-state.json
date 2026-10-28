@@ -182,7 +182,8 @@
     "FOLDER85X14UND",
     "SILICONBARRAUND",
     "TALONARIOPEQUEN",
-    "6970873984599"
+    "6970873984599",
+    "CART7"
   ],
   "history": [
     {
@@ -2196,6 +2197,17 @@
       "facebook_post_id": "1056461310893148_122152757337354776",
       "instagram_post_id": "18115014338277294",
       "completed_at": "2026-10-28T19:44:31.076904+00:00"
+    },
+    {
+      "sku": "CART7",
+      "name": "CARTULINA AMARILLO FUERTE UNID",
+      "caption": "Un toque amarillo cambia el ánimo del proyecto. 💛 Usa esta cartulina para letras, fondos o figuras que pidan un color alegre.\n\nCartulina amarilla brillante · RD$30\n\nTe esperamos en Papelería Sol Naciente. ¡Estamos a la orden! ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-10-26T17:14:20-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/CART7.jpg",
+      "started_at": "2026-10-28T23:37:06.002542+00:00",
+      "facebook_post_id": "1056461310893148_122152794819354776",
+      "instagram_post_id": "18100134080654795",
+      "completed_at": "2026-10-28T23:37:18.484014+00:00"
     }
   ],
   "pending": null,
