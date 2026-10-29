@@ -374,6 +374,7 @@ def main() -> int:
     parser.add_argument("--refresh-captions", action="store_true")
     parser.add_argument("--fill-missing-slots", action="store_true")
     parser.add_argument("--enforce-window", action="store_true")
+    parser.add_argument("--catch-up", action="store_true", help="Publish all eligible campaign slots already due at batch start")
     args = parser.parse_args()
     state = load_state()
     if args.prepare_campaign:
@@ -391,6 +392,31 @@ def main() -> int:
         save_state(state)
         print(f"Added {added} missing campaign slots.")
         return 0
+    if args.catch_up:
+        cutoff = datetime.now(timezone.utc)
+        count = 0
+        # Freeze the cutoff so this manual batch never consumes future slots.
+        for _ in range(len(state.get("campaign", {}).get("schedule", [])) + 1):
+            gate = {**state, "campaign": {**state.get("campaign", {}), "minimum_interval_minutes": 0}}
+            if not campaign_post_due(gate):
+                break
+            pending = state.get("pending")
+            if pending and pending.get("scheduled_for") and datetime.fromisoformat(pending["scheduled_for"]) > cutoff:
+                break
+            if not pending:
+                if campaign_item(state, now=cutoff, due_only=True) is None:
+                    break
+                pending = new_pending(state, now=cutoff, due_only=True)
+            if args.dry_run:
+                print(json.dumps(pending, ensure_ascii=False, indent=2))
+                output("status", "dry-run")
+                return 0
+            if publish_pending(state, pending) != "success":
+                return 0
+            count += 1
+        print(f"Catch-up completed: {count} posts published to both platforms.")
+        output("status", "success")
+        return 0
     if args.enforce_window and not campaign_post_due(state):
         print("No campaign post is due; nothing to publish.")
         output("status", "skipped")
@@ -401,6 +427,11 @@ def main() -> int:
         output("status", "dry-run")
         return 0
 
+    publish_pending(state, pending)
+    return 0
+
+
+def publish_pending(state: dict, pending: dict) -> str:
     token = os.environ["META_ACCESS_TOKEN"]
     page_id = os.environ["META_PAGE_ID"]
     instagram_id = os.environ["META_INSTAGRAM_ID"]
@@ -419,7 +450,7 @@ def main() -> int:
         save_state(state)
         print(f"Posting failed: {exc}", file=sys.stderr)
         output("status", "error")
-        return 0
+        return "error"
 
     pending["completed_at"] = datetime.now(timezone.utc).isoformat()
     pending.pop("last_error", None)
@@ -431,7 +462,7 @@ def main() -> int:
     save_state(state)
     print(f"Published {pending['sku']} to Facebook and Instagram.")
     output("status", "success")
-    return 0
+    return "success"
 
 
 if __name__ == "__main__":

@@ -8,6 +8,11 @@ on:
         required: true
         type: boolean
         default: true
+      catch_up:
+        description: Publish all overdue campaign posts now (bypass spacing for this batch only)
+        required: false
+        type: boolean
+        default: false
   schedule:
     # Check frequently because GitHub scheduled jobs can start late. The script
     # publishes only the oldest prepared slot whose scheduled time has passed.
@@ -32,6 +37,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Validate posting logic
+        run: python -m unittest discover -s scripts -p "test_social_posting.py"
+
       - name: Select and publish product
         id: posting
         env:
@@ -41,6 +49,8 @@ jobs:
         run: |
           if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.dry_run }}" == "true" ]]; then
             python scripts/social_posting.py --dry-run
+          elif [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.catch_up }}" == "true" ]]; then
+            python scripts/social_posting.py --catch-up
           elif [[ "${{ github.event_name }}" == "schedule" ]]; then
             python scripts/social_posting.py --enforce-window
           else
@@ -48,7 +58,7 @@ jobs:
           fi
 
       - name: Persist posting state
-        if: steps.posting.outputs.status != 'dry-run'
+        if: always() && steps.posting.outputs.status != 'dry-run'
         run: |
           git config user.name "Social Posting Automation"
           git config user.email "actions@users.noreply.github.com"
