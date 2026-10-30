@@ -207,7 +207,8 @@
     "20260314103517505",
     "ESTUCHETRANSPUND",
     "HANI1039180GSM",
-    "6940509500738"
+    "6940509500738",
+    "2022124765533"
   ],
   "history": [
     {
@@ -2496,6 +2497,17 @@
       "facebook_post_id": "1056461310893148_122153417949354776",
       "instagram_post_id": "17892654138617677",
       "completed_at": "2026-10-30T19:27:38.004927+00:00"
+    },
+    {
+      "sku": "2022124765533",
+      "name": "GOMITAS BANDA 200/1 PAQUETE",
+      "caption": "Junta tus grupos de papeles y separa lo que va con cada pedido. 📦 Las bandas de goma son un básico para organizar a tu manera.\n\nPaquete de bandas de goma · RD$70\n\n¿Te hace falta? Escríbenos por DM y te ayudamos. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-10-30T11:14:20-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/2022124765533.jpg",
+      "started_at": "2026-10-30T23:07:16.911795+00:00",
+      "facebook_post_id": "1056461310893148_122153456559354776",
+      "instagram_post_id": "17916086652495167",
+      "completed_at": "2026-10-30T23:07:33.332558+00:00"
     }
   ],
   "pending": null,
