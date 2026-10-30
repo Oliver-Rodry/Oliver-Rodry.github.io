@@ -205,7 +205,8 @@
     "CINTAPEQ",
     "1313526879951",
     "20260314103517505",
-    "ESTUCHETRANSPUND"
+    "ESTUCHETRANSPUND",
+    "HANI1039180GSM"
   ],
   "history": [
     {
@@ -2472,6 +2473,17 @@
       "facebook_post_id": "1056461310893148_122153134827354776",
       "instagram_post_id": "18340439842274634",
       "completed_at": "2026-10-30T01:14:32.363272+00:00"
+    },
+    {
+      "sku": "HANI1039180GSM",
+      "name": "PAPEL FOTOGRAFICO BRILLANTE 180 HOJA",
+      "caption": "Esa foto favorita también puede salir de la pantalla. 📸 Consulta nuestro papel fotográfico brillante y revisa la compatibilidad de tu impresora.\n\nPapel fotográfico brillante de 180 g · RD$15\n\nEscríbenos por DM y te ayudamos con tu pedido. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-10-29T21:14:20-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/HANI1039180GSM.jpg",
+      "started_at": "2026-10-30T14:15:00.112935+00:00",
+      "facebook_post_id": "1056461310893148_122153350047354776",
+      "instagram_post_id": "18010028810996071",
+      "completed_at": "2026-10-30T14:15:16.701749+00:00"
     }
   ],
   "pending": null,
