@@ -204,7 +204,8 @@
     "6824120314052",
     "CINTAPEQ",
     "1313526879951",
-    "20260314103517505"
+    "20260314103517505",
+    "ESTUCHETRANSPUND"
   ],
   "history": [
     {
@@ -2460,6 +2461,17 @@
       "facebook_post_id": "1056461310893148_122153097309354776",
       "instagram_post_id": "17897368146415477",
       "completed_at": "2026-10-29T21:20:57.240516+00:00"
+    },
+    {
+      "sku": "ESTUCHETRANSPUND",
+      "name": "ESTUCHE VARIEDAD COLOR TRANSPARENTE UND",
+      "caption": "Encuentra el lápiz sin vaciar la mochila entera. ✏️ Un estuche transparente te deja ver tus útiles mientras los mantienes reunidos.\n\nEstuche transparente de colores · RD$55\n\nPasa por Papelería Sol Naciente o escríbenos por DM. ☀️\n\n#PapeleriaSolNaciente #Papelería #SantoDomingo",
+      "scheduled_for": "2026-10-29T19:14:20-04:00",
+      "image_url": "https://papeleriasolnaciente.com/img/products/ESTUCHETRANSPUND.jpg",
+      "started_at": "2026-10-30T01:14:17.432785+00:00",
+      "facebook_post_id": "1056461310893148_122153134827354776",
+      "instagram_post_id": "18340439842274634",
+      "completed_at": "2026-10-30T01:14:32.363272+00:00"
     }
   ],
   "pending": null,
